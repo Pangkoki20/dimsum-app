@@ -1,0 +1,23 @@
+.home{
+    background-color: black !important;
+}
+
+.logo{
+    color:black;
+    font-size: 30px;
+}
+.logo:hover{
+    color: red;
+}
+.basket{
+     font-size: 20px;
+}
+.basket:hover{
+    color:blue;
+}
+.login{
+    font-size: 20px
+}
+.login:hover{
+    color:blue;
+}

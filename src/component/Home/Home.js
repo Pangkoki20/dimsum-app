@@ -8,15 +8,17 @@ import {
     NavItem,
     NavLink,
     UncontrolledCarousel
+
+    
 } from 'reactstrap'
+import './Home.css'
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
 
         this.toggle = this.toggle.bind(this);
         this.state = {
-            isOpen: false,
-            name: 'koki2'
+            isOpen: false
         };
     }
     toggle() {
@@ -27,16 +29,16 @@ export default class Home extends React.Component {
     render() {
         return (
             <div>
-                <Navbar color="light" light expand="md">
-                    <NavbarBrand href="/">Dimsumahkong Delivery</NavbarBrand>
+                <Navbar color="home" light expand="md">
+                    <NavbarBrand href="/"><div className="logo">Dimsumahkong Delivery</div></NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink href="">หยิบใส่ตะกร้า</NavLink>
+                                <NavLink href=""><div className="basket"><i class="fas fa-cart-arrow-down"></i></div></NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="">Login</NavLink>
+                                <NavLink href=""><div className="login">เข้าสู่ระบบ</div></NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>
