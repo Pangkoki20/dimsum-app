@@ -1,14 +1,13 @@
 import React, {Component} from 'react'
-import Login from './component/Login'
-import Home from './component/Home'
-import 'bootstrap'
+import Home from './component/Home/Home'
+import Banner from './component/Banner/Banner'
 
 class App extends Component {
     render(){
       return(
         <div>
-          <Login/>
           <Home/>
+          <Banner/>
         </div>
       );
     }
