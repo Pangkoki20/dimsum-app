@@ -9,7 +9,6 @@ import {
     NavLink,
     UncontrolledCarousel
 
-    
 } from 'reactstrap'
 import './Home.css'
 export default class Home extends React.Component {
@@ -29,16 +28,16 @@ export default class Home extends React.Component {
     render() {
         return (
             <div>
-                <Navbar color="home" light expand="md">
-                    <NavbarBrand href="/"><div className="logo">Dimsumahkong Delivery</div></NavbarBrand>
+                <Navbar color="light" light expand="md">
+                    <NavbarBrand href="/"><div className="logo"><b>Dimsumahkong Delivery</b></div></NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink href=""><div className="basket"><i class="fas fa-cart-arrow-down"></i></div></NavLink>
+                                <NavLink href=""><div className="login"><b>เข้าสู่ระบบ</b></div></NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href=""><div className="login">เข้าสู่ระบบ</div></NavLink>
+                                <NavLink href=""><div className="basket"><i class="fas fa-cart-arrow-down"></i></div></NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>

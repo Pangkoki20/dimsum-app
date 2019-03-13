@@ -1,23 +1,22 @@
 .home{
-    background-color: black !important;
+    background-color:rgba(4,47,89,0.2)!important;
+}
+.logo{
+    color:#8f1402;
+    font-size: 25px
 }
 
-.logo{
-    color:black;
-    font-size: 30px;
+.login{
+    font-size: 15px
 }
-.logo:hover{
-    color: red;
-}
-.basket{
-     font-size: 20px;
-}
-.basket:hover{
+
+.login:hover{
     color:blue;
 }
-.login{
-    font-size: 20px
+.basket{
+     font-size: 15px;
 }
-.login:hover{
+
+.basket:hover{
     color:blue;
 }
