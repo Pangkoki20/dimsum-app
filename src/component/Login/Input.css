@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    color: #990000;
+    text-align: center;
 }
 Input [type = "email"],
 Input [type = "password"] {

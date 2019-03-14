@@ -10,7 +10,7 @@ class Login extends Component {
         <Container className="log">
           <Form>
             <FormGroup>
-              <h2 className="log">เข้าสู่ระบบ</h2>
+              <h4 className="log"><b>เข้าสู่ระบบ</b></h4>
               <Input
                 type="email"
                 name="email"
