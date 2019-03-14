@@ -1,0 +1,14 @@
+.log{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+Input [type = "email"],
+Input [type = "password"] {
+    display: block;
+    width: 500px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
