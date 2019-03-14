@@ -7,19 +7,15 @@ import {
     Nav,
     NavItem,
     NavLink,
-    UncontrolledCarousel,
-    Button
-
 } from 'reactstrap'
 import './Home.css'
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
-
-        this.toggle = this.toggle.bind(this);
         this.state = {
             isOpen: false
         };
+        this.toggle = this.toggle.bind(this);
     }
     toggle() {
         this.setState({

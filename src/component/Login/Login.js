@@ -1,34 +1,32 @@
 import React, { Component } from "react";
-import { Form, FormGroup, Input, Container } from "reactstrap";
+import { Form, FormGroup, Input, Container ,Button } from "reactstrap";
 import Home from "../Home/Home";
-import "./Input.css";
+import "./Login.css";
 class Login extends Component {
   render() {
     return (
-      <div>
-        <Home />
-        <Container className="log">
-          <Form>
-            <FormGroup>
-              <h4 className="log"><b>เข้าสู่ระบบ</b></h4>
-              <Input
-                type="email"
-                name="email"
-                id="exampleEmail"
-                placeholder="dimsumahkong@gmail.com"
-              />
-            </FormGroup>
-            <FormGroup>
-              <Input
-                type="password"
-                name="password"
-                id="examplePassword"
-                placeholder="password"
-              />
-            </FormGroup>
-          </Form>
-        </Container>
-      </div>
+      <Container className="log">
+        <Form className="form-login">
+          <FormGroup>
+            <h4 ><b>เข้าสู่ระบบ</b></h4>
+            <Input
+              className="input-login"
+              type="email"
+              name="email"
+              id="exampleEmail"
+              placeholder="dimsumahkong@gmail.com"
+            />
+            <Input
+              className="input-login"
+              type="password"
+              name="password"
+              id="examplePassword"
+              placeholder="password"
+            />
+          </FormGroup>
+          <Button color="primary" className="btn-login">Login</Button>
+        </Form>
+      </Container>
     );
   }
 }

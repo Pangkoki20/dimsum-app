@@ -1,0 +1,19 @@
+.log{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #990000;
+    text-align: center;
+    height: 100vh;
+}
+
+.input-login{
+    margin: 20px 0px 20px 0px;
+}
+
+.btn-login{
+    width: 100%;
+}
+.form-login{
+padding: 50px;
+}
