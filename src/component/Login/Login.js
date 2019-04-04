@@ -14,14 +14,14 @@ class Login extends Component {
               type="email"
               name="email"
               id="exampleEmail"
-              placeholder="dimsumahkong@gmail.com"
+              placeholder="Email"
             />
             <Input
               className="input-login"
               type="password"
               name="password"
               id="examplePassword"
-              placeholder="password"
+              placeholder="Password"
             />
           </FormGroup>
           <Button color="primary" className="btn-login">Login</Button>
