@@ -1,22 +1,21 @@
 .home{
-    background-color:rgba(4,47,89,0.2)!important;
+    background-color: aquamarine!important;
 }
 .logo{
-    color:#8f1402;
-    font-size: 30px
+    color: aquamarine;
+    font-size: 35px;
 }
-
 .login{
     font-size: 15px;
 }
 
 .login:hover{
-    color:blue;
+    color:#33FFFF;
 }
 .basket{
      font-size: 15px;
 }
 
 .basket:hover{
-    color:blue;
+    color:#33FFFF;
 }

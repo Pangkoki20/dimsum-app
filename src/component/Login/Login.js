@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, FormGroup, Input, Container ,Button } from "reactstrap";
+import { Form, FormGroup, Input, Container, Button } from "reactstrap";
 import Home from "../Home/Home";
 import "./Login.css";
 class Login extends Component {
@@ -7,8 +7,11 @@ class Login extends Component {
     return (
       <Container className="log">
         <Form className="form-login">
+        
           <FormGroup>
-            <h4 ><b>เข้าสู่ระบบ</b></h4>
+            <h2>
+              <b>Login</b>
+            </h2>
             <Input
               className="input-login"
               type="email"
@@ -24,7 +27,12 @@ class Login extends Component {
               placeholder="Password"
             />
           </FormGroup>
-          <Button color="primary" className="btn-login">Login</Button>
+          <button type="button" class="btn btn-primary btn-login btn-block">
+            Login
+          </button>
+          <button type="button" class="btn btn-secondary btn-register btn-block">
+            ลงทะเบียน
+          </button>
         </Form>
       </Container>
     );

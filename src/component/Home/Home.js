@@ -25,7 +25,7 @@ export default class Home extends React.Component {
     render() {
         return (
             <div>
-                <Navbar color="light" light expand="md">
+                <Navbar color="navbar navbar-dark bg-dark" light expand="md">
                     <NavbarBrand href="/"><div className="logo"><b>Dimsumahkong Delivery</b></div></NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>

@@ -1,19 +1,21 @@
-.log{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: .bg-info;
-    text-align: center;
-    height: 100vh;
+.log {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
 }
 
-.input-login{
-    margin: 20px 0px 20px 0px;
+.input-login {
+  margin: 20px 0px 20px 0px;
 }
 
-.btn-login{
-    width: 100%;
+.btn-login {
+  width: 100%;
 }
-.form-login{
-padding: 50px;
+.form-login {
+  padding: 10px;
+}
+.btn-register {
+  margin: 0px 0px 0px 0px;
 }
