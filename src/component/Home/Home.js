@@ -1,6 +1,7 @@
 import React from 'react'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
 import './Home.css'
+
 export default class Home extends React.Component {
 	constructor(props) {
 		super(props)
