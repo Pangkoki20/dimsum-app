@@ -10,6 +10,8 @@ class Register extends Component {
       lastname: "",
       email: "",
       password: "",
+      phone:"",
+      address:"",
       message: ""
     };
   }
@@ -86,7 +88,7 @@ class Register extends Component {
               onChange={this.handleInputChange}
               required
             />
-			<Input
+            <Input
               className="register-phone"
               type="phone"
               name="phone"
@@ -95,7 +97,7 @@ class Register extends Component {
               onChange={this.handleInputChange}
               required
             />
-			<Input
+            <Input
               className="register-address"
               type="address"
               name="address"
@@ -104,8 +106,6 @@ class Register extends Component {
               onChange={this.handleInputChange}
               required
             />
-
-
           </FormGroup>
           <Button type="button" className="btn-register" color="info">
             ลงทะเบียน
