@@ -20,8 +20,6 @@ class Register extends Component {
 		console.log({ [name]: value })
 	}
 	register = e => {
-		console.log(' fuck !!')
-
 		e.preventDefault()
 		try {
 			const data = {

@@ -8,13 +8,23 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Overview from './component/Overview/Overview'
 
 class App extends Component {
+	state = {
+		user: null
+	}
+
+	onUserChanged = user => {
+		this.setState({ user })
+	}
+
 	render() {
+		const { user } = this.state
+
 		return (
 			<div>
-				<Home />
+				<Home user={user} />
 				<Switch>
 					<Route exact path="/" component={Main} />
-					<Route exact path="/login" component={Login} />
+					<Route exact path="/login" component={() => <Login onUserChanged={this.onUserChanged} />} />
 					<Route exact path="/register" component={Register} />
 					<Route exact path="/overview" component={Overview} />
 				</Switch>
