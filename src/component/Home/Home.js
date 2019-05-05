@@ -22,7 +22,6 @@ export default class Home extends React.Component {
 		auth.clearToken()
 		this.props.history.push('/')
 	}
-	componentDidMount = e => {}
 
 	componentWillReceiveProps = nextProps => {
 		if (nextProps.user !== null) {

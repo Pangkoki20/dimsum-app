@@ -36,7 +36,11 @@ class Login extends Component {
 				const { data } = res
 				console.log('res : ', res.data)
 				this.setState({ message: data.message })
+
+
 				this.props.onUserChanged(res)
+
+				
 				localStorage.setItem('token', data.token)
 				this.props.history.push(`/overview`)
 			})
@@ -44,6 +48,8 @@ class Login extends Component {
 			console.log('Error : ', error)
 		}
 	}
+
+
 	render() {
 		return (
 			<Container className="log">
@@ -58,6 +64,7 @@ class Login extends Component {
 							name="email"
 							id="exampleEmail"
 							placeholder="Email"
+							value={this.state.email}
 							onChange={this.handleInputChange}
 						/>
 						<Input
@@ -65,6 +72,7 @@ class Login extends Component {
 							type="password"
 							name="password"
 							id="examplePassword"
+							value={this.state.password}
 							placeholder="Password"
 							onChange={this.handleInputChange}
 						/>

@@ -30,9 +30,12 @@ class Register extends Component {
 			}
 
 			axios.post(`http://localhost:3001/api/users/create`, data).then(res => {
+
 				const { data } = res
 				this.setState({ message: data.message })
-				this.props.history.push(`/`)
+
+				this.props.history.push(`/overview`)
+
 			})
 		} catch (error) {
 			console.log('Error : ', error)
@@ -47,6 +50,7 @@ class Register extends Component {
 						<h2>
 							<b>Register</b>
 						</h2>
+						
 						<Input
 							className=""
 							type="text"
@@ -56,6 +60,8 @@ class Register extends Component {
 							onChange={this.handleInputChange}
 							required
 						/>
+
+
 						<Input
 							className=""
 							type="text"
