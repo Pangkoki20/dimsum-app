@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
-
+import React, { Component } from "react";
+import "./Overview.css";
 export default class Overview extends Component {
   render() {
     return (
       <div>
-        Overview
+        <h2>
+          <center> รายการอาหาร </center>
+        </h2>
       </div>
-    )
+    );
   }
 }

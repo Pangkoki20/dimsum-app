@@ -40,7 +40,7 @@ export default class Home extends React.Component {
 							<NavItem>
 								<NavLink href="overview">
 									<div className="login">
-										<b>Overview</b>
+										<b>หน้าแรก</b>
 									</div>
 								</NavLink>
 							</NavItem>
