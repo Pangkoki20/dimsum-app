@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import Main from './Main'
 import Login from './component/Login/Login'
+import Overview from './component/Overview/Overview'
 import Home from './component/Home/Home'
 import Register from './component/Register/Register'
 import { Switch, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Overview from './component/Overview/Overview'
-
 class App extends Component {
 	state = {
 		user: null
