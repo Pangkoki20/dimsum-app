@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Form, FormGroup, Input, Container, Button } from "reactstrap";
 import axios from "axios";
 import "./Register.css";
+
 class Register extends Component {
   constructor(props) {
     super(props);
@@ -10,8 +11,8 @@ class Register extends Component {
       lastname: "",
       email: "",
       password: "",
-      phone:"",
-      address:"",
+      phone: "",
+      address: "",
       message: ""
     };
   }
@@ -28,8 +29,12 @@ class Register extends Component {
         firstname: this.state.firstname,
         lastname: this.state.lastname,
         email: this.state.email,
-        password: this.state.password
+        password: this.state.password,
+        phone: this.state.phone,
+        address: this.state.address
       };
+      console.log('ข้อมูบที่กำลังจะ่ส่งไป ....  ' , data);
+      
 
       axios.post(`http://localhost:3001/api/users/create`, data).then(res => {
         const { data } = res;
@@ -107,7 +112,7 @@ class Register extends Component {
               required
             />
           </FormGroup>
-          <Button type="button" className="btn-register" color="info">
+          <Button className="btn-register" color="info">
             ลงทะเบียน
           </Button>
         </Form>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { UncontrolledCarousel } from 'reactstrap'
 import './Banner.css'
+
 const items = [
 	{
 		src: 'http://f.ptcdn.info/006/035/000/1441040062-22-o.jpg',
