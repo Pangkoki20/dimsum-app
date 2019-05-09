@@ -74,10 +74,10 @@ class Login extends Component {
               onChange={this.handleInputChange}
             />
           </FormGroup>
-          <Button className="btn-login" color="success">Login</Button>
+          <Button className="btn-login" color="danger">Login</Button>
           <Button
             type="button"
-            className="btn btn-secondary btn-register btn-block"
+            className="btn btn-secondary btn-register btn-block" color="info"
             onClick={this.toRegister}
           >
             ลงทะเบียน

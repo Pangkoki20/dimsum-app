@@ -1,21 +1,20 @@
 .home{
-    background-color: aquamarine!important;
+   
 }
 .logo{
-    color: aquamarine;
-    font-size: 35px;
+    font-size: 40px;
 }
 .login{
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .login:hover{
-    color:#33FFFF;
+
 }
 .basket{
-     font-size: 15px;
+     font-size: 16px;
 }
 
 .basket:hover{
-    color:#33FFFF;
+
 }
