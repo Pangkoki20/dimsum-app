@@ -40,7 +40,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="navbar navbar-dark bg-primary" light expand="md">
+        <Navbar color="navbar navbar-dark bg-info" light expand="md">
           <NavbarBrand href="/">Dimsumahkong Delivery</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
