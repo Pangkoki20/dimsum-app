@@ -33,7 +33,7 @@ class Register extends Component {
         phone: this.state.phone,
         address: this.state.address
       };
-      console.log('ข้อมูบที่กำลังจะ่ส่งไป ....  ' , data);
+      console.log('ข้อมูลที่กำลังจะ่ส่งไป ....  ' , data);
       
 
       axios.post(`http://localhost:3001/api/users/create`, data).then(res => {

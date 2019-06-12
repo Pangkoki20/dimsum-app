@@ -45,16 +45,12 @@ export default class Home extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="overview">
-                  <div className="login">Home</div>
-                </NavLink>
-              </NavItem>
-
               {this.state.check !== "login" && (
                 <NavItem>
                   <NavLink href="login">
-                    <div className="login">Login</div>
+                    <div className="login">
+                      <b>Login</b>
+                    </div>
                   </NavLink>
                 </NavItem>
               )}

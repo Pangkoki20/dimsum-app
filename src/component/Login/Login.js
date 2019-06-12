@@ -40,7 +40,7 @@ class Login extends Component {
         this.props.onUserChanged(res);
 
         localStorage.setItem("token", data.token);
-        this.props.history.push(`/overview`);
+        this.props.history.push(`/banner`);
       });
     } catch (error) {
       console.log("Error : ", error);
@@ -74,10 +74,13 @@ class Login extends Component {
               onChange={this.handleInputChange}
             />
           </FormGroup>
-          <Button className="btn-login" color="danger">Login</Button>
+          <Button className="btn-login" color="danger">
+            Login
+          </Button>
           <Button
             type="button"
-            className="btn btn-secondary btn-register btn-block" color="info"
+            className="btn btn-secondary btn-register btn-block"
+            color="info"
             onClick={this.toRegister}
           >
             ลงทะเบียน

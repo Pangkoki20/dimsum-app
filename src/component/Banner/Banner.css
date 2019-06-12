@@ -1,3 +1,4 @@
 .ban-size {
-  overflow: hidden;
+  position: absolute;
+  width: 800px;
 }
