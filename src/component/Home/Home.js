@@ -41,7 +41,7 @@ export default class Home extends React.Component {
     return (
       <div>
         <Navbar color="navbar navbar-dark bg-info" light expand="md">
-          <NavbarBrand href="/">Dimsumahkong Delivery</NavbarBrand>
+          <NavbarBrand href="/"><b>Dimsumahkong Delivery</b></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
