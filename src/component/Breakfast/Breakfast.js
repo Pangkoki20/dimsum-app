@@ -1,9 +1,10 @@
+
 import React, { Component } from "react";
 import { Form, FormGroup, Input, Container, Button } from "reactstrap";
 import Banner from "../Banner/Banner";
-import "./Drink.css";
+import "./Breakfast";
 
-class Drink extends Component {
+class Breakfast extends Component {
   render() {
     return (
       <div>
@@ -12,4 +13,4 @@ class Drink extends Component {
     );
   }
 }
-export default Drink;
+export default Breakfast;

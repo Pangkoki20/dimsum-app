@@ -6,8 +6,11 @@ import {
   Nav,
   NavItem,
   NavLink,
+  Dropdown,
+  DropdownMenu,
+  DropdownToggle
 } from "reactstrap";
-import "./Nav.css"
+import "./Nav.css";
 
 class Navbars extends Component {
   constructor(props) {
@@ -39,7 +42,7 @@ class Navbars extends Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/">
+                <NavLink href="Dimsum">
                   <button type="button" class="btn btn-outline-info">
                     {" "}
                     ติ่มซำ
@@ -47,7 +50,7 @@ class Navbars extends Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/">
+                <NavLink href="Breakfast">
                   <button type="button" class="btn btn-outline-info">
                     {" "}
                     อาหารเช้า
@@ -55,7 +58,7 @@ class Navbars extends Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/">
+                <NavLink href="Fastfood">
                   <button type="button" class="btn btn-outline-info">
                     {" "}
                     อาหารจานเดียว
@@ -63,7 +66,7 @@ class Navbars extends Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/">
+                <NavLink href="Drink">
                   <button type="button" class="btn btn-outline-info">
                     {" "}
                     เครื่องดื่ม
@@ -71,7 +74,7 @@ class Navbars extends Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/">
+                <NavLink href="Delivery">
                   <button type="button" class="btn btn-outline-info">
                     {" "}
                     สถานะการจัดส่ง
@@ -79,7 +82,7 @@ class Navbars extends Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/">
+                <NavLink href="Contact">
                   <button type="button" class="btn btn-outline-info">
                     {" "}
                     ติดต่อเรา

@@ -6,7 +6,11 @@ import Register from "./component/Register/Register";
 import { Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Dimsum from "./component/Dimsum/Dimsum";
-
+import Breakfast from "./component/Breakfast/Breakfast";
+import Fastfood from "./component/Fastfood/Fastfood";
+import Drink from "./component/Drink/Drink";
+import Delivery from "./component/Delivery/Delivery";
+import Contact from "./component/Contact/Contact";
 class App extends Component {
   state = {
     user: null
@@ -31,7 +35,11 @@ class App extends Component {
           />
           <Route exact path="/register" component={Register} />
           <Route exact path="/Dimsum" component={Dimsum} />
-
+          <Route exact path="/Breakfast" component={Breakfast} />
+          <Route exact path="/Fastfood" component={Fastfood} />
+          <Route exact path="/Drink" component={Drink} />
+		  <Route exact path="/Delivery" component={Drink} />
+		  <Route exact path="/Contact" component={Drink} />
         </Switch>
       </div>
     );
