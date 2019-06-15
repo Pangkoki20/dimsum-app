@@ -10,8 +10,7 @@ import {
   CardBody,
   Container,
   Row,
-  Col,
-  Badge
+  Col
 } from "reactstrap";
 import Banner from "../Banner/Banner";
 import "./Dimsum.css";
@@ -40,9 +39,7 @@ class Dimsum extends Component {
                 lead-in to additional content. This content is a little bit
                 longer.
               </CardText> */}
-                  <Button outline color="danger">
-                    สั่งอาหาร
-                  </Button>
+                  <Button color="danger">สั่งอาหาร</Button>
                 </CardBody>
               </Card>
             </Col>
@@ -63,9 +60,7 @@ class Dimsum extends Component {
                 This card has supporting text below as a natural lead-in to
                 additional content.
               </CardText> */}
-                  <Button outline color="danger">
-                    สั่งอาหาร
-                  </Button>
+                  <Button color="danger">สั่งอาหาร</Button>
                 </CardBody>
               </Card>
             </Col>
@@ -87,9 +82,7 @@ class Dimsum extends Component {
                 lead-in to additional content. This card has even longer content
                 than the first to show that equal height action.
               </CardText> */}
-                  <Button outline color="danger">
-                    สั่งอาหาร
-                  </Button>
+                  <Button color="danger">สั่งอาหาร</Button>
                 </CardBody>
               </Card>
             </Col>
@@ -113,9 +106,7 @@ class Dimsum extends Component {
                 lead-in to additional content. This content is a little bit
                 longer.
               </CardText> */}
-                  <Button outline color="danger">
-                    สั่งอาหาร
-                  </Button>
+                  <Button color="danger">สั่งอาหาร</Button>
                 </CardBody>
               </Card>
             </Col>
@@ -136,9 +127,7 @@ class Dimsum extends Component {
                 This card has supporting text below as a natural lead-in to
                 additional content.
               </CardText> */}
-                  <Button outline color="danger">
-                    สั่งอาหาร
-                  </Button>
+                  <Button color="danger">สั่งอาหาร</Button>
                 </CardBody>
               </Card>
             </Col>
@@ -160,9 +149,7 @@ class Dimsum extends Component {
                 lead-in to additional content. This card has even longer content
                 than the first to show that equal height action.
               </CardText> */}
-                  <Button outline color="danger">
-                    สั่งอาหาร
-                  </Button>
+                  <Button color="danger">สั่งอาหาร</Button>
                 </CardBody>
               </Card>
             </Col>
@@ -186,9 +173,7 @@ class Dimsum extends Component {
                 lead-in to additional content. This content is a little bit
                 longer.
               </CardText> */}
-                  <Button outline color="danger">
-                    สั่งอาหาร
-                  </Button>
+                  <Button color="danger">สั่งอาหาร</Button>
                 </CardBody>
               </Card>
             </Col>
@@ -209,9 +194,7 @@ class Dimsum extends Component {
                 This card has supporting text below as a natural lead-in to
                 additional content.
               </CardText> */}
-                  <Button outline color="danger">
-                    สั่งอาหาร
-                  </Button>
+                  <Button color="danger">สั่งอาหาร</Button>
                 </CardBody>
               </Card>
             </Col>
@@ -233,9 +216,7 @@ class Dimsum extends Component {
                 lead-in to additional content. This card has even longer content
                 than the first to show that equal height action.
               </CardText> */}
-                  <Button outline color="danger">
-                    สั่งอาหาร
-                  </Button>
+                  <Button color="danger">สั่งอาหาร</Button>
                 </CardBody>
               </Card>
             </Col>
