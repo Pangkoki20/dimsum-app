@@ -1,100 +1,58 @@
-import React, { Component } from "react";
+import React from "react";
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
   Nav,
   NavItem,
-  NavLink,
   Dropdown,
+  DropdownItem,
+  DropdownToggle,
   DropdownMenu,
-  DropdownToggle
+  NavLink
 } from "reactstrap";
 import "./Nav.css";
-
-class Navbars extends Component {
+class Navbars extends React.Component {
   constructor(props) {
     super(props);
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      dropdownOpen: false
     };
   }
+
   toggle() {
     this.setState({
-      isOpen: !this.state.isOpen
+      dropdownOpen: !this.state.dropdownOpen
     });
   }
+
   render() {
     return (
       <div>
-        <Navbar className="colorbar" light expand="md">
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto nav" navbar>
-              <NavItem>
-                <NavLink href="/">
-                  <button type="button" class="btn btn-outline-info">
-                    {" "}
-                    เมนูแนะนำ
-                  </button>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="Dimsum">
-                  <button type="button" class="btn btn-outline-info">
-                    {" "}
-                    ติ่มซำ
-                  </button>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="Breakfast">
-                  <button type="button" class="btn btn-outline-info">
-                    {" "}
-                    อาหารเช้า
-                  </button>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="Fastfood">
-                  <button type="button" class="btn btn-outline-info">
-                    {" "}
-                    อาหารจานเดียว
-                  </button>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="Drink">
-                  <button type="button" class="btn btn-outline-info">
-                    {" "}
-                    เครื่องดื่ม
-                  </button>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="Delivery">
-                  <button type="button" class="btn btn-outline-info">
-                    {" "}
-                    สถานะการจัดส่ง
-                  </button>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="Contact">
-                  <button type="button" class="btn btn-outline-info">
-                    {" "}
-                    ติดต่อเรา
-                  </button>
-                </NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
+        <Nav tabs>
+          <NavItem>
+            <NavLink href="/">เมนูแนะนำ</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="Dimsum">ติ่มซำ</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="Breakfast">อาหารเช้า</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="Fastfood">อาหารจานเดียว</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="Drink">เครื่องดื่ม</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="Delivery">สถานะการจัดส่ง</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="Contact">ติดต่อเรา</NavLink>
+          </NavItem>
+        </Nav>
       </div>
     );
   }
 }
-
 export default Navbars;

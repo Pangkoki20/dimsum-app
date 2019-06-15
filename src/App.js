@@ -38,8 +38,8 @@ class App extends Component {
           <Route exact path="/Breakfast" component={Breakfast} />
           <Route exact path="/Fastfood" component={Fastfood} />
           <Route exact path="/Drink" component={Drink} />
-		  <Route exact path="/Delivery" component={Drink} />
-		  <Route exact path="/Contact" component={Drink} />
+          <Route exact path="/Delivery" component={Drink} />
+          <Route exact path="/Contact" component={Drink} />
         </Switch>
       </div>
     );
