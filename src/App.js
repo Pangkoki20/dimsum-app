@@ -11,6 +11,7 @@ import Fastfood from "./component/Fastfood/Fastfood";
 import Drink from "./component/Drink/Drink";
 import Delivery from "./component/Delivery/Delivery";
 import Contact from "./component/Contact/Contact";
+import "./App.css";
 class App extends Component {
   state = {
     user: null

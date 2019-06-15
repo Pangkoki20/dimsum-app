@@ -1,3 +1,11 @@
 .home {
   background-color: lightcoral;
 }
+body,html{
+  font-family: 'THSarabunNew';
+}
+@font-face {
+  font-family: "THSarabunNew";
+  src: url("./fonts/thsarabunnew-webfont.woff");
+
+}

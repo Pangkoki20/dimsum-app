@@ -1,8 +1,8 @@
 .nav {
-    margin-left: auto;
-    margin-right: auto;
-    
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 .colorbar {
-    background-color: #ffffff; 
+  background-color: #ffffff;
 }

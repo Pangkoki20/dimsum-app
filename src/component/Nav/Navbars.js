@@ -6,7 +6,8 @@ import {
   DropdownItem,
   DropdownToggle,
   DropdownMenu,
-  NavLink
+  NavLink,
+  Container
 } from "reactstrap";
 import "./Nav.css";
 class Navbars extends React.Component {
@@ -27,7 +28,8 @@ class Navbars extends React.Component {
 
   render() {
     return (
-      <div>
+      <Container>
+      <div className="nav">
         <Nav tabs>
           <NavItem>
             <NavLink href="/">เมนูแนะนำ</NavLink>
@@ -52,6 +54,7 @@ class Navbars extends React.Component {
           </NavItem>
         </Nav>
       </div>
+      </Container>
     );
   }
 }
