@@ -21,6 +21,8 @@ class Dimsum extends Component {
       <Container>
         <div>
           <Banner />
+          
+          <h3>ติ่มซำ </h3>
           <Row className="menu">
             <Col>
               <Card>

@@ -40,8 +40,10 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="navbar navbar-dark bg-info" light expand="md">
-          <NavbarBrand href="/"><b>Dimsumahkong Delivery</b></NavbarBrand>
+        <Navbar color="navbar navbar-expand-lg navbar-light bg-light" light expand="md">
+          <NavbarBrand href="/">
+            <h4>Dimsumahkong Delivery</h4>
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -49,7 +51,9 @@ export default class Home extends React.Component {
                 <NavItem>
                   <NavLink href="login">
                     <div className="login">
-                      <b>Login</b>
+                      <button type="button" class="btn btn-info">
+                        Login
+                      </button>
                     </div>
                   </NavLink>
                 </NavItem>
