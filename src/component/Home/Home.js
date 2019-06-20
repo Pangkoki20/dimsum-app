@@ -6,7 +6,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  Button
 } from "reactstrap";
 import "./Home.css";
 import auth from "../service";
@@ -40,7 +41,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="navbar navbar-expand-lg navbar-light bg-light" light expand="md">
+        <Navbar color="navbar navbar-expand-lg navbar-light bg light" light expand="md">
           <NavbarBrand href="/">
             <h4>Dimsumahkong Delivery</h4>
           </NavbarBrand>
@@ -51,9 +52,9 @@ export default class Home extends React.Component {
                 <NavItem>
                   <NavLink href="login">
                     <div className="login">
-                      <button type="button" class="btn btn-info">
+                      <Button outline color="success">
                         Login
-                      </button>
+                      </Button>
                     </div>
                   </NavLink>
                 </NavItem>

@@ -4,7 +4,7 @@ import {
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  CarouselCaption
+  CarouselCaption,
 } from 'reactstrap';
 import "./Banner.css";
 

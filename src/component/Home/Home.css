@@ -1,20 +1,27 @@
-.home{
-
+@media only screen and (max-width: 1200px) {
+.content{
+    margin-top: 50px;
 }
-.logo{
+.text-st{
+    font-size: 25px;
 }
-.login{
-
-    
+.title{
+    padding: 40px;
 }
-
-.login:hover{
-    
+.article1{
+    height: 650px;
 }
-.basket{
-
+.article2{
+    height: 650px;
 }
-
-.basket:hover{
-
+.text-course{
+    font-size: 12px;
+}
+.text-faculty{
+    font-size: 12px;
+}
+.text-second{
+    font-size: 10px !important;
+    font-weight: 100 !important;
+}
 }
