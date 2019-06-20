@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Nav,
-  NavItem,
-  Dropdown,
-  DropdownItem,
-  DropdownToggle,
-  DropdownMenu,
-  NavLink,
-  Container
-} from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import "./Nav.css";
 class Navbars extends React.Component {
   constructor(props) {
@@ -29,7 +20,10 @@ class Navbars extends React.Component {
   render() {
     return (
       <Container>
-     
+        <h2 className="me">✧ เริ่มสั่งอาหาร ✧</h2>
+        
+      
+
       </Container>
     );
   }

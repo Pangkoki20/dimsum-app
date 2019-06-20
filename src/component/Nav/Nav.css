@@ -3,6 +3,8 @@
   margin-right: auto;
   display: block;
 }
-.colorbar {
-  
+.me {
+  text-align: center;
+  color:#191970;
+  margin-top: 10px;
 }

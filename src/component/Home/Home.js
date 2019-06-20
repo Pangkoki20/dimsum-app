@@ -41,20 +41,25 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="navbar navbar-expand-lg navbar-light bg light" light expand="md">
-          <NavbarBrand href="/">
-            <h4>Dimsumahkong Delivery</h4>
+        <Navbar className="bar" light expand="md">
+          <NavbarBrand href="/"> 
+          <h4>Dimsumahkong Delivery</h4>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
+            
             <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="/">เมนูอาหาร</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="Contact">ติดต่อเรา</NavLink>
+              </NavItem>
               {this.state.check !== "login" && (
                 <NavItem>
-                  <NavLink href="login">
-                    <div className="login">
-                      <Button outline color="success">
-                        Login
-                      </Button>
+                  <NavLink href="Login">
+                    <div className="Login">
+                     <b>เข้าสู่ระบบ </b>
                     </div>
                   </NavLink>
                 </NavItem>
