@@ -20,10 +20,7 @@ class Navbars extends React.Component {
   render() {
     return (
       <Container>
-        <h2 className="me">✧ เริ่มสั่งอาหาร ✧</h2>
-        
-      
-
+   
       </Container>
     );
   }

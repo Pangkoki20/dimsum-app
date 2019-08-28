@@ -4,18 +4,20 @@
   justify-content: center;
   text-align: center;
   height: 90vh;
+  color:  #0099ff;
 }
 
 .input-login {
-  margin: 20px 0px 20px 0px;
+  margin: 20px 50px 20px 0px;
 }
 .btn-login {
-  width: 100%;
+  width:60%;
+  margin-top: 10px;
   
 }
 .form-login {
-  padding: 10px;
+  margin: 20px 50px 20px 0px;
 }
 .btn-register {
-  margin: 20px 0px 20px 0px;
+  width:60%;
 }

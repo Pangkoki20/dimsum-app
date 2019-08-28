@@ -10,6 +10,7 @@ export default class Banner extends React.Component {
       <Container>
         <div className="ban-size">
           <Pic />
+          
         </div>
         <Nav />
         

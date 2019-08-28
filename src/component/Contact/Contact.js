@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import { Button, Jumbotron } from "reactstrap";
-import Banner from "../Banner/Banner";
+import {Media} from "reactstrap";
 import "./Contact.css";
+
 
 class Contact extends Component {
   render() {
     return (
       <div>
-        <Banner />
+        @media
+        <img src="https://homebeco.com/wp-content/uploads/2019/03/contact_us_png_315841.png?w=1400"></img>
       </div>
     );
   }

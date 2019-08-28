@@ -52,9 +52,9 @@ class Login extends Component {
       <Container className="log">
         <Form className="form-login" onSubmit={this.login}>
           <FormGroup>
-            <h2>
+            <h1>
               <b>Login...</b>
-            </h2>
+            </h1>
             <Input
               className="input-login"
               type="email"
@@ -77,10 +77,10 @@ class Login extends Component {
           <Button className="btn-login" color="info">
             Login
           </Button>
-          <Button
+          <Button outline
             type="button"
-            className="btn btn-secondary btn-register btn-block"
-            color="secondary"
+            className="btn-register"
+             color="info"
             onClick={this.toRegister}
           >
             ลงทะเบียน

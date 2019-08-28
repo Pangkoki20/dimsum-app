@@ -53,7 +53,7 @@ class Register extends Component {
         <Form className="form-login" onSubmit={this.register}>
           <FormGroup>
             <h2>
-              <b>Register...</b>
+              <b>ลงทะเบียน</b>
             </h2>
 
             <Input

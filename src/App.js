@@ -11,6 +11,8 @@ import Fastfood from "./component/Fastfood/Fastfood";
 import Drink from "./component/Drink/Drink";
 import Delivery from "./component/Delivery/Delivery";
 import Contact from "./component/Contact/Contact";
+import Menu from "./component/Menu/Menu";
+
 import "./App.css";
 class App extends Component {
   state = {
@@ -39,8 +41,9 @@ class App extends Component {
           <Route exact path="/Breakfast" component={Breakfast} />
           <Route exact path="/Fastfood" component={Fastfood} />
           <Route exact path="/Drink" component={Drink} />
-          <Route exact path="/Delivery" component={Drink} />
-          <Route exact path="/Contact" component={Drink} />
+          <Route exact path="/Delivery" component={Delivery} />
+          <Route exact path="/Contact" component={Contact} />
+          <Route exact path="/Menu" component={Menu} />
         </Switch>
       </div>
     );

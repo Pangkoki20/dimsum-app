@@ -7,28 +7,28 @@
 }
 
 .input-register {
-  margin: 10px 0px 10px 0px;
+  margin: 10px 20px 10px 0px;
 }
 .register-first {
-  margin: 10px 0px 10px 0px;
+  margin: 30px 20px 10px 0px;
 }
 .register-last {
-  margin: 10px 0px 10px 0px;
+  margin: 10px 20px 10px 0px;
 }
 .register-email {
-  margin: 10px 0px 10px 0px;
+  margin: 10px 50px 10px 0px;
 }
 .register-pass {
-  margin: 10px 0px 10px 0px;
+  margin: 10px 50px 10px 0px;
 }
 .register-phone {
-  margin: 10px 0px 10px 0px;
+  margin: 10px 50px 10px 0px;
 }
 .register-address {
-  margin: 0px 0px 0px 0px;
+  margin: 10px 50px 10px 0px;
 }
 
 .btn-register {
   margin: 10px 0px 10px 0px;
-  width: 100%;
+  width: 60%;
 }
