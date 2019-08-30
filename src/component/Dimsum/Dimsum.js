@@ -1,17 +1,5 @@
 import React, { Component } from "react";
-import {
-  Card,
-  Button,
-  CardImg,
-  CardTitle,
-  CardText,
-  CardDeck,
-  CardSubtitle,
-  CardBody,
-  Container,
-  Row,
-  Col
-} from "reactstrap";
+import  { Container } from "reactstrap";
 import Banner from "../Banner/Banner";
 import "./Dimsum.css";
 

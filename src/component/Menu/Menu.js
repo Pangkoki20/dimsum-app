@@ -5,7 +5,7 @@ import Banner from "../Banner/Banner";
 class Menu extends Component {
   render() {
     return (
-      <div>
+      <div className="Menuu">
         <Banner />
 
       </div>

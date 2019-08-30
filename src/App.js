@@ -12,8 +12,10 @@ import Drink from "./component/Drink/Drink";
 import Delivery from "./component/Delivery/Delivery";
 import Contact from "./component/Contact/Contact";
 import Menu from "./component/Menu/Menu";
+import Footer from "./component/Footer/Footer";
 
 import "./App.css";
+
 class App extends Component {
   state = {
     user: null
@@ -44,7 +46,9 @@ class App extends Component {
           <Route exact path="/Delivery" component={Delivery} />
           <Route exact path="/Contact" component={Contact} />
           <Route exact path="/Menu" component={Menu} />
+      
         </Switch>
+<Footer/>
       </div>
     );
   }
