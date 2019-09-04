@@ -1,23 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap");
+.fon-log {
+  font-family: "Montserrat Alternates", sans-serif;
+}
 .log {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 90vh;
-  color:  #37b2fa;
+  height: 60vh;
+  color: rgb(32, 38, 124);
 }
 
 .input-login {
   margin: 20px 50px 20px 0px;
 }
 .btn-login {
-  width:60%;
+  width: 60%;
   margin-top: 10px;
-  
 }
 .form-login {
   margin: 20px 50px 20px 0px;
 }
 .btn-register {
-  width:60%;
+  width: 60%;
 }

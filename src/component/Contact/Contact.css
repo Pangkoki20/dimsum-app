@@ -1,20 +1,4 @@
-.cont {
-  margin-left: auto;
-  margin-right: auto;
-}
-@media only screen and (max-width: 680px){
-  .cont {
-    
-    width: 100%;
-    height: 100%;
-    font-size: 10px;
-  }
-}
-@media only screen and (min-width: 520px){
-  .cont {
-    
-    width: 100%;
-    height: 100%;
-    font-size: 10px;
-  }
+.cont{
+  text-align: center;
+  margin-top: 50px;
 }

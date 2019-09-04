@@ -1,6 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Aclonica&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+.fon-bar {
+  font-family: "Aclonica", sans-serif;
+  color: rgb(32, 38, 124);
+  font-size: 30px;
+  margin: 3px;
+}
+.fon-barr {
+  font-family: "Kanit", sans-serif;
+  font-size: 18px;
+  color: rgb(32, 38, 124);
+  
+}
 .bar {
   background-color: #b0e2ff;
   border-color: aliceblue;
+
 }
 @media only screen and (max-width: 768px) {
   .content {
@@ -29,5 +45,3 @@
     font-weight: 100 !important;
   }
 }
-
-

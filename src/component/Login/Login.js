@@ -52,7 +52,7 @@ class Login extends Component {
       <Container className="log">
         <Form className="form-login" onSubmit={this.login}>
           <FormGroup>
-            <h1>
+            <h1 className="fon-log">
               <b>Login...</b>
             </h1>
             <Input
@@ -74,13 +74,14 @@ class Login extends Component {
               onChange={this.handleInputChange}
             />
           </FormGroup>
-          <Button className="btn-login" color="info">
+          <Button className="btn-login " color="info">
             Login
           </Button>
-          <Button outline
+          <Button
+            outline
             type="button"
             className="btn-register"
-             color="info"
+            color="info"
             onClick={this.toRegister}
           >
             ลงทะเบียน

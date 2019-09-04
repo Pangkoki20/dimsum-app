@@ -13,6 +13,8 @@ import Delivery from "./component/Delivery/Delivery";
 import Contact from "./component/Contact/Contact";
 import Menu from "./component/Menu/Menu";
 import Footer from "./component/Footer/Footer";
+import Fried from "./component/Fried/Fried";
+import Other from "./component/Other/Other";
 
 import "./App.css";
 
@@ -46,7 +48,8 @@ class App extends Component {
           <Route exact path="/Delivery" component={Delivery} />
           <Route exact path="/Contact" component={Contact} />
           <Route exact path="/Menu" component={Menu} />
-      
+          <Route exact path="/Fried" component={Fried}/>
+          <Route exact path="/Other" component={Other}/>
         </Switch>
 <Footer/>
       </div>
