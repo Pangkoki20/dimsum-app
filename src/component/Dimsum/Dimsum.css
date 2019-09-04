@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Prompt&display=swap");
 .pic {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  height: 100%;
+  width: 100%;
 }
 .card {
   height: 200px;
@@ -12,4 +15,7 @@
 }
 .menu{
   margin-top: 100px;
+}
+.font-name {
+  font-family: "Prompt", sans-serif;
 }

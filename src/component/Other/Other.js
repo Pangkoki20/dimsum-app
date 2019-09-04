@@ -9,6 +9,7 @@ class Other extends Component {
       <Container>
         <div>
           <Banner />
+          <div className="text-com">Comming soon ... </div>
         </div>
       </Container>
     );

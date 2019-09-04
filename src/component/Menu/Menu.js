@@ -17,37 +17,13 @@ class Menu extends Component {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
       },
       {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-      },
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-      },
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-      },
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-      },
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
       }
     ]
   };
@@ -55,17 +31,21 @@ class Menu extends Component {
     return this.state.menu.map((menu, index) => (
       <Col xs="6" className="cardd Container">
         <Card body className="pic-card">
-        <Row>
-          <Col className="">
-            <img top width="100%" src={menu.img} className="imgSelect"/> 
-          </Col>
-          <Col>
-          <CardTitle>{menu.name}</CardTitle>
-          <CardText>{menu.description}</CardText>
-          <CardText>{menu.price}</CardText>
-          <button class="btn btn-danger ">หยิบใส่ตะกร้า</button>
-          </Col>
-        </Row>
+          <Row>
+            <Col className="">
+              <img top width="100%" src={menu.img} className="imgSelect" />
+            </Col>
+            <Col>
+              <CardTitle>
+                <h3 className="font-name">
+                  <b>{menu.name}</b>
+                </h3>
+              </CardTitle>
+              <CardText>{menu.description}</CardText>
+              <CardText>{menu.price}</CardText>
+              <button class="btn btn-outline-danger ">หยิบใส่ตะกร้า</button>
+            </Col>
+          </Row>
         </Card>
       </Col>
     ));

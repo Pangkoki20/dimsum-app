@@ -1,8 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Prompt&display=swap");
 .menuu {
   margin-bottom: 100px;
-}
-.new {
-  text-align: center;
 }
 .cardd {
   margin-top: 30px;
@@ -16,4 +14,7 @@
   margin-right: auto;
   height: 100%;
   width: 100%;
+}
+.font-name {
+  font-family: "Prompt", sans-serif;
 }

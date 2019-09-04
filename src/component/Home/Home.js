@@ -10,7 +10,7 @@ import {
 } from "reactstrap";
 import "./Home.css";
 import auth from "../service";
-// import Menu from "../Menu/Menu";
+
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -80,6 +80,8 @@ export default class Home extends React.Component {
           </Collapse>
         </Navbar>
       </div>
+     
+      
     );
   }
 }

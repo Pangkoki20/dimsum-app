@@ -1,4 +1,14 @@
-.cont{
+.cont {
+  margin-top: 20px;
+}
+.foo {
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.text-com {
+  font-size: 80px;
   text-align: center;
-  margin-top: 50px;
 }

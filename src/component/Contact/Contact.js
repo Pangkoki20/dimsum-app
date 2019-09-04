@@ -4,12 +4,13 @@ import "./Contact.css";
 class Contact extends Component {
   render() {
     return (
-      <div>
-        <img 
+      <div className="foo">
+        <img
           className="cont"
-          src="https://cdn.raftingbali.net/wp-content/uploads/2018/09/Contact-Us-Wira-Rafting-Facebook.jpg" alt="pic">
-          </img>
-          
+          src="http://www.iased.net/ueditor/php/upload/image/20180320/1521551906635323.png"
+          alt="pic"
+        ></img>
+        <div className="text-com">Comming soon ... </div>
       </div>
     );
   }
