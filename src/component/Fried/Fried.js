@@ -18,37 +18,37 @@ class Fried extends Component {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+        img: "https://foodmakesgood.com/wp-content/uploads/151-8.jpg"
       },
       {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+        img: "https://foodmakesgood.com/wp-content/uploads/151-8.jpg"
       },
       {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+        img: "https://foodmakesgood.com/wp-content/uploads/151-8.jpg"
       },
       {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+        img: "https://foodmakesgood.com/wp-content/uploads/151-8.jpg"
       },
       {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+        img: "https://foodmakesgood.com/wp-content/uploads/151-8.jpg"
       },
       {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+        img: "https://foodmakesgood.com/wp-content/uploads/151-8.jpg"
       }
     ]
   };

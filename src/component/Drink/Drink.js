@@ -18,37 +18,19 @@ class Drink extends Component {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+        img: "https://3.bp.blogspot.com/-rnoH11ekOZ8/Wo3ynr0jRqI/AAAAAAAAAhQ/8o69jP3ZY9cKcuzUgCZzeIIQXrFbvCfbACLcBGAs/s1600/1519251724170.png"
       },
       {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+        img: "https://3.bp.blogspot.com/-rnoH11ekOZ8/Wo3ynr0jRqI/AAAAAAAAAhQ/8o69jP3ZY9cKcuzUgCZzeIIQXrFbvCfbACLcBGAs/s1600/1519251724170.png"
       },
       {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-      },
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-      },
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-      },
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+        img: "https://3.bp.blogspot.com/-rnoH11ekOZ8/Wo3ynr0jRqI/AAAAAAAAAhQ/8o69jP3ZY9cKcuzUgCZzeIIQXrFbvCfbACLcBGAs/s1600/1519251724170.png"
       }
     ]
   };

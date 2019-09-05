@@ -17,37 +17,37 @@ class Dimsum extends Component {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+        img: "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
       },
       {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+        img: "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
       },
       {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+        img: "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
       },
       {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+        img: "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
       },
       {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+        img: "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
       },
       {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+        img: "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
       }
     ]
   };
