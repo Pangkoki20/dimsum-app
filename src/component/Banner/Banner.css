@@ -1,6 +1,7 @@
-img{
-  width: 800px;  
-  height: 450px;
+@import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+img {
+  width: 800px;
+  height: 390px;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -8,4 +9,8 @@ img{
 .ban-size {
   margin-top: 20px;
   text-align: center;
+}
+.text {
+  margin-top: 20px;
+  font-family: "Kanit", sans-serif;
 }

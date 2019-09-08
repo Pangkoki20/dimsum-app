@@ -6,7 +6,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  button
 } from "reactstrap";
 import "./Home.css";
 import auth from "../service";
@@ -42,22 +43,18 @@ export default class Home extends React.Component {
     return (
       <div>
         <Navbar className="bar" light expand="md">
-          <NavbarBrand href="/Menu">
+          <NavbarBrand href="/">
             <h4 className="fon-bar">Dimsumahkong Delivery</h4>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/Menu">
-                  <h6 className="fon-barr">หน้าแรก</h6>
-                </NavLink>
-              </NavItem>
-              <NavItem>
                 <NavLink href="Contact">
-                  <h6 className="fon-barr">ติดต่อ</h6>
+                  <h6 className="fon-barr">ติดต่อเรา</h6>
                 </NavLink>
               </NavItem>
+
               {this.state.check !== "login" && (
                 <NavItem>
                   <NavLink href="Login">
@@ -79,9 +76,10 @@ export default class Home extends React.Component {
             </Nav>
           </Collapse>
         </Navbar>
+        <div>
+          
+        </div>
       </div>
-     
-      
     );
   }
 }

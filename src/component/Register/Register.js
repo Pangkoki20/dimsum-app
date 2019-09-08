@@ -52,8 +52,8 @@ class Register extends Component {
       <Container className="log">
         <Form className="form-login" onSubmit={this.register}>
           <FormGroup>
-            <h2>
-              <b>ลงทะเบียน</b>
+            <h2 >
+              <b className="re">ลงทะเบียน</b>
             </h2>
 
             <Input

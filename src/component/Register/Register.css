@@ -1,11 +1,13 @@
-.register {
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  text-align: center;
-  height: 100vh;
+@import url("https://fonts.googleapis.com/css?family=Kodchasan&display=swap");
+.re {
+  font-family: "Kodchasan", sans-serif;
+  font-size: 40px;
 }
-
+.form-login{
+margin-left: auto;
+margin-right: auto;
+margin-top: -50px;
+}
 .input-register {
   margin: 10px 20px 10px 0px;
 }

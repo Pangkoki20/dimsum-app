@@ -9,7 +9,7 @@ import {
   Col
 } from "reactstrap";
 import "./Dimsum.css";
-import Banner from "../Banner/Banner";
+
 class Dimsum extends Component {
   state = {
     dimmsum: [
@@ -17,37 +17,43 @@ class Dimsum extends Component {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
+        img:
+          "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
       },
       {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
+        img:
+          "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
       },
       {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
+        img:
+          "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
       },
       {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
+        img:
+          "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
       },
       {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
+        img:
+          "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
       },
       {
         name: "ขนมจีบหมู",
         description: "asdqwqwdqwdqwd",
         price: 62,
-        img: "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
+        img:
+          "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
       }
     ]
   };
@@ -79,7 +85,7 @@ class Dimsum extends Component {
   render() {
     return (
       <div>
-        <Banner />
+        
         <Container>
           <Row>{this.renderDimmsum()}</Row>
         </Container>

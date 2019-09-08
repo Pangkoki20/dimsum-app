@@ -4,7 +4,7 @@
 }
 .cardd {
   margin-top: 30px;
-}
+} 
 .imgSelect {
   height: 100%;
   width: 100%;
@@ -17,4 +17,9 @@
 }
 .font-name {
   font-family: "Prompt", sans-serif;
+  font-size: 70px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
 }

@@ -1,8 +1,7 @@
 import React from "react";
 import Pic from "./Pic";
-import Nav from "../Nav/Navbars";
 import "./Banner.css";
-import { Container } from "reactstrap";
+import { Container, Button } from "reactstrap";
 
 export default class Banner extends React.Component {
   render() {
@@ -10,8 +9,10 @@ export default class Banner extends React.Component {
       <Container>
         <div className="ban-size">
           <Pic />
+          <Button outline color="info" className="text" href="/Menu">
+            <h3>เริ่มสั่งอาหาร</h3>
+          </Button>
         </div>
-        <Nav />
       </Container>
     );
   }
