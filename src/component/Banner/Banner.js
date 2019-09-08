@@ -9,9 +9,6 @@ export default class Banner extends React.Component {
       <Container>
         <div className="ban-size">
           <Pic />
-          <Button outline color="info" className="text" href="/Menu">
-            <h3>เริ่มสั่งอาหาร</h3>
-          </Button>
         </div>
       </Container>
     );

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import { Form, FormGroup, Input, Container, Button } from "reactstrap";
+import { Form, FormGroup, Input, Container, Badge } from "reactstrap";
 import axios from "axios";
 import "./Login.css";
 class Login extends Component {
@@ -60,7 +60,7 @@ class Login extends Component {
               type="email"
               name="email"
               id="exampleEmail"
-              placeholder="Email"
+              placeholder="ป้อนอีเมล์ของผู้ใช้"
               value={this.state.email}
               onChange={this.handleInputChange}
             />
@@ -70,22 +70,23 @@ class Login extends Component {
               name="password"
               id="examplePassword"
               value={this.state.password}
-              placeholder="Password"
+              placeholder="ป้อนรหัสผ่านของผู้ใช้"
               onChange={this.handleInputChange}
             />
           </FormGroup>
-          <Button className="btn-login " color="info">
-            Login
-          </Button>
-          <Button
-            outline
-            type="button"
-            className="btn-register"
-            color="info"
-            onClick={this.toRegister}
-          >
-            ลงทะเบียน
-          </Button>
+          <a href="/">
+            <p className="forget-pass text-right"> ลืมรหัสผ่าน </p>
+          </a>
+          <Badge href="/" className="btn-login" color="info" pill>
+            <h5>ลงชื่อเข้าใช้งาน</h5>
+          </Badge>
+          <div className="btn-forgot ">
+            <lable>หากคุณยังไม่เป็นสมาชิก</lable>
+
+            <a href="/Register" className="btn-register lable">
+              <a>  สมัครสมาชิก</a>{" "}
+            </a>
+          </div>
         </Form>
       </Container>
     );

@@ -44,6 +44,7 @@ export default class Home extends React.Component {
       <div>
         <Navbar className="bar" light expand="md">
           <NavbarBrand href="/">
+            
             <h4 className="fon-bar">Dimsumahkong Delivery</h4>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
@@ -76,9 +77,7 @@ export default class Home extends React.Component {
             </Nav>
           </Collapse>
         </Navbar>
-        <div>
-          
-        </div>
+        <div></div>
       </div>
     );
   }

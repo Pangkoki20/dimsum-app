@@ -3,21 +3,20 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 .fon-bar {
   font-family: "Aclonica", sans-serif;
-  color: #B2D6CA;
+  color: #b2d6ca;
   font-size: 30px;
   margin: 3px;
 }
 .fon-barr {
   font-family: "Kanit", sans-serif;
   font-size: 18px;
-  color: #85B8CB;
-  
+  color: #85b8cb;
 }
 .bar {
-  background-color: #1D6A96;
+  background-color: #1d6a96;
   border-color: aliceblue;
-
 }
+
 @media only screen and (max-width: 768px) {
   .content {
     margin-top: 50px;

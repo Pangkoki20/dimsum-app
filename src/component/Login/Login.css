@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+
 .fon-log {
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 50px;
@@ -17,11 +19,30 @@
 }
 .btn-login {
   width: 60%;
-  margin-top: 10px;
+  font-family: "Kanit", sans-serif;
+ 
 }
 .form-login {
-  margin: 20px 100px 20px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -50px;
 }
 .btn-register {
-  width: 60%;
+  font-family: "Kanit", sans-serif;
+  color: rgb(0, 132, 255);
+  margin-top: 5px;
+  
+}
+.fon-btl{
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.forget-pass{
+ color: #000;
+ font-family: "Kanit", sans-serif;
+
+}
+.btn-forgot{
+  font-family: "Kanit", sans-serif;
+  margin-top: 10px;
+  color: #000;
 }

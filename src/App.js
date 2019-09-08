@@ -4,6 +4,9 @@ import Login from "./component/Login/Login";
 import Home from "./component/Home/Home";
 import Register from "./component/Register/Register";
 import { Switch, Route } from "react-router-dom";
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import Dimsum from "./component/Dimsum/Dimsum";
 import Breakfast from "./component/Breakfast/Breakfast";
