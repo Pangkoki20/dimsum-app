@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Prompt&display=swap");
+.new-menu{
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; 
+  font-size: 80px;
+}
+
 .menuu {
   margin-bottom: 100px;
 }
