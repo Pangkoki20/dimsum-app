@@ -7,10 +7,12 @@ import {
   Nav,
   NavItem,
   NavLink,
-  button
+  Row,
+  Col
 } from "reactstrap";
 import "./Home.css";
 import auth from "../service";
+import logo from "../../img/1.png";
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -43,9 +45,13 @@ export default class Home extends React.Component {
     return (
       <div>
         <Navbar className="bar" light expand="md">
-          <NavbarBrand href="/">
-            
-            <h4 className="fon-bar">Dimsumahkong Delivery</h4>
+          <NavbarBrand>
+            <NavbarBrand href="/">
+              <span>
+                <img className="pic-1" src={logo} />
+              </span>
+              <span className="fon-bar"> Dimsumahkong Delivery</span>
+            </NavbarBrand>{" "}
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
@@ -77,7 +83,6 @@ export default class Home extends React.Component {
             </Nav>
           </Collapse>
         </Navbar>
-        <div></div>
       </div>
     );
   }

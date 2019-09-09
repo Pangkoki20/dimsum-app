@@ -11,12 +11,18 @@
   font-family: "Kanit", sans-serif;
   font-size: 18px;
   color: #85b8cb;
+  text-align: center;
 }
 .bar {
   background-color: #1d6a96;
   border-color: aliceblue;
 }
-
+.pic-1 {
+  height: 50px;
+  display: flex;
+ width:50px;
+ float: left;
+}
 @media only screen and (max-width: 768px) {
   .content {
     margin-top: 50px;

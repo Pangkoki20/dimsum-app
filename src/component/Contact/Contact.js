@@ -11,7 +11,8 @@ class Contact extends Component {
           alt="pic"
         ></img>
         <div className="text-com">Comming soon ... </div>
-      </div>
+        
+    </div>
     );
   }
 }

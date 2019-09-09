@@ -4,8 +4,8 @@ import {
   CardTitle,
   CardText,
   Button,
-  row,
-  col,
+  Row,
+  Col,
   Container,
   nav
 } from "reactstrap";
@@ -18,6 +18,7 @@ class Menu extends Component {
         <Container>
         
           <h1 className="new-menu"> เมนูแนะนำ</h1>
+          
         </Container>
       </div>
     );

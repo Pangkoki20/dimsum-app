@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, FormGroup, Input, Container, Button } from "reactstrap";
+import { Form, FormGroup, Input, Container, Badge,lable} from "reactstrap";
 import axios from "axios";
 import "./Register.css";
 
@@ -112,9 +112,15 @@ class Register extends Component {
               required
             />
           </FormGroup>
-          <Button className="btn-register" color="info">
-            ลงทะเบียน
-          </Button>
+          <Badge href=""className="btn-register" color="info" pill>
+            <h5>ลงทะเบียน</h5>
+          </Badge>
+          <div className="btn-forgot">
+            <lable>หากคุณเป็นสมาชิกแล้ว</lable>
+
+            <a href="/" className="btn-register lable"> เข้าสู่ระบบ{" "}
+            </a>
+          </div>
         </Form>
       </Container>
     );

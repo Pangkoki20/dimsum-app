@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Kodchasan&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 .re {
   font-family: "Kodchasan", sans-serif;
   font-size: 40px;
@@ -31,6 +32,6 @@ margin-top: -50px;
 }
 
 .btn-register {
-  margin: 10px 0px 10px 0px;
+  font-family: "Kanit", sans-serif;
   width: 60%;
 }
