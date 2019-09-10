@@ -10,7 +10,7 @@ class Contact extends Component {
     return (
       <div className="foo">
         <span>
-          <img className="pic-con" src={piccon} />
+          <img className="piccon" src={piccon} />
         </span>
         <Container>
           <div class="row cont-row">
