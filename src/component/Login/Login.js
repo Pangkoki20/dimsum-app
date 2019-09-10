@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 import { Form, FormGroup, Input, Container, Badge } from "reactstrap";
 import axios from "axios";
 import "./Login.css";
+import lo from "../../img/login.png"
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -53,14 +54,16 @@ class Login extends Component {
         <Form className="form-login" onSubmit={this.login}>
           <FormGroup>
             <h1 className="fon-log">
-              <b>Login...</b>
+              <span>
+                <img className="lo" src={lo} />
+              </span>
             </h1>
             <Input
               className="input-login"
               type="email"
               name="email"
               id="exampleEmail"
-              placeholder="ป้อนอีเมล์ของผู้ใช้"
+              placeholder="อีเมล์ของผู้ใช้"
               value={this.state.email}
               onChange={this.handleInputChange}
             />
@@ -70,7 +73,7 @@ class Login extends Component {
               name="password"
               id="examplePassword"
               value={this.state.password}
-              placeholder="ป้อนรหัสผ่านของผู้ใช้"
+              placeholder="รหัสผ่านของผู้ใช้"
               onChange={this.handleInputChange}
             />
           </FormGroup>
@@ -84,7 +87,7 @@ class Login extends Component {
             <lable>หากคุณยังไม่เป็นสมาชิก</lable>
 
             <a href="/Register" className="btn-register lable">
-              <a>  สมัครสมาชิก</a>{" "}
+              <a> สมัครสมาชิก</a>{" "}
             </a>
           </div>
         </Form>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import {
   Collapse,
   Navbar,
@@ -6,14 +6,11 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  Row,
-  Col
+  NavLink
 } from "reactstrap";
 import "./Home.css";
 import auth from "../service";
-import logo from "../../img/1.png";
-
+import logo from "../../img/baker.png";
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -83,6 +80,9 @@ export default class Home extends React.Component {
             </Nav>
           </Collapse>
         </Navbar>
+       
+          <Navbar/>
+        
       </div>
     );
   }

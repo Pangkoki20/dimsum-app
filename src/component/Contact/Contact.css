@@ -1,6 +1,4 @@
-.cont {
-  margin-top: 20px;
-}
+@import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 .foo {
   align-items: center;
   justify-content: center;
@@ -8,7 +6,43 @@
   margin-right: auto;
   display: block;
 }
+.piccon {
+  margin-top: 20px;
+  display: block;
+}
 .text-com {
   font-size: 80px;
   text-align: center;
+}
+.cont-row {
+  margin-top: 50px;
+  text-align: center;
+}
+.tel {
+  display: flex;
+  height: 100px;
+  width: 100px;
+}
+.line{
+  display: flex;
+  height: 100px;
+  width: 100px;
+}
+.face{
+  display: flex;
+  height: 100px;
+  width: 100px;
+
+}
+.text-tel{
+  font-family: "Kanit", sans-serif;
+  margin-top: 20px;
+}
+.text-line{
+  font-family: "Kanit", sans-serif;
+  margin-top: 20px;
+}
+.text-face{
+  font-family: "Kanit", sans-serif;
+  margin-top: 20px;
 }

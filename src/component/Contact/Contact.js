@@ -1,18 +1,44 @@
 import React, { Component } from "react";
+import { Container, Nav, NavItem, NavLink } from "reactstrap";
 import "./Contact.css";
-
+import tel from "../../img/mobile-phone.png";
+import line from "../../img/line(2).png";
+import face from "../../img/facebook(1).png";
+import piccon from "../../img/contacttt.png";
 class Contact extends Component {
   render() {
     return (
       <div className="foo">
-        <img
-          className="cont"
-          src="http://www.iased.net/ueditor/php/upload/image/20180320/1521551906635323.png"
-          alt="pic"
-        ></img>
-        <div className="text-com">Comming soon ... </div>
-        
-    </div>
+        <span>
+          <img className="pic-con" src={piccon} />
+        </span>
+        <Container>
+          <div class="row cont-row">
+            <div class="col">
+              <span>
+                <img className="tel" src={tel} />
+                <h5 className="text-tel">เบอร์โทรศัพท์</h5>
+              </span>
+            </div>
+
+            <div class="col">
+              <span>
+                <img className="line" src={line} />
+                <h5 className="text-line" Line>
+                  {" "}
+                  Line{" "}
+                </h5>
+              </span>
+            </div>
+            <div class="col">
+              <span>
+                <img className="face" src={face} />
+                <h5 className="text-face">Facebook</h5>
+              </span>
+            </div>
+          </div>
+        </Container>
+      </div>
     );
   }
 }

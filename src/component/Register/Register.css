@@ -4,31 +4,38 @@
   font-family: "Kodchasan", sans-serif;
   font-size: 40px;
 }
-.form-login{
-margin-left: auto;
-margin-right: auto;
-margin-top: -50px;
+.form-login {
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 .input-register {
   margin: 10px 20px 10px 0px;
+  font-family: "Kanit", sans-serif;
 }
 .register-first {
   margin: 30px 20px 10px 0px;
+  font-family: "Kanit", sans-serif;
 }
 .register-last {
   margin: 10px 20px 10px 0px;
+  font-family: "Kanit", sans-serif;
 }
 .register-email {
   margin: 10px 50px 10px 0px;
+  font-family: "Kanit", sans-serif;
 }
 .register-pass {
+  font-family: "Kanit", sans-serif;
   margin: 10px 50px 10px 0px;
 }
 .register-phone {
   margin: 10px 50px 10px 0px;
+  font-family: "Kanit", sans-serif;
 }
 .register-address {
   margin: 10px 50px 10px 0px;
+  font-family: "Kanit", sans-serif;
 }
 
 .btn-register {

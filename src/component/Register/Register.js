@@ -53,6 +53,7 @@ class Register extends Component {
         <Form className="form-login" onSubmit={this.register}>
           <FormGroup>
             <h2 >
+          
               <b className="re">ลงทะเบียน</b>
             </h2>
 
@@ -61,7 +62,7 @@ class Register extends Component {
               type="text"
               name="firstname"
               value={firstname}
-              placeholder="Firstname"
+              placeholder="ชื่อจริง"
               onChange={this.handleInputChange}
               required
             />
@@ -71,7 +72,7 @@ class Register extends Component {
               type="text"
               name="lastname"
               value={lastname}
-              placeholder="Lastname"
+              placeholder="นามสกุล"
               onChange={this.handleInputChange}
               required
             />
@@ -80,7 +81,7 @@ class Register extends Component {
               type="email"
               name="email"
               value={email}
-              placeholder="E-mail"
+              placeholder="อีเมล์ของผู้ใช้"
               onChange={this.handleInputChange}
               required
             />
@@ -89,7 +90,7 @@ class Register extends Component {
               type="password"
               name="password"
               value={password}
-              placeholder="Password"
+              placeholder="รหัสผ่าน"
               onChange={this.handleInputChange}
               required
             />
@@ -118,7 +119,7 @@ class Register extends Component {
           <div className="btn-forgot">
             <lable>หากคุณเป็นสมาชิกแล้ว</lable>
 
-            <a href="/" className="btn-register lable"> เข้าสู่ระบบ{" "}
+            <a href="/" className="btn-register lable"> ลงชื่อเข้าใช้งาน{" "}
             </a>
           </div>
         </Form>
