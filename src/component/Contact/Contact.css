@@ -9,34 +9,36 @@
 .piccon {
   margin-top: 20px;
   display: block;
-}
-.text-com {
-  font-size: 80px;
-  text-align: center;
+  width: 600px;
+  max-width: 100%;
+  max-height: 100%;
 }
 .cont-row {
   margin-top: 50px;
   text-align: center;
+  max-width: 100%;
+  max-height: 100%;
 }
 .tel {
   display: flex;
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
 }
 .line{
   display: flex;
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
+
 }
 .face{
   display: flex;
-  height: 100px;
-  width: 100px;
-
+  height: 50px;
+  width: 50px;
 }
 .text-tel{
   font-family: "Kanit", sans-serif;
   margin-top: 20px;
+  
 }
 .text-line{
   font-family: "Kanit", sans-serif;

@@ -1,44 +1,80 @@
 @import url("https://fonts.googleapis.com/css?family=Kodchasan&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
-.re {
-  font-family: "Kodchasan", sans-serif;
-  font-size: 40px;
-}
 .form-login {
-  margin-left: auto;
-  margin-right: auto;
-  
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
 }
-.input-register {
-  margin: 10px 20px 10px 0px;
-  font-family: "Kanit", sans-serif;
-}
-.register-first {
-  margin: 30px 20px 10px 0px;
-  font-family: "Kanit", sans-serif;
-}
-.register-last {
-  margin: 10px 20px 10px 0px;
-  font-family: "Kanit", sans-serif;
-}
-.register-email {
-  margin: 10px 50px 10px 0px;
-  font-family: "Kanit", sans-serif;
-}
-.register-pass {
-  font-family: "Kanit", sans-serif;
-  margin: 10px 50px 10px 0px;
-}
-.register-phone {
-  margin: 10px 50px 10px 0px;
-  font-family: "Kanit", sans-serif;
-}
-.register-address {
-  margin: 10px 50px 10px 0px;
-  font-family: "Kanit", sans-serif;
-}
-
 .btn-register {
-  font-family: "Kanit", sans-serif;
-  width: 60%;
+  margin-top: 50px;
+}
+.register{
+  width: 400px !important;
+  height: 50px !important;
+  margin-top: 10px;
+  padding: 10px;
+}
+@media only screen and (max-width: 768px) {
+  /* .re {
+    font-size: px;
+  }
+  .form-login {
+    margin-top: 90px;
+    height: 80px;
+    width: 80px;
+  }
+  .input-register {
+    margin: 20px 50px 15px 50px;
+    width: 250px !important;
+    height: 35px !important;
+    font-size: 12px !important;
+    text-align: center;
+  }
+  .register-first {
+    margin: 20px 100px 20px 0px;
+    width: 450px !important;
+    height: 50px !important;
+    font-family: "Kanit", sans-serif;
+    text-align: center;
+  }
+  .register-last {
+    margin: 20px 100px 20px 0px;
+    width: 450px !important;
+    height: 50px !important;
+    text-align: center;
+  }
+  .register-email {
+    margin: 20px 100px 20px 0px;
+    width: 450px !important;
+    height: 50px !important;
+    text-align: center;
+  }
+  .register-pass {
+    margin: 20px 100px 20px 0px;
+    width: 450px !important;
+    height: 50px !important;
+    text-align: center;
+  }
+  .register-phone {
+    margin: 20px 100px 20px 0px;
+    width: 450px !important;
+    height: 50px !important;
+    text-align: center;
+  }
+  .register-address {
+    margin: 20px 100px 20px 0px;
+    width: 450px !important;
+    height: 50px !important;
+    text-align: center;
+  }
+  .btn-register {
+    width: 400px;
+    height: 50px;
+    padding: 15px !important;
+    text-align: center;
+  }
+  .btn-forgott {
+    margin-top: 50px;
+    font-size: 12px;
+  } */
 }

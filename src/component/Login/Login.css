@@ -1,45 +1,55 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
-.lo {
-  height: 150px;
-  width: 150px;
-}
-.log {
-  display: flex;
-  padding: 10%;
-  text-align: center;
-  height: 70vh;
-  color: rgb(32, 38, 124);
-}
-.input-login {
-  margin: 20px 100px 20px 0px;
-  font-family: "Kanit", sans-serif;
-}
-.btn-login {
-  width: 60%;
-  font-family: "Kanit", sans-serif;
-}
 .form-login {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -50px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 .btn-register {
-  font-family: "Kanit", sans-serif;
-  color: rgb(0, 132, 255);
-  margin-top: 5px;
-  font-family: "Kanit", sans-serif;
+  margin-top: 50px;
 }
-.fon-btl {
-  font-family: "Montserrat Alternates", sans-serif;
-}
-.forget-pass {
-  color: #000;
-  font-family: "Kanit", sans-serif;
-}
-.btn-forgot {
-  font-family: "Kanit", sans-serif;
-  margin-top: 10px;
-  color: #000;
-  
+@media only screen and (max-width: 768px) {
+  .lo {
+    margin-top: 90px;
+    height: 80px;
+    width: 80px;
+  }
+  .input-login {
+    margin: 20px 50px 15px 50px;
+    width: 250px !important;
+    height: 35px !important;
+    font-size: 12px !important;
+    text-align: center;
+  }
+  .btn-login {
+    margin: 0px 0px 15px 70px;
+    width: 60%;
+    height: 40px;
+  }
+  .text-re {
+    font-size: 12px;
+    padding: 15px !important;
+  }
+  .form-login {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -50px;
+    text-align: center;
+  }
+  .btn-register {
+    font-size: 12px;
+    font-family: "Kanit", sans-serif;
+    margin-top: 5px;
+    font-family: "Kanit", sans-serif;
+  }
+  .fon-btl {
+    font-family: "Montserrat Alternates", sans-serif;
+  }
+  .forget-pass {
+    font-size: 10px;
+    margin-right: 50px;
+  }
+  .btn-forgot {
+    margin-top: 10px;
+    font-size: 12px;
+  }
 }

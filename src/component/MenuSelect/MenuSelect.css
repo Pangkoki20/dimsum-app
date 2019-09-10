@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+.cont-row {
+  text-align: center;
+  margin: 100px;
+}
+.nm {
+  display: flex;
+  height: 120px;
+  width: 120px;
+}
+.text-nm {
+  text-decoration: none;
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.ts {
+  display: flex;
+  height: 120px;
+  width: 120px;
+}
+.text-ts {
+  font-family: 'Kanit', sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.bf {
+  display: flex;
+  height: 120px;
+  width: 120px;
+}
+.text-bf {
+  font-family: 'Kanit', sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.ff {
+  display: flex;
+  height: 120px;
+  width: 120px;
+}
+.text-ff {
+  font-family: 'Kanit', sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.drink {
+  display: flex;
+  height: 120px;
+  width: 120px;
+}
+.text-drink {
+  font-family: 'Kanit', sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.text-nm:hover {
+  text-decoration: none;
+  color: rgb(255, 30, 124);
+}
+.text-ts:hover {
+  text-decoration: none;
+  color: rgb(255, 30, 124);
+}
+.text-bf:hover {
+  text-decoration: none;
+  color: rgb(255, 30, 124);
+}
+.text-ff:hover {
+  text-decoration: none;
+  color: rgb(255, 30, 124);
+}
+.text-drink:hover {
+  text-decoration: none;
+  color: rgb(255, 30, 124);
+}

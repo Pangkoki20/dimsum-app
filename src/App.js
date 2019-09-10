@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import Main from "./Main";
 import Login from "./component/Login/Login";
-import Home from "./component/Home/Home";
+import Navigator from "./component/Navigator/Navigator";
 import Register from "./component/Register/Register";
 import { Switch, Route } from "react-router-dom";
-import { library } from '@fortawesome/fontawesome-svg-core';
-
-
+import { library } from "@fortawesome/fontawesome-svg-core";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Dimsum from "./component/Dimsum/Dimsum";
 import Breakfast from "./component/Breakfast/Breakfast";
@@ -35,7 +33,7 @@ class App extends Component {
 
     return (
       <div>
-        <Home user={user} />
+        <Navigator user={user} />
         <Switch>
           <Route exact path="/" component={Main} />
           <Route
@@ -51,10 +49,10 @@ class App extends Component {
           <Route exact path="/Delivery" component={Delivery} />
           <Route exact path="/Contact" component={Contact} />
           <Route exact path="/Menu" component={Menu} />
-          <Route exact path="/Fried" component={Fried}/>
-          <Route exact path="/Other" component={Other}/>
+          <Route exact path="/Fried" component={Fried} />
+          <Route exact path="/Other" component={Other} />
         </Switch>
-<Footer/>
+        <Footer />
       </div>
     );
   }

@@ -8,10 +8,10 @@ import {
   NavItem,
   NavLink
 } from "reactstrap";
-import "./Home.css";
+import "./Navigator.css";
 import auth from "../service";
 import logo from "../../img/baker.png";
-export default class Home extends React.Component {
+export default class Navigator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -44,10 +44,10 @@ export default class Home extends React.Component {
         <Navbar className="bar" light expand="md">
           <NavbarBrand>
             <NavbarBrand href="/">
+              <span className="fon-bar"> Dimsumahkong Delivery</span>
               <span>
                 <img className="pic-1" src={logo} />
               </span>
-              <span className="fon-bar"> Dimsumahkong Delivery</span>
             </NavbarBrand>{" "}
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
@@ -80,9 +80,8 @@ export default class Home extends React.Component {
             </Nav>
           </Collapse>
         </Navbar>
-       
-          <Navbar/>
-        
+
+        <Navbar />
       </div>
     );
   }

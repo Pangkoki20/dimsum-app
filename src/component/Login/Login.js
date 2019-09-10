@@ -81,7 +81,7 @@ class Login extends Component {
             <p className="forget-pass text-right"> ลืมรหัสผ่าน </p>
           </a>
           <Badge href="/" className="btn-login" color="info" pill>
-            <h5>ลงชื่อเข้าใช้งาน</h5>
+            <span className="text-re">ลงชื่อเข้าใช้งาน</span>
           </Badge>
           <div className="btn-forgot ">
             <lable>หากคุณยังไม่เป็นสมาชิก</lable>
