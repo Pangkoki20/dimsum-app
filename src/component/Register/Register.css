@@ -9,15 +9,6 @@
   margin-top: 30px;
   text-align:center;
 }
-.btn-register {
-  margin-top: 50px;
-  text-align: center;
-  width: 200px !important;
-  height: 50px !important;
-  padding: 15px !important; 
-  font-family: "Kanit", sans-serif;
-  font-size: 20px;
-}
 .register {
   width: 400px !important;
   height: 50px !important;
@@ -30,6 +21,15 @@
   font-size: 35px;
   text-align: center;
   font-family: "Kanit", sans-serif;
+}
+.reg{
+  font-size: 20px;
+  margin-top: 10px;
+  font-family: "Kanit", sans-serif;
+
+}
+.btn-register{
+  margin-top: 10px;
 }
 @media only screen and (max-width: 768px) {
   .re {

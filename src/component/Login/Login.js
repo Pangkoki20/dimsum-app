@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import { Form, FormGroup, Input, Container, Badge } from "reactstrap";
+import { Form, FormGroup, Input, Container, Button } from "reactstrap";
 import axios from "axios";
 import "./Login.css";
-import lo from "../../img/login.png"
+import lo from "../../img/login.png";
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -50,44 +50,45 @@ class Login extends Component {
 
   render() {
     return (
-      <Container className="log">
+      <Container>
         <Form className="form-login" onSubmit={this.login}>
-          <FormGroup>
-            <h1 className="fon-log">
-              <span>
-                <img className="logo" src={lo} />
-              </span>
-            </h1>
-            <Input
-              className="input-login"
-              type="email"
-              name="email"
-              id="exampleEmail"
-              placeholder="อีเมล์ของผู้ใช้"
-              value={this.state.email}
-              onChange={this.handleInputChange}
-            />
-            <Input
-              className="input-login"
-              type="password"
-              name="password"
-              id="examplePassword"
-              value={this.state.password}
-              placeholder="รหัสผ่านของผู้ใช้"
-              onChange={this.handleInputChange}
-            />
-          </FormGroup>
-          <a href="/">
-            <p className="forget-pass text-right"> ลืมรหัสผ่าน </p>
-          </a>
-          <Badge href="/" className="btn-login" color="info" pill>
+          <FormGroup className="fon-log">
+            <span>
+              <img className="logo" src={lo} />
+              <div className="in">
+                  <Input
+                    className="input-login"
+                    type="email"
+                    name="email"
+                    id="exampleEmail"
+                    placeholder="อีเมล์ของผู้ใช้"
+                    value={this.state.email}
+                    onChange={this.handleInputChange}
+                  />
+                <Input
+                  className="input-login"
+                  type="password"
+                  name="password"
+                  id="examplePassword"
+                  value={this.state.password}
+                  placeholder="รหัสผ่านของผู้ใช้"
+                  onChange={this.handleInputChange}
+                />
+              </div>
+            </span>
+            </FormGroup>
+            <a href="/">
+              <p className="forget-pass text-right"> ลืมรหัสผ่าน </p>
+            </a>
+          
+          <Button href="/" className="btn-login" color="info">
             <span className="text-re">ลงชื่อเข้าใช้งาน</span>
-          </Badge>
+          </Button>
           <div className="btn-forgot ">
-            <lable>หากคุณยังไม่เป็นสมาชิก</lable>
+            <lable className="reg">หากคุณยังไม่เป็นสมาชิก</lable>
 
-            <a href="/Register" className="btn-register lable">
-              <a> สมัครสมาชิก</a>{" "}
+            <a href="/Register">
+              <a className="reg"> สมัครสมาชิก</a>{" "}
             </a>
           </div>
         </Form>

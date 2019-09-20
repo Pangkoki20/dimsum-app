@@ -1,49 +1,48 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 .cont-row {
   text-align: center;
-  display: flex;
+
+}
+.imgnav{
+  text-align: center;
 }
 .nm {
-  display: flex;
   height: 120px;
   width: 120px;
+  text-align: center;
 }
 .text-nm {
   font-family: "Kanit", sans-serif;
   font-size: 25px;
   margin-top: 20px;
-  display: flex;
   text-align: center;
 }
 .ts {
-  display: flex;
   height: 120px;
   width: 120px;
+  text-align: center;
 }
 .text-ts {
   font-family: "Kanit", sans-serif;
   font-size: 25px;
   margin-top: 20px;
-  display: flex;
   text-align: center;
 }
 .bf {
-  display: flex;
   height: 120px;
   width: 120px;
+  text-align: center;
 }
 .text-bf {
   font-family: "Kanit", sans-serif;
   font-size: 25px;
   margin-top: 20px;
-  display: flex;
   text-align: center;
 }
 .ff {
-  display: flex;
   height: 120px;
   width: 120px;
-  display: flex;
+  text-align: center;
 }
 .text-ff {
   font-family: "Kanit", sans-serif;
@@ -52,10 +51,9 @@
   text-align: center;
 }
 .drink {
-  display: flex;
   height: 120px;
   width: 120px;
-  display: flex;
+  text-align: center;
 }
 .text-drink {
   font-family: "Kanit", sans-serif;

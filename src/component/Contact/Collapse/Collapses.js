@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import { Collapse, CardBody, Card, Row, Col, Container} from "reactstrap";
 import "../Contact.css";
 import tel from "../../../img/mobile-phone.png";
 import line from "../../../img/line(2).png";
 import face from "../../../img/facebook(1).png";
-import { Collapse, Button, CardBody, Card, Row, Col } from "reactstrap";
+
 
 class Collapses extends Component {
   constructor(props) {
@@ -21,8 +22,9 @@ class Collapses extends Component {
   };
   render() {
     return (
-      <div>
-        <Row>
+      <Container >
+      <div >
+        <Row className="colla">
           <Col className="cade-tel">
             <img onClick={this.toggle1} className="tel" src={tel} />
             <Collapse isOpen={this.state.collapse1}>
@@ -49,6 +51,7 @@ class Collapses extends Component {
           </Col>
         </Row>
       </div>
+      </Container>
     );
   }
 }
