@@ -1,35 +1,44 @@
 @import url("https://fonts.googleapis.com/css?family=Kodchasan&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
-.form-register{
+.form-register {
   margin-top: 100px;
   margin-bottom: 100px;
+  margin-left: auto !important;
+  margin-right: auto !important;
   text-align: center;
 }
-.regis-in{
-  margin-top: 30px;
-  text-align:center;
-}
 .register {
+  margin-top: 20px;
+  padding: 10px;
   width: 400px !important;
   height: 50px !important;
-  margin-top: 15px;
-  padding: 10px;
+  margin-left: auto !important;
+  margin-right: auto !important;
   font-family: "Kanit", sans-serif;
-
 }
 .re {
   font-size: 35px;
   text-align: center;
   font-family: "Kanit", sans-serif;
 }
-.reg{
-  font-size: 20px;
-  margin-top: 10px;
+.btn-register {
+  margin-top: 50px;
+  text-align: center !important;
+  padding: 15px !important;
+  font-size: 25px !important;
   font-family: "Kanit", sans-serif;
-
 }
-.btn-register{
-  margin-top: 10px;
+.bt-register {
+  font-size: 20px;
+  margin-top: 25px;
+  text-align: center !important;
+  font-family: "Kanit", sans-serif;
+}
+.btn-forgot {
+  font-size: 20px;
+  margin-top: 15px;
+  text-align: center;
+  font-family: "Kanit", sans-serif;
 }
 @media only screen and (max-width: 768px) {
   .re {
@@ -41,5 +50,5 @@
     margin-top: 90px;
     height: 100px;
     text-align: center;
-}
+  }
 }

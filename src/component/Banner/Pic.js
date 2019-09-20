@@ -4,24 +4,24 @@ import {
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  CarouselCaption
+  CarouselCaption,
+  img
 } from "reactstrap";
 import "./Banner.css";
 
 const items = [
   {
-    src: "http://f.ptcdn.info/006/035/000/1441040062-22-o.jpg",
+    src:"https://scontent.fbkk5-1.fna.fbcdn.net/v/t1.0-9/70743668_2270832493043917_534257037853327360_n.jpg?_nc_cat=109&_nc_oc=AQm-vUf_WSh-LBsQ9lvUDmUfk9sYJVNQPMSc5i5TncAKnBcthDqZ5XZYtTsmHNNkfIs&_nc_ht=scontent.fbkk5-1.fna&oh=7498c81db71b1efe3c4ee75e00d7b352&oe=5DF82486",
     altText: "",
     caption: ""
   },
   {
-    src:
-      "https://scontent.fbkk13-1.fna.fbcdn.net/v/t1.0-9/62529448_2095674483893053_1235545594366263296_n.jpg?_nc_cat=108&_nc_oc=AQnFob99mb05H-JB2qS97EUDksn2_Nnonc6lVVL6gntoQtjfT14QrNdMg-ie_i0AWLc&_nc_ht=scontent.fbkk13-1.fna&oh=7b9b5adf2339c1b13e796b833a5ae4dc&oe=5D7863A5",
+    src: "https://scontent.fbkk5-1.fna.fbcdn.net/v/t1.0-9/70443361_2270832433043923_3460931672713723904_n.jpg?_nc_cat=109&_nc_oc=AQmSvyeYl4pmGMhRKyRq9ZQcxZRFbQGx4V036odbS2v1J2YnrEhWgHo90pIAgytipEg&_nc_ht=scontent.fbkk5-1.fna&oh=0c798851bd124805303f59ff81283347&oe=5E07432B",
     altText: "",
     caption: ""
   },
   {
-    src: "http://f.ptcdn.info/006/035/000/1441040119-26-o.jpg",
+    src: "https://scontent.fbkk5-7.fna.fbcdn.net/v/t1.0-9/70415927_2270832319710601_5956073303914315776_n.jpg?_nc_cat=108&_nc_oc=AQnsEb38L4Ikf2-AEkTv1g3KjeUCOao1LbXqoHMm2vVcYCJcHSIBpTFW0mgrh3PSEco&_nc_ht=scontent.fbkk5-7.fna&oh=e1d26c6fda68e95e8d7ad387de73ef20&oe=5DFECF5A",
     altText: "",
     caption: ""
   }
@@ -81,7 +81,6 @@ class Pic extends Component {
         >
           <div className="pic">
             <img src={item.src} alt={item.altText} />
-            
           </div>
 
           <CarouselCaption

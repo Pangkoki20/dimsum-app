@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, FormGroup, Input, Container, Button, lable } from "reactstrap";
+import { Form, FormGroup, Input, Container, Button } from "reactstrap";
 import axios from "axios";
 import "./Register.css";
 
@@ -55,73 +55,68 @@ class Register extends Component {
               <h2>
                 <b className="re">ลงทะเบียน</b>
               </h2>{" "}
-              <div className="regis-in">
-                <Input
-                  className="register "
-                  type="text"
-                  name="firstname"
-                  value={firstname}
-                  placeholder="ชื่อจริง"
-                  onChange={this.handleInputChange}
-                  required
-                />
-
-                <Input
-                  className="register"
-                  type="text"
-                  name="lastname"
-                  value={lastname}
-                  placeholder="นามสกุล"
-                  onChange={this.handleInputChange}
-                  required
-                />
-
-                <Input
-                  className="register"
-                  type="email"
-                  name="email"
-                  value={email}
-                  placeholder="อีเมล์ของผู้ใช้"
-                  onChange={this.handleInputChange}
-                  required
-                />
-                <Input
-                  className="register"
-                  type="password"
-                  name="password"
-                  value={password}
-                  placeholder="รหัสผ่าน"
-                  onChange={this.handleInputChange}
-                  required
-                />
-                <Input
-                  className="register"
-                  type="phone"
-                  name="phone"
-                  value={phone}
-                  placeholder="เบอร์โทรศัพท์"
-                  onChange={this.handleInputChange}
-                  required
-                />
-                <Input
-                  className="register"
-                  type="address"
-                  name="address"
-                  value={address}
-                  placeholder="ที่อยู่ปัจจุบัน"
-                  onChange={this.handleInputChange}
-                  required
-                />
-              </div>
-              <Button href="" className="btn-register" color="info" pill>
+              <Input
+                className="register "
+                type="text"
+                name="firstname"
+                value={firstname}
+                placeholder="ชื่อจริง"
+                onChange={this.handleInputChange}
+                required
+              />
+              <Input
+                className="register"
+                type="text"
+                name="lastname"
+                value={lastname}
+                placeholder="นามสกุล"
+                onChange={this.handleInputChange}
+                required
+              />
+              <Input
+                className="register"
+                type="email"
+                name="email"
+                value={email}
+                placeholder="อีเมล์ของผู้ใช้"
+                onChange={this.handleInputChange}
+                required
+              />
+              <Input
+                className="register"
+                type="password"
+                name="password"
+                value={password}
+                placeholder="รหัสผ่าน"
+                onChange={this.handleInputChange}
+                required
+              />
+              <Input
+                className="register"
+                type="phone"
+                name="phone"
+                value={phone}
+                placeholder="เบอร์โทรศัพท์"
+                onChange={this.handleInputChange}
+                required
+              />
+              <Input
+                className="register"
+                type="address"
+                name="address"
+                value={address}
+                placeholder="ที่อยู่ปัจจุบัน"
+                onChange={this.handleInputChange}
+                required
+              />
+              <Button href="/Login" className="btn-register" color="info">
                 ลงทะเบียน
               </Button>
-              <div className="btn-forgot">
-                <lable>หากคุณเป็นสมาชิกแล้ว</lable>
 
-                <a href="/" className="btn-register lable">
-                  {" "}
-                  ลงชื่อเข้าใช้งาน{" "}
+              <div className="btn-forgot">
+                <lable className="reg">หากคุณเป็นสมาชิกแล้ว </lable>
+                <a href="/Login" className="bt-register">
+                  ลงชื่อเข้าใช้งาน
                 </a>
               </div>
             </Form>

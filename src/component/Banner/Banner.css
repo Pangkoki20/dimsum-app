@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 .img {
-  width: 1200px;
+  width: 720px;
   height: 360px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
   display: block;
 }
 .ban-size {
@@ -16,8 +16,11 @@
 }
 @media only screen and (max-width: 768px) {
   .img {
-    height: 10px;
-    width: 10px;
+    height: 20px;
+    width: 20px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block;
   }
   .ban-size {
     margin-top: 20px;

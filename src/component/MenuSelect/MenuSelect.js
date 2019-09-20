@@ -11,10 +11,10 @@ class MenuSelect extends Component {
   render() {
     return (
       <Container className="cont-row">
-        <div class="row ">
+        <div class="row">
           <div class="col">
             <span className="imgnav">
-              <a href="/Menu">
+              <a href="/">
                 <img className="nm" src={nm} />
               </a>
               <h6 className="text-nm">เมนูแนะนำ</h6>
@@ -22,7 +22,7 @@ class MenuSelect extends Component {
           </div>
           <div class="col">
             <span className="imgnav">
-              <a href="/Dimsum">
+              <a href="/">
                 <img className="ts" src={ts} />
               </a>
               <h6 className="text-ts">ติ่มซำ</h6>
@@ -30,7 +30,7 @@ class MenuSelect extends Component {
           </div>
           <div class="col">
             <span className="imgnav">
-              <a href="/Breakfast">
+              <a href="/">
                 <img className="bf" src={bf} />
               </a>
               <h6 className="text-bf">อาหารเช้า</h6>
@@ -38,7 +38,7 @@ class MenuSelect extends Component {
           </div>
           <div class="col">
             <span className="imgnav">
-              <a href="/Breakfast">
+              <a href="/">
                 <img className="ff" src={ff} />
               </a>
               <h6 className="text-ff">อาหารจานเดียว</h6>
@@ -46,7 +46,7 @@ class MenuSelect extends Component {
           </div>
           <div class="col">
             <span className="imgnav">
-              <a href="/Drink">
+              <a href="/">
                 <img className="drink" src={drink} />
               </a>
               <h6 className="text-drink">เครื่องดื่ม</h6>

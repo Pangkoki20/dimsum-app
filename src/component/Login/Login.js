@@ -51,20 +51,21 @@ class Login extends Component {
   render() {
     return (
       <Container>
-        <Form className="form-login" onSubmit={this.login}>
-          <FormGroup className="fon-log">
-            <span>
-              <img className="logo" src={lo} />
-              <div className="in">
-                  <Input
-                    className="input-login"
-                    type="email"
-                    name="email"
-                    id="exampleEmail"
-                    placeholder="อีเมล์ของผู้ใช้"
-                    value={this.state.email}
-                    onChange={this.handleInputChange}
-                  />
+        <div className="form-login">
+          <Form onSubmit={this.login}>
+            <FormGroup className="fon-log">
+              <span>
+                <img className="logo" src={lo} />
+
+                <Input
+                  className="input-login"
+                  type="email"
+                  name="email"
+                  id="exampleEmail"
+                  placeholder="อีเมล์ของผู้ใช้"
+                  value={this.state.email}
+                  onChange={this.handleInputChange}
+                />
                 <Input
                   className="input-login"
                   type="password"
@@ -74,24 +75,23 @@ class Login extends Component {
                   placeholder="รหัสผ่านของผู้ใช้"
                   onChange={this.handleInputChange}
                 />
-              </div>
-            </span>
+              </span>
             </FormGroup>
+
             <a href="/">
               <p className="forget-pass text-right"> ลืมรหัสผ่าน </p>
             </a>
-          
-          <Button href="/" className="btn-login" color="info">
-            <span className="text-re">ลงชื่อเข้าใช้งาน</span>
-          </Button>
-          <div className="btn-forgot ">
-            <lable className="reg">หากคุณยังไม่เป็นสมาชิก</lable>
 
-            <a href="/Register">
-              <a className="reg"> สมัครสมาชิก</a>{" "}
-            </a>
-          </div>
-        </Form>
+            <Button href="/" className="btn-login" color="info">
+              ลงชื่อเข้าใช้งาน
+            </Button>
+
+            <div className="btn-forgot ">
+              <lable className="reg">หากคุณยังไม่เป็นสมาชิก </lable>
+              <a href="/Register">สมัครสมาชิก</a>
+            </div>
+          </Form>
+        </div>
       </Container>
     );
   }

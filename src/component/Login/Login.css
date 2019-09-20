@@ -3,29 +3,27 @@
 .form-login {
   margin-top: 100px;
   margin-bottom: 100px;
-}
-.log{
-  margin-left: auto;
-  margin-right: auto;
-}
-.in{
-  text-align: center;  
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
 }
 .btn-login {
   margin-top: 50px;
-  text-align: center;
-  width: 200px !important;
-  height: 50px !important;
+  text-align: center !important;
   padding: 15px !important;
-  font-size: 25px;
+  font-size: 25px !important;
   font-family: "Kanit", sans-serif;
 }
+.text-re{
+  padding: 15px !important;
+  text-align: center !important;
+}
 .btn-forgot {
-  margin-top: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 20px;
+  margin-left: auto ;
+  margin-right: auto ;
+  font-size: 18px;
+  font-family: "Kanit", sans-serif;
 }
 .text-re {
   margin-top: 50px;
@@ -35,12 +33,21 @@
 .input-login {
   width: 400px !important;
   height: 50px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   margin-top: 30px;
   padding: 10px;
   font-family: "Kanit", sans-serif;
 }
 .logo {
   height: 250px;
+}
+.forget-pass{
+  font-size: 20px;
+}
+.reg{
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 @media only screen and (max-width: 768px) {
   .lo {
