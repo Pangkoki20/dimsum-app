@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 .cont-row {
   text-align: center;
-  margin: 100px;
+  display: flex;
 }
 .nm {
   display: flex;
@@ -9,10 +9,11 @@
   width: 120px;
 }
 .text-nm {
-  text-decoration: none;
   font-family: "Kanit", sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   margin-top: 20px;
+  display: flex;
+  text-align: center;
 }
 .ts {
   display: flex;
@@ -20,10 +21,11 @@
   width: 120px;
 }
 .text-ts {
-  font-family: 'Kanit', sans-serif;
-  text-decoration: none;
-  font-size: 20px;
+  font-family: "Kanit", sans-serif;
+  font-size: 25px;
   margin-top: 20px;
+  display: flex;
+  text-align: center;
 }
 .bf {
   display: flex;
@@ -31,32 +33,35 @@
   width: 120px;
 }
 .text-bf {
-  font-family: 'Kanit', sans-serif;
-  text-decoration: none;
-  font-size: 20px;
+  font-family: "Kanit", sans-serif;
+  font-size: 25px;
   margin-top: 20px;
+  display: flex;
+  text-align: center;
 }
 .ff {
   display: flex;
   height: 120px;
   width: 120px;
+  display: flex;
 }
 .text-ff {
-  font-family: 'Kanit', sans-serif;
-  text-decoration: none;
-  font-size: 20px;
+  font-family: "Kanit", sans-serif;
+  font-size: 25px;
   margin-top: 20px;
+  text-align: center;
 }
 .drink {
   display: flex;
   height: 120px;
   width: 120px;
+  display: flex;
 }
 .text-drink {
-  font-family: 'Kanit', sans-serif;
-  text-decoration: none;
-  font-size: 20px;
+  font-family: "Kanit", sans-serif;
+  font-size: 25px;
   margin-top: 20px;
+  text-align: center;
 }
 .text-nm:hover {
   text-decoration: none;

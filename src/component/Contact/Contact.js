@@ -6,14 +6,14 @@ import Collapses from "./Collapse/Collapses";
 class Contact extends Component {
   render() {
     return (
-      <div className="foo">
-        <span>
-          <img className="piccon" src={piccon} />
-        </span>
-        <Container>
-          <Collapses/>
-        </Container>
-      </div>
+      <Container className="contact">
+        <div className="foo">
+          <span>
+            <img className="piccon" src={piccon} />
+          </span>
+          <Collapses />
+        </div>
+      </Container>
     );
   }
 }

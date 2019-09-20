@@ -49,16 +49,15 @@ class Register extends Component {
     const { firstname, lastname, email, password, phone, address } = this.state;
     return (
       <div>
-        <Container >
+        <Container>
           <div className="log">
-            <Form className="form-login" onSubmit={this.register}>
-          
-                <h2>
-                  <b className="re">ลงทะเบียน</b>
-                </h2>
-
+            <Form className="form-register" onSubmit={this.register}>
+              <h2>
+                <b className="re">ลงทะเบียน</b>
+              </h2>{" "}
+              <div className="regis-in">
                 <Input
-                  className="register"
+                  className="register "
                   type="text"
                   name="firstname"
                   value={firstname}
@@ -76,6 +75,7 @@ class Register extends Component {
                   onChange={this.handleInputChange}
                   required
                 />
+
                 <Input
                   className="register"
                   type="email"
@@ -112,18 +112,18 @@ class Register extends Component {
                   onChange={this.handleInputChange}
                   required
                 />
-                <Button href="" className="btn-register" color="info" pill>
-                  ลงทะเบียน
-                </Button>
-                <div className="btn-forgot">
-                  <lable>หากคุณเป็นสมาชิกแล้ว</lable>
+              </div>
+              <Button href="" className="btn-register" color="info" pill>
+                ลงทะเบียน
+              </Button>
+              <div className="btn-forgot">
+                <lable>หากคุณเป็นสมาชิกแล้ว</lable>
 
-                  <a href="/" className="btn-register lable">
-                    {" "}
-                    ลงชื่อเข้าใช้งาน{" "}
-                  </a>
-                </div>
-    
+                <a href="/" className="btn-register lable">
+                  {" "}
+                  ลงชื่อเข้าใช้งาน{" "}
+                </a>
+              </div>
             </Form>
           </div>
         </Container>

@@ -55,7 +55,7 @@ class Login extends Component {
           <FormGroup>
             <h1 className="fon-log">
               <span>
-                <img className="lo" src={lo} />
+                <img className="logo" src={lo} />
               </span>
             </h1>
             <Input

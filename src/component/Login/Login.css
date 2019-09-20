@@ -3,9 +3,30 @@
 .form-login {
   margin-top: 100px;
   margin-bottom: 100px;
-}
-.btn-register {
+  text-align: center;
+} 
+.btn-login {
   margin-top: 50px;
+  text-align: center;
+  width: 200px !important;
+  height: 40px !important;
+  padding: 15px !important;
+  font-size: 20px;
+}
+.text-re {
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+}
+.input-login{
+  width: 400px !important;
+  height: 50px !important;
+  margin-top: 10px;
+  padding: 10px;
+  font-family: "Kanit", sans-serif;
+}
+.logo{
+  height: 250px;
 }
 @media only screen and (max-width: 768px) {
   .lo {
@@ -21,9 +42,12 @@
     text-align: center;
   }
   .btn-login {
-    margin: 0px 0px 15px 70px;
-    width: 60%;
-    height: 40px;
+    margin-top: 50px;
+    text-align: center;
+    width: 200px !important;
+    height: 40px !important;
+    padding: 15px !important;
+    font-family: "Kanit", sans-serif;
   }
   .text-re {
     font-size: 12px;
@@ -39,7 +63,6 @@
     font-size: 12px;
     font-family: "Kanit", sans-serif;
     margin-top: 5px;
-    font-family: "Kanit", sans-serif;
   }
   .fon-btl {
     font-family: "Montserrat Alternates", sans-serif;
@@ -51,5 +74,6 @@
   .btn-forgot {
     margin-top: 10px;
     font-size: 12px;
+    font-family: "Kanit", sans-serif;
   }
 }
