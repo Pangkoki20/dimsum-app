@@ -19,7 +19,9 @@
 .re {
   font-size: 35px;
   text-align: center;
-  font-family: "Kanit", sans-serif;
+  color: teal;
+  margin-top: 30px;
+   font-family: "Kanit", sans-serif;
 }
 .btn-register {
   margin-top: 50px;
