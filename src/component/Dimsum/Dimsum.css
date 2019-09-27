@@ -1,21 +1,56 @@
-@import url("https://fonts.googleapis.com/css?family=Prompt&display=swap");
-.pic {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100%;
-  width: 100%;
+@import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
+.table-dimsum {
+  margin-top: 20px;
 }
-.card {
+.textname-dimsum {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 10px;
+  color: #224870;
+  font-family: "Kanit", sans-serif;
+}
+.textname-dimsum:hover {
+  text-decoration: none;
+  color: #00758d;
+}
+.thead-bar {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+}
+.tabel-dimsum {
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+}
+.dl_pok{
   height: 200px;
-  width: 300px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  width: 200px;
+  text-align: center;
 }
-.menu{
-  margin-top: 100px;
+.dl_pokegg{
+height: 200px;
+width: 200px;
+text-align: center;
 }
-.font-name {
-  font-family: "Prompt", sans-serif;
+.dl_poo{
+height: 200px;
+width: 200px;
+text-align: center;
+}
+.dl_shrimp{
+height: 200px;
+width: 200px;
+text-align: center;
+}
+.dl_hargao{
+height: 200px;
+width: 200px;
+text-align: center;
+}
+.dl_shrimp_dum{
+height: 200px;
+width: 200px;
+text-align: center;
 }

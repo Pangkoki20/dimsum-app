@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
+
+.table-fastfood {
+    margin-top: 20px;
+}
+
+.textname-fastfood {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 10px;
+    color: #224870;
+    font-family: "Kanit", sans-serif;
+}
+
+.textname-fastfood:hover {
+    text-decoration: none;
+    color: #00758d;
+}
+
+.thead-bar {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    font-family: "Kanit", sans-serif;
+}
+
+.tabel-fastfood {
+    text-align: center;
+    font-family: "Kanit", sans-serif;
+}
+
+.btn-basket {
+    font-family: 'Prompt', sans-serif;
+}
+
+.ff_chicken {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+
+.ff_redpork {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+
+.ff_crispypork {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+
+.ff_porkleg {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+
+.ff_duck {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+
+.ff_babutte {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+
+.ff_rice {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}

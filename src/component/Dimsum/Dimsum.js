@@ -1,93 +1,110 @@
 import React, { Component } from "react";
-import {
-  Container,
-  Card,
-  CardTitle,
-  CardText,
-  Button,
-  Row,
-  Col
-} from "reactstrap";
+import { Container, Table, Button } from "reactstrap";
+import dl_pok from "../../imgdimsun/ขนมจีบหมู.png";
+import dl_pokegg from "../../imgdimsun/ขนมจีบหมูไข่เค็ม.png";
+import dl_poo from "../../imgdimsun/ขนมจีบปู.png";
+import dl_shrimp from "../../imgdimsun/ขนมจีบกุ้ง.png";
+import dl_hargao from "../../imgdimsun/ฮะเก๋า.png";
+import dl_shrimp_dum from "../../imgdimsun/เกี๊ยวกุ้ง.png";
 import "./Dimsum.css";
-
 class Dimsum extends Component {
-  state = {
-    dimmsum: [
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img:
-          "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
-      },
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img:
-          "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
-      },
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img:
-          "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
-      },
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img:
-          "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
-      },
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img:
-          "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
-      },
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img:
-          "https://food.mthai.com/app/uploads/2017/06/Dim-Sum-in-Bamboo-Trays.jpg"
-      }
-    ]
-  };
-  renderDimmsum = () => {
-    return this.state.dimmsum.map((dimmsum, index) => (
-      <Col xs="6" className="cardd Container">
-        <Card body className="pic-card">
-          <Row>
-            <Col className="">
-              <img top width="100%" src={dimmsum.img} className="imgSelect" />
-            </Col>
-            <Col>
-              <CardTitle>
-                <h3 className="font-name">
-                  <b>{dimmsum.name}</b>
-                </h3>
-              </CardTitle>
-              <CardText>{dimmsum.description}</CardText>
-              <CardText>{dimmsum.price}</CardText>
-              <Button outline color="danger">
-                หยิบใส่ตะกร้า
-              </Button>
-            </Col>
-          </Row>
-        </Card>
-      </Col>
-    ));
-  };
   render() {
     return (
       <div>
-        
         <Container>
-          <Row>{this.renderDimmsum()}</Row>
+          <div className="textname-dimsum">ติ่มซำ</div>
+          <Table hover className="table-dimsum">
+            <thead className="thead-bar">
+              <tr>
+                <th></th>
+                <th>ชื่อติ่มซำ</th>
+                <th>ราคา</th>
+                <th>จำนวน</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody className="tabel-dimsum">
+              <tr>
+                <th scope="row">
+                  <img className="dl_pok" src={dl_pok} />
+                </th>
+                <td>ขนมจีบหมู</td>
+                <td>20.-</td>
+                <td>@mdo</td>
+                <td>
+                  <Button outline color="danger" className="btn-basket">
+                    เพิ่มลงในตะกร้า
+                  </Button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <img className="dl_pokegg" src={dl_pokegg} />
+                </th>
+                <td>ขนมจีบหมูไข่เค็ม</td>
+                <td>20.-</td>
+                <td>@fat</td>
+                <td>
+                  <Button outline color="danger" className="btn-basket">
+                    เพิ่มลงในตะกร้า
+                  </Button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <img className="dl_poo" src={dl_poo} />
+                </th>
+                <td>ขนมจีบปู</td>
+                <td>20.-</td>
+                <td>@twitter</td>
+                <td>
+                  <Button outline color="danger" className="btn-basket">
+                    เพิ่มลงในตะกร้า
+                  </Button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <img className="dl_shrimp" src={dl_shrimp} />
+                </th>
+                <td>ขนมจีบกุ้ง</td>
+                <td>20.-</td>
+                <td>@twitter</td>
+                <td>
+                  <Button outline color="danger" className="btn-basket">
+                    เพิ่มลงในตะกร้า
+                  </Button>
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">
+                  <img className="dl_hargao" src={dl_hargao} />
+                </th>
+                <td>ฮะเก๋า</td>
+                <td>20.-</td>
+                <td>@twitter</td>
+                <td>
+                  <Button outline color="danger" className="btn-basket">
+                    เพิ่มลงในตะกร้า
+                  </Button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <img className="dl_shrimp_dum" src={dl_shrimp_dum} />
+                </th>
+                <td>เกี๊ยวกุ้ง</td>
+                <td>20.-</td>
+                <td>@twitter</td>
+                <td>
+                  <Button outline color="danger" className="btn-basket">
+                    เพิ่มลงในตะกร้า
+                  </Button>
+                </td>
+              </tr>
+            </tbody>
+          </Table>
         </Container>
       </div>
     );

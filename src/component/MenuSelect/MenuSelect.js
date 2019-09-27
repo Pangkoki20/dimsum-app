@@ -22,7 +22,7 @@ class MenuSelect extends Component {
           </div>
           <div class="col">
             <span className="imgnav">
-              <a href="/">
+              <a href="/Dimsum">
                 <img className="ts" src={ts} />
               </a>
               <h6 className="text-ts">ติ่มซำ</h6>
@@ -30,7 +30,7 @@ class MenuSelect extends Component {
           </div>
           <div class="col">
             <span className="imgnav">
-              <a href="/">
+              <a href="/Breakfast">
                 <img className="bf" src={bf} />
               </a>
               <h6 className="text-bf">อาหารเช้า</h6>
@@ -38,7 +38,7 @@ class MenuSelect extends Component {
           </div>
           <div class="col">
             <span className="imgnav">
-              <a href="/">
+              <a href="/Fastfood">
                 <img className="ff" src={ff} />
               </a>
               <h6 className="text-ff">อาหารจานเดียว</h6>

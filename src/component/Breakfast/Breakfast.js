@@ -1,87 +1,81 @@
 import React, { Component } from "react";
-import {
-Container,
-Card,
-  CardTitle,
-  CardText,
-  Button,
-  Row,
-  Col
-} from "reactstrap";
-import Banner from "../Banner/Banner";
-import "./Breakfast";
+import { Container, Table, Button } from "reactstrap";
+import bf_bf from "../../imgbreakfast/อาหารเช้า.png";
+import bf_egg from "../../imgbreakfast/ไข่กะทะ.png";
+import bf_fish from "../../imgbreakfast/ปลาทิพย์ทอด.png";
+import bf_shrimp from "../../imgbreakfast/กุ้งชุบแป้งทอด.png";
+import "./Breakfast.css";
 class Breakfast extends Component {
-  state = {
-    breakfast: [
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img: "https://cdn2.vectorstock.com/i/1000x1000/17/41/dim-sum-chinese-food-with-chopstick-vector-20711741.jpg"
-      },
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img: "https://cdn2.vectorstock.com/i/1000x1000/17/41/dim-sum-chinese-food-with-chopstick-vector-20711741.jpg"
-      },
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img: "https://cdn2.vectorstock.com/i/1000x1000/17/41/dim-sum-chinese-food-with-chopstick-vector-20711741.jpg"
-      },
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img: "https://cdn2.vectorstock.com/i/1000x1000/17/41/dim-sum-chinese-food-with-chopstick-vector-20711741.jpg"
-      },
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img: "https://cdn2.vectorstock.com/i/1000x1000/17/41/dim-sum-chinese-food-with-chopstick-vector-20711741.jpg"
-      },
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img: "https://cdn2.vectorstock.com/i/1000x1000/17/41/dim-sum-chinese-food-with-chopstick-vector-20711741.jpg"
-      }
-    ]
-  };
-  renderBreakfast = () => {
-    return this.state.breakfast.map((breakfast, index) => (
-      <Col xs="6" className="cardd Container">
-        <Card body className="pic-card">
-          <Row>
-            <Col className="">
-              <img top width="100%" src={breakfast.img} className="imgSelect" />
-            </Col>
-            <Col>
-              <CardTitle>
-                <h3 className="font-name">
-                  <b>{breakfast.name}</b>
-                </h3>
-              </CardTitle>
-              <CardText>{breakfast.description}</CardText>
-              <CardText>{breakfast.price}</CardText>
-              <Button outline color="danger">
-                หยิบใส่ตะกร้า
-              </Button>
-            </Col>
-          </Row>
-        </Card>
-      </Col>
-    ));
-  };
   render() {
     return (
-      <div className="">
-        <Banner />
+      <div>
         <Container>
-          <Row>{this.renderBreakfast()}</Row>
+          <div className="textname-breakfast">อาหารเช้า</div>
+          <Table hover className="table-breakfast">
+            <thead className="thead-bar">
+              <tr>
+                <th></th>
+                <th>ชื่ออาหารเช้า</th>
+                <th>ราคา</th>
+                <th>จำนวน</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody className="tabel-breakfast">
+              <tr>
+                <th scope="row">
+                  <img className="bf_bf" src={bf_bf} />
+                </th>
+                <td>ชุดอาหารเช้า</td>
+                <td>40.-</td>
+                <td>@mdo</td>
+                <td>
+                  <Button outline color="danger" className="btn-basket">
+                    เพิ่มลงในตะกร้า
+                  </Button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <img className="bf_egg" src={bf_egg} />
+                </th>
+                <td>ไข่กะทะ</td>
+                <td>40.-</td>
+                <td>@fat</td>
+                <td>
+                  <Button outline color="danger" className="btn-basket">
+                    เพิ่มลงในตะกร้า
+                  </Button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <img className="bf_fish" src={bf_fish} />
+                </th>
+                <td>ปลาทิพย์ทอด</td>
+                <td>40.-</td>
+                <td>@twitter</td>
+                <td>
+                  <Button outline color="danger" className="btn-basket">
+                    เพิ่มลงในตะกร้า
+                  </Button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <img className="bf_shrimp" src={bf_shrimp} />
+                </th>
+                <td>กุ้งชุบแป้งทอด</td>
+                <td>40.-</td>
+                <td>@twitter</td>
+                <td>
+                  <Button outline color="danger" className="btn-basket">
+                    เพิ่มลงในตะกร้า
+                  </Button>
+                </td>
+              </tr>
+            </tbody>
+          </Table>
         </Container>
       </div>
     );

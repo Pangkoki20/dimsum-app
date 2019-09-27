@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Table, Button } from "reactstrap";
-import gt from "../../imgdrink/ชาเย็น.png";
+import gt from "../../imgdrink/ชาเย็นนน.png";
 import chadum from "../../imgdrink/ชาดำเย็น.png";
 import chamanow from "../../imgdrink/ชามะนาว.png";
 import coffee from "../../imgdrink/กาแฟเย็น.png";
@@ -13,11 +13,11 @@ class Drink extends Component {
       <div>
         <Container>
           <div className="textname-drink">เครื่องดื่ม</div>
-          <Table hover>
+          <Table hover className="table-drink">
             <thead className="thead-bar">
               <tr>
                 <th></th>
-                <th>ชื่อ</th>
+                <th>ชื่อเครื่องดื่ม</th>
                 <th>ราคา</th>
                 <th>จำนวน</th>
                 <th></th>
@@ -32,7 +32,9 @@ class Drink extends Component {
                 <td>30.-</td>
                 <td>@mdo</td>
                 <td>
-                  <Button color="danger">danger</Button>
+                  <Button outline color="danger" className="btn-basket">
+                    เพิ่มลงในตะกร้า
+                  </Button>
                 </td>
               </tr>
               <tr>
@@ -42,14 +44,11 @@ class Drink extends Component {
                 <td>ชาดำเย็น</td>
                 <td>30.-</td>
                 <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  <img className="chamanow" src={chamanow} />
-                </th>
-                <td>ชามะนาว</td>
-                <td>30.-</td>
-                <td>@twitter</td>
+                <td>
+                  <Button outline color="danger" className="btn-basket">
+                    เพิ่มลงในตะกร้า
+                  </Button>
+                </td>
               </tr>
               <tr>
                 <th scope="row">
@@ -58,7 +57,26 @@ class Drink extends Component {
                 <td>กาแฟเย็น</td>
                 <td>30.-</td>
                 <td>@twitter</td>
+                <td>
+                  <Button outline color="danger" className="btn-basket">
+                    เพิ่มลงในตะกร้า
+                  </Button>
+                </td>
               </tr>
+              <tr>
+                <th scope="row">
+                  <img className="chamanow" src={chamanow} />
+                </th>
+                <td>ชามะนาว</td>
+                <td>30.-</td>
+                <td>@twitter</td>
+                <td>
+                  <Button outline color="danger" className="btn-basket">
+                    เพิ่มลงในตะกร้า
+                  </Button>
+                </td>
+              </tr>
+
               <tr>
                 <th scope="row">
                   <img className="ovantin" src={ovantin} />
@@ -66,6 +84,11 @@ class Drink extends Component {
                 <td>โอวัลตินเย็น</td>
                 <td>30.-</td>
                 <td>@twitter</td>
+                <td>
+                  <Button outline color="danger" className="btn-basket">
+                    เพิ่มลงในตะกร้า
+                  </Button>
+                </td>
               </tr>
               <tr>
                 <th scope="row">
@@ -74,6 +97,11 @@ class Drink extends Component {
                 <td>ชาเขียวนมเย็น</td>
                 <td>30.-</td>
                 <td>@twitter</td>
+                <td>
+                  <Button outline color="danger" className="btn-basket">
+                    เพิ่มลงในตะกร้า
+                  </Button>
+                </td>
               </tr>
             </tbody>
           </Table>

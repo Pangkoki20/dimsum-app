@@ -1,9 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
+.table-drink{
+    margin-top: 20px;
+}
 .textname-drink{
     text-align: center;
     font-size: 50px;
     margin-top: 10px;  
+    color:#224870;
     font-family: "Kanit",sans-serif;
+}
+.textname-drink:hover{
+    text-decoration: none;
+    color: #00758d;
 }
 .thead-bar{
     margin-top: 20px;
@@ -15,8 +24,36 @@
     text-align: center;
     font-family: "Kanit",sans-serif;
 }
+.btn-basket {
+    font-family: 'Prompt',sans-serif;
+}
 .gt{
   height: 200px;
   width: 200px;
   text-align: center;
+}
+.chadum{
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+.chamanow{
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+.coffee{
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+.ovantin{
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+.greentea{
+    height: 200px;
+    width: 200px;
+    text-align: center;
 }
