@@ -14,7 +14,7 @@ class MenuSelect extends Component {
         <div class="row">
           <div class="col">
             <span className="imgnav">
-              <a href="/">
+              <a href="/Menu">
                 <img className="nm" src={nm} />
               </a>
               <h6 className="text-nm">เมนูแนะนำ</h6>
