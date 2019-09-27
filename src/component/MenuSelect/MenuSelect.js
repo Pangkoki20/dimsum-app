@@ -46,7 +46,7 @@ class MenuSelect extends Component {
           </div>
           <div class="col">
             <span className="imgnav">
-              <a href="/">
+              <a href="/Drink">
                 <img className="drink" src={drink} />
               </a>
               <h6 className="text-drink">เครื่องดื่ม</h6>

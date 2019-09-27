@@ -1,70 +1,82 @@
 import React, { Component } from "react";
-import {
-  Container,
-  Card,
-  CardTitle,
-  CardText,
-  Button,
-  Row,
-  Col
-} from "reactstrap";
-import Banner from "../Banner/Banner";
+import { Container, Table, Button } from "reactstrap";
+import gt from "../../imgdrink/ชาเย็น.png";
+import chadum from "../../imgdrink/ชาดำเย็น.png";
+import chamanow from "../../imgdrink/ชามะนาว.png";
+import coffee from "../../imgdrink/กาแฟเย็น.png";
+import ovantin from "../../imgdrink/โอวัลติน.png";
+import greentea from "../../imgdrink/ชาเขียว.png";
 import "./Drink.css";
-
 class Drink extends Component {
-  state = {
-    drink: [
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img: "https://3.bp.blogspot.com/-rnoH11ekOZ8/Wo3ynr0jRqI/AAAAAAAAAhQ/8o69jP3ZY9cKcuzUgCZzeIIQXrFbvCfbACLcBGAs/s1600/1519251724170.png"
-      },
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img: "https://3.bp.blogspot.com/-rnoH11ekOZ8/Wo3ynr0jRqI/AAAAAAAAAhQ/8o69jP3ZY9cKcuzUgCZzeIIQXrFbvCfbACLcBGAs/s1600/1519251724170.png"
-      },
-      {
-        name: "ขนมจีบหมู",
-        description: "asdqwqwdqwdqwd",
-        price: 62,
-        img: "https://3.bp.blogspot.com/-rnoH11ekOZ8/Wo3ynr0jRqI/AAAAAAAAAhQ/8o69jP3ZY9cKcuzUgCZzeIIQXrFbvCfbACLcBGAs/s1600/1519251724170.png"
-      }
-    ]
-  };
-  renderDrink = () => {
-    return this.state.drink.map((drink, index) => (
-      <Col xs="6" className="cardd Container">
-        <Card body className="pic-card">
-          <Row>
-            <Col className="">
-              <img top width="100%" src={drink.img} className="imgSelect" />
-            </Col>
-            <Col>
-              <CardTitle>
-                <h3 className="font-name">
-                  <b>{drink.name}</b>
-                </h3>
-              </CardTitle>
-              <CardText>{drink.description}</CardText>
-              <CardText>{drink.price}</CardText>
-              <Button outline color="danger">
-                หยิบใส่ตะกร้า
-              </Button>
-            </Col>
-          </Row>
-        </Card>
-      </Col>
-    ));
-  };
   render() {
     return (
       <div>
-        <Banner />
         <Container>
-          <Row>{this.renderDrink()}</Row>
+          <div className="textname-drink">เครื่องดื่ม</div>
+          <Table hover>
+            <thead className="thead-bar">
+              <tr>
+                <th></th>
+                <th>ชื่อ</th>
+                <th>ราคา</th>
+                <th>จำนวน</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody className="tabel-drink">
+              <tr>
+                <th scope="row">
+                  <img className="gt" src={gt} />
+                </th>
+                <td>ชาเย็น</td>
+                <td>30.-</td>
+                <td>@mdo</td>
+                <td>
+                  <Button color="danger">danger</Button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <img className="chadum" src={chadum} />
+                </th>
+                <td>ชาดำเย็น</td>
+                <td>30.-</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <img className="chamanow" src={chamanow} />
+                </th>
+                <td>ชามะนาว</td>
+                <td>30.-</td>
+                <td>@twitter</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <img className="coffee" src={coffee} />
+                </th>
+                <td>กาแฟเย็น</td>
+                <td>30.-</td>
+                <td>@twitter</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <img className="ovantin" src={ovantin} />
+                </th>
+                <td>โอวัลตินเย็น</td>
+                <td>30.-</td>
+                <td>@twitter</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <img className="greentea" src={greentea} />
+                </th>
+                <td>ชาเขียวนมเย็น</td>
+                <td>30.-</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </Table>
         </Container>
       </div>
     );
