@@ -45,10 +45,10 @@ export default class Navigator extends React.Component {
           <NavbarBrand>
             <NavbarBrand href="/">
               <span className="fon-bar"> Dimsumahkong Delivery</span>
-              <span>
+              {/* <span>
                 <img className="pic-1" src={logo} />
-              </span>
-            </NavbarBrand>{" "}
+              </span> */}
+            </NavbarBrand>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>

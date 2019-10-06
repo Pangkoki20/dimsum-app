@@ -3,13 +3,13 @@
 .fon-bar {
   font-family: 'Righteous', cursive;
   color: hsl(160, 31%, 77%);
-  font-size: 40px; 
-  margin-top: 5px;
+  font-size: 28px; 
+  margin-top: 10px;
   margin-right: 10px;
 }
 .fon-barr {
   font-family: "Kanit", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   color: #85b8cb;
   text-align: center;
   margin-left: 30px;
@@ -23,8 +23,8 @@
   border-color: aliceblue;
 }
 .pic-1 {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   margin-top: 5px;
   display: flex;
   margin-right: 15px;

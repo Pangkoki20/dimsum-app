@@ -7,6 +7,7 @@ import dl_shrimp from "../../imgdimsun/ขนมจีบกุ้ง.png";
 import dl_hargao from "../../imgdimsun/ฮะเก๋า.png";
 import dl_shrimp_dum from "../../imgdimsun/เกี๊ยวกุ้ง.png";
 import "./Dimsum.css";
+import Paginat from "../Pagination/Paginat";
 class Dimsum extends Component {
   render() {
     return (
@@ -104,6 +105,7 @@ class Dimsum extends Component {
                 </td>
               </tr>
             </tbody>
+            <Paginat />
           </Table>
         </Container>
       </div>
