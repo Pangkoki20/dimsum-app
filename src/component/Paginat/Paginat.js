@@ -10,12 +10,8 @@ class Paginat extends Component {
   render() {
     return (
       <Container>
-        <div>
-          <Pagination
-            className="form-paginat"
-            size="lg"
-            aria-label="Page navigation example"
-          >
+        <div className="pagination justify-content-center">
+          <Pagination size="lg" aria-label="Page navigation">
             <PaginationItem>
               <PaginationLink previous href="#" />
             </PaginationItem>
@@ -32,7 +28,6 @@ class Paginat extends Component {
               <PaginationLink next href="#" />
             </PaginationItem>
           </Pagination>
-          <Paginat />
         </div>
       </Container>
     );

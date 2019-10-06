@@ -76,11 +76,11 @@ class Login extends Component {
                 />
               </span>
             </FormGroup>
-
-            <a href="/">
-              <p className="forget-pass text-right"> ลืมรหัสผ่าน </p>
-            </a>
-
+            <div>
+              <a href="/">
+                <p className="forget-pass text-right"> ลืมรหัสผ่าน </p>
+              </a>
+            </div>
             <Button href="/" className="btn-login" color="info">
               ลงชื่อเข้าใช้งาน
             </Button>

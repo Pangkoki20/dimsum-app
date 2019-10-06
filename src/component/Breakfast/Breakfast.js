@@ -5,6 +5,7 @@ import bf_egg from "../../imgbreakfast/ไข่กะทะ.png";
 import bf_fish from "../../imgbreakfast/ปลาทิพย์ทอด.png";
 import bf_shrimp from "../../imgbreakfast/กุ้งชุบแป้งทอด.png";
 import "./Breakfast.css";
+import Paginat from "../Paginat/Paginat";
 class Breakfast extends Component {
   render() {
     return (
@@ -17,7 +18,7 @@ class Breakfast extends Component {
                 <th></th>
                 <th>ชื่ออาหารเช้า</th>
                 <th>ราคา</th>
-                <th>จำนวน</th>
+
                 <th></th>
               </tr>
             </thead>
@@ -28,7 +29,7 @@ class Breakfast extends Component {
                 </th>
                 <td>ชุดอาหารเช้า</td>
                 <td>40.-</td>
-                <td>@mdo</td>
+
                 <td>
                   <Button outline color="danger" className="btn-basket">
                     เพิ่มลงในตะกร้า
@@ -41,7 +42,7 @@ class Breakfast extends Component {
                 </th>
                 <td>ไข่กะทะ</td>
                 <td>40.-</td>
-                <td>@fat</td>
+
                 <td>
                   <Button outline color="danger" className="btn-basket">
                     เพิ่มลงในตะกร้า
@@ -54,7 +55,7 @@ class Breakfast extends Component {
                 </th>
                 <td>ปลาทิพย์ทอด</td>
                 <td>40.-</td>
-                <td>@twitter</td>
+
                 <td>
                   <Button outline color="danger" className="btn-basket">
                     เพิ่มลงในตะกร้า
@@ -67,7 +68,6 @@ class Breakfast extends Component {
                 </th>
                 <td>กุ้งชุบแป้งทอด</td>
                 <td>40.-</td>
-                <td>@twitter</td>
                 <td>
                   <Button outline color="danger" className="btn-basket">
                     เพิ่มลงในตะกร้า
@@ -76,6 +76,7 @@ class Breakfast extends Component {
               </tr>
             </tbody>
           </Table>
+          <Paginat />
         </Container>
       </div>
     );

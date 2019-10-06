@@ -7,6 +7,7 @@ import coffee from "../../imgdrink/กาแฟเย็น.png";
 import ovantin from "../../imgdrink/โอวัลติน.png";
 import greentea from "../../imgdrink/ชาเขียว.png";
 import "./Drink.css";
+import Paginat from "../Paginat/Paginat";
 class Drink extends Component {
   render() {
     return (
@@ -19,7 +20,7 @@ class Drink extends Component {
                 <th></th>
                 <th>ชื่อเครื่องดื่ม</th>
                 <th>ราคา</th>
-                <th>จำนวน</th>
+
                 <th></th>
               </tr>
             </thead>
@@ -30,7 +31,7 @@ class Drink extends Component {
                 </th>
                 <td>ชาเย็น</td>
                 <td>30.-</td>
-                <td>@mdo</td>
+
                 <td>
                   <Button outline color="danger" className="btn-basket">
                     เพิ่มลงในตะกร้า
@@ -43,7 +44,7 @@ class Drink extends Component {
                 </th>
                 <td>ชาดำเย็น</td>
                 <td>30.-</td>
-                <td>@fat</td>
+
                 <td>
                   <Button outline color="danger" className="btn-basket">
                     เพิ่มลงในตะกร้า
@@ -56,7 +57,7 @@ class Drink extends Component {
                 </th>
                 <td>กาแฟเย็น</td>
                 <td>30.-</td>
-                <td>@twitter</td>
+
                 <td>
                   <Button outline color="danger" className="btn-basket">
                     เพิ่มลงในตะกร้า
@@ -69,7 +70,7 @@ class Drink extends Component {
                 </th>
                 <td>ชามะนาว</td>
                 <td>30.-</td>
-                <td>@twitter</td>
+
                 <td>
                   <Button outline color="danger" className="btn-basket">
                     เพิ่มลงในตะกร้า
@@ -83,7 +84,7 @@ class Drink extends Component {
                 </th>
                 <td>โอวัลตินเย็น</td>
                 <td>30.-</td>
-                <td>@twitter</td>
+
                 <td>
                   <Button outline color="danger" className="btn-basket">
                     เพิ่มลงในตะกร้า
@@ -96,7 +97,7 @@ class Drink extends Component {
                 </th>
                 <td>ชาเขียวนมเย็น</td>
                 <td>30.-</td>
-                <td>@twitter</td>
+
                 <td>
                   <Button outline color="danger" className="btn-basket">
                     เพิ่มลงในตะกร้า
@@ -105,6 +106,7 @@ class Drink extends Component {
               </tr>
             </tbody>
           </Table>
+          <Paginat />
         </Container>
       </div>
     );

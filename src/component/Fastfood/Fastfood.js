@@ -8,6 +8,7 @@ import ff_duck from "../../imgfastfoood/ข้าวหน้าเป็ด.png
 import ff_babutte from "../../imgfastfoood/บะกุ๊ดเต๋.png";
 import ff_rice from "../../imgfastfoood/ข้าวเปล่า.png";
 import "./Fastfood.css";
+import Paginat from "../Paginat/Paginat";
 class Fastfood extends Component {
   render() {
     return (
@@ -20,7 +21,6 @@ class Fastfood extends Component {
                 <th></th>
                 <th>ชื่ออาหาร</th>
                 <th>ราคา</th>
-                <th>จำนวน</th>
                 <th></th>
               </tr>
             </thead>
@@ -31,7 +31,7 @@ class Fastfood extends Component {
                 </th>
                 <td>ข้าวมันไก่</td>
                 <td>40.-</td>
-                <td>@mdo</td>
+             
                 <td>
                   <Button outline color="danger" className="btn-basket">
                     เพิ่มลงในตะกร้า
@@ -44,7 +44,6 @@ class Fastfood extends Component {
                 </th>
                 <td>ข้าวหมูแดง</td>
                 <td>40.-</td>
-                <td>@fat</td>
                 <td>
                   <Button outline color="danger" className="btn-basket">
                     เพิ่มลงในตะกร้า
@@ -57,7 +56,6 @@ class Fastfood extends Component {
                 </th>
                 <td>ข้าวหมูกรอบ</td>
                 <td>40.-</td>
-                <td>@twitter</td>
                 <td>
                   <Button outline color="danger" className="btn-basket">
                     เพิ่มลงในตะกร้า
@@ -70,7 +68,6 @@ class Fastfood extends Component {
                 </th>
                 <td>ข้าวขาหมู</td>
                 <td>50.-</td>
-                <td>@twitter</td>
                 <td>
                   <Button outline color="danger" className="btn-basket">
                     เพิ่มลงในตะกร้า
@@ -84,7 +81,6 @@ class Fastfood extends Component {
                 </th>
                 <td>ข้าวหน้าเป็ด</td>
                 <td>50.-</td>
-                <td>@twitter</td>
                 <td>
                   <Button outline color="danger" className="btn-basket">
                     เพิ่มลงในตะกร้า
@@ -97,7 +93,6 @@ class Fastfood extends Component {
                 </th>
                 <td>บะกุ๊ดเต๋</td>
                 <td>50.-</td>
-                <td>@twitter</td>
                 <td>
                   <Button outline color="danger" className="btn-basket">
                     เพิ่มลงในตะกร้า
@@ -110,7 +105,6 @@ class Fastfood extends Component {
                 </th>
                 <td>ข้าวเปล่า</td>
                 <td>10.-</td>
-                <td>@twitter</td>
                 <td>
                   <Button outline color="danger" className="btn-basket">
                     เพิ่มลงในตะกร้า
@@ -119,6 +113,7 @@ class Fastfood extends Component {
               </tr>
             </tbody>
           </Table>
+          <Paginat/>
         </Container>
       </div>
     );

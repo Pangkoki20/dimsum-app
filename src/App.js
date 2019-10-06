@@ -17,6 +17,7 @@ import Menu from "./component/Menu/Menu";
 import Footer from "./component/Footer/Footer";
 import Fried from "./component/Fried/Fried";
 import Other from "./component/Other/Other";
+import Paginat from "./component/Paginat/Paginat";
 
 import "./App.css";
 
