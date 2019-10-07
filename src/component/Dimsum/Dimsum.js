@@ -10,28 +10,6 @@ import "./Dimsum.css";
 import Paginat from "../Paginat/Paginat";
 import Pork_Dumpling from "./Pork_Dumpling";
 class Dimsum extends Component {
-
-
-  componentDidMount() {
-    document.title = 'THE VIJITT RESORT PHUKET'
-    // var oldItems = []
-    var oldItems = JSON.parse(localStorage.getItem('order'))
-    console.log('old first :', oldItems
-    );
-
-    if (oldItems == null) {
-      var oldItems = []
-      localStorage.setItem('order', JSON.stringify(oldItems))
-    } else {
-      var oldItems = JSON.parse(localStorage.getItem('order')) || []
-    }
-    // var oldItems = JSON.parse(localStorage.getItem('order')) || [];
-  }
-
-
-
-
-
   render() {
     return (
       <Container>
@@ -48,25 +26,20 @@ class Dimsum extends Component {
             </tr>
           </thead>
           <tbody className="tabel-dimsum">
-
-
-
-            {/* <tr>
+            <tr>
               <th scope="row">
                 <img className="dl_pok" src={dl_pok} />
               </th>
               <td>ขนมจีบหมู</td>
               <td>20.-</td>
-
+             
               <td>
                 <Button outline color="danger" className="btn-basket">
                   เพิ่มลงในตะกร้า
                 </Button>
 
               </td>
-            </tr> */}
-            <Pork_Dumpling />
-
+            </tr>
             <tr>
               <th scope="row">
                 <img className="dl_pokegg" src={dl_pokegg} />

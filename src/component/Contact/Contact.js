@@ -12,7 +12,7 @@ class Contact extends Component {
             <img className="piccon" src={piccon} />
           </span>
           <div className="text-cont"> Contact Us </div>
-         {/* <Collapses/> */}
+       <Collapses/>
          </div>
        
       </Container>

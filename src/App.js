@@ -18,9 +18,8 @@ import Footer from "./component/Footer/Footer";
 import Fried from "./component/Fried/Fried";
 import Other from "./component/Other/Other";
 import Paginat from "./component/Paginat/Paginat";
-
-import "./App.css";
 import ShowOrder from "./component/ShowOrder/ShowOrder";
+import "./App.css";
 
 class App extends Component {
   state = {
@@ -51,12 +50,11 @@ class App extends Component {
           <Route exact path="/Drink" component={Drink} />
           <Route exact path="/Delivery" component={Delivery} />
           <Route exact path="/Contact" component={Contact} />
-          <Route exact path="Collapses" component={Collapses}/>
+          <Route exact path="Collapses" component={Collapses} />
           <Route exact path="/Menu" component={Menu} />
           <Route exact path="/Fried" component={Fried} />
           <Route exact path="/Other" component={Other} />
-
-          <Route exact path="/showorder" component={ShowOrder} />
+          <Route exact path="/ShowOrder" component={ShowOrder} />
         </Switch>
         <Footer />
       </div>
