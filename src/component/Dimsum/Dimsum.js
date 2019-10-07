@@ -43,7 +43,7 @@ class Dimsum extends Component {
               <th scope="row">
                 <img className="dl_pok" src={dl_pok} />
               </th>
-              <td>ขนมจีบหมู</td>
+              <td>ขนมจีบหมู  45555</td>
               <td>20.-</td>
 
               <td>
