@@ -10,34 +10,40 @@ class Collapses extends Component {
       <Container>
         <CardColumns>
           <Card>
-            <CardImg
-              className="address"
-              top
-              width=""
-              src={address}
-              alt="Card image cap"
-            />
-            <CardTitle>Card title</CardTitle>
+            <a href="">
+              <CardImg
+                className="address"
+                top
+                width=""
+                src={address}
+                alt="Card image cap"
+              />
+            </a>
+            <CardTitle className="text-address">ที่อยู่ร้าน</CardTitle>
           </Card>
           <Card>
-            <CardImg
-              className="phone"
-              top
-              width=""
-              src={phone}
-              alt="Card image cap"
-            />
-            <CardTitle>Card title</CardTitle>
+            <a href="">
+              <CardImg
+                className="phone"
+                top
+                width=""
+                src={phone}
+                alt="Card image cap"
+              />{" "}
+            </a>
+            <CardTitle className="text-phone">เบอร์โทรศัพท์</CardTitle>
           </Card>
           <Card>
-            <CardImg
-              className="facebook"
-              top
-              width=""
-              src={facebook}
-              alt="Card image cap"
-            />
-            <CardTitle>Card title</CardTitle>
+            <a href="">
+              <CardImg
+                className="facebook"
+                top
+                width=""
+                src={facebook}
+                alt="Card image cap"
+              />
+            </a>
+            <CardTitle className="text-facebook">Facebook</CardTitle>
           </Card>
         </CardColumns>
       </Container>

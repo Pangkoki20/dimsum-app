@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 .address{
   height: 100px;
   width: 100px;
@@ -12,4 +13,37 @@
   height: 100px;
   width: 100px;
   margin-top: 30px;
+}
+.text-address{
+  font-size: 18px;
+  font-family: "Kanit",
+  sans-serif;
+  margin-top: 20px;
+   text-align: center;
+}
+.text-phone{
+  font-size: 18px;
+  font-family: "Kanit",
+  sans-serif;
+  margin-top: 20px;
+   text-align: center;
+}
+.text-facebook{
+  font-size: 18px;
+  font-family: "Kanit",
+  sans-serif;
+  margin-top: 20px;
+   text-align: center;
+}
+.text-address:hover {
+  text-decoration: none;
+  color: rgb(255, 30, 124);
+}
+.text-phone:hover {
+  text-decoration: none;
+  color: rgb(255, 30, 124);
+}
+.text-facebook:hover {
+  text-decoration: none;
+  color: rgb(255, 30, 124);
 }
