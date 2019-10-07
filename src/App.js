@@ -4,7 +4,6 @@ import Login from "./component/Login/Login";
 import Navigator from "./component/Navigator/Navigator";
 import Register from "./component/Register/Register";
 import { Switch, Route } from "react-router-dom";
-import { library } from "@fortawesome/fontawesome-svg-core";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Dimsum from "./component/Dimsum/Dimsum";
 import Breakfast from "./component/Breakfast/Breakfast";
@@ -17,7 +16,6 @@ import Menu from "./component/Menu/Menu";
 import Footer from "./component/Footer/Footer";
 import Fried from "./component/Fried/Fried";
 import Other from "./component/Other/Other";
-import Paginat from "./component/Paginat/Paginat";
 import ShowOrder from "./component/ShowOrder/ShowOrder";
 import "./App.css";
 
