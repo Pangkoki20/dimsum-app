@@ -20,6 +20,7 @@ import Other from "./component/Other/Other";
 import Paginat from "./component/Paginat/Paginat";
 
 import "./App.css";
+import ShowOrder from "./component/ShowOrder/ShowOrder";
 
 class App extends Component {
   state = {
@@ -54,6 +55,8 @@ class App extends Component {
           <Route exact path="/Menu" component={Menu} />
           <Route exact path="/Fried" component={Fried} />
           <Route exact path="/Other" component={Other} />
+
+          <Route exact path="/showorder" component={ShowOrder} />
         </Switch>
         <Footer />
       </div>
