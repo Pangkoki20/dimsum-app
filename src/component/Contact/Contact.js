@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container } from "reactstrap";
+import { Container} from "reactstrap";
 import "./Contact.css";
 import Collapses from "../Collapses/Collapses";
 import piccon from "../../img/customer.png";
@@ -12,9 +12,13 @@ class Contact extends Component {
             <img className="piccon" src={piccon} />
           </span>
           <div className="text-cont"> Contact Us </div>
-       <Collapses/>
-         </div>
-       
+          <Collapses />
+        </div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+      
       </Container>
     );
   }

@@ -7,6 +7,7 @@
   margin-right: auto;
   display: block;
   text-align: center;
+  margin-top: 50px;
 }
 .piccon {
   width: 520px;
@@ -14,7 +15,6 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  margin-top: 50px;
 }
 .text-cont{
   font-size: 80px;

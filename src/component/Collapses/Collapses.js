@@ -8,7 +8,7 @@ class Collapses extends Component {
   render() {
     return (
       <Container>
-        <CardColumns>
+        <CardColumns className="from_colla">
           <Card>
             <a href="https://www.google.co.th/maps/@8.0604407,98.9973333,3a,75y,334.76h,89.22t/data=!3m6!1e1!3m4!1sfQG9FGsw3Sx8Gw5FBal8og!2e0!7i13312!8i6656?hl=th">
               <CardImg

@@ -1,38 +1,41 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+.from_colla{
+  margin-top: 70px;
+}
 .address{
   height: 100px;
   width: 100px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 .phone{
   height: 100px;
   width: 100px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 .facebook{
   height: 100px;
   width: 100px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 .text-address{
   font-size: 22px;
   font-family: "Kanit",
   sans-serif;
-  margin-top: 20px;
+  margin-top: 30px;
    text-align: center;
 }
 .text-phone{
   font-size: 22px;
   font-family: "Kanit",
   sans-serif;
-  margin-top: 20px;
+  margin-top: 30px;
    text-align: center;
 }
 .text-facebook{
   font-size: 22px;
   font-family: "Kanit",
   sans-serif;
-  margin-top: 20px;
+  margin-top: 30px;
    text-align: center;
 }
 .text-address:hover {

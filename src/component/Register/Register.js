@@ -112,12 +112,15 @@ class Register extends Component {
               <Button href="/Login" className="btn-register" color="info">
                 ลงทะเบียน
               </Button>
-
               <div className="btn-forgot">
                 <lable className="reg">หากคุณเป็นสมาชิกแล้ว </lable>
                 <a href="/Login" className="bt-register">
                   ลงชื่อเข้าใช้งาน
                 </a>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
               </div>
             </Form>
           </div>

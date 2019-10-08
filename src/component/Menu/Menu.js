@@ -21,8 +21,13 @@ class Menu extends Component {
         </div>
         <div>
           <h1 className="text_menucom">Comming Soon ...</h1>
-          <br></br>
         </div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
       </Container>
     );
   }

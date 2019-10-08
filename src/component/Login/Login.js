@@ -78,7 +78,7 @@ class Login extends Component {
             </FormGroup>
             <div>
               <a href="/">
-                <p className="forget-pass text-right"> ลืมรหัสผ่าน </p>
+                <p className="forget-pass"> ลืมรหัสผ่าน </p>
               </a>
             </div>
             <Button href="/" className="btn-login" color="info">
@@ -88,6 +88,12 @@ class Login extends Component {
             <div className="btn-forgot ">
               <lable className="reg">หากคุณยังไม่เป็นสมาชิก </lable>
               <a href="/Register">สมัครสมาชิก</a>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
             </div>
           </Form>
         </div>
