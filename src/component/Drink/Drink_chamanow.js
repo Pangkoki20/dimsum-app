@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import { Container, Table, Button } from "reactstrap";
-import dl_pok from "../../imgdimsum/ขนมจีบหมู.png";
-export default class Pork_Dumpling extends Component {
-  state = { menu_name: "pork_dumpling", menu_value: 0, menu_price: 20 };
+import chamanow from "../../imgdrink/ชามะนาว.png";
+export default class Drink_Coffee extends Component {
+  state = {
+    menu_name: "drink_chamanow",
+    menu_value: 0,
+    menu_price: 20
+  };
 
   sentOrder = e => {
     e.preventDefault();
@@ -33,10 +37,10 @@ export default class Pork_Dumpling extends Component {
     return (
       <tr>
         <th scope="row">
-          <img className="dl_pok" src={dl_pok} />
+          <img className="chamanow" src={chamanow} />
         </th>
-        <td>ขนมจีบหมู</td>
-        <td>20.-</td>
+        <td>ชามะนาวเย็น</td>
+        <td>30.-</td>
         <td>
           <Button
             onClick={this.sentOrder}

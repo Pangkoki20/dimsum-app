@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import { Container, Table, Button } from "reactstrap";
-import dl_pok from "../../imgdimsun/ขนมจีบหมู.png";
-import dl_pokegg from "../../imgdimsun/ขนมจีบหมูไข่เค็ม.png";
-import dl_poo from "../../imgdimsun/ขนมจีบปู.png";
-import dl_shrimp from "../../imgdimsun/ขนมจีบกุ้ง.png";
-import dl_hargao from "../../imgdimsun/ฮะเก๋า.png";
-import dl_shrimp_dum from "../../imgdimsun/เกี๊ยวกุ้ง.png";
 import "./Dimsum.css";
 import Paginat from "../Paginat/Paginat";
 import Pork_Dumpling from "./Pork_Dumpling";
+import Porkegg from "./Porkegg";
+import Poo_Dumpling from "./Poo_Dumpling";
+import Shrimp from "./Shrimp";
+import Hargao from "./Hargao";
+import Shrimp_Dumling from "./Shrimp_Dumling";
 class Dimsum extends Component {
   componentDidMount() {
-    document.title = "THE VIJITT RESORT PHUKET";
+    document.title = "Dimsumahkong Delivery";
     // var oldItems = []
     var oldItems = JSON.parse(localStorage.getItem("order"));
     console.log("old first :", oldItems);
@@ -34,90 +33,16 @@ class Dimsum extends Component {
               <th></th>
               <th>ชื่อติ่มซำ</th>
               <th>ราคา</th>
-
               <th></th>
             </tr>
           </thead>
           <tbody className="tabel-dimsum">
-            <tr>
-              <th scope="row">
-                <img className="dl_pok" src={dl_pok} />
-              </th>
-              <td>ขนมจีบหมู  45555</td>
-              <td>20.-</td>
-
-              <td>
-                <Button outline color="danger" className="btn-basket">
-                  เพิ่มลงในตะกร้า
-                </Button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <img className="dl_pokegg" src={dl_pokegg} />
-              </th>
-              <td>ขนมจีบหมูไข่เค็ม</td>
-              <td>20.-</td>
-
-              <td>
-                <Button outline color="danger" className="btn-basket">
-                  เพิ่มลงในตะกร้า
-                </Button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <img className="dl_poo" src={dl_poo} />
-              </th>
-              <td>ขนมจีบปู</td>
-              <td>20.-</td>
-
-              <td>
-                <Button outline color="danger" className="btn-basket">
-                  เพิ่มลงในตะกร้า
-                </Button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <img className="dl_shrimp" src={dl_shrimp} />
-              </th>
-              <td>ขนมจีบกุ้ง</td>
-              <td>20.-</td>
-
-              <td>
-                <Button outline color="danger" className="btn-basket">
-                  เพิ่มลงในตะกร้า
-                </Button>
-              </td>
-            </tr>
-
-            <tr>
-              <th scope="row">
-                <img className="dl_hargao" src={dl_hargao} />
-              </th>
-              <td>ฮะเก๋า</td>
-              <td>20.-</td>
-
-              <td>
-                <Button outline color="danger" className="btn-basket">
-                  เพิ่มลงในตะกร้า
-                </Button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <img className="dl_shrimp_dum" src={dl_shrimp_dum} />
-              </th>
-              <td>เกี๊ยวกุ้ง</td>
-              <td>20.-</td>
-
-              <td>
-                <Button outline color="danger" className="btn-basket">
-                  เพิ่มลงในตะกร้า
-                </Button>
-              </td>
-            </tr>
+            <Pork_Dumpling />
+            <Porkegg />
+            <Poo_Dumpling />
+            <Shrimp />
+            <Hargao />
+            <Shrimp_Dumling />
           </tbody>
         </Table>
         <Paginat />

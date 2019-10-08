@@ -1,114 +1,52 @@
 import React, { Component } from "react";
 import { Container, Table, Button } from "reactstrap";
-import gt from "../../imgdrink/ชาเย็นนน.png";
-import chadum from "../../imgdrink/ชาดำเย็น.png";
-import chamanow from "../../imgdrink/ชามะนาว.png";
-import coffee from "../../imgdrink/กาแฟเย็น.png";
-import ovantin from "../../imgdrink/โอวัลติน.png";
-import greentea from "../../imgdrink/ชาเขียว.png";
-import "./Drink.css";
 import Paginat from "../Paginat/Paginat";
+import Drink_Chaice from "./Drink_Chaice";
+import "./Drink.css";
+import Drink_Coffee from "./Drink_Coffee";
+import Drink_chamanow from "./Drink_chamanow";
+import Drink_Ovantin from "./Drink_Ovantin";
+import Drink_Greentea from "./Drink_Greentea";
+import Drink_Chadum from "./Drink_Chadum";
 class Drink extends Component {
+  componentDidMount() {
+    document.title = "Dimsumahkong Delivery";
+    // var oldItems = []
+    var oldItems = JSON.parse(localStorage.getItem("order"));
+    console.log("old first :", oldItems);
+
+    if (oldItems == null) {
+      var oldItems = [];
+      localStorage.setItem("order", JSON.stringify(oldItems));
+    } else {
+      var oldItems = JSON.parse(localStorage.getItem("order")) || [];
+    }
+    // var oldItems = JSON.parse(localStorage.getItem('order')) || [];
+  }
   render() {
     return (
-      <div>
-        <Container>
-          <div className="textname-drink">เครื่องดื่ม</div>
-          <Table hover className="table-drink">
-            <thead className="thead-bar">
-              <tr>
-                <th></th>
-                <th>ชื่อเครื่องดื่ม</th>
-                <th>ราคา</th>
-
-                <th></th>
-              </tr>
-            </thead>
-            <tbody className="tabel-drink">
-              <tr>
-                <th scope="row">
-                  <img className="gt" src={gt} />
-                </th>
-                <td>ชาเย็น</td>
-                <td>30.-</td>
-
-                <td>
-                  <Button outline color="danger" className="btn-basket">
-                    เพิ่มลงในตะกร้า
-                  </Button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  <img className="chadum" src={chadum} />
-                </th>
-                <td>ชาดำเย็น</td>
-                <td>30.-</td>
-
-                <td>
-                  <Button outline color="danger" className="btn-basket">
-                    เพิ่มลงในตะกร้า
-                  </Button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  <img className="coffee" src={coffee} />
-                </th>
-                <td>กาแฟเย็น</td>
-                <td>30.-</td>
-
-                <td>
-                  <Button outline color="danger" className="btn-basket">
-                    เพิ่มลงในตะกร้า
-                  </Button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  <img className="chamanow" src={chamanow} />
-                </th>
-                <td>ชามะนาว</td>
-                <td>30.-</td>
-
-                <td>
-                  <Button outline color="danger" className="btn-basket">
-                    เพิ่มลงในตะกร้า
-                  </Button>
-                </td>
-              </tr>
-
-              <tr>
-                <th scope="row">
-                  <img className="ovantin" src={ovantin} />
-                </th>
-                <td>โอวัลตินเย็น</td>
-                <td>30.-</td>
-
-                <td>
-                  <Button outline color="danger" className="btn-basket">
-                    เพิ่มลงในตะกร้า
-                  </Button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  <img className="greentea" src={greentea} />
-                </th>
-                <td>ชาเขียวนมเย็น</td>
-                <td>30.-</td>
-
-                <td>
-                  <Button outline color="danger" className="btn-basket">
-                    เพิ่มลงในตะกร้า
-                  </Button>
-                </td>
-              </tr>
-            </tbody>
-          </Table>
-          <Paginat />
-        </Container>
-      </div>
+      <Container>
+        <div className="textname-drink">เครื่องดื่ม</div>
+        <Table hover className="table-drink">
+          <thead className="thead-bar">
+            <tr>
+              <th></th>
+              <th>ชื่อเครื่องดื่ม</th>
+              <th>ราคา</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody className="tabel-drink">
+            <Drink_Chaice />
+            <Drink_Coffee/>
+            <Drink_chamanow/>
+            <Drink_Ovantin/>
+            <Drink_Greentea/>
+            <Drink_Chadum/>
+          </tbody>
+        </Table>
+        <Paginat />
+      </Container>
     );
   }
 }
