@@ -15,6 +15,7 @@ import Fast_Duck from "./Fast_Duck";
 import Fast_Porkleg from "./Fast_Porkleg";
 import Fast_Redpork from "./Fast_Redpork";
 import Fast_Crispypork from "./Fast_Crispypork";
+import BTHome from "../BTHome/BTHome";
 class Fastfood extends Component {
   render() {
     return (
@@ -41,6 +42,7 @@ class Fastfood extends Component {
             </tbody>
           </Table>
           <Paginat/>
+          <BTHome/>
         </Container>
       </div>
     );

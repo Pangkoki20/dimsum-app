@@ -8,6 +8,7 @@ import Drink_chamanow from "./Drink_chamanow";
 import Drink_Ovantin from "./Drink_Ovantin";
 import Drink_Greentea from "./Drink_Greentea";
 import Drink_Chadum from "./Drink_Chadum";
+import BTHome from "../BTHome/BTHome";
 class Drink extends Component {
   componentDidMount() {
     document.title = "Dimsumahkong Delivery";
@@ -38,14 +39,15 @@ class Drink extends Component {
           </thead>
           <tbody className="tabel-drink">
             <Drink_Chaice />
-            <Drink_Coffee/>
-            <Drink_chamanow/>
-            <Drink_Ovantin/>
-            <Drink_Greentea/>
-            <Drink_Chadum/>
+            <Drink_Coffee />
+            <Drink_chamanow />
+            <Drink_Ovantin />
+            <Drink_Greentea />
+            <Drink_Chadum />
           </tbody>
         </Table>
         <Paginat />
+        <BTHome />
       </Container>
     );
   }

@@ -9,6 +9,7 @@ import {
   Container
 } from "reactstrap";
 import "./Menu.css";
+import BTHome from "../BTHome/BTHome";
 import imgmenu from "../../imgmenu/menu.png";
 
 class Menu extends Component {
@@ -28,6 +29,7 @@ class Menu extends Component {
         <br></br>
         <br></br>
         <br></br>
+        <BTHome />
       </Container>
     );
   }

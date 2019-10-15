@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Container, Table, Button } from "reactstrap";
 import "./Dimsum.css";
 import Paginat from "../Paginat/Paginat";
+import BTHome from "../BTHome/BTHome";
 import Pork_Dumpling from "./Pork_Dumpling";
 import Porkegg from "./Porkegg";
 import Poo_Dumpling from "./Poo_Dumpling";
@@ -46,6 +47,7 @@ class Dimsum extends Component {
           </tbody>
         </Table>
         <Paginat />
+        <BTHome />
       </Container>
     );
   }

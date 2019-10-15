@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Container, Table, Button } from "reactstrap";
 import "./Breakfast.css";
 import Paginat from "../Paginat/Paginat";
+import BTHome from "../BTHome/BTHome";
 import Break_fast from "./Break_fast";
 import Break_egg from "./Break_egg";
 import Break_fish from "./Break_fish";
@@ -42,6 +43,7 @@ class Breakfast extends Component {
           </tbody>
         </Table>
         <Paginat />
+        <BTHome />
       </Container>
     );
   }
