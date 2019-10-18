@@ -11,13 +11,15 @@ import {
 import "./Navigator.css";
 import auth from "../service";
 import logo from "../../img/baker.png";
+import axios from 'axios'
 export default class Navigator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isOpen: false,
       check: "",
-      nameLogin: ""
+      nameLogin: "",
+      role : ""
     };
     this.toggle = this.toggle.bind(this);
   }
@@ -31,20 +33,25 @@ export default class Navigator extends React.Component {
     auth.clearToken();
     this.props.history.push("/");
   };
-  //ask pls
-  componentDidMount = () =>{
-    if (localStorage.getItem("token") !== null) {
-      this.setState({ check: "login" });
-    }
-  }
-  componentWillReceiveProps = nextProps => {
+ 
+  componentWillReceiveProps = async nextProps => {
     if (nextProps.user !== null) {
       this.setState({ check: "login" });
+    }
+    
+    let token = localStorage.getItem("token");
+    if(token){
+      if (token !== null) {
+        this.setState({ check: "login" });
+      }
+
+      let res = await axios.post(`http://localhost:3001/api/users/me`, { token });
+       this.setState({ role: res.data.role });
     }
   };
 
   render() {
-    console.log(this.props);
+    console.log(this.state.role);
     
     return (
       <div>
@@ -65,6 +72,16 @@ export default class Navigator extends React.Component {
                   <h6 className="fon-barr">ติดต่อเรา</h6>
                 </NavLink>
               </NavItem>
+
+              {this.state.role === "admin" && this.state.check === "login" && (
+                <NavItem>
+                  <NavLink>
+                    <div className="Login">
+                      <h6 className="fon-barr">ADMIN </h6>
+                    </div>
+                  </NavLink>
+                </NavItem>
+              )}
 
               {this.state.check !== "login" && (
                 <NavItem>
