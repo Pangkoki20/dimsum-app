@@ -31,7 +31,12 @@ export default class Navigator extends React.Component {
     auth.clearToken();
     this.props.history.push("/");
   };
-
+  //ask pls
+  componentDidMount = () =>{
+    if (localStorage.getItem("token") !== null) {
+      this.setState({ check: "login" });
+    }
+  }
   componentWillReceiveProps = nextProps => {
     if (nextProps.user !== null) {
       this.setState({ check: "login" });
@@ -39,6 +44,8 @@ export default class Navigator extends React.Component {
   };
 
   render() {
+    console.log(this.props);
+    
     return (
       <div>
         <Navbar className="bar" light expand="md">

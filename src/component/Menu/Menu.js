@@ -9,7 +9,6 @@ import {
   Container
 } from "reactstrap";
 import "./Menu.css";
-import BTHome from "../BTHome/BTHome";
 import imgmenu from "../../imgmenu/menu.png";
 
 class Menu extends Component {
@@ -20,16 +19,20 @@ class Menu extends Component {
           <h1 className="text-menu">เมนูแนะนำ</h1>
           <img className="img_menu" src={imgmenu} />
         </div>
-        <div>
-          <h1 className="text_menucom">Comming Soon ...</h1>
+        <div className="from_mn">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">
+                With supporting text below as a natural lead-in to additional
+                content.
+              </p>
+              <a href="#" class="btn btn-primary">
+                หยิบใส่ตะกร้า
+              </a>
+            </div>
+          </div>
         </div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <BTHome />
       </Container>
     );
   }

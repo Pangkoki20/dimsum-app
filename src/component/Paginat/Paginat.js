@@ -9,7 +9,7 @@ import "./Paginat.css";
 class Paginat extends Component {
   render() {
     return (
-      <Container>
+      <Container className="form-paginat">
         <div className="pagination justify-content-center">
           <Pagination size="lg" aria-label="Page navigation">
             <PaginationItem>

@@ -14,16 +14,16 @@ import Contact from "./component/Contact/Contact";
 import Collapses from "./component/Collapses/Collapses";
 import Menu from "./component/Menu/Menu";
 import Footer from "./component/Footer/Footer";
-import Fried from "./component/Fried/Fried";
 import Other from "./component/Other/Other";
 import ShowOrder from "./component/ShowOrder/ShowOrder";
 import "./App.css";
 
 class App extends Component {
-  state = {
-    user: null
-  };
-
+  
+    state = {
+      user: null
+    };
+  
   onUserChanged = user => {
     this.setState({ user });
   };
@@ -50,7 +50,6 @@ class App extends Component {
           <Route exact path="/Contact" component={Contact} />
           <Route exact path="Collapses" component={Collapses} />
           <Route exact path="/Menu" component={Menu} />
-          <Route exact path="/Fried" component={Fried} />
           <Route exact path="/Other" component={Other} />
           <Route exact path="/ShowOrder" component={ShowOrder} />
         </Switch>

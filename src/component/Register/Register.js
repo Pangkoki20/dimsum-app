@@ -39,19 +39,20 @@ class Register extends Component {
         const { data } = res;
         this.setState({ message: data.message });
 
-        this.props.history.push(`/overview`);
+        this.props.history.push(`/login`);
       });
     } catch (error) {
       console.log("Error : ", error);
     }
   };
   render() {
+    
     const { firstname, lastname, email, password, phone, address } = this.state;
     return (
       <div>
         <Container>
           <div className="log">
-            <Form className="form-register" onSubmit={this.register}>
+            <Form className="form-register" >
               <h2>
                 <b className="re">ลงทะเบียน</b>
               </h2>{" "}
@@ -109,7 +110,7 @@ class Register extends Component {
                 onChange={this.handleInputChange}
                 required
               />
-              <Button href="/Login" className="btn-register" color="info">
+              <Button  className="btn-register" color="info" onClick={(e)=>this.register(e)}>
                 ลงทะเบียน
               </Button>
               <div className="btn-forgot">

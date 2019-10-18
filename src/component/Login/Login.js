@@ -41,7 +41,7 @@ class Login extends Component {
         this.props.onUserChanged(res);
 
         localStorage.setItem("token", data.token);
-        this.props.history.push(`/banner`);
+       this.props.history.push(`/`);
       });
     } catch (error) {
       console.log("Error : ", error);
@@ -49,10 +49,11 @@ class Login extends Component {
   };
 
   render() {
+    
     return (
       <Container>
         <div className="form-login">
-          <Form onSubmit={this.login}>
+          <Form >
             <FormGroup className="fon-log">
               <span>
                 <img className="logo" src={lo} />
@@ -81,7 +82,7 @@ class Login extends Component {
                 <p className="forget-pass"> ลืมรหัสผ่าน </p>
               </a>
             </div>
-            <Button href="/" className="btn-login" color="info">
+            <Button href="/" className="btn-login" color="info" onClick={(e) => this.login(e)}>
               ลงชื่อเข้าใช้งาน
             </Button>
 

@@ -4,7 +4,7 @@
   margin-top: 20px;
 }
 .textname-dimsum {
-  text-align: center;
+  text-align:left;
   font-size: 50px;
   margin-top: 10px;
   color: #224870;
@@ -53,4 +53,11 @@ text-align: center;
 height: 200px;
 width: 200px;
 text-align: center;
+}
+.bt_shop{
+  width: 40px;
+  height: 40px;
+}
+.from_btshop{
+  text-align: right;
 }

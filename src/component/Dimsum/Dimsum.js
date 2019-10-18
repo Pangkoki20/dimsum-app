@@ -9,6 +9,7 @@ import Poo_Dumpling from "./Poo_Dumpling";
 import Shrimp from "./Shrimp";
 import Hargao from "./Hargao";
 import Shrimp_Dumling from "./Shrimp_Dumling";
+import bt_shop from "../../imgshop/shopping-basket.png";
 class Dimsum extends Component {
   componentDidMount() {
     document.title = "Dimsumahkong Delivery";
@@ -26,29 +27,36 @@ class Dimsum extends Component {
   }
   render() {
     return (
-      <Container>
-        <div className="textname-dimsum">ติ่มซำ</div>
-        <Table hover className="table-dimsum">
-          <thead className="thead-bar">
-            <tr>
-              <th></th>
-              <th>ชื่อติ่มซำ</th>
-              <th>ราคา</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody className="tabel-dimsum">
-            <Pork_Dumpling />
-            <Porkegg />
-            <Poo_Dumpling />
-            <Shrimp />
-            <Hargao />
-            <Shrimp_Dumling />
-          </tbody>
-        </Table>
+      <div class="container-fluid">
+        <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+          <div class="d-flex bd-highlight textname-dimsum">
+            <div class="p-2 w-100 bd-highlight ">ติ่มซำ</div>
+            <div class="p-2 flex-shrink-1 bd-highlight">
+              <img className="bt_shop" src={bt_shop} />
+            </div>
+          </div>
+          <Table hover className="table-dimsum">
+            <thead className="thead-bar">
+              <tr>
+                <th></th>
+                <th>ชื่อติ่มซำ</th>
+                <th>ราคา</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody className="tabel-dimsum">
+              <Pork_Dumpling />
+              <Porkegg />
+              <Poo_Dumpling />
+              <Shrimp />
+              <Hargao />
+              <Shrimp_Dumling />
+            </tbody>
+          </Table>
+        </div>
         <Paginat />
         <BTHome />
-      </Container>
+      </div>
     );
   }
 }
