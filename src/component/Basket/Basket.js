@@ -8,9 +8,11 @@ import {
   CardFooter,
   CardBody,
   CardTitle,
-  CardText
+  CardText,
+  ButtonGroup
 } from "reactstrap";
 import "./Basket.css";
+import img_gps from "../../imgbasket/navigation.png"
 class Basket extends Component {
   render() {
     return (
@@ -26,10 +28,28 @@ class Basket extends Component {
                   <th>จำนวน</th>
                   <th>ราคา</th>
                 </tr>
+                <tr className="body">
+                  <td className="item">อาหาร</td>
+                  <td className="price_item">ราคา(ชิ้น)</td>
+                  <td className="add_remove">
+                    <div>
+                      <ButtonGroup className="" size="lg">
+                        <Button className="btn-outline-secondary btn btn-ligh bt_addremove">
+                          -
+                        </Button>
+                        <Button className="btn-outline-secondary btn btn-ligh bt_addremove">
+                          1
+                        </Button>
+                        <Button className="btn-outline-secondary btn btn-ligh bt_addremove">
+                          +
+                        </Button>
+                      </ButtonGroup>
+                    </div>
+                  </td>
+                  <td className="total_item">ราคา</td>
+                </tr>
               </thead>
-              <tbody>
-               
-              </tbody>
+              <tbody></tbody>
             </Table>
           </div>
           <div class="col-6 col-md-4 ">
@@ -43,6 +63,12 @@ class Basket extends Component {
                 </CardBody>
                 <CardFooter className="tt_money">รวม</CardFooter>
               </Card>
+            </div>
+            <div className="address_customer">
+              <Button outline color="info" size="lg" block>
+                <img className="img_gps" src={img_gps} />
+                ที่อยู่สำหรับการจัดส่ง
+              </Button>
             </div>
           </div>
         </div>

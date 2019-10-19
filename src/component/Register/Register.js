@@ -101,7 +101,7 @@ class Register extends Component {
                 onChange={this.handleInputChange}
                 required
               />
-              <Input
+              {/* <Input
                 className="register"
                 type="address"
                 name="address"
@@ -109,7 +109,7 @@ class Register extends Component {
                 placeholder="ที่อยู่ปัจจุบัน"
                 onChange={this.handleInputChange}
                 required
-              />
+              /> */}
               <Button  className="btn-register" color="info" onClick={(e)=>this.register(e)}>
                 ลงทะเบียน
               </Button>

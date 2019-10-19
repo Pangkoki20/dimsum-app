@@ -1,37 +1,88 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+
 .text_basket {
     font-size: 40px;
     text-align: center;
     margin-top: 15px;
     font-family: "Kanit", sans-serif;
 }
+
 .table-basket {
     margin-top: 15px !important;
     font-family: "Kanit", sans-serif;
-}
-.from_money{
-    margin-top: 30px;
-}
-.text_money {
-    font-size: 25px;
-    font-family: "Kanit",sans-serif;
     text-align: center;
 }
+
+.item {
+    width: 400px;
+    height: 50px;
+    text-align: center !important;
+}
+
+.price_item {
+    width: 50px;
+    height: 50px;
+    text-align: center !important;
+}
+
+.add_remove {
+    width: 50px;
+    height: 50px;
+    text-align: center !important;
+    border: none;
+}
+.bt_addremove{
+    background-color: #ffffff;
+}
+.total_item {
+    width: 50px;
+    height: 50px;
+    text-align: center !important;
+}
+
+.from_money {
+    margin-top: 30px;
+}
+
+.text_money {
+    font-size: 25px;
+    font-family: "Kanit", sans-serif;
+    text-align: center;
+}
+
 .text_food {
     font-size: 19px;
     font-family: "Kanit", sans-serif;
 }
+
 .tt_food {
     font-size: 19px;
     font-family: "Kanit",
         sans-serif;
 }
+
 .delivery_charge {
     font-size: 19px;
     font-family: "Kanit", sans-serif;
 }
+
 .tt_money {
     font-size: 22px;
-    font-family: "Kanit",sans-serif;
+    font-family: "Kanit", sans-serif;
     text-align: right;
+}
+
+.address_customer {
+    font-size: 25px;
+    font-family: "Kanit",
+        sans-serif;
+    text-align: right;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.img_gps {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
 }
