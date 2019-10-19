@@ -10,7 +10,6 @@ import {
 } from "reactstrap";
 import "./Navigator.css";
 import auth from "../service";
-import logo from "../../img/baker.png";
 import axios from 'axios'
 export default class Navigator extends React.Component {
   constructor(props) {

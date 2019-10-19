@@ -8,7 +8,6 @@ import drink from "../../img/iced-tea.png";
 import "./MenuSelect.css";
 
 class MenuSelect extends Component {
- 
   render() {
     return (
       <Container className="cont-row">
@@ -17,8 +16,8 @@ class MenuSelect extends Component {
             <span className="imgnav">
               <a href="/Menu">
                 <img className="nm" src={nm} />
-                <h6 className="text-nm">เมนูแนะนำ</h6>
-              </a>
+              </a>  
+              <h6 className="text-nm">เมนูแนะนำ</h6>
             </span>
           </div>
           <div class="col">

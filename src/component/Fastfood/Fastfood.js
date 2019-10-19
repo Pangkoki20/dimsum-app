@@ -20,7 +20,9 @@ class Fastfood extends Component {
             <div class="d-flex bd-highlight textname-fastfood">
               <div class="p-2 w-100 bd-highlight ">อาหารจานเดียว</div>
               <div class="p-2 flex-shrink-1 bd-highlight">
-                <img className="bt_shop" src={bt_shop} />
+                <a href="/Basket">
+                  <img className="bt_shop" src={bt_shop} />
+                </a>
               </div>
             </div>
             <Table hover className="table-fastfood">

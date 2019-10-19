@@ -10,6 +10,7 @@ import Shrimp from "./Shrimp";
 import Hargao from "./Hargao";
 import Shrimp_Dumling from "./Shrimp_Dumling";
 import bt_shop from "../../imgshop/shopping-basket.png";
+import Basket from "../../component/Basket/Basket";
 class Dimsum extends Component {
   componentDidMount() {
     document.title = "Dimsumahkong Delivery";
@@ -32,7 +33,9 @@ class Dimsum extends Component {
           <div class="d-flex bd-highlight textname-dimsum">
             <div class="p-2 w-100 bd-highlight ">ติ่มซำ</div>
             <div class="p-2 flex-shrink-1 bd-highlight">
-              <img className="bt_shop" src={bt_shop} />
+              <a href="/Basket">
+                <img className="bt_shop" src={bt_shop} />
+              </a>
             </div>
           </div>
           <Table hover className="table-dimsum">

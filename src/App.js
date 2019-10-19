@@ -16,6 +16,7 @@ import Menu from "./component/Menu/Menu";
 import Footer from "./component/Footer/Footer";
 import Other from "./component/Other/Other";
 import ShowOrder from "./component/ShowOrder/ShowOrder";
+import Basket from "./component/Basket/Basket";
 import "./App.css";
 
 class App extends Component {
@@ -52,6 +53,7 @@ class App extends Component {
           <Route exact path="/Menu" component={Menu} />
           <Route exact path="/Other" component={Other} />
           <Route exact path="/ShowOrder" component={ShowOrder} />
+          <Route exact path="/Basket" component={Basket}/>
         </Switch>
         <Footer />
       </div>
