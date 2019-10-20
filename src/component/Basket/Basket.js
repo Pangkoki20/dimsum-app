@@ -9,10 +9,16 @@ import {
   CardBody,
   CardTitle,
   CardText,
-  ButtonGroup
+  ButtonGroup,
+  Row,
+  Col,
+  InputGroupAddon,
+  Input,
+  InputGroupText
 } from "reactstrap";
 import "./Basket.css";
-import img_gps from "../../imgbasket/navigation.png"
+import img_gps from "../../imgbasket/confirmation.png";
+import img_trash from "../../imgbasket/trash.png";
 class Basket extends Component {
   render() {
     return (
@@ -20,18 +26,45 @@ class Basket extends Component {
         <div class="row">
           <div class="col-12 col-md-8">
             <div className="text_basket">อาหารในตะกร้า</div>
-            <Table className="table-basket">
-              <thead>
-                <tr>
-                  <th>อาหาร</th>
-                  <th>ราคา(ชิ้น)</th>
-                  <th>จำนวน</th>
-                  <th>ราคา</th>
-                </tr>
-                <tr className="body">
-                  <td className="item">อาหาร</td>
-                  <td className="price_item">ราคา(ชิ้น)</td>
-                  <td className="add_remove">
+            <Card className="card_food">
+              <CardHeader>
+                <Row>
+                  <div>
+                    <Col>
+                      <Input
+                        className="check"
+                        addon
+                        type="checkbox"
+                        aria-label="Checkbox for following text input"
+                      />
+                    </Col>
+                  </div>
+                  <Col>
+                    <div className="tt_inputfood">ทั้งหมด </div>
+                  </Col>
+                  <Col>ชื่ออาหาร</Col>
+                  <Col>ราคา</Col>
+                  <Col>จำนวน</Col>
+                  <Col>ราคารวม</Col>
+                  <Col>ลบออก</Col>
+                </Row>
+              </CardHeader>
+              <CardBody>
+                <Row>
+                  <div>
+                    <Col>
+                      <Input
+                        className="check"
+                        addon
+                        type="checkbox"
+                        aria-label="Checkbox for following text input"
+                      />
+                    </Col>
+                  </div>
+                  <Col></Col>
+                  <Col></Col>
+                  <Col></Col>
+                  <Col className="add_remove">
                     <div>
                       <ButtonGroup className="" size="lg">
                         <Button className="btn-outline-secondary btn btn-ligh bt_addremove">
@@ -45,12 +78,21 @@ class Basket extends Component {
                         </Button>
                       </ButtonGroup>
                     </div>
-                  </td>
-                  <td className="total_item">ราคา</td>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </Table>
+                  </Col>
+                  <Col></Col>
+                  <Col>
+                    <img className="img_trash" src={img_trash} />
+                  </Col>
+                </Row>
+              </CardBody>
+              <CardFooter>
+                <div class="row">
+                  <div class="col">จำนวนทั้งหมด</div>
+                  <div class="col col-lg-2">--</div>
+                  <div class="col col-lg-2">ชิ้น</div>
+                </div>
+              </CardFooter>
+            </Card>
           </div>
           <div class="col-6 col-md-4 ">
             <div class="card from_money">
@@ -61,13 +103,18 @@ class Basket extends Component {
                   <CardText className="tt_food">ราคาอาหารทั้งหมด</CardText>
                   <CardText className="delivery_charge">ค่าจัดส่ง</CardText>
                 </CardBody>
-                <CardFooter className="tt_money">รวม</CardFooter>
+                <CardFooter className="tt_money">
+                  <div class="row">
+                    <div class="col-sm-8"> รวม</div>
+                    <div class="col-sm-4">--</div>
+                  </div>
+                </CardFooter>
               </Card>
             </div>
             <div className="address_customer">
-              <Button outline color="info" size="lg" block>
+              <Button outline color="info" size="lg" block href="/OrderConfirm">
                 <img className="img_gps" src={img_gps} />
-                ที่อยู่สำหรับการจัดส่ง
+                ยืนยันการสั่งซื้อ
               </Button>
             </div>
           </div>

@@ -51,7 +51,7 @@ class Login extends Component {
   render() {
     
     return (
-      <Container>
+      <div class="container-fluid">
         <div className="form-login">
           <Form >
             <FormGroup className="fon-log">
@@ -98,7 +98,7 @@ class Login extends Component {
             </div>
           </Form>
         </div>
-      </Container>
+      </div>
     );
   }
 }

@@ -1,0 +1,39 @@
+.from_order {
+    margin-top: 20px;
+}
+.bt_payment {
+    width: 300px;
+}
+.bt_payment:hover{
+    background-color: #ffffff;
+    color: #224870;
+}
+.text-addre {
+    font-size: 22px;
+    font-family: "Kanit", sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+.text-addre:hover {
+    text-decoration: none;
+}
+.img_order {
+    text-align: center;
+}
+.img_address {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.img_pay {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.img_confirm {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}

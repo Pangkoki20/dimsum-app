@@ -1,9 +1,29 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 
+.card_food {
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Kanit",
+        sans-serif;
+    font-size: 20px;
+}
+
+.in_check {
+    width: 10px !important;
+}
+
+.check {
+    width: 20px;
+    height: 20px;
+}
+
+.tt_inputfood {
+    width: 100px;
+}
+
 .text_basket {
     font-size: 40px;
     text-align: center;
-    margin-top: 15px;
     font-family: "Kanit", sans-serif;
 }
 
@@ -31,9 +51,11 @@
     text-align: center !important;
     border: none;
 }
-.bt_addremove{
+
+.bt_addremove {
     background-color: #ffffff;
 }
+
 .total_item {
     width: 50px;
     height: 50px;
@@ -41,7 +63,7 @@
 }
 
 .from_money {
-    margin-top: 30px;
+    margin-top: 80px;
 }
 
 .text_money {
@@ -69,7 +91,7 @@
 .tt_money {
     font-size: 22px;
     font-family: "Kanit", sans-serif;
-    text-align: right;
+    text-align: center;
 }
 
 .address_customer {
@@ -80,9 +102,14 @@
     margin-top: 30px;
     text-align: center;
 }
-
-.img_gps {
+.img_trash{
     width: 30px;
     height: 30px;
-    margin-right: 10px;
+}.img_gps{
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+.footer_ttfood{
+    margin-left: 10px;
 }
