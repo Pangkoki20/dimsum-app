@@ -1,8 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 .from_order {
     margin-top: 20px;
 }
+.text_basketconfirm{
+     font-size: 50px;
+     text-align: center;
+     font-family: "Kanit",
+     sans-serif;
+     margin-top: 30px;
+     color: #224870;
+}
+.text_basketconfirm {
+   text-decoration: none;
+   color: #00758d;
+}
 .bt_payment {
-    width: 300px;
+    width: 200px;
+    margin-top: 30px;
 }
 .bt_payment:hover{
     background-color: #ffffff;
@@ -36,4 +50,9 @@
     width: 60px;
     height: 60px;
     margin-right: 20px;
+}
+.btmodify_food{
+    margin-top: 50px;
+    /* width: 250px;
+    margin-left: 300px; */
 }

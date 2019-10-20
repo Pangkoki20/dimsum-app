@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+
+.from_payment {
+    margin-top: 30px;
+}
+
+.text_payment {
+    font-size: 22px;
+    text-align: center;
+    font-family: "Kanit",
+        sans-serif;
+    color: #224870;
+}
+.bt_payment {
+    height: 100px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.text_btpayment {
+    font-size: 18px;
+    font-family: "Kanit",
+        sans-serif;
+}
