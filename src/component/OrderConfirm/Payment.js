@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, CardHeader, Card, CardBody, Button } from "reactstrap";
+import { CardHeader, Card, CardBody, Button } from "reactstrap";
 import "./Payment.css";
 import Order from "./Oder";
 class Payment extends Component {
@@ -11,14 +11,10 @@ class Payment extends Component {
           <div>
             <Order />
           </div>
-          
-            <Card className="from_payment">
-              <CardHeader className="text_payment">วิธีการชำระเงิน</CardHeader>
-              <CardBody className="bt_payment">
-                
-              </CardBody>
-            </Card>
-          
+          <Card className="from_payment">
+            <CardHeader className="text_payment">วิธีการชำระเงิน</CardHeader>
+            <CardBody className="bt_payment"></CardBody>
+          </Card>
         </div>
       </div>
     );

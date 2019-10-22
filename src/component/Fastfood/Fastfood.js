@@ -11,12 +11,14 @@ import Fast_Redpork from "./Fast_Redpork";
 import Fast_Crispypork from "./Fast_Crispypork";
 import BTHome from "../BTHome/BTHome";
 import bt_shop from "../../imgshop/shopping-basket.png";
+import NavMenu from "../์NavMenu/NavMenu";
 class Fastfood extends Component {
   render() {
     return (
       <div>
         <div class="container-fluid">
           <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+            <NavMenu/>
             <div class="d-flex bd-highlight textname-fastfood">
               <div class="p-2 w-100 bd-highlight ">อาหารจานเดียว</div>
               <div class="p-2 flex-shrink-1 bd-highlight">
@@ -45,7 +47,7 @@ class Fastfood extends Component {
               </tbody>
             </Table>
           </div>
-          <Paginat />
+          
           <BTHome />
         </div>
       </div>
