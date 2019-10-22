@@ -15,9 +15,7 @@ class Payment extends Component {
             <Card className="from_payment">
               <CardHeader className="text_payment">วิธีการชำระเงิน</CardHeader>
               <CardBody className="bt_payment">
-                <Button color="danger" className="text_btpayment">
-                  ชำระเงินปลายทาง
-                </Button>
+                
               </CardBody>
             </Card>
           
