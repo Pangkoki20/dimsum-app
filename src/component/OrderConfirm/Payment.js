@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { CardHeader, Card, CardBody, Button } from "reactstrap";
 import "./Payment.css";
 import Order from "./Oder";
+import RtOrder from "./BtOder";
 class Payment extends Component {
   render() {
     return (
@@ -15,6 +16,9 @@ class Payment extends Component {
             <CardHeader className="text_payment">วิธีการชำระเงิน</CardHeader>
             <CardBody className="bt_payment"></CardBody>
           </Card>
+          <div>
+            <RtOrder/>
+          </div>
         </div>
       </div>
     );
