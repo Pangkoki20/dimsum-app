@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
-
+.from_searchdimsum {
+  width: 400px;
+}
 .table-dimsum {
   margin-top: 30px;
   font-size: 22px;
@@ -55,14 +57,14 @@
   font-size: 80px;
   color: #224870;
   font-family: "Kanit", sans-serif;
+
 }
 
 .row1 {
-  padding-left: 600px;
-  padding-right: 600px;
+  padding-left: 450px;
+  padding-right: 450px;
 }
 .text_namemenu{
   font-size: 20px;
   text-align: center;
-
 }

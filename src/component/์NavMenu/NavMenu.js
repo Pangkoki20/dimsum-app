@@ -1,29 +1,29 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
+  InputGroup,
+  InputGroupAddon,
+  Button,
+  Input,
+  InputGroupText
 } from "reactstrap";
 import "./NavMenu.css";
-import bt_shop from "../../imgshop/shopping-basket.png";
-class NavMenu extends Component{
+class NavMenu extends Component {
   render() {
-      return (
-        <nav className="navbar navbar-light bg-light ">
-          <a class="navbar-brand"></a>
-          <form class="form-inline from_sech">
-            <input
-              className="form-control mr-sm-2 "
-              type="search"
-              placeholder="เมนูที่คุณต้องการ....."
-              aria-label="Search"
-            />
-            <button className="btn btn-info my-2 my-sm-0" type="submit">
-              ค้นหา
-            </button>
-          </form>
-          <a href="/Basket">
-            <img className="bt_shop" src={bt_shop} />
-          </a>
-        </nav>
-      );
-}
+    return (
+      <InputGroup>
+        <InputGroupAddon addonType="prepend">
+          <Button color="secondary">I'm a button</Button>
+        </InputGroupAddon>
+        <Input className="bt_search" />
+      </InputGroup>
+
+      // <InputGroup>
+      //   <InputGroupAddon addonType="">
+      //     <InputGroupText className="input_search">ค้นหาอาหาร</InputGroupText>
+      //   </InputGroupAddon >
+      //
+      // </InputGroup>
+    );
+  }
 }
 export default NavMenu;
