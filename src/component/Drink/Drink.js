@@ -59,7 +59,7 @@ class Drink extends Component {
             </tbody>
           </Table>
         </div>
-        <Paginat />
+        
         <BTHome />
       </div>
     );

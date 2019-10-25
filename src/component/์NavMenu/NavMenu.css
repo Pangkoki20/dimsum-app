@@ -1,9 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+
 .textname-dimsum:hover {
     text-decoration: none;
     color: #00758d;
 }
-.input_search{
-     font-family: "Kanit",
-     sans-serif;
+
+.input_text {
+    font-family: "Kanit",
+        sans-serif;
+}
+
+.from_sech {
+    margin-right: 570px;
+}
+
+.bt_shop {
+    width: 40px;
+    height: 40px;
+    margin-left: 200px;
 }

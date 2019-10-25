@@ -27,17 +27,13 @@ class Breakfast extends Component {
   }
   render() {
     return (
-      <div class="container-fluid">
+      <div>
+        <div className="textname-dimsum">อาหารเช้า</div>
+      <div class="row">
+          <div class="col row1">
+            <div class="container-fluid">
         <div class="card shadow-lg p-3 mb-5 bg-white rounded">
           <NavMenu />
-          <div class="d-flex bd-highlight textname-breakfast">
-            <div class="p-2 w-100 bd-highlight ">อาหารเช้า</div>
-            <div class="p-2 flex-shrink-1 bd-highlight">
-              <a href="/Basket">
-                <img className="bt_shop" src={bt_shop} />
-              </a>
-            </div>
-          </div>
           <Table hover className="table-breakfast">
             <thead className="thead-bar">
               <tr>
@@ -55,8 +51,11 @@ class Breakfast extends Component {
             </tbody>
           </Table>
         </div>
-        <Paginat />
+        </div>
+        
         <BTHome />
+      </div>
+      </div>
       </div>
     );
   }
