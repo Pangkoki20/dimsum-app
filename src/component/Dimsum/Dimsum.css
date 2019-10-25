@@ -4,7 +4,7 @@
   width: 400px;
 }
 .table-dimsum {
-  margin-top: 30px;
+  margin-top: 5px;
   font-size: 22px;
   text-align: center;
   font-family: "Kanit", sans-serif;}
@@ -61,10 +61,13 @@
 }
 
 .row1 {
-  padding-left: 450px;
-  padding-right: 450px;
+  padding-left: 300px;
+  padding-right: 300px;
 }
 .text_namemenu{
   font-size: 20px;
   text-align: center;
+}
+.from_dimsum{
+  margin-top:10px;
 }

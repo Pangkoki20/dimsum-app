@@ -10,19 +10,20 @@ import "./NavMenu.css";
 class NavMenu extends Component {
   render() {
     return (
-      <InputGroup>
-        <InputGroupAddon addonType="prepend">
-          <Button color="secondary">I'm a button</Button>
-        </InputGroupAddon>
-        <Input className="bt_search" />
-      </InputGroup>
-
-      // <InputGroup>
-      //   <InputGroupAddon addonType="">
-      //     <InputGroupText className="input_search">ค้นหาอาหาร</InputGroupText>
-      //   </InputGroupAddon >
-      //
-      // </InputGroup>
+      <nav class="navbar navbar-light">
+        <a class="navbar-brand"></a>
+        <form class="form-inline">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder=""
+            aria-label="Search"
+          />
+          <button class="btn btn-success my-2 my-sm-0" type="submit">
+            ค้นหา
+          </button>
+        </form>
+      </nav>
     );
   }
 }

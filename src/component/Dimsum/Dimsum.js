@@ -29,13 +29,12 @@ class Dimsum extends Component {
   render() {
     return (
       <div>
+        <NavMenu />
         <div class="row">
           <div class="col row1">
             <div class="container-fluid">
               <div class="card shadow-sm p-3 mb-1 bg-white rounded from_dimsum">
-                <div className="from_searchdimsum">
-                  <NavMenu />
-                </div>
+                <div></div>
                 <div className="textname-dimsum">ติ่มซำ </div>
 
                 <Table hover className="table-dimsum ">
