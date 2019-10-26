@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Table, Button } from "reactstrap";
 import ff_babutte from "../../imgfastfoood/บะกุ๊ดเต๋.png";
+import BTBasket from "../BTBasket/BTBasket";
 export default class Fast_Babutte extends Component {
   state = {
     menu_name: "fast_babutte",
@@ -42,14 +43,7 @@ export default class Fast_Babutte extends Component {
         <td>บะกุ๊ดเต๋</td>
         <td>50.-</td>
         <td>
-          <Button
-            onClick={this.sentOrder}
-            outline
-            color="danger"
-            className="btn-basket"
-          >
-            เพิ่มลงในตะกร้า
-          </Button>
+          <BTBasket/>
         </td>
       </tr>
     );

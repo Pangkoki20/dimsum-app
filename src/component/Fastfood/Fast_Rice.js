@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Table, Button } from "reactstrap";
 import ff_rice from "../../imgfastfoood/ข้าวเปล่า.png";
+import BTBasket from "../BTBasket/BTBasket";
 export default class Fast_Rice extends Component {
   state = {
     menu_name: "fast_chicken",
@@ -43,14 +44,7 @@ export default class Fast_Rice extends Component {
         </td>
         <td>10.-</td>
         <td>
-          <Button
-            onClick={this.sentOrder}
-            outline
-            color="danger"
-            className="btn-basket"
-          >
-            เพิ่มลงในตะกร้า
-          </Button>
+         <BTBasket/>
         </td>
       </tr>
     );

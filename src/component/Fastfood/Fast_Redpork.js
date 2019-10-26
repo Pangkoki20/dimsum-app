@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Table, Button } from "reactstrap";
 import ff_redpork from "../../imgfastfoood/ข้าวหมูแดง.png";
+import BTBasket from "../BTBasket/BTBasket";
 export default class Fast_Redpork extends Component {
   state = {
     menu_name: "fast_redpork",
@@ -42,14 +43,7 @@ export default class Fast_Redpork extends Component {
         <td>ข้าวหมูแดง</td>
         <td>50.-</td>
         <td>
-          <Button
-            onClick={this.sentOrder}
-            outline
-            color="danger"
-            className="btn-basket"
-          >
-            เพิ่มลงในตะกร้า
-          </Button>
+         <BTBasket/>
         </td>
       </tr>
     );

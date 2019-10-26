@@ -2,9 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
 .table-drink{
     margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    font-family: "Kanit",
+    sans-serif;
 }
 .textname-drink{
-    text-align: left;
+    text-align: center;
     font-size: 50px;
     margin-top: 10px;  
     color:#224870;

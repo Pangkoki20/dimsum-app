@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Table, Button } from "reactstrap";
 import dl_pokegg from "../../imgdimsum/ขนมจีบหมูไข่เค็ม.png";
+import BTBasket from "../BTBasket/BTBasket";
 export default class Porkegg extends Component {
   state = { menu_name: "porkegg", menu_value: 0, menu_price: 20 };
 
@@ -33,22 +34,14 @@ export default class Porkegg extends Component {
     return (
       <tr>
         <th scope="row">
-                <img className="dl_pokegg" src={dl_pokegg} />
-              </th>             
-               <td className="text_name">ขนมจีบหมูไข่เค็ม</td>
-              <td className="text_name">20.-</td>
-              <td></td> 
-              <td>
-          <Button
-            onClick={this.sentOrder}
-            outline
-            color="danger"
-            className="btn-basket"
-          >
-            เพิ่มลงในตะกร้า
-          </Button>
+          <img className="dl_pokegg" src={dl_pokegg} />
+        </th>
+        <td className="text_name">ขนมจีบหมูไข่เค็ม</td>
+        <td className="text_name">20.-</td>
+        <td>
+          <BTBasket />
         </td>
-        </tr>
+      </tr>
     );
   }
 }

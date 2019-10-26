@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Table, Button } from "reactstrap";
 import dl_hargao from "../../imgdimsum/ฮะเก๋า.png";
+import BTBasket from "../BTBasket/BTBasket";
 export default class Hargao extends Component {
   state = { menu_name: "hargao", menu_value: 0, menu_price: 20 };
 
@@ -38,14 +39,7 @@ export default class Hargao extends Component {
         <td>ฮะเก๋า</td>
         <td>20.-</td>
         <td>
-          <Button
-            onClick={this.sentOrder}
-            outline
-            color="danger"
-            className="btn-basket"
-          >
-            เพิ่มลงในตะกร้า
-          </Button>
+          <BTBasket/>
         </td>
       </tr>
     );

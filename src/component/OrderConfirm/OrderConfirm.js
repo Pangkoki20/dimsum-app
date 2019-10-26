@@ -7,8 +7,8 @@ import BtOrder from "./BtOder";
 class OrderConfirm extends Component {
   render() {
     return (
-      <div class="container-fluid ">
-        <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+      <div class="container">
+        <div class="card shadow-lg p-3 mb-5  bg-white rounded">
           <div className="text_basketconfirm">ยืนยันการสั่งซื้อ</div>
           <div>
             <Order/>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Table, Button } from "reactstrap";
 import dl_pok from "../../imgdimsum/ขนมจีบหมู.png";
+import BTBasket from "../BTBasket/BTBasket";
 export default class Pork_Dumpling extends Component {
   state = { menu_name: "pork_dumpling", menu_value: 0, menu_price: 20 };
 
@@ -38,14 +39,7 @@ export default class Pork_Dumpling extends Component {
         <td className="text_name">ขนมจีบหมู</td>
         <td className="text_name">20.-</td>
         <td>
-          <Button
-            onClick={this.sentOrder}
-            outline
-            color="danger"
-            className="btn-basket"
-          >
-            เพิ่มลงในตะกร้า
-          </Button>
+          <BTBasket/>
         </td>
       </tr>
     );

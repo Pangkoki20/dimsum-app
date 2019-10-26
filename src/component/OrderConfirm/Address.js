@@ -4,10 +4,7 @@ import {
   Card,
   Button,
   CardHeader,
-  CardFooter,
-  CardBody,
-  CardTitle,
-  CardText
+  CardBody
 } from "reactstrap";
 import "./Address.css";
 import Order from "./Oder";

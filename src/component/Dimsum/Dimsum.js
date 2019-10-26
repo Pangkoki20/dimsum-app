@@ -29,15 +29,14 @@ class Dimsum extends Component {
     return (
       <div>
         <MenuSelect />
-        <div class="row">
+        <div class="row table-drink">
           <div class="col row1">
             <div class="container-fluid">
               <div class="card shadow-sm p-3 mb-1 bg-white rounded from_dimsum">
                 <div></div>
                 <div className="textname-dimsum">ติ่มซำ </div>
-
                 <Table hover>
-                  <tbody className="tabel-dimsum">
+                  <tbody>
                     <Pork_Dumpling />
                     <Porkegg />
                     <Poo_Dumpling />

@@ -2,6 +2,9 @@
 
 .from_payment {
     margin-top: 30px;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .text_payment {

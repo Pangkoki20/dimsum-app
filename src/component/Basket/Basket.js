@@ -1,20 +1,15 @@
 import React, { Component } from "react";
 import {
-  Container,
-  Table,
   Card,
   Button,
   CardHeader,
   CardFooter,
   CardBody,
-  CardTitle,
+  Input,
   CardText,
   ButtonGroup,
   Row,
-  Col,
-  InputGroupAddon,
-  Input,
-  InputGroupText
+  Col
 } from "reactstrap";
 import "./Basket.css";
 import img_gps from "../../imgbasket/confirmation.png";
@@ -66,14 +61,14 @@ class Basket extends Component {
                   <Col></Col>
                   <Col className="add_remove">
                     <div>
-                      <ButtonGroup className="" size="lg">
-                        <Button className="btn-outline-secondary btn btn-ligh bt_addremove">
+                      <ButtonGroup size="lg">
+                        <Button className="btn-light border border-secondary bt_addremove">
                           -
                         </Button>
-                        <Button className="btn-outline-secondary btn btn-ligh bt_addremove">
+                        <Button className="btn-light border border-secondary bt_addremove">
                           1
                         </Button>
-                        <Button className="btn-outline-secondary btn btn-ligh bt_addremove">
+                        <Button className="btn-light border border-secondary bt_addremove">
                           +
                         </Button>
                       </ButtonGroup>

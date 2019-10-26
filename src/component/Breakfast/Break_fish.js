@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Table, Button } from "reactstrap";
 import bf_fish from "../../imgbreakfast/ปลาทิพย์ทอด.png";
+import BTBasket from "../BTBasket/BTBasket";
 export default class Break_fish extends Component {
   state = {
     menu_name: "break_fish",
@@ -42,14 +43,7 @@ export default class Break_fish extends Component {
         <td>ปลาทิพย์ทอด</td>
         <td>40.-</td>
         <td>
-          <Button
-            onClick={this.sentOrder}
-            outline
-            color="danger"
-            className="btn-basket"
-          >
-            เพิ่มลงในตะกร้า
-          </Button>
+          <BTBasket/>
         </td>
       </tr>
     );

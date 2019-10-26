@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Table, Button } from "reactstrap";
 import chamanow from "../../imgdrink/ชามะนาว.png";
+import BTBasket from "../BTBasket/BTBasket";
 export default class Drink_Coffee extends Component {
   state = {
     menu_name: "drink_chamanow",
@@ -42,14 +43,7 @@ export default class Drink_Coffee extends Component {
         <td>ชามะนาวเย็น</td>
         <td>30.-</td>
         <td>
-          <Button
-            onClick={this.sentOrder}
-            outline
-            color="danger"
-            className="btn-basket"
-          >
-            เพิ่มลงในตะกร้า
-          </Button>
+          <BTBasket/>
         </td>
       </tr>
     );

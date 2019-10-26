@@ -28,21 +28,20 @@ class Breakfast extends Component {
     return (
       <div>
         <MenuSelect />
-        <div class="row">
+        <div class="row table-breakfast">
           <div class="col row1">
             <div class="container-fluid">
               <div class="card shadow-sm p-3 mb-1 bg-white rounded from_breakfast">
                 <div></div>
                 <div className="textname-breakfast">อาหารเช้า</div>
-
-                <Table hover className="table-breakfast">
-                  <tbody className="tabel-breakfast">
+                 <Table hover>
+                  <tbody>
                     <Break_fast />
                     <Break_egg />
                     <Break_fish />
                     <Break_shrimp />
                   </tbody>
-                </Table>
+              </Table>
               </div>
             </div>
 

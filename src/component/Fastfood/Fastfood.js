@@ -10,29 +10,19 @@ import Fast_Porkleg from "./Fast_Porkleg";
 import Fast_Redpork from "./Fast_Redpork";
 import Fast_Crispypork from "./Fast_Crispypork";
 import BTHome from "../BTHome/BTHome";
-import bt_shop from "../../imgshop/shopping-basket.png";
-import NavMenu from "../์NavMenu/NavMenu";
 import MenuSelect from "../MenuSelect/MenuSelect";
 class Fastfood extends Component {
   render() {
     return (
       <div>
         <MenuSelect />
-        <div class="row">
-          <div class="col row1">
+        <div class="row table-fastfood">
+          <div class="col row1 ">
             <div class="container-fluid">
               <div class="card shadow-sm p-3 mb-1 bg-white rounded from_fastfood">
                 <div></div>
                 <div className="textname-fastfood">อาหารจานเดียว </div>
-                <Table hover className="table-fastfood">
-                  <thead className="thead-bar">
-                    <tr>
-                      <th></th>
-                      <th>ชื่ออาหาร</th>
-                      <th>ราคา</th>
-                      <th></th>
-                    </tr>
-                  </thead>
+                <Table hover className="">
                   <tbody className="tabel-fastfood">
                     <Fast_Babutte />
                     <Fast_Chicken />

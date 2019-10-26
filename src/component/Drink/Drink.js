@@ -10,7 +10,6 @@ import Drink_Greentea from "./Drink_Greentea";
 import Drink_Chadum from "./Drink_Chadum";
 import BTHome from "../BTHome/BTHome";
 import bt_shop from "../../imgshop/shopping-basket.png";
-import NavMenu from "../์NavMenu/NavMenu";
 import MenuSelect from "../MenuSelect/MenuSelect";
 class Drink extends Component {
   componentDidMount() {
@@ -31,22 +30,14 @@ class Drink extends Component {
     return (
       <div>
         <MenuSelect />
-        <div class="row">
+        <div class="row table-drink">
           <div class="col row1">
             <div class="container-fluid">
-              <div class="card shadow-sm p-3 mb-1 bg-white rounded from_dimsum">
+              <div class="card shadow-sm p-3 mb-1 bg-white rounded from_drink">
                 <div></div>
-                <div className="textname-dink">เครื่องดื่ม</div>
-                <Table hover className="table-drink">
-                  <thead className="thead-bar">
-                    <tr>
-                      <th></th>
-                      <th>ชื่อเครื่องดื่ม</th>
-                      <th>ราคา</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody className="tabel-drink">
+                <div className="textname-drink">เครื่องดื่ม</div>
+                <Table hover>
+                  <tbody>
                     <Drink_Chaice />
                     <Drink_Coffee />
                     <Drink_chamanow />
