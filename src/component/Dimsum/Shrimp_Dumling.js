@@ -40,8 +40,8 @@ export default class Shrimp_Dumling extends Component {
                        <th scope="row">
                          <img className="dl_shrimp" src={dl_shrimp} />
                        </th>
-                       <td>เกี๊ยวกุ้ง</td>
-                       <td>20.-</td>
+                       <td className="text_name">เกี๊ยวกุ้ง</td>
+                       <td className="text_name">20.-</td>
                        <td>
                          <Button
                            onClick={this.sentOrder}

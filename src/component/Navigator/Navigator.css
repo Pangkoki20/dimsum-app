@@ -1,27 +1,40 @@
 @import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+
 .fon-bar {
   font-family: 'Righteous', cursive;
   color: hsl(160, 31%, 77%);
-  font-size: 30px; 
+  font-size: 30px;
   margin-top: 10px;
   margin-right: 10px;
 }
+
 .fon-barr {
-  font-family: "Kanit", sans-serif;
-  font-size: 22px;
-  color: #85b8cb;
-  text-align: center;
-  margin-left: 30px;
-  float:left;
+  margin-top: 10px;
+  font-family: "Kanit",
+    sans-serif;
+    color: hsl(160, 31%, 77%);
+    font-size: 18px;
+
 }
+
+.bt_login {
+  text-align: center;
+  margin-left: 20px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+
 .fon-barr:hover {
   color: #2ccef6;
 }
+
 .bar {
   background-color: #1d6a96;
   border-color: aliceblue;
 }
+
 .pic-1 {
   height: 40px;
   width: 40px;
@@ -30,10 +43,12 @@
   margin-right: 15px;
   float: left;
 }
+
 @media only screen and (max-width: 768px) {
   .fon-bar {
-    font-size: 12px;
+    font-size: 16px;
   }
+
   .pic-1 {
     height: 15px;
     width: 15px;
@@ -42,34 +57,43 @@
     margin-right: 5px;
     float: left;
   }
+
   .fon-barr {
     font-size: 10px;
     color: #85b8cb;
     text-align: center;
     margin-left: 30px;
-    float:left;
+    float: left;
   }
+
   .content {
     margin-top: 50px;
   }
+
   .text-st {
     font-size: 25px;
   }
+
   .title {
     padding: 40px;
   }
+
   .article1 {
     height: 650px;
   }
+
   .article2 {
     height: 650px;
   }
+
   .text-course {
     font-size: 12px;
   }
+
   .text-faculty {
     font-size: 12px;
   }
+
   .text-second {
     font-size: 10px !important;
     font-weight: 100 !important;

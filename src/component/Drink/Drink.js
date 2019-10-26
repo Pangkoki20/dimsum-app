@@ -11,7 +11,7 @@ import Drink_Chadum from "./Drink_Chadum";
 import BTHome from "../BTHome/BTHome";
 import bt_shop from "../../imgshop/shopping-basket.png";
 import NavMenu from "../์NavMenu/NavMenu";
-
+import MenuSelect from "../MenuSelect/MenuSelect";
 class Drink extends Component {
   componentDidMount() {
     document.title = "Dimsumahkong Delivery";
@@ -29,38 +29,37 @@ class Drink extends Component {
   }
   render() {
     return (
-      <div class="container-fluid">
-        <div class="card shadow-lg p-3 mb-5 bg-white rounded">
-          <NavMenu/>
-          <div class="d-flex bd-highlight textname-dimsum">
-            <div class="p-2 w-100 bd-highlight ">เครื่องดื่ม</div>
-            <div class="p-2 flex-shrink-1 bd-highlight">
-              <a href="/Basket">
-                <img className="bt_shop" src={bt_shop} />
-              </a>
+      <div>
+        <MenuSelect />
+        <div class="row">
+          <div class="col row1">
+            <div class="container-fluid">
+              <div class="card shadow-sm p-3 mb-1 bg-white rounded from_dimsum">
+                <div></div>
+                <div className="textname-dink">เครื่องดื่ม</div>
+                <Table hover className="table-drink">
+                  <thead className="thead-bar">
+                    <tr>
+                      <th></th>
+                      <th>ชื่อเครื่องดื่ม</th>
+                      <th>ราคา</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody className="tabel-drink">
+                    <Drink_Chaice />
+                    <Drink_Coffee />
+                    <Drink_chamanow />
+                    <Drink_Ovantin />
+                    <Drink_Greentea />
+                    <Drink_Chadum />
+                  </tbody>
+                </Table>
+              </div>
             </div>
+            <BTHome />
           </div>
-          <Table hover className="table-drink">
-            <thead className="thead-bar">
-              <tr>
-                <th></th>
-                <th>ชื่อเครื่องดื่ม</th>
-                <th>ราคา</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody className="tabel-drink">
-              <Drink_Chaice />
-              <Drink_Coffee />
-              <Drink_chamanow />
-              <Drink_Ovantin />
-              <Drink_Greentea />
-              <Drink_Chadum />
-            </tbody>
-          </Table>
         </div>
-        
-        <BTHome />
       </div>
     );
   }

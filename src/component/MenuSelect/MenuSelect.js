@@ -1,63 +1,65 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "reactstrap";
-import nm from "../../img/text-lines.png";
-import ts from "../../img/dimsum(2).png";
-import bf from "../../img/croissant.png";
-import ff from "../../img/fried-rice.png";
-import drink from "../../img/iced-tea.png";
+import { Nav, NavLink, NavItem } from "reactstrap";
 import "./MenuSelect.css";
-
+import basket from "../../imgshop/shopping-basket.png";
 class MenuSelect extends Component {
   render() {
     return (
-      <Container className="cont-row">
-        <div class="row">
-          <div class="col">
-            <span className="imgnav">
-              <a href="/Menu">
-                <img className="nm" src={nm} />
-              </a>  
-              <h6 className="text-nm">เมนูแนะนำ</h6>
-            </span>
-          </div>
-          <div class="col">
-            <span className="imgnav">
-              <a href="/Dimsum">
-                <img className="ts" src={ts} />
-              </a>
-              <h6 className="text-ts">ติ่มซำ</h6>
-            </span>
-          </div>
-          <div class="col">
-            <span className="imgnav">
-              <a href="/Breakfast">
-                <img className="bf" src={bf} />
-              </a>
-              <h6 className="text-bf">อาหารเช้า</h6>
-            </span>
-          </div>
-          <div class="col">
-            <span className="imgnav">
-              <a href="/Fastfood">
-                <img className="ff" src={ff} />
-              </a>
-              <h6 className="text-ff">อาหารจานเดียว</h6>
-            </span>
-          </div>
-          <div class="col">
-            <span className="imgnav">
-              <a href="/Drink">
-                <img className="drink" src={drink} />
-              </a>
-              <h6 className="text-drink">เครื่องดื่ม</h6>
-            </span>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-          </div>
-        </div>
-      </Container>
+        <Nav className="from_menusel">
+          <NavItem>
+            <NavLink className="border-right" href="/Menu">
+              เมนูแนะนำ
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink className="border-right" href="/Dimsum">
+              ติ่มซำ
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink className="border-right" href="/Breakfast">
+              อาหารเช้า
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink className="border-right" href="/Fastfood">
+              อาหารจานเดียว
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink className="border-right" href="/Drink">
+              เครื่องดื่ม
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink className="border-right" href="/Delivvery">
+              ขั้นตอนการสั่งอาหาร
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink className="" href="/Delivvery">
+              ตรวจสอบสถานะการจัดส่ง
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <div className="input_search">
+              <form class="form-inline">
+                <input
+                  class="form-control mr-sm-2 "
+                  type="search"
+                  placeholder=""
+                  aria-label="Search"
+                />
+                <button class="btn btn-success my-2 my-sm-0" type="submit">
+                  ค้นหา
+                </button>
+              </form>
+            </div>
+          </NavItem>
+          <NavItem>
+            <img className="basket" src={basket} />
+          </NavItem>
+        </Nav>
     );
   }
 }

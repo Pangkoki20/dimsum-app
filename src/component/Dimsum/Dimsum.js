@@ -9,8 +9,7 @@ import Poo_Dumpling from "./Poo_Dumpling";
 import Shrimp from "./Shrimp";
 import Hargao from "./Hargao";
 import Shrimp_Dumling from "./Shrimp_Dumling";
-import bt_shop from "../../imgshop/shopping-basket.png";
-import NavMenu from "../์NavMenu/NavMenu";
+import MenuSelect from "../MenuSelect/MenuSelect";
 class Dimsum extends Component {
   componentDidMount() {
     document.title = "Dimsumahkong Delivery";
@@ -29,7 +28,7 @@ class Dimsum extends Component {
   render() {
     return (
       <div>
-        <NavMenu />
+        <MenuSelect />
         <div class="row">
           <div class="col row1">
             <div class="container-fluid">
@@ -37,8 +36,8 @@ class Dimsum extends Component {
                 <div></div>
                 <div className="textname-dimsum">ติ่มซำ </div>
 
-                <Table hover className="table-dimsum ">
-                  <tbody className="tabel-dimsum text_namemenu">
+                <Table hover>
+                  <tbody className="tabel-dimsum">
                     <Pork_Dumpling />
                     <Porkegg />
                     <Poo_Dumpling />

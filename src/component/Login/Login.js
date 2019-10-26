@@ -24,7 +24,7 @@ class Login extends Component {
   };
 
   login = e => {
-   e.preventDefault();
+    e.preventDefault();
     console.log("dimsum");
 
     try {
@@ -41,7 +41,7 @@ class Login extends Component {
         this.props.onUserChanged(res);
 
         localStorage.setItem("token", data.token);
-       this.props.history.push(`/`);
+        this.props.history.push(`/`);
       });
     } catch (error) {
       console.log("Error : ", error);
@@ -49,54 +49,61 @@ class Login extends Component {
   };
 
   render() {
-    
     return (
-      <div class="container-fluid">
-        <div className="form-login">
-          <Form >
-            <FormGroup className="fon-log">
-              <span>
-                <img className="logo" src={lo} />
-                <Input
-                  className="input-login"
-                  type="email"
-                  name="email"
-                  id="exampleEmail"
-                  placeholder="อีเมล์ของผู้ใช้"
-                  value={this.state.email}
-                  onChange={this.handleInputChange}
-                />
-                <Input
-                  className="input-login"
-                  type="password"
-                  name="password"
-                  id="examplePassword"
-                  value={this.state.password}
-                  placeholder="รหัสผ่านของผู้ใช้"
-                  onChange={this.handleInputChange}
-                />
-              </span>
-            </FormGroup>
-            <div>
-              <a href="/">
-                <p className="forget-pass"> ลืมรหัสผ่าน </p>
-              </a>
-            </div>
-            <Button href="/" className="btn-login" color="info" onClick={(e) => this.login(e)}>
-              ลงชื่อเข้าใช้งาน
-            </Button>
+      <div className="from_lo">
+        <div class="container-fluid">
+          <div className="form-login ">
+            <Form>
+              <FormGroup className="fon-log">
+                <span>
+                  <img className="logo" src={lo} />
+                  <div className="text_login">เข้าสู่ระบบ</div>
+                  <Input
+                    className="input-login"
+                    type="email"
+                    name="email"
+                    id="exampleEmail"
+                    placeholder="อีเมล์ของผู้ใช้"
+                    value={this.state.email}
+                    onChange={this.handleInputChange}
+                  />
+                  <Input
+                    className="input-login"
+                    type="password"
+                    name="password"
+                    id="examplePassword"
+                    value={this.state.password}
+                    placeholder="รหัสผ่านของผู้ใช้"
+                    onChange={this.handleInputChange}
+                  />
+                </span>
+              </FormGroup>
+              <div>
+                <a href="/">
+                  <p className="forget-pass"> ลืมรหัสผ่าน </p>
+                </a>
+              </div>
+              <Button
+                href="/"
+                className="btn-login"
+                color="info"
+                onClick={e => this.login(e)}
+              >
+                ลงชื่อเข้าใช้งาน
+              </Button>
 
-            <div className="btn-forgot ">
-              <lable className="reg">หากคุณยังไม่เป็นสมาชิก </lable>
-              <a href="/Register">สมัครสมาชิก</a>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-            </div>
-          </Form>
+              <div className="btn-forgot ">
+                <lable className="reg">หากคุณยังไม่เป็นสมาชิก </lable>
+                <a href="/Register">สมัครสมาชิก</a>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+              </div>
+            </Form>
+          </div>
         </div>
       </div>
     );

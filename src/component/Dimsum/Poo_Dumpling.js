@@ -35,8 +35,8 @@ export default class Poo_Dumpling extends Component {
         <th scope="row">
           <img className="dl_poo" src={dl_poo} />
         </th>
-        <td>ขนมจีบปู</td>
-        <td>20.-</td>
+        <td className="text_name">ขนมจีบปู</td>
+        <td className="text_name">20.-</td>
         <td>
           <Button
             onClick={this.sentOrder}

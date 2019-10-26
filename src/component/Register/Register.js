@@ -49,10 +49,10 @@ class Register extends Component {
     
     const { firstname, lastname, email, password, phone, address } = this.state;
     return (
-      <div>
+      <div className="from_lo">
         <Container>
           <div className="log">
-            <Form className="form-register" >
+            <Form className="form-register">
               <h2>
                 <b className="re">ลงทะเบียน</b>
               </h2>{" "}
@@ -110,7 +110,11 @@ class Register extends Component {
                 onChange={this.handleInputChange}
                 required
               /> */}
-              <Button  className="btn-register" color="info" onClick={(e)=>this.register(e)}>
+              <Button
+                className="btn-register"
+                color="info"
+                onClick={e => this.register(e)}
+              >
                 ลงทะเบียน
               </Button>
               <div className="btn-forgot">

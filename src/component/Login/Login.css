@@ -1,13 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+.from_lo{
+  padding-left: 500px ;
+  padding-right: 500px;
+}
 .form-login {
   margin-top: 150px;
   margin-bottom: 100px;
   margin-left: auto !important;
   margin-right: auto !important;
   text-align: center;
+  border:3px ;
 }
-
+.text_login{
+   text-align: center;
+   font-size: 30px;
+     font-family: "Kanit",
+     sans-serif;
+}
 .btn-login {
   margin-top: 30px;
   text-align: center !important;

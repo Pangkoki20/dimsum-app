@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
-.from_searchdimsum {
-  width: 400px;
-}
+
 .table-dimsum {
   margin-top: 5px;
-  font-size: 22px;
-  text-align: center;
-  font-family: "Kanit", sans-serif;}
-.tabel-dimsum {
+  font-size: 18px;
   text-align: center;
   font-family: "Kanit", sans-serif;
 }
+
+.text_name {
+  font-size: 18px;
+}
+
 .dl_pok {
   height: 200px;
   width: 200px;
@@ -54,20 +54,26 @@
 
 .textname-dimsum {
   text-align: center;
-  font-size: 80px;
+  font-size: 50px;
   color: #224870;
   font-family: "Kanit", sans-serif;
 
 }
 
 .row1 {
-  padding-left: 300px;
-  padding-right: 300px;
+  padding-left: 400px;
+  padding-right: 400px;
 }
-.text_namemenu{
+
+.text_namemenu {
   font-size: 20px;
   text-align: center;
 }
-.from_dimsum{
-  margin-top:10px;
+
+.from_dimsum {
+  margin-top: 10px;
+}
+.basket{
+  width: 40px;
+  height: 40px;
 }

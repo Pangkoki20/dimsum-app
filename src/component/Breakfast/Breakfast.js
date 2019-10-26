@@ -8,8 +8,7 @@ import Break_egg from "./Break_egg";
 import Break_fish from "./Break_fish";
 import Break_shrimp from "./Break_shrimp";
 import bt_shop from "../../imgshop/shopping-basket.png";
-import NavMenu from "../์NavMenu/NavMenu";
-
+import MenuSelect from "../MenuSelect/MenuSelect";
 class Breakfast extends Component {
   componentDidMount() {
     document.title = "Dimsumahkong Delivery";
@@ -28,34 +27,28 @@ class Breakfast extends Component {
   render() {
     return (
       <div>
-        <div className="textname-dimsum">อาหารเช้า</div>
-      <div class="row">
+        <MenuSelect />
+        <div class="row">
           <div class="col row1">
             <div class="container-fluid">
-        <div class="card shadow-lg p-3 mb-5 bg-white rounded">
-          <NavMenu />
-          <Table hover className="table-breakfast">
-            <thead className="thead-bar">
-              <tr>
-                <th></th>
-                <th>ชื่ออาหารเช้า</th>
-                <th>ราคา</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody className="tabel-breakfast">
-              <Break_fast />
-              <Break_egg />
-              <Break_fish />
-              <Break_shrimp />
-            </tbody>
-          </Table>
+              <div class="card shadow-sm p-3 mb-1 bg-white rounded from_breakfast">
+                <div></div>
+                <div className="textname-breakfast">อาหารเช้า</div>
+
+                <Table hover className="table-breakfast">
+                  <tbody className="tabel-breakfast">
+                    <Break_fast />
+                    <Break_egg />
+                    <Break_fish />
+                    <Break_shrimp />
+                  </tbody>
+                </Table>
+              </div>
+            </div>
+
+            <BTHome />
+          </div>
         </div>
-        </div>
-        
-        <BTHome />
-      </div>
-      </div>
       </div>
     );
   }

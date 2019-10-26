@@ -1,20 +1,13 @@
 import React, { Component } from "react";
-import {
-  InputGroup,
-  InputGroupAddon,
-  Button,
-  Input,
-  InputGroupText
-} from "reactstrap";
+import {} from "reactstrap";
 import "./NavMenu.css";
 class NavMenu extends Component {
   render() {
     return (
-      <nav class="navbar navbar-light">
-        <a class="navbar-brand"></a>
+      <div>
         <form class="form-inline">
           <input
-            class="form-control mr-sm-2"
+            class="form-control mr-sm-2 "
             type="search"
             placeholder=""
             aria-label="Search"
@@ -23,7 +16,7 @@ class NavMenu extends Component {
             ค้นหา
           </button>
         </form>
-      </nav>
+      </div>
     );
   }
 }

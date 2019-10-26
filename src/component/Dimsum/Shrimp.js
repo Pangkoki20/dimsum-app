@@ -35,8 +35,8 @@ export default class Shrimp extends Component {
         <th scope="row">
           <img className="dl_shrimp" src={dl_shrimp} />
         </th>
-        <td>ขนมจีบกุ้ง</td>
-        <td>20.-</td>
+        <td className="text_name">ขนมจีบกุ้ง</td>
+        <td className="text_name">20.-</td>
         <td>
           <Button
             onClick={this.sentOrder}

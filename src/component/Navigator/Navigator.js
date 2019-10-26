@@ -9,8 +9,9 @@ import {
   NavLink
 } from "reactstrap";
 import "./Navigator.css";
+import login from "../../imghome/user.png";
 import auth from "../service";
-import axios from 'axios'
+import axios from "axios";
 export default class Navigator extends React.Component {
   constructor(props) {
     super(props);
@@ -18,7 +19,7 @@ export default class Navigator extends React.Component {
       isOpen: false,
       check: "",
       nameLogin: "",
-      role : ""
+      role: ""
     };
     this.toggle = this.toggle.bind(this);
   }
@@ -32,26 +33,28 @@ export default class Navigator extends React.Component {
     auth.clearToken();
     this.props.history.push("/");
   };
- 
+
   componentWillReceiveProps = async nextProps => {
     if (nextProps.user !== null) {
       this.setState({ check: "login" });
     }
-    
+
     let token = localStorage.getItem("token");
-    if(token){
+    if (token) {
       if (token !== null) {
         this.setState({ check: "login" });
       }
 
-      let res = await axios.post(`http://localhost:3001/api/users/me`, { token });
-       this.setState({ role: res.data.role });
+      let res = await axios.post(`http://localhost:3001/api/users/me`, {
+        token
+      });
+      this.setState({ role: res.data.role });
     }
   };
 
   render() {
     console.log(this.state.role);
-    
+
     return (
       <div>
         <Navbar className="bar" light expand="md">
@@ -67,7 +70,17 @@ export default class Navigator extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="Contact">
+                <NavLink href="/">
+                  <h6 className="fon-barr">หน้าหลัก</h6>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/Menu">
+                  <h6 className="fon-barr">สั่งอาหาร</h6>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/Contact">
                   <h6 className="fon-barr">ติดต่อเรา</h6>
                 </NavLink>
               </NavItem>
@@ -85,8 +98,8 @@ export default class Navigator extends React.Component {
               {this.state.check !== "login" && (
                 <NavItem>
                   <NavLink href="Login">
-                    <div className="Login">
-                      <h6 className="fon-barr">เข้าสู่ระบบ </h6>
+                    <div className="Login ">
+                      <img className="login bt_login" src={login} />
                     </div>
                   </NavLink>
                 </NavItem>
@@ -100,6 +113,7 @@ export default class Navigator extends React.Component {
                   </NavLink>
                 </NavItem>
               )}
+              
             </Nav>
           </Collapse>
         </Navbar>

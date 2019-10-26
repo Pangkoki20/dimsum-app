@@ -34,9 +34,10 @@ export default class Porkegg extends Component {
       <tr>
         <th scope="row">
                 <img className="dl_pokegg" src={dl_pokegg} />
-              </th>
-              <td>ขนมจีบหมูไข่เค็ม</td>
-              <td>20.-</td>
+              </th>             
+               <td className="text_name">ขนมจีบหมูไข่เค็ม</td>
+              <td className="text_name">20.-</td>
+              <td></td> 
               <td>
           <Button
             onClick={this.sentOrder}
@@ -47,7 +48,7 @@ export default class Porkegg extends Component {
             เพิ่มลงในตะกร้า
           </Button>
         </td>
-      </tr>
+        </tr>
     );
   }
 }

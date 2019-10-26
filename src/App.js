@@ -13,7 +13,7 @@ import Delivery from "./component/Delivery/Delivery";
 import Contact from "./component/Contact/Contact";
 import Collapses from "./component/Collapses/Collapses";
 import Menu from "./component/Menu/Menu";
-import Footer from "./component/Footer/Footer";
+// import Footer from "./component/Footer/Footer";
 import Other from "./component/Other/Other";
 import ShowOrder from "./component/ShowOrder/ShowOrder";
 import Basket from "./component/Basket/Basket";
@@ -59,7 +59,7 @@ class App extends Component {
           <Route exact path="/OrderConfirm" component={OrderConfirm}/>
           <Route exact path="/Payment" component={Payment}/>
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }
