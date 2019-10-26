@@ -6,7 +6,7 @@ class BtOrder extends Component {
     return (
       <Row className="tabel_btcon justify-content-md-center">
         <Col className="col-auto">
-          <Button color="info" size="lg" block href="/Address">
+          <Button color="info" size="lg" block href="/OrderConfirm">
             ย้อนกลับ
           </Button>
         </Col>

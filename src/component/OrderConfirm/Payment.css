@@ -2,9 +2,6 @@
 
 .from_payment {
     margin-top: 30px;
-    text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
 }
 
 .text_payment {
@@ -24,4 +21,16 @@
     font-size: 18px;
     font-family: "Kanit",
         sans-serif;
+}
+.img_payment {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+}
+.text_pay{
+    margin-right: 20px;
+}
+.ip_pay{
+    width: 15px;
+    height: 15px;
 }

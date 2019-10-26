@@ -44,14 +44,14 @@ class MenuSelect extends Component {
         </NavItem>
         <NavItem className="ml-auto">
           <div className="input_search">
-            <form class="form-inline">
+            <form class="form-inline ">
               <input
-                class="form-control mr-sm-2 "
+                class="form-control mr-sm-2 rounded-pill"
                 type="search"
                 placeholder=""
                 aria-label="Search"
               />
-              <button class="btn btn-primary" type="submit">
+              <button class="btn btn-primary " type="submit">
                 ค้นหา
               </button>
             </form>
