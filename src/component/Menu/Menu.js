@@ -21,7 +21,7 @@ class Menu extends Component {
             <h1 className="text-menu">เมนูแนะนำ</h1>
             <img className="img_menu" src={imgmenu} />
           <div className="from_mn">
-            <div class="card">
+            {/* <div class="card">
               <div class="card-body">
                 <h5 class="card-title"></h5>
                 <p class="card-text"></p>
@@ -29,7 +29,7 @@ class Menu extends Component {
                   หยิบใส่ตะกร้า
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </Container>
       </div>
