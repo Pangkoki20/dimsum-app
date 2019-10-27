@@ -25,7 +25,7 @@ class MenuNewPoo extends Component {
                 <img className="img_jopoo" src={img_jopoo} />
               </div>
               <CardTitle className="text_menuname">จ๊อปูทอด</CardTitle>
-              <CardText></CardText>
+              <CardText>ราคา 50 .-</CardText>
               <BTBasket />
             </Card>
           </div>

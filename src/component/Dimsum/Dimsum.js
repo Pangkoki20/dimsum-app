@@ -29,26 +29,28 @@ class Dimsum extends Component {
     return (
       <div>
         <MenuSelect />
-        <div class="row table-drink">
-          <div class="col row1">
-            <div class="container-fluid">
-              <div class="card shadow-sm p-3 mb-1 bg-white rounded from_dimsum">
-                <div></div>
-                <div className="textname-dimsum">ติ่มซำ </div>
-                <Table hover>
-                  <tbody>
-                    <Pork_Dumpling />
-                    <Porkegg />
-                    <Poo_Dumpling />
-                    <Shrimp />
-                    <Hargao />
-                    <Shrimp_Dumling />
-                  </tbody>
-                </Table>
-              </div>
-            </div>
-            <BTHome />
-          </div>
+        <div className="menuform">
+          <div className="textname-dimsum">ติ่มซำ </div>
+          <Row>
+            <Col xs="6" sm="4">
+              <Pork_Dumpling />
+            </Col>
+            <Col xs="6" sm="4">
+              <Porkegg />
+            </Col>
+            <Col xs="6" sm="4">
+              <Poo_Dumpling />
+            </Col>
+            <Col xs="6" sm="4">
+              <Shrimp />
+            </Col>
+            <Col xs="6" sm="4">
+              <Hargao />
+            </Col>
+            <Col xs="6" sm="4">
+              <Shrimp_Dumling />
+            </Col>
+          </Row>
         </div>
       </div>
     );

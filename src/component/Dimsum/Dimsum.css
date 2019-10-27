@@ -1,55 +1,48 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
 
-.table-dimsum {
-  margin-top: 20px;
-}
 .textname-dimsum {
-text-align: center;
-font-size: 50px;
-margin-top: 10px;
-color: #224870;
-font-family: "Kanit",
-sans-serif;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 15px;
+  color: #243e5a;
+  font-family: "Kanit",
+    sans-serif;
 }
+
 .textname-dimsum:hover {
   text-decoration: none;
   color: #00758d;
 }
-.dl_pok {
+
+.img_pok {
   height: 200px;
-  width: 200px;
-  text-align: center;
+  width: 250px;
 }
 
-.dl_pokegg {
+.img_pokegg {
   height: 200px;
-  width: 200px;
-  text-align: center;
+  width: 250px;
 }
 
-.dl_poo {
+.img_poo {
   height: 200px;
-  width: 200px;
-  text-align: center;
+  width: 250px;
 }
 
-.dl_shrimp {
+.img_shrimp {
   height: 200px;
-  width: 200px;
-  text-align: center;
+  width: 250px;
 }
 
-.dl_hargao {
+.img_hargao {
   height: 200px;
-  width: 200px;
-  text-align: center;
+  width: 250px;
 }
 
-.dl_shrimp_dum {
+.img_shrimp {
   height: 200px;
-  width: 200px;
-  text-align: center;
+  width: 250px;
 }
 
 .from_btshop {
@@ -77,10 +70,12 @@ sans-serif;
 .from_dimsum {
   margin-top: 10px;
 }
-.basket{
+
+.basket {
   width: 40px;
   height: 40px;
 }
-.btn-basket{
+
+.btn-basket {
   font-size: 18px;
 }

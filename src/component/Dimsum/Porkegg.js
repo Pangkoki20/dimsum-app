@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Table, Button } from "reactstrap";
+import { Container, Card, CardText, CardTitle } from "reactstrap";
 import dl_pokegg from "../../imgdimsum/ขนมจีบหมูไข่เค็ม.png";
 import BTBasket from "../BTBasket/BTBasket";
 export default class Porkegg extends Component {
@@ -32,16 +32,20 @@ export default class Porkegg extends Component {
   };
   render() {
     return (
-      <tr>
-        <th scope="row">
-          <img className="dl_pokegg" src={dl_pokegg} />
-        </th>
-        <td className="text_name">ขนมจีบหมูไข่เค็ม</td>
-        <td className="text_name">20.-</td>
-        <td>
-          <BTBasket />
-        </td>
-      </tr>
+      <div>
+        <Container>
+          <div className="form-menu">
+            <Card body>
+              <div className="pic_pokegg">
+                <img className="img_pokegg" src={dl_pokegg} />
+              </div>
+              <CardTitle className="text_menuname">ขนมจีบหมูไข่เค็ม</CardTitle>
+              <CardText>ราคา 20 .-</CardText>
+              <BTBasket />
+            </Card>
+          </div>
+        </Container>
+      </div>
     );
   }
 }

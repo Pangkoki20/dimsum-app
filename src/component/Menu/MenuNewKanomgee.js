@@ -16,7 +16,7 @@ class MenuNewKanomgee extends Component {
                 <img className="img_kanomgee" src={img_kanomgee} />
               </div>
               <CardTitle className="text_menuname">ขนมจีนน้ำแกงปู</CardTitle>
-              <CardText></CardText>
+              <CardText>ราคา 50 .-</CardText>
               <BTBasket />
             </Card>
           </div>

@@ -36,25 +36,25 @@ class Menu extends Component {
       <div >
         <MenuSelect />
         <div className="menuform">
-          <h1 className="text-menu">เมนูแนะนำ</h1>
+          <div className="text-menu">เมนูแนะนำ</div>
           <Row>
             <Col xs="6" sm="4">
-              <MenuNewPoo />
-            </Col>
-            <Col xs="6" sm="4">
-              <MenuNewBuk />
+              <MenuNewSarapol />
             </Col>
             <Col xs="6" sm="4">
               <MenuNewEgg />
             </Col>
             <Col xs="6" sm="4">
-              <MenuNewKanomgee />
+               <MenuNewEggpan />
             </Col>
             <Col xs="6" sm="4">
-              <MenuNewSarapol />
+               <MenuNewBuk />
             </Col>
             <Col xs="6" sm="4">
-              <MenuNewEggpan />
+              <MenuNewPoo />
+            </Col>
+            <Col xs="6" sm="4">
+            <MenuNewKanomgee />
             </Col>
           </Row>
         </div>

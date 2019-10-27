@@ -16,7 +16,7 @@ class MenuNewSarapol extends Component {
                 <img className="img_sarapol" src={img_sarapol} />
               </div>
               <CardTitle className="text_menuname">ซาลาเปาทอด</CardTitle>
-              <CardText></CardText>
+              <CardText>ราคา 10 .-</CardText>
               <BTBasket />
             </Card>
           </div>

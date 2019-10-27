@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Table, Button } from "reactstrap";
+import { Container,Card, CardText, CardTitle } from "reactstrap";
 import dl_poo from "../../imgdimsum/ขนมจีบปู.png";
 import BTBasket from "../BTBasket/BTBasket";
 export default class Poo_Dumpling extends Component {
@@ -32,16 +32,22 @@ export default class Poo_Dumpling extends Component {
   };
   render() {
     return (
-      <tr>
-        <th scope="row">
-          <img className="dl_poo" src={dl_poo} />
-        </th>
-        <td className="text_name">ขนมจีบปู</td>
-        <td className="text_name">20.-</td>
-        <td>
-          <BTBasket/>
-        </td>
-      </tr>
+      <div>
+        <Container>
+          <div className="form-menu">
+            <Card body>
+              <div className="pic_dlpoo">
+          <img className="img_poo" src={dl_poo} />
+          </div>
+              <CardTitle className="text_menuname">ขนมจีบปู</CardTitle>
+              <CardText>
+                ราคา 50 .-
+              </CardText>
+              <BTBasket />
+            </Card>
+          </div>
+        </Container>
+        </div>
     );
   }
 }
