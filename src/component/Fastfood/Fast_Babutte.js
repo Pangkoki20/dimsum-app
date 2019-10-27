@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Table, Button } from "reactstrap";
+import { Container, Card, CardText, CardTitle } from "reactstrap";
 import ff_babutte from "../../imgfastfoood/บะกุ๊ดเต๋.png";
 import BTBasket from "../BTBasket/BTBasket";
 export default class Fast_Babutte extends Component {
@@ -36,16 +36,20 @@ export default class Fast_Babutte extends Component {
   };
   render() {
     return (
-      <tr>
-        <th scope="row">
-          <img className="ff_babutte" src={ff_babutte} />
-        </th>
-        <td>บะกุ๊ดเต๋</td>
-        <td>50.-</td>
-        <td>
-          <BTBasket/>
-        </td>
-      </tr>
+      <div>
+        <Container>
+          <div className="form-menu">
+            <Card body>
+              <div className="pic_buk">
+                <img className="img_ffbabutte" src={ff_babutte} />
+              </div>
+              <CardTitle className="text_menuname">บะกุ๊ดเต๋</CardTitle>
+              <CardText>ราคา 50 .-</CardText>
+              <BTBasket />
+            </Card>
+          </div>
+        </Container>
+      </div>
     );
   }
 }

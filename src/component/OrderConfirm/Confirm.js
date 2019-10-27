@@ -15,7 +15,7 @@ class Confirm extends Component {
       <Container>
         <div >
           <Card className="from_payment">
-            <CardHeader>วิธีการชำระเงิน</CardHeader>
+            <CardHeader>ยืนยันการสั่งอาหาร</CardHeader>
             <CardBody>
               <CardTitle>Special Title Treatment</CardTitle>
               <CardText>

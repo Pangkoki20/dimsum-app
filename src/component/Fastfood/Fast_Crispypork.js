@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Table, Button } from "reactstrap";
+import { Container, Card, CardText, CardTitle } from "reactstrap";
 import ff_crispypork from "../../imgfastfoood/ข้าวหมูกรอบ.png";
 import BTBasket from "../BTBasket/BTBasket";
 export default class Fast_Crispypork extends Component {
@@ -36,16 +36,21 @@ export default class Fast_Crispypork extends Component {
   };
   render() {
     return (
-      <tr>
-        <th scope="row">
-          <img className="ff_crispypork" src={ff_crispypork} />
-        </th>
-        <td>ข้าวหมูกรอบ</td>
-        <td>10.-</td>
-        <td>
-          <BTBasket/>
-        </td>
-      </tr>
+
+      <div>
+        <Container>
+          <div className="form-menu">
+            <Card body>
+              <div className="pic_buk">
+               <img className="img_ffcrispypork" src={ff_crispypork} />
+              </div>
+              <CardTitle className="text_menuname">ข้าวหมูกรอบ</CardTitle>
+              <CardText>ราคา 50 .-</CardText>
+              <BTBasket />
+            </Card>
+          </div>
+        </Container>
+      </div>
     );
   }
 }

@@ -44,11 +44,6 @@
   height: 200px;
   width: 250px;
 }
-
-.from_btshop {
-  text-align: right;
-}
-
 .textname-dimsum {
   text-align: center;
   font-size: 50px;
@@ -56,26 +51,11 @@
   font-family: "Kanit", sans-serif;
 
 }
-
-.row1 {
-  padding-left: 400px;
-  padding-right: 400px;
-}
-
 .text_namemenu {
   font-size: 20px;
   text-align: center;
 }
-
-.from_dimsum {
-  margin-top: 10px;
-}
-
 .basket {
   width: 40px;
   height: 40px;
-}
-
-.btn-basket {
-  font-size: 18px;
 }

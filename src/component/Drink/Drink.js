@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Container, Table, Button } from "reactstrap";
-import Paginat from "../Paginat/Paginat";
+import { Row, Col } from "reactstrap";
 import Drink_Chaice from "./Drink_Chaice";
 import "./Drink.css";
 import Drink_Coffee from "./Drink_Coffee";
@@ -8,8 +7,6 @@ import Drink_chamanow from "./Drink_chamanow";
 import Drink_Ovantin from "./Drink_Ovantin";
 import Drink_Greentea from "./Drink_Greentea";
 import Drink_Chadum from "./Drink_Chadum";
-import BTHome from "../BTHome/BTHome";
-import bt_shop from "../../imgshop/shopping-basket.png";
 import MenuSelect from "../MenuSelect/MenuSelect";
 class Drink extends Component {
   componentDidMount() {
@@ -30,26 +27,28 @@ class Drink extends Component {
     return (
       <div>
         <MenuSelect />
-        <div class="row table-drink">
-          <div class="col row1">
-            <div class="container-fluid">
-              <div class="card shadow-sm p-3 mb-1 bg-white rounded from_drink">
-                <div></div>
-                <div className="textname-drink">เครื่องดื่ม</div>
-                <Table hover>
-                  <tbody>
-                    <Drink_Chaice />
-                    <Drink_Coffee />
-                    <Drink_chamanow />
-                    <Drink_Ovantin />
-                    <Drink_Greentea />
-                    <Drink_Chadum />
-                  </tbody>
-                </Table>
-              </div>
-            </div>
-            <BTHome />
-          </div>
+        <div className="menuform">
+          <div className="textname-drink">เมนูแนะนำ</div>
+          <Row>
+            <Col xs="6" sm="4">
+              <Drink_Chaice />
+            </Col>
+            <Col xs="6" sm="4">
+              <Drink_Coffee />
+            </Col>
+            <Col xs="6" sm="4">
+              <Drink_chamanow />
+            </Col>
+            <Col xs="6" sm="4">
+              <Drink_Ovantin />
+            </Col>
+            <Col xs="6" sm="4">
+              <Drink_Greentea />
+            </Col>
+            <Col xs="6" sm="4">
+              <Drink_Chadum />
+            </Col>
+          </Row>
         </div>
       </div>
     );

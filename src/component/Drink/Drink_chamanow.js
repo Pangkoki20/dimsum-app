@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Table, Button } from "reactstrap";
+import { Container, Card, CardText, CardTitle } from "reactstrap";
 import chamanow from "../../imgdrink/ชามะนาว.png";
 import BTBasket from "../BTBasket/BTBasket";
 export default class Drink_Coffee extends Component {
@@ -36,16 +36,20 @@ export default class Drink_Coffee extends Component {
   };
   render() {
     return (
-      <tr>
-        <th scope="row">
-          <img className="chamanow" src={chamanow} />
-        </th>
-        <td>ชามะนาวเย็น</td>
-        <td>30.-</td>
-        <td>
-          <BTBasket/>
-        </td>
-      </tr>
+      <div>
+        <Container>
+          <div className="form-menu">
+            <Card body>
+              <div>
+               <img className="img_chamanow" src={chamanow} />
+              </div>
+              <CardTitle className="text_menuname">ชามะนาวเย็น</CardTitle>
+              <CardText>ราคา 30 .-</CardText>
+              <BTBasket />
+            </Card>
+          </div>
+        </Container>
+      </div>
     );
   }
 }

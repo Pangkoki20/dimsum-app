@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Table, Button } from "reactstrap";
+import { Container, Card, CardText, CardTitle } from "reactstrap";
 import ff_rice from "../../imgfastfoood/ข้าวเปล่า.png";
 import BTBasket from "../BTBasket/BTBasket";
 export default class Fast_Rice extends Component {
@@ -36,17 +36,20 @@ export default class Fast_Rice extends Component {
   };
   render() {
     return (
-      <tr>
-        <th scope="row">
-          <img className="ff_rice" src={ff_rice} />
-        </th>
-        <td>ข้าวเปล่า
-        </td>
-        <td>10.-</td>
-        <td>
-         <BTBasket/>
-        </td>
-      </tr>
+      <div>
+        <Container>
+          <div className="form-menu">
+            <Card body>
+              <div className="pic_buk">
+                <img className="img_ffrice" src={ff_rice} />
+              </div>
+              <CardTitle className="text_menuname">ข้าวเปล่า</CardTitle>
+              <CardText>ราคา 10 .-</CardText>
+              <BTBasket />
+            </Card>
+          </div>
+        </Container>
+      </div>
     );
   }
 }

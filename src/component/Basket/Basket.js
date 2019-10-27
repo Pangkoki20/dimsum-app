@@ -14,6 +14,7 @@ import {
 import "./Basket.css";
 import img_gps from "../../imgbasket/confirmation.png";
 import img_trash from "../../imgbasket/trash.png";
+import BTCount from "./BTCount";
 class Basket extends Component {
   render() {
     return (
@@ -59,20 +60,8 @@ class Basket extends Component {
                   <Col></Col>
                   <Col></Col>
                   <Col></Col>
-                  <Col className="add_remove">
-                    <div>
-                      <ButtonGroup size="lg">
-                        <Button className="btn-light border border-secondary bt_addremove">
-                          -
-                        </Button>
-                        <Button className="btn-light border border-secondary bt_addremove">
-                          1
-                        </Button>
-                        <Button className="btn-light border border-secondary bt_addremove">
-                          +
-                        </Button>
-                      </ButtonGroup>
-                    </div>
+                  <Col>
+                    <BTCount/>
                   </Col>
                   <Col></Col>
                   <Col>

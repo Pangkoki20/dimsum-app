@@ -1,13 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
-.table-fastfood {
-    margin-top: 20px;
-}
 .textname-fastfood {
     text-align: center;
     font-size: 50px;
-    margin-top: 10px;
-    color: #224870;
+    margin-top: 15px;
+    color: #243e5a;
     font-family: "Kanit", sans-serif;
 }
 
@@ -16,61 +13,38 @@
     color: #00758d;
 }
 
-.thead-bar {
-    margin-top: 20px;
-    font-size: 18px;
-    text-align: center;
-    font-family: "Kanit", sans-serif;
-}
-
-.tabel-fastfood {
-    text-align: center;
-    font-family: "Kanit", sans-serif;
-}
-
-.btn-basket {
-    font-family: 'Prompt', sans-serif;
-    font-size: 20px;
-}
-
-.ff_chicken {
+.img_ffchicken {
     height: 200px;
-    width: 200px;
-    text-align: center;
+    width: 250px;
 }
 
-.ff_redpork {
+.img_ffredpork {
     height: 200px;
-    width: 200px;
-    text-align: center;
+    width: 250px;
+    ;
 }
 
-.ff_crispypork {
+.img_ffcrispypork {
     height: 200px;
-    width: 200px;
-    text-align: center;
+    width: 250px;
 }
 
-.ff_porkleg {
+.img_ffporkleg {
     height: 200px;
-    width: 200px;
-    text-align: center;
+    width: 250px;
 }
 
-.ff_duck {
+.img_ffduck {
     height: 200px;
-    width: 200px;
-    text-align: center;
+    width: 250px;
 }
 
-.ff_babutte {
+.img_ffbabutte {
     height: 200px;
-    width: 200px;
-    text-align: center;
+    width: 250px;
 }
 
-.ff_rice {
+.img_ffrice {
     height: 200px;
-    width: 200px;
-    text-align: center;
+    width: 250px;
 }
