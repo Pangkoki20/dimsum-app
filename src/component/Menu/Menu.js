@@ -1,13 +1,5 @@
 import React, { Component } from "react";
-import {
-  Row,
-  Col,
-  Container,
-  Card,
-  CardText,
-  CardTitle,
-  Button
-} from "reactstrap";
+import { Row, Col } from "reactstrap";
 import "./Menu.css";
 import MenuSelect from "../MenuSelect/MenuSelect";
 import MenuNewPoo from "./MenuNewPoo";
@@ -33,7 +25,7 @@ class Menu extends Component {
   }
   render() {
     return (
-      <div >
+      <div>
         <MenuSelect />
         <div className="menuform">
           <div className="text-menu">เมนูแนะนำ</div>
@@ -45,16 +37,16 @@ class Menu extends Component {
               <MenuNewEgg />
             </Col>
             <Col xs="6" sm="4">
-               <MenuNewEggpan />
+              <MenuNewEggpan />
             </Col>
             <Col xs="6" sm="4">
-               <MenuNewBuk />
+              <MenuNewBuk />
             </Col>
             <Col xs="6" sm="4">
               <MenuNewPoo />
             </Col>
             <Col xs="6" sm="4">
-            <MenuNewKanomgee />
+              <MenuNewKanomgee />
             </Col>
           </Row>
         </div>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Table, Button } from "reactstrap";
+import { Container, Card, CardText, CardTitle } from "reactstrap";
 import bf_fish from "../../imgbreakfast/ปลาทิพย์ทอด.png";
 import BTBasket from "../BTBasket/BTBasket";
 export default class Break_fish extends Component {
@@ -36,16 +36,21 @@ export default class Break_fish extends Component {
   };
   render() {
     return (
-      <tr>
-        <th scope="row">
-          <img className="bf_fish" src={bf_fish} />
-        </th>
-        <td>ปลาทิพย์ทอด</td>
-        <td>40.-</td>
-        <td>
-          <BTBasket/>
-        </td>
-      </tr>
+
+<div>
+        <Container>
+          <div className="form-menu">
+            <Card body>
+              <div className="pic_buk">
+               <img className="img_bffish" src={bf_fish} />
+              </div>
+              <CardTitle className="text_menuname">ปลาทิพย์ทอด</CardTitle>
+              <CardText>ราคา 40 .-</CardText>
+              <BTBasket />
+            </Card>
+          </div>
+        </Container>
+      </div>
     );
   }
 }

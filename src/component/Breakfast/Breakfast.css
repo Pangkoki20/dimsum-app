@@ -24,26 +24,22 @@
     text-align: center;
     font-family: "Kanit", sans-serif;
 }
-.btn-basket {
-    font-family: 'Prompt', sans-serif;
-    font-size: 20px;
-}
-.bf_bf {
+.img_bf {
     height: 200px;
     width: 200px;
     text-align: center;
 }
-.bf_egg {
+.img_bfegg {
     height: 200px;
     width: 200px;
     text-align: center;
 }
-.bf_fish {
+.img_bffish {
     height: 200px;
     width: 200px;
     text-align: center;
 }
-.bf_shrimp{
+.img_bfshrimp {
     height: 200px;
     width: 200px;
     text-align: center;
