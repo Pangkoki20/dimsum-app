@@ -1,32 +1,90 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+
+.menuform {
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
 .form-menu {
-  margin-top: 50px;
-  margin-bottom: 30px;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  margin-top: 10px;
   text-align: center;
+
 }
-.img_menu {
-  height: 150px;
+.img_egg {
+  height: 200px;
+  width: 250px;
 }
+
+.img_jopoo {
+  height: 200px;
+  width: 250px;
+
+}
+
+.img_buk {
+  height: 200px;
+  width: 250px;
+}
+
+.img_eggpan {
+  height: 200px;
+  width: 250px;
+}
+
+.img_kanomgee {
+  height: 200px;
+  width: 250px;
+}
+
+.img_sarapol {
+  height: 200px;
+  width: 250px;
+}
+
+.img_egg {
+  height: 200px;
+  width: 250px;
+}
+
 .text-menu {
   margin-top: 10px;
-  color: #007aa5;
+  color: #243e5a;
   font-family: "Kanit", sans-serif;
+  text-align: center;
+
 }
-.text_menucom{
+
+.text-menu:hover {
+  text-decoration: none;
+  color: #1a9191;
+
+}
+
+.text_menucom {
   font-size: 80px;
   text-align: center;
   color: rgb(13, 43, 175);
 }
-.from_mn{
-  margin-top: 50px !important; 
+
+.from_mn {
+  margin-top: 50px !important;
   text-align: center;
 }
-.from_menuone{
-margin-top: 20px;
-text-align: center;
-margin-inline-end: 20px;
-margin-inline-start: 20px;
-margin-block-end: 20px;
+
+.from_menuone {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.text_menuname {
+  font-size: 20px;
+  font-family: "Kanit",
+    sans-serif;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(90, 91, 160);
+}
+.text_menuname:hover {
+  color: rgb(57, 13, 107);
 }

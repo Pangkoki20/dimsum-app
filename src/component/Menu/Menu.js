@@ -9,28 +9,55 @@ import {
   Button
 } from "reactstrap";
 import "./Menu.css";
-import imgmenu from "../../imgmenu/menu.png";
 import MenuSelect from "../MenuSelect/MenuSelect";
-
+import MenuNewPoo from "./MenuNewPoo";
+import MenuNewBuk from "./MenuNewBuk";
+import MenuNewEgg from "./MenuNewEgg";
+import MenuNewKanomgee from "./MenuNewKanomgee";
+import MenuNewSarapol from "./MenuNewSarapol";
+import MenuNewEggpan from "./MenuNewEngpan";
 class Menu extends Component {
+  componentDidMount() {
+    document.title = "Dimsumahkong Delivery";
+    // var oldItems = []
+    var oldItems = JSON.parse(localStorage.getItem("order"));
+    console.log("old first :", oldItems);
+
+    if (oldItems == null) {
+      var oldItems = [];
+      localStorage.setItem("order", JSON.stringify(oldItems));
+    } else {
+      var oldItems = JSON.parse(localStorage.getItem("order")) || [];
+    }
+    // var oldItems = JSON.parse(localStorage.getItem('order')) || [];
+  }
   render() {
     return (
-      <div>
+      <div >
         <MenuSelect />
-        <Container className="form-menu">
+        <div className="menuform">
           <h1 className="text-menu">เมนูแนะนำ</h1>
-          <img className="img_menu" src={imgmenu} />
-          <div className="from_mn">
-            <Row className="no-gutters ">
-              <div class="col-md-4 border">
-                <div className="from_menuone">
-                  <img className="img_menu" src={imgmenu} />
-                </div>
-              </div>
-              <div class="col-12 col-md-8 border">col-8</div>
-            </Row>
-          </div>
-        </Container>
+          <Row>
+            <Col xs="6" sm="4">
+              <MenuNewPoo />
+            </Col>
+            <Col xs="6" sm="4">
+              <MenuNewBuk />
+            </Col>
+            <Col xs="6" sm="4">
+              <MenuNewEgg />
+            </Col>
+            <Col xs="6" sm="4">
+              <MenuNewKanomgee />
+            </Col>
+            <Col xs="6" sm="4">
+              <MenuNewSarapol />
+            </Col>
+            <Col xs="6" sm="4">
+              <MenuNewEggpan />
+            </Col>
+          </Row>
+        </div>
       </div>
     );
   }
