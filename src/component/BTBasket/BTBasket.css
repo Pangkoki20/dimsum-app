@@ -1,3 +1,8 @@
-.btn-basket{
+@import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+
+.btn-basket {
     font-size: 18px !important;
+    font-family: "Kanit",
+        sans-serif;
+
 }
