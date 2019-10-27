@@ -44,7 +44,7 @@ export default class Drink_Ovantin extends Component {
                 <img className="img_ovantin" src={ovantin} />
               </div>
               <CardTitle className="text_menuname">โอวัลตินเย็น</CardTitle>
-              <CardText>ราคา 30 .-</CardText>
+              <CardText className="text_price">ราคา 30 .-</CardText>
               <BTBasket />
             </Card>
           </div>

@@ -16,7 +16,7 @@ class MenuNewEgg extends Component {
                 <img className="img_egg" src={img_egg} />
               </div>
               <CardTitle className="text_menuname">ไข่ลวก</CardTitle>
-              <CardText>ราคา 30 .-</CardText>
+              <CardText className="text_price">ราคา 30 .-</CardText>
               <BTBasket />
             </Card>
           </div>

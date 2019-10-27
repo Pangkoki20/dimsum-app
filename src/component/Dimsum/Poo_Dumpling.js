@@ -37,17 +37,15 @@ export default class Poo_Dumpling extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_dlpoo">
-          <img className="img_poo" src={dl_poo} />
-          </div>
+                <img className="img_poo" src={dl_poo} />
+              </div>
               <CardTitle className="text_menuname">ขนมจีบปู</CardTitle>
-              <CardText>
-                ราคา 50 .-
-              </CardText>
+              <CardText className="text_price">ราคา 50 .-</CardText>
               <BTBasket />
             </Card>
           </div>
         </Container>
-        </div>
+      </div>
     );
   }
 }

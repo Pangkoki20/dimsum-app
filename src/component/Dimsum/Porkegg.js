@@ -40,7 +40,7 @@ export default class Porkegg extends Component {
                 <img className="img_pokegg" src={dl_pokegg} />
               </div>
               <CardTitle className="text_menuname">ขนมจีบหมูไข่เค็ม</CardTitle>
-              <CardText>ราคา 20 .-</CardText>
+              <CardText className="text_price">ราคา 20 .-</CardText>
               <BTBasket />
             </Card>
           </div>

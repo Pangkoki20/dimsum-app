@@ -44,7 +44,7 @@ export default class Break_egg extends Component {
                 <img className="img_bfegg" src={bf_egg} />
               </div>
               <CardTitle className="text_menuname">ไข่กะทะ</CardTitle>
-              <CardText>ราคา 40 .-</CardText>
+              <CardText className="text_price">ราคา 40 .-</CardText>
               <BTBasket />
             </Card>
           </div>

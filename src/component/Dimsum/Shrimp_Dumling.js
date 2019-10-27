@@ -41,12 +41,10 @@ export default class Shrimp_Dumling extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_hrimp">
-               <img className="img_shrimp" src={dl_shrimp} />
+                <img className="img_shrimp" src={dl_shrimp} />
               </div>
               <CardTitle className="text_menuname">เกี๊ยวกุ้ง</CardTitle>
-              <CardText>
-                ราคา 20 .-
-              </CardText>
+              <CardText className="text_price">ราคา 20 .-</CardText>
               <BTBasket />
             </Card>
           </div>

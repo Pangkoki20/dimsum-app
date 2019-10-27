@@ -36,16 +36,15 @@ export default class Break_fish extends Component {
   };
   render() {
     return (
-
-<div>
+      <div>
         <Container>
           <div className="form-menu">
             <Card body>
               <div className="pic_buk">
-               <img className="img_bffish" src={bf_fish} />
+                <img className="img_bffish" src={bf_fish} />
               </div>
               <CardTitle className="text_menuname">ปลาทิพย์ทอด</CardTitle>
-              <CardText>ราคา 40 .-</CardText>
+              <CardText className="text_price">ราคา 40 .-</CardText>
               <BTBasket />
             </Card>
           </div>

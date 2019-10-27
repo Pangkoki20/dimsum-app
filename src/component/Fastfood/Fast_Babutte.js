@@ -44,7 +44,7 @@ export default class Fast_Babutte extends Component {
                 <img className="img_ffbabutte" src={ff_babutte} />
               </div>
               <CardTitle className="text_menuname">บะกุ๊ดเต๋</CardTitle>
-              <CardText>ราคา 50 .-</CardText>
+              <CardText className="text_price">ราคา 50 .-</CardText>
               <BTBasket />
             </Card>
           </div>

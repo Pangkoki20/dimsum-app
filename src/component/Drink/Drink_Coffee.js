@@ -44,7 +44,7 @@ export default class Drink_Coffee extends Component {
                 <img className="img_coffee" src={coffee} />
               </div>
               <CardTitle className="text_menuname">กาแฟเย็น</CardTitle>
-              <CardText>ราคา 30 .-</CardText>
+              <CardText className="text_price">ราคา 30 .-</CardText>
               <BTBasket />
             </Card>
           </div>

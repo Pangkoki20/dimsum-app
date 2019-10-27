@@ -36,21 +36,20 @@ export default class Drink_Chaice extends Component {
   };
   render() {
     return (
-       <div>
+      <div>
         <Container>
           <div className="form-menu">
             <Card body>
               <div>
-                 <img className="img_gt" src={gt} />
+                <img className="img_gt" src={gt} />
               </div>
               <CardTitle className="text_menuname">ชาเย็น</CardTitle>
-              <CardText>ราคา 30 .-</CardText>
+              <CardText className="text_price">ราคา 30 .-</CardText>
               <BTBasket />
             </Card>
           </div>
         </Container>
       </div>
-     
     );
   }
 }

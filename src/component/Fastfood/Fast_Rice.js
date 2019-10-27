@@ -44,7 +44,7 @@ export default class Fast_Rice extends Component {
                 <img className="img_ffrice" src={ff_rice} />
               </div>
               <CardTitle className="text_menuname">ข้าวเปล่า</CardTitle>
-              <CardText>ราคา 10 .-</CardText>
+              <CardText className="text_price">ราคา 10 .-</CardText>
               <BTBasket />
             </Card>
           </div>

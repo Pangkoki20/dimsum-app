@@ -40,7 +40,7 @@ export default class Hargao extends Component {
                 <img className="img_hargao" src={dl_hargao} />
               </div>
               <CardTitle className="text_menuname">ฮะเก๋า</CardTitle>
-              <CardText>ราคา 20.-</CardText>
+              <CardText className="text_price">ราคา 20.-</CardText>
               <BTBasket />
             </Card>
           </div>

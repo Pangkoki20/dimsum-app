@@ -41,10 +41,10 @@ export default class Drink_Coffee extends Component {
           <div className="form-menu">
             <Card body>
               <div>
-               <img className="img_chamanow" src={chamanow} />
+                <img className="img_chamanow" src={chamanow} />
               </div>
               <CardTitle className="text_menuname">ชามะนาวเย็น</CardTitle>
-              <CardText>ราคา 30 .-</CardText>
+              <CardText className="text_price">ราคา 30 .-</CardText>
               <BTBasket />
             </Card>
           </div>

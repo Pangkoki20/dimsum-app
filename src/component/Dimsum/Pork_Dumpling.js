@@ -40,15 +40,12 @@ export default class Pork_Dumpling extends Component {
                 <img className="img_pok" src={dl_pok} />
               </div>
               <CardTitle className="text_menuname">ขนมจีบหมู</CardTitle>
-              <CardText>
-                ราคา 20 .-
-              </CardText>
+              <CardText className="text_price">ราคา 20 .-</CardText>
               <BTBasket />
             </Card>
           </div>
         </Container>
       </div>
-      
     );
   }
 }

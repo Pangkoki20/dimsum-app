@@ -36,16 +36,15 @@ export default class Fast_Crispypork extends Component {
   };
   render() {
     return (
-
       <div>
         <Container>
           <div className="form-menu">
             <Card body>
               <div className="pic_buk">
-               <img className="img_ffcrispypork" src={ff_crispypork} />
+                <img className="img_ffcrispypork" src={ff_crispypork} />
               </div>
               <CardTitle className="text_menuname">ข้าวหมูกรอบ</CardTitle>
-              <CardText>ราคา 50 .-</CardText>
+              <CardText className="text_price">ราคา 50 .-</CardText>
               <BTBasket />
             </Card>
           </div>

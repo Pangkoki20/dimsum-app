@@ -36,15 +36,15 @@ export default class Fast_Chicken extends Component {
   };
   render() {
     return (
-<div>
+      <div>
         <Container>
           <div className="form-menu">
             <Card body>
               <div className="pic_buk">
-                 <img className="img_ffchicken" src={ff_chicken} />
+                <img className="img_ffchicken" src={ff_chicken} />
               </div>
               <CardTitle className="text_menuname">ข้าวมันไก่</CardTitle>
-              <CardText>ราคา 40 .-</CardText>
+              <CardText className="text_price">ราคา 40 .-</CardText>
               <BTBasket />
             </Card>
           </div>

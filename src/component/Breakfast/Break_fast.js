@@ -44,7 +44,7 @@ export default class Break_fast extends Component {
                 <img className="img_bf" src={bf_bf} />
               </div>
               <CardTitle className="text_menuname">ชุดอาหารเช้า</CardTitle>
-              <CardText>ราคา 40 .-</CardText>
+              <CardText className="text_price">ราคา 40 .-</CardText>
               <BTBasket />
             </Card>
           </div>

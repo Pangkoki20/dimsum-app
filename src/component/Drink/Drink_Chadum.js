@@ -36,7 +36,7 @@ export default class Drink_Greentea extends Component {
   };
   render() {
     return (
-       <div>
+      <div>
         <Container>
           <div className="form-menu">
             <Card body>
@@ -44,12 +44,12 @@ export default class Drink_Greentea extends Component {
                 <img className="img_chadum" src={chadum} />
               </div>
               <CardTitle className="text_menuname">ชาดำเย็น</CardTitle>
-              <CardText>ราคา 30 .-</CardText>
+              <CardText className="text_price">ราคา 30 .-</CardText>
               <BTBasket />
             </Card>
           </div>
         </Container>
-        </div>
+      </div>
     );
   }
 }

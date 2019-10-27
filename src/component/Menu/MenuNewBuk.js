@@ -15,7 +15,7 @@ class MenuNewBuk extends Component {
                 <img className="img_buk" src={img_buk} />
               </div>
               <CardTitle className="text_menuname">บะกุ๊ดเต๋</CardTitle>
-              <CardText>ราคา 50 .-</CardText>
+              <CardText className="text_price">ราคา 50 .-</CardText>
               <BTBasket />
             </Card>
           </div>

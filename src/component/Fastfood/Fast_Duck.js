@@ -44,7 +44,7 @@ export default class Fast_Duck extends Component {
                 <img className="img_ffduck" src={ff_duck} />
               </div>
               <CardTitle className="text_menuname">ข้าวหน้าเป็ด</CardTitle>
-              <CardText>ราคา 50 .-</CardText>
+              <CardText className="text_price">ราคา 50 .-</CardText>
               <BTBasket />
             </Card>
           </div>

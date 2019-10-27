@@ -41,10 +41,10 @@ export default class Fast_Porkleg extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_buk">
-                 <img className="img_ffporkleg" src={ff_porkleg} />
+                <img className="img_ffporkleg" src={ff_porkleg} />
               </div>
               <CardTitle className="text_menuname">ข้าวขาหมู</CardTitle>
-              <CardText>ราคา 50 .-</CardText>
+              <CardText className="text_price">ราคา 50 .-</CardText>
               <BTBasket />
             </Card>
           </div>

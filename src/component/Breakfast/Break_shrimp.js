@@ -44,7 +44,7 @@ export default class Break_shrimp extends Component {
                 <img className="img_bfshrimp" src={bf_shrimp} />
               </div>
               <CardTitle className="text_menuname">กุ้งชุบแป้งทอด</CardTitle>
-              <CardText>ราคา 40 .-</CardText>
+              <CardText className="text_price">ราคา 40 .-</CardText>
               <BTBasket />
             </Card>
           </div>

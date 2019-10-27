@@ -32,15 +32,15 @@ export default class Shrimp extends Component {
   };
   render() {
     return (
-        <div>
+      <div>
         <Container>
           <div className="form-menu">
             <Card body>
               <div className="pic_buk">
-                 <img className="img_shrimp" src={dl_shrimp} />
+                <img className="img_shrimp" src={dl_shrimp} />
               </div>
               <CardTitle className="text_menuname">ขนมจีบกุ้ง</CardTitle>
-              <CardText>ราคา 20 .-</CardText>
+              <CardText className="text_price">ราคา 20 .-</CardText>
               <BTBasket />
             </Card>
           </div>
