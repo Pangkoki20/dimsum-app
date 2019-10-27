@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import {
-  Card,
-  Button,
-  CardTitle,
-  CardText,
   Row,
   Col,
-  Container
+  Container,
+  Card,
+  CardText,
+  CardTitle,
+  Button
 } from "reactstrap";
 import "./Menu.css";
 import imgmenu from "../../imgmenu/menu.png";
@@ -18,18 +18,17 @@ class Menu extends Component {
       <div>
         <MenuSelect />
         <Container className="form-menu">
-            <h1 className="text-menu">เมนูแนะนำ</h1>
-            <img className="img_menu" src={imgmenu} />
+          <h1 className="text-menu">เมนูแนะนำ</h1>
+          <img className="img_menu" src={imgmenu} />
           <div className="from_mn">
-            {/* <div class="card">
-              <div class="card-body">
-                <h5 class="card-title"></h5>
-                <p class="card-text"></p>
-                <a href="#" class="btn btn-primary">
-                  หยิบใส่ตะกร้า
-                </a>
+            <Row className="no-gutters ">
+              <div class="col-md-4 border">
+                <div className="from_menuone">
+                  <img className="img_menu" src={imgmenu} />
+                </div>
               </div>
-            </div> */}
+              <div class="col-12 col-md-8 border">col-8</div>
+            </Row>
           </div>
         </Container>
       </div>

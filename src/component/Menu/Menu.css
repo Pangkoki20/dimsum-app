@@ -20,6 +20,13 @@
   color: rgb(13, 43, 175);
 }
 .from_mn{
-  margin-top: 10px !important; 
+  margin-top: 50px !important; 
   text-align: center;
+}
+.from_menuone{
+margin-top: 20px;
+text-align: center;
+margin-inline-end: 20px;
+margin-inline-start: 20px;
+margin-block-end: 20px;
 }
