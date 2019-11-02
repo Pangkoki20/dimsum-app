@@ -25,22 +25,24 @@ class Breakfast extends Component {
     return (
       <div>
         <MenuSelect />
-        <div className="menuform">
+        <div>
           <div className="textname-breakfast">อาหารเช้า</div>
-          <Row>
-            <Col xs="6" sm="4">
-              <Break_fast />
-            </Col>
-            <Col xs="6" sm="4">
-              <Break_egg />
-            </Col>
-            <Col xs="6" sm="4">
-              <Break_fish />
-            </Col>
-            <Col xs="6" sm="4">
-              <Break_shrimp />
-            </Col>
-          </Row>
+          <div className="menuform">
+            <Row>
+              <Col xs="6" sm="4">
+                <Break_fast />
+              </Col>
+              <Col xs="6" sm="4">
+                <Break_egg />
+              </Col>
+              <Col xs="6" sm="4">
+                <Break_fish />
+              </Col>
+              <Col xs="6" sm="4">
+                <Break_shrimp />
+              </Col>
+            </Row>
+          </div>
         </div>
       </div>
     );

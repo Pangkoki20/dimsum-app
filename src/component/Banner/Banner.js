@@ -15,8 +15,8 @@ export default class Banner extends React.Component {
         </div>
         <div className="bt_startfood">
           <Button
-            className=" rounded-lg"
-            color="danger"
+            className=" rounded-lg rounded-pill"
+            color="info"
             size="lg"
             href="/Menu"
           >

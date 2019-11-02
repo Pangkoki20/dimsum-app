@@ -1,7 +1,41 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
+
+.textname-breakfast {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 15px;
+    color: #224870;
+    font-family: "Kanit", sans-serif;
+}
+
+.textname-breakfast:hover {
+    text-decoration: none;
+    color: #00758d;
+}
+
+.img_bfegg {
+    height: 200px;
+    width: 250px;
+}
+
+.img_bffish {
+    height: 200px;
+    width: 250px;
+}
+
+.img_bfshrimp {
+    height: 200px;
+    width: 250px;
+}
+.img_bf{
+    height: 200px;
+    width: 250px;
+}
+
+/* @media only screen and (max-width: 768px) {
 .table-breakfast {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .textname-breakfast {
     text-align: center;
@@ -10,38 +44,46 @@
     color: #224870;
     font-family: "Kanit", sans-serif;
 }
+
 .textname-breakfast:hover {
     text-decoration: none;
     color: #00758d;
 }
+
 .thead-bar {
-    margin-top: 20px;
-    font-size: 22px;
+    margin-top: 10px;
+    font-size: 16px;
     text-align: center;
     font-family: "Kanit", sans-serif;
 }
+
 .tabel-breakfast {
     text-align: center;
     font-family: "Kanit", sans-serif;
 }
+
 .img_bf {
-    height: 200px;
-    width: 200px;
-    text-align: center;
-}
-.img_bfegg {
-    height: 200px;
-    width: 200px;
-    text-align: center;
-}
-.img_bffish {
-    height: 200px;
-    width: 200px;
-    text-align: center;
-}
-.img_bfshrimp {
-    height: 200px;
-    width: 200px;
+    height: 70px;
+    width: 70px;
     text-align: center;
 }
 
+.img_bfegg {
+    height: 70px;
+    width: 70px;
+    text-align: center;
+}
+
+.img_bffish {
+    height: 70px;
+    width: 70px;
+    text-align: center;
+}
+
+.img_bfshrimp {
+    height: 70px;
+    width: 70px;
+    text-align: center;
+}
+}
+ */

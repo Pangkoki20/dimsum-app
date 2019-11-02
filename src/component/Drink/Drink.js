@@ -27,28 +27,30 @@ class Drink extends Component {
     return (
       <div>
         <MenuSelect />
-        <div className="menuform">
-          <div className="textname-drink">เมนูแนะนำ</div>
-          <Row>
-            <Col xs="6" sm="4">
-              <Drink_Chaice />
-            </Col>
-            <Col xs="6" sm="4">
-              <Drink_Coffee />
-            </Col>
-            <Col xs="6" sm="4">
-              <Drink_chamanow />
-            </Col>
-            <Col xs="6" sm="4">
-              <Drink_Ovantin />
-            </Col>
-            <Col xs="6" sm="4">
-              <Drink_Greentea />
-            </Col>
-            <Col xs="6" sm="4">
-              <Drink_Chadum />
-            </Col>
-          </Row>
+        <div>
+          <div className="textname-drink">เครื่องดื่ม</div>
+          <div className="menuform">
+            <Row>
+              <Col xs="6" sm="4">
+                <Drink_Chaice />
+              </Col>
+              <Col xs="6" sm="4">
+                <Drink_Coffee />
+              </Col>
+              <Col xs="6" sm="4">
+                <Drink_chamanow />
+              </Col>
+              <Col xs="6" sm="4">
+                <Drink_Ovantin />
+              </Col>
+              <Col xs="6" sm="4">
+                <Drink_Greentea />
+              </Col>
+              <Col xs="6" sm="4">
+                <Drink_Chadum />
+              </Col>
+            </Row>
+          </div>
         </div>
       </div>
     );
