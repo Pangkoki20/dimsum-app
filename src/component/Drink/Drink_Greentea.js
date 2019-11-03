@@ -4,7 +4,7 @@ import greentea from "../../imgdrink/ชาเขียว.png";
 import BTBasket from "../BTBasket/BTBasket";
 export default class Drink_Greentea extends Component {
   state = {
-    menu_name: "drink_greentea",
+    menu_name: "ชาเขียว",
     menu_value: 0,
     menu_price: 30
   };
@@ -41,11 +41,15 @@ export default class Drink_Greentea extends Component {
           <div className="form-menu">
             <Card body>
               <div>
-                <img className="img_greentea" src={greentea} />
+                <img className="img_greentea img-fluid" src={greentea} />
               </div>
               <CardTitle className="text_menuname">ชาเขียวเย็น</CardTitle>
               <CardText className="text_price">ราคา 30 .-</CardText>
-              <Button onClick={this.sentOrder} color="info">
+              <Button
+                onClick={this.sentOrder}
+                color="info"
+                className="btn-basket"
+              >
                 เพิ่มไปยังตะกร้า
               </Button>
             </Card>

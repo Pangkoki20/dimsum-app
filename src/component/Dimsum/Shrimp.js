@@ -1,9 +1,13 @@
 import React, { Component } from "react";
-import { Container, Card, CardText, CardTitle,Button } from "reactstrap";
+import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import dl_shrimp from "../../imgdimsum/ขนมจีบกุ้ง.png";
 import BTBasket from "../BTBasket/BTBasket";
 export default class Shrimp extends Component {
-  state = { menu_name: "poo_dumpling", menu_value: 0, menu_price: 20 };
+  state = {
+    menu_name: "ขนมจีบกุ้ง",
+    menu_value: 0,
+    menu_price: 20
+  };
 
   sentOrder = e => {
     e.preventDefault();
@@ -37,11 +41,15 @@ export default class Shrimp extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_buk">
-                <img className="img_shrimp" src={dl_shrimp} />
+                <img className="img_shrimp img-fluid" src={dl_shrimp} />
               </div>
               <CardTitle className="text_menuname">ขนมจีบกุ้ง</CardTitle>
               <CardText className="text_price">ราคา 20 .-</CardText>
-              <Button onClick={this.sentOrder} color="info">
+              <Button
+                onClick={this.sentOrder}
+                color="info"
+                className="btn-basket"
+              >
                 เพิ่มไปยังตะกร้า
               </Button>
             </Card>

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Container, Card, CardText, CardTitle,Button } from "reactstrap";
+import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import dl_hargao from "../../imgdimsum/ฮะเก๋า.png";
 export default class Hargao extends Component {
-  state = { menu_name: "hargao", menu_value: 0, menu_price: 20 };
+  state = { menu_name: "ฮะเก๋า", menu_value: 0, menu_price: 20 };
 
   sentOrder = e => {
     e.preventDefault();
@@ -36,11 +36,15 @@ export default class Hargao extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_hargao">
-                <img className="img_hargao" src={dl_hargao} />
+                <img className="img_hargao img-fluid" src={dl_hargao} />
               </div>
               <CardTitle className="text_menuname">ฮะเก๋า</CardTitle>
               <CardText className="text_price">ราคา 20.-</CardText>
-              <Button onClick={this.sentOrder} color="info">
+              <Button
+                onClick={this.sentOrder}
+                color="info"
+                className="btn-basket"
+              >
                 เพิ่มไปยังตะกร้า
               </Button>
             </Card>

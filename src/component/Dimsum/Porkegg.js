@@ -3,7 +3,11 @@ import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import dl_pokegg from "../../imgdimsum/ขนมจีบหมูไข่เค็ม.png";
 import BTBasket from "../BTBasket/BTBasket";
 export default class Porkegg extends Component {
-  state = { menu_name: "porkegg", menu_value: 0, menu_price: 20 };
+  state = {
+    menu_name: "ขนมจีบหมูไข่เค็ม",
+    menu_value: 0,
+    menu_price: 20
+  };
 
   sentOrder = e => {
     e.preventDefault();
@@ -37,11 +41,15 @@ export default class Porkegg extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_pokegg">
-                <img className="img_pokegg" src={dl_pokegg} />
+                <img className="img_pokegg img-fluid" src={dl_pokegg} />
               </div>
               <CardTitle className="text_menuname">ขนมจีบหมูไข่เค็ม</CardTitle>
               <CardText className="text_price">ราคา 20 .-</CardText>
-              <Button onClick={this.sentOrder} color="info">
+              <Button
+                onClick={this.sentOrder}
+                color="info"
+                className="btn-basket"
+              >
                 เพิ่มไปยังตะกร้า
               </Button>
             </Card>

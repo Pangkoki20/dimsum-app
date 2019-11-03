@@ -8,6 +8,14 @@
     font-size: 20px;
 }
 
+.add_food {
+    margin-top: 10px;
+    font-family: "Kanit",
+        sans-serif;
+    font-size: 25px;
+    text-align: right;
+}
+
 .in_check {
     width: 10px !important;
 }
@@ -63,7 +71,7 @@
 }
 
 .from_money {
-    margin-top: 80px;
+    margin-top: 20px;
 }
 
 .text_money {
@@ -99,7 +107,7 @@
     font-family: "Kanit",
         sans-serif;
     text-align: right;
-    margin-top: 30px;
+    margin-top: 10px;
     text-align: center;
 }
 
@@ -112,14 +120,20 @@
     height: 30px;
 }
 
-.img_trash:hover{
-   color: red;
+.img_trash:hover {
+    color: red;
 }
 
 .img_gps {
     width: 30px;
     height: 30px;
     margin-right: 20px;
+}
+
+.img_add {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
 }
 
 .footer_ttfood {

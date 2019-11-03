@@ -6,7 +6,7 @@ import BTBasket from "../BTBasket/BTBasket";
 
 class MenuNewBuk extends Component {
   state = {
-    menu_name: "break_egg",
+    menu_name: "บะกุ๊ดเต๋",
     menu_value: 0,
     menu_price: 50
   };
@@ -43,11 +43,15 @@ class MenuNewBuk extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_buk">
-                <img className="img_buk" src={img_buk} />
+                <img className="img_buk img-fluid" src={img_buk} />
               </div>
               <CardTitle className="text_menuname">บะกุ๊ดเต๋</CardTitle>
               <CardText className="text_price">ราคา 50 .-</CardText>
-              <Button onClick={this.sentOrder} color="info">
+              <Button
+                onClick={this.sentOrder}
+                color="info"
+                className="btn-basket"
+              >
                 เพิ่มไปยังตะกร้า
               </Button>
             </Card>

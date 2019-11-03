@@ -6,7 +6,7 @@ import BTBasket from "../BTBasket/BTBasket";
 
 class MenuNewSarapol extends Component {
   state = {
-    menu_name: "break_egg",
+    menu_name: "ซาลาเปาทอด",
     menu_value: 0,
     menu_price: 10
   };
@@ -48,7 +48,11 @@ class MenuNewSarapol extends Component {
               </div>
               <CardTitle className="text_menuname">ซาลาเปาทอด</CardTitle>
               <CardText className="text_price">ราคา 10 .-</CardText>
-              <Button onClick={this.sentOrder} color="info">
+              <Button
+                onClick={this.sentOrder}
+                color="info"
+                className="btn-basket"
+              >
                 เพิ่มไปยังตะกร้า
               </Button>
             </Card>

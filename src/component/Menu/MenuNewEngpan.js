@@ -5,7 +5,7 @@ import img_eggpan from "../../imgfastfoood/ไข่กะทะ.png";
 import BTBasket from "../BTBasket/BTBasket";
 
 class MenuNewEggpan extends Component {
-  state = { menu_name: "hargao", menu_value: 0, menu_price: 40 };
+  state = { menu_name: "ไข่กะทะ", menu_value: 0, menu_price: 40 };
 
   sentOrder = e => {
     e.preventDefault();
@@ -40,11 +40,17 @@ class MenuNewEggpan extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_eggpan">
-                <img className="img_eggpan" src={img_eggpan} />
+                <img className="img_eggpan img-fluid" src={img_eggpan} />
               </div>
               <CardTitle className="text_menuname">ไข่กะทะ</CardTitle>
               <CardText className="text_price">ราคา 40 .-</CardText>
-              <BTBasket />
+              <Button
+                onClick={this.sentOrder}
+                color="info"
+                className="btn-basket"
+              >
+                เพิ่มไปยังตะกร้า
+              </Button>
             </Card>
           </div>
         </Container>

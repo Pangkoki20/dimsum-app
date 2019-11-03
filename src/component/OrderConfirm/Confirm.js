@@ -17,12 +17,7 @@ class Confirm extends Component {
           <Card className="from_payment">
             <CardHeader>ยืนยันการสั่งอาหาร</CardHeader>
             <CardBody>
-              <CardTitle>Special Title Treatment</CardTitle>
-              <CardText>
-                With supporting text below as a natural lead-in to additional
-                content.
-              </CardText>
-              <Button>Go somewhere</Button>
+              
             </CardBody>
             <CardFooter>Footer</CardFooter>
           </Card>

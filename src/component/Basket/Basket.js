@@ -13,13 +13,13 @@ import {
 } from "reactstrap";
 import "./Basket.css";
 import img_gps from "../../imgbasket/confirmation.png";
-import img_trash from "../../imgbasket/trash.png";
-import BTCount from "./BTCount";
+import img_add from "../../imgbasket/plus.png";
 class Basket extends Component {
   state = {
     order: [],
     priceAll: 0,
-    total: 0
+    total: 0,
+    check:1
   };
   componentDidMount = () => {
     let order = JSON.parse(localStorage.getItem("order"));
@@ -40,17 +40,24 @@ class Basket extends Component {
     localStorage.setItem("order", JSON.stringify(afterObject));
     this.getData();
   };
-  getData = () => {
+  async getData() {
     let order = JSON.parse(localStorage.getItem("order"));
     this.setState({ order: order });
-  };
+    await this.setState({ priceAll: 0 });
+    console.log("After Remove order : ", order);
+    order.map((e, index) => {
+      this.state.priceAll = this.state.priceAll + e.menu_value * e.menu_price;
+      console.log("after price all : ", this.state.priceAll);
+    });
+    this.setState({ priceAll: this.state.priceAll });
+  }
 
   render() {
     return (
       <div class="container-fluid">
+        <div className="text_basket">อาหารในตะกร้า</div>
         <div class="row">
           <div class="col-12 col-md-8">
-            <div className="text_basket">อาหารในตะกร้า</div>
             <Card className="card_food">
               <CardHeader>
                 <Row>
@@ -71,7 +78,7 @@ class Basket extends Component {
                         <Col> {e.menu_price}</Col>
                         <Col className="img_trash">
                           <div onClick={() => this.toRemove(index)}>
-                            <i class="fas fa-trash"></i>
+                            <i class="far fa-trash-alt"></i>
                           </div>
                         </Col>
                       </Row>
@@ -121,6 +128,11 @@ class Basket extends Component {
                   </div>
                 </CardFooter>
               </Card>
+            </div>
+            <div className="add_food">
+              <Button color="info" size="lg" block href="/Menu">
+                เพิ่มรายการอาหาร
+              </Button>
             </div>
             <div className="address_customer">
               <Button outline color="info" size="lg" block href="/OrderConfirm">

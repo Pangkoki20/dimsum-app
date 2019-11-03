@@ -3,7 +3,7 @@ import { Container, Card, CardText, CardTitle,Button } from "reactstrap";
 import bf_egg from "../../imgbreakfast/ไข่กะทะ.png";
 export default class Break_egg extends Component {
   state = {
-    menu_name: "break_egg",
+    menu_name: "ไข่กะทะ",
     menu_value: 0,
     menu_price: 40
   };
@@ -40,11 +40,15 @@ export default class Break_egg extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_bfegg">
-                <img className="img_bfegg" src={bf_egg} />
+                <img className="img_bfegg img-fluid" src={bf_egg} />
               </div>
               <CardTitle className="text_menuname">ไข่กะทะ</CardTitle>
               <CardText className="text_price">ราคา 40 .-</CardText>
-              <Button onClick={this.sentOrder} color="info">
+              <Button
+                onClick={this.sentOrder}
+                color="info"
+                className="btn-basket"
+              >
                 เพิ่มไปยังตะกร้า
               </Button>
             </Card>

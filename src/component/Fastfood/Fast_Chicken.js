@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { Container, Card, CardText, CardTitle,Button } from "reactstrap";
+import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import ff_chicken from "../../imgfastfoood/ข้าวมันไก่.png";
 import BTBasket from "../BTBasket/BTBasket";
 export default class Fast_Chicken extends Component {
   state = {
-    menu_name: "fast_chicken",
+    menu_name: "ข้าวมันไก่",
     menu_value: 0,
     menu_price: 40
   };
@@ -41,11 +41,15 @@ export default class Fast_Chicken extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_buk">
-                <img className="img_ffchicken" src={ff_chicken} />
+                <img className="img_ffchicken img-fluid" src={ff_chicken} />
               </div>
               <CardTitle className="text_menuname">ข้าวมันไก่</CardTitle>
               <CardText className="text_price">ราคา 40 .-</CardText>
-              <Button onClick={this.sentOrder} color="info">
+              <Button
+                onClick={this.sentOrder}
+                color="info"
+                className="btn-basket"
+              >
                 เพิ่มไปยังตะกร้า
               </Button>
             </Card>

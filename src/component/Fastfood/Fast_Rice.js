@@ -4,7 +4,7 @@ import ff_rice from "../../imgfastfoood/ข้าวเปล่า.png";
 import BTBasket from "../BTBasket/BTBasket";
 export default class Fast_Rice extends Component {
   state = {
-    menu_name: "fast_chicken",
+    menu_name: "ข้าวเปล่า",
     menu_value: 0,
     menu_price: 10
   };
@@ -41,11 +41,15 @@ export default class Fast_Rice extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_buk">
-                <img className="img_ffrice" src={ff_rice} />
+                <img className="img_ffrice img-fluid" src={ff_rice} />
               </div>
               <CardTitle className="text_menuname">ข้าวเปล่า</CardTitle>
               <CardText className="text_price">ราคา 10 .-</CardText>
-              <Button onClick={this.sentOrder} color="info">
+              <Button
+                onClick={this.sentOrder}
+                color="info"
+                className="btn-basket"
+              >
                 เพิ่มไปยังตะกร้า
               </Button>
             </Card>

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Container, Card, CardText, CardTitle,Button } from "reactstrap";
+import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import dl_shrimp from "../../imgdimsum/เกี๊ยวกุ้ง.png";
 export default class Shrimp_Dumling extends Component {
   state = {
-    menu_name: "shrimp_dumlin",
+    menu_name: "เกี๊ยวกุ้ง",
     menu_value: 0,
     menu_price: 20
   };
@@ -40,11 +40,15 @@ export default class Shrimp_Dumling extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_hrimp">
-                <img className="img_shrimp" src={dl_shrimp} />
+                <img className="img_shrimp img-fluid" src={dl_shrimp} />
               </div>
               <CardTitle className="text_menuname">เกี๊ยวกุ้ง</CardTitle>
               <CardText className="text_price">ราคา 20 .-</CardText>
-              <Button onClick={this.sentOrder} color="info">
+              <Button
+                onClick={this.sentOrder}
+                color="info"
+                className="btn-basket"
+              >
                 เพิ่มไปยังตะกร้า
               </Button>
             </Card>

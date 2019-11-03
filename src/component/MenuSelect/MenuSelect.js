@@ -33,7 +33,7 @@ class MenuSelect extends Component {
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink className="" href="/Delivvery">
+          <NavLink className="" href="/Delivery">
             ตรวจสอบสถานะการจัดส่ง
           </NavLink>
         </NavItem>

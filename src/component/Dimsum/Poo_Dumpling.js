@@ -3,7 +3,11 @@ import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import dl_poo from "../../imgdimsum/ขนมจีบปู.png";
 import BTBasket from "../BTBasket/BTBasket";
 export default class Poo_Dumpling extends Component {
-  state = { menu_name: "poo_dumpling", menu_value: 0, menu_price: 20 };
+  state = {
+    menu_name: "ขนมจีบปู",
+    menu_value: 0,
+    menu_price: 20
+  };
 
   sentOrder = e => {
     e.preventDefault();
@@ -37,11 +41,15 @@ export default class Poo_Dumpling extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_dlpoo">
-                <img className="img_poo" src={dl_poo} />
+                <img className="img_poo img-fluid" src={dl_poo} />
               </div>
               <CardTitle className="text_menuname">ขนมจีบปู</CardTitle>
               <CardText className="text_price">ราคา 50 .-</CardText>
-              <Button onClick={this.sentOrder} color="info">
+              <Button
+                onClick={this.sentOrder}
+                color="info"
+                className="btn-basket"
+              >
                 เพิ่มไปยังตะกร้า
               </Button>
             </Card>

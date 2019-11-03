@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import dl_pok from "../../imgdimsum/ขนมจีบหมู.png";
 export default class Pork_Dumpling extends Component {
-  state = { menu_name: "pork_dumpling", menu_value: 0, menu_price: 20 };
+  state = {
+    menu_name: "ขนมจีบหมู",
+    menu_value: 0,
+    menu_price: 20
+  };
 
   sentOrder = e => {
     e.preventDefault();
@@ -36,11 +40,15 @@ export default class Pork_Dumpling extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_pok">
-                <img className="img_pok" src={dl_pok} />
+                <img className="img_pok img-fluid" src={dl_pok} />
               </div>
               <CardTitle className="text_menuname">ขนมจีบหมู</CardTitle>
               <CardText className="text_price">ราคา 20 .-</CardText>
-              <Button onClick={this.sentOrder} color="info">
+              <Button
+                onClick={this.sentOrder}
+                color="info"
+                className="btn-basket"
+              >
                 เพิ่มไปยังตะกร้า
               </Button>
             </Card>

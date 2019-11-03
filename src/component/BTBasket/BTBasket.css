@@ -2,7 +2,8 @@
 
 .btn-basket {
     font-size: 18px !important;
-    font-family: "Kanit",
-        sans-serif;
-
+    font-family: "Kanit",sans-serif;
+   justify-content: center;
+   align-items: center;
+   display: flex;
 }

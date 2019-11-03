@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { Container, Card, CardText, CardTitle,Button } from "reactstrap";
+import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import bf_fish from "../../imgbreakfast/ปลาทิพย์ทอด.png";
 import BTBasket from "../BTBasket/BTBasket";
 export default class Break_fish extends Component {
   state = {
-    menu_name: "break_fish",
+    menu_name: "ปลาทิพย์ทอด",
     menu_value: 0,
     menu_price: 40
   };
@@ -41,11 +41,15 @@ export default class Break_fish extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_buk">
-                <img className="img_bffish" src={bf_fish} />
+                <img className="img_bffish img-fluid" src={bf_fish} />
               </div>
               <CardTitle className="text_menuname">ปลาทิพย์ทอด</CardTitle>
               <CardText className="text_price">ราคา 40 .-</CardText>
-              <Button onClick={this.sentOrder} color="info">
+              <Button
+                onClick={this.sentOrder}
+                color="info"
+                className="btn-basket"
+              >
                 เพิ่มไปยังตะกร้า
               </Button>
             </Card>
