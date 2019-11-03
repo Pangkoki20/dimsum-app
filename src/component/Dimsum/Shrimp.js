@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Card, CardText, CardTitle } from "reactstrap";
+import { Container, Card, CardText, CardTitle,Button } from "reactstrap";
 import dl_shrimp from "../../imgdimsum/ขนมจีบกุ้ง.png";
 import BTBasket from "../BTBasket/BTBasket";
 export default class Shrimp extends Component {
@@ -41,7 +41,9 @@ export default class Shrimp extends Component {
               </div>
               <CardTitle className="text_menuname">ขนมจีบกุ้ง</CardTitle>
               <CardText className="text_price">ราคา 20 .-</CardText>
-              <BTBasket />
+              <Button onClick={this.sentOrder} color="info">
+                เพิ่มไปยังตะกร้า
+              </Button>
             </Card>
           </div>
         </Container>

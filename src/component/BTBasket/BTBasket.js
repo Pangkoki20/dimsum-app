@@ -5,8 +5,8 @@ class BTBasket extends Component {
   render() {
     return (
       <div className="btn-basket">
-        <Button onClick={this.sentOrder} outline color="danger">
-          เพิ่มลงในตะกร้า
+        <Button onClick={this.sentOrder} color="info">
+          เพิ่มไปยังตะกร้า
         </Button>
       </div>
     );

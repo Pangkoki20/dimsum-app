@@ -4,7 +4,7 @@ import "./Menu.css";
 import img_egg from "../../imgdrink/ไข่ลวก.png";
 import BTBasket from "../BTBasket/BTBasket";
 class MenuNewEgg extends Component {
-  state = { menu_name: "hargao", menu_value: 0, menu_price: 20 };
+  state = { menu_name: "hargao", menu_value: 0, menu_price: 30 };
 
   sentOrder = e => {
     e.preventDefault();
@@ -43,7 +43,9 @@ class MenuNewEgg extends Component {
               </div>
               <CardTitle className="text_menuname">ไข่ลวก</CardTitle>
               <CardText className="text_price">ราคา 30 .-</CardText>
-              <BTBasket />
+              <Button onClick={this.sentOrder} color="info">
+                เพิ่มไปยังตะกร้า
+              </Button>
             </Card>
           </div>
         </Container>

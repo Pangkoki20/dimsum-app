@@ -18,10 +18,10 @@ class Dimsum extends Component {
     console.log("old first :", oldItems);
 
     if (oldItems == null) {
-      var oldItems = [];
+      oldItems = [];
       localStorage.setItem("order", JSON.stringify(oldItems));
     } else {
-      var oldItems = JSON.parse(localStorage.getItem("order")) || [];
+      oldItems = JSON.parse(localStorage.getItem("order")) || [];
     }
     // var oldItems = JSON.parse(localStorage.getItem('order')) || [];
   }

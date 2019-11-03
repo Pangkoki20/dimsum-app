@@ -5,6 +5,37 @@ import img_sarapol from "../../imgbreakfast/ซาลาเปาทอด.png";
 import BTBasket from "../BTBasket/BTBasket";
 
 class MenuNewSarapol extends Component {
+  state = {
+    menu_name: "break_egg",
+    menu_value: 0,
+    menu_price: 10
+  };
+
+  sentOrder = e => {
+    e.preventDefault();
+
+    var oldItems = JSON.parse(localStorage.getItem("order")) || [];
+
+    console.log("sent !");
+
+    const newData = {
+      menu_name: this.state.menu_name,
+      menu_value: 1,
+      menu_price: this.state.menu_price
+    };
+    oldItems.push(newData);
+    localStorage.setItem("order", JSON.stringify(oldItems));
+    console.log(" data : ", newData);
+    this.setState({ menu_value: 0 });
+    this.setState({ remark: "" });
+  };
+
+  handleInputChange = e => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+    this.setState({ please: "" });
+    console.log({ [name]: value });
+  };
   render() {
     return (
       <div>
@@ -13,11 +44,13 @@ class MenuNewSarapol extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_egg">
-                <img className="img_sarapol" src={img_sarapol} />
+                <img className="img_sarapol img-fluid" src={img_sarapol} />
               </div>
               <CardTitle className="text_menuname">ซาลาเปาทอด</CardTitle>
               <CardText className="text_price">ราคา 10 .-</CardText>
-              <BTBasket />
+              <Button onClick={this.sentOrder} color="info">
+                เพิ่มไปยังตะกร้า
+              </Button>
             </Card>
           </div>
         </Container>

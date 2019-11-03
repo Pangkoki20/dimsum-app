@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { Container, Card, CardText, CardTitle } from "reactstrap";
+import { Container, Card, CardText, CardTitle,Button } from "reactstrap";
 import dl_hargao from "../../imgdimsum/ฮะเก๋า.png";
-import BTBasket from "../BTBasket/BTBasket";
 export default class Hargao extends Component {
   state = { menu_name: "hargao", menu_value: 0, menu_price: 20 };
 
@@ -41,7 +40,9 @@ export default class Hargao extends Component {
               </div>
               <CardTitle className="text_menuname">ฮะเก๋า</CardTitle>
               <CardText className="text_price">ราคา 20.-</CardText>
-              <BTBasket />
+              <Button onClick={this.sentOrder} color="info">
+                เพิ่มไปยังตะกร้า
+              </Button>
             </Card>
           </div>
         </Container>

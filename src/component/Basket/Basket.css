@@ -102,14 +102,26 @@
     margin-top: 30px;
     text-align: center;
 }
-.img_trash{
+
+.img_trash {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
     width: 30px;
     height: 30px;
-}.img_gps{
+}
+
+.img_trash:hover{
+   color: red;
+}
+
+.img_gps {
     width: 30px;
     height: 30px;
     margin-right: 20px;
 }
-.footer_ttfood{
+
+.footer_ttfood {
     margin-left: 10px;
 }

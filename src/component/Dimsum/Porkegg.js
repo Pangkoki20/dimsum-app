@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Card, CardText, CardTitle } from "reactstrap";
+import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import dl_pokegg from "../../imgdimsum/ขนมจีบหมูไข่เค็ม.png";
 import BTBasket from "../BTBasket/BTBasket";
 export default class Porkegg extends Component {
@@ -41,7 +41,9 @@ export default class Porkegg extends Component {
               </div>
               <CardTitle className="text_menuname">ขนมจีบหมูไข่เค็ม</CardTitle>
               <CardText className="text_price">ราคา 20 .-</CardText>
-              <BTBasket />
+              <Button onClick={this.sentOrder} color="info">
+                เพิ่มไปยังตะกร้า
+              </Button>
             </Card>
           </div>
         </Container>

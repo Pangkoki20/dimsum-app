@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { Container, Card, CardText, CardTitle } from "reactstrap";
+import { Container, Card, CardText, CardTitle,Button } from "reactstrap";
 import ff_redpork from "../../imgfastfoood/ข้าวหมูแดง.png";
 import BTBasket from "../BTBasket/BTBasket";
 export default class Fast_Redpork extends Component {
   state = {
     menu_name: "fast_redpork",
     menu_value: 0,
-    menu_price: 20
+    menu_price: 50
   };
 
   sentOrder = e => {
@@ -45,7 +45,9 @@ export default class Fast_Redpork extends Component {
               </div>
               <CardTitle className="text_menuname">ข้าวหมูแดง</CardTitle>
               <CardText className="text_price">ราคา 50 .-</CardText>
-              <BTBasket />
+              <Button onClick={this.sentOrder} color="info">
+                เพิ่มไปยังตะกร้า
+              </Button>
             </Card>
           </div>
         </Container>

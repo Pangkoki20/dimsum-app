@@ -5,7 +5,7 @@ import img_kanomgee from "../../imgfastfoood/ขนมจีนน้ำแก�
 import BTBasket from "../BTBasket/BTBasket";
 
 class MenuNewKanomgee extends Component {
-  state = { menu_name: "hargao", menu_value: 0, menu_price: 20 };
+  state = { menu_name: "hargao", menu_value: 0, menu_price: 50 };
 
   sentOrder = e => {
     e.preventDefault();
@@ -44,7 +44,9 @@ class MenuNewKanomgee extends Component {
               </div>
               <CardTitle className="text_menuname">ขนมจีนน้ำแกงปู</CardTitle>
               <CardText className="text_price">ราคา 50 .-</CardText>
-              <BTBasket />
+              <Button onClick={this.sentOrder} color="info">
+                เพิ่มไปยังตะกร้า
+              </Button>
             </Card>
           </div>
         </Container>

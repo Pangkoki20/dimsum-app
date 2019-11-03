@@ -14,7 +14,7 @@ import img_jopoo from "../../imgdimsum/จ๊อปูแนะนำ.png";
 import BTBasket from "../BTBasket/BTBasket";
 
 class MenuNewPoo extends Component {
-  state = { menu_name: "hargao", menu_value: 0, menu_price: 20 };
+  state = { menu_name: "hargao", menu_value: 0, menu_price: 100 };
 
   sentOrder = e => {
     e.preventDefault();
@@ -52,7 +52,7 @@ class MenuNewPoo extends Component {
                 <img className="img_jopoo" src={img_jopoo} />
               </div>
               <CardTitle className="text_menuname">จ๊อปูทอด</CardTitle>
-              <CardText className="text_price">ราคา 50 .-</CardText>
+              <CardText className="text_price">ราคา 100 .-</CardText>
               <BTBasket />
             </Card>
           </div>

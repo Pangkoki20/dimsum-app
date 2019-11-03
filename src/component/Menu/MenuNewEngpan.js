@@ -5,7 +5,7 @@ import img_eggpan from "../../imgfastfoood/ไข่กะทะ.png";
 import BTBasket from "../BTBasket/BTBasket";
 
 class MenuNewEggpan extends Component {
-  state = { menu_name: "hargao", menu_value: 0, menu_price: 20 };
+  state = { menu_name: "hargao", menu_value: 0, menu_price: 40 };
 
   sentOrder = e => {
     e.preventDefault();

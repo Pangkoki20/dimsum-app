@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import { Container, Card, CardText, CardTitle } from "reactstrap";
+import { Container, Card, CardText, CardTitle,Button } from "reactstrap";
 import bf_egg from "../../imgbreakfast/ไข่กะทะ.png";
-import BTBasket from "../BTBasket/BTBasket";
 export default class Break_egg extends Component {
   state = {
     menu_name: "break_egg",
     menu_value: 0,
-    menu_price: 20
+    menu_price: 40
   };
 
   sentOrder = e => {
@@ -45,7 +44,9 @@ export default class Break_egg extends Component {
               </div>
               <CardTitle className="text_menuname">ไข่กะทะ</CardTitle>
               <CardText className="text_price">ราคา 40 .-</CardText>
-              <BTBasket />
+              <Button onClick={this.sentOrder} color="info">
+                เพิ่มไปยังตะกร้า
+              </Button>
             </Card>
           </div>
         </Container>
