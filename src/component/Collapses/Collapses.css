@@ -1,10 +1,15 @@
-.col-con{
-  margin-left: auto !important;
-  margin-right: auto !important;
-  margin-top: 50px;
-}
 .address{
   height: 100px;
   width: 100px;
-  margin-top: 50px;
+  margin-top: 30px;
+}
+.phone{
+  height: 100px;
+  width: 100px;
+  margin-top: 30px;
+}
+.facebook{
+  height: 100px;
+  width: 100px;
+  margin-top: 30px;
 }
