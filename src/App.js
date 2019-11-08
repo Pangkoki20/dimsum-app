@@ -17,7 +17,7 @@ import Menu from "./component/Menu/Menu";
 import Other from "./component/Other/Other";
 import ShowOrder from "./component/ShowOrder/ShowOrder";
 import Basket from "./component/Basket/Basket";
-import OrderConfirm from "./component/OrderConfirm/OrderConfirm";
+import Order from "./component/OrderConfirm/Order";
 import Payment from "./component/OrderConfirm/Payment";
 import "./App.css";
 
@@ -56,7 +56,7 @@ class App extends Component {
           <Route exact path="/Other" component={Other} />
           <Route exact path="/ShowOrder" component={ShowOrder} />
           <Route exact path="/Basket" component={Basket}/>
-          <Route exact path="/OrderConfirm" component={OrderConfirm}/>
+          <Route exact path="/Order" component={Order}/>
           <Route exact path="/Payment" component={Payment}/>
         </Switch>
         {/* <Footer /> */}

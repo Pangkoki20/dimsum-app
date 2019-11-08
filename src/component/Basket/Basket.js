@@ -135,7 +135,7 @@ class Basket extends Component {
               </Button>
             </div>
             <div className="address_customer">
-              <Button outline color="info" size="lg" block href="/OrderConfirm">
+              <Button outline color="info" size="lg" block href="/Order">
                 <img className="img_gps" src={img_gps} />
                 ยืนยันการสั่งซื้อ
               </Button>

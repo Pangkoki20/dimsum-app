@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { CardHeader, Card, CardBody, Input } from "reactstrap";
 import "./Payment.css";
-import Order from "./Oder";
+import Order from "./Order";
 import RtOrder from "./BtOder";
 import img_payment from "../../imgorder/pay.png";
 class Payment extends Component {
