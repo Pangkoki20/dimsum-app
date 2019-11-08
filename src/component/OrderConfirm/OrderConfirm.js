@@ -4,7 +4,6 @@ import "./OrderConfirm.css";
 import Address from "./Address";
 import Order from "./Oder";
 import BtOrder from "./BtOder";
-import Confirm from "./Confirm";
 class OrderConfirm extends Component {
   render() {
     return (
@@ -13,13 +12,6 @@ class OrderConfirm extends Component {
           <div className="text_basketconfirm">ยืนยันการสั่งซื้อ</div>
           <div>
             <Order />
-          </div>
-          <div>
-            <Address />
-          </div>
-
-          <div>
-            <BtOrder />
           </div>
         </div>
       </div>

@@ -7,11 +7,10 @@ import {
   CardBody
 } from "reactstrap";
 import "./Address.css";
-import Order from "./Oder";
 class Address extends Component {
   render() {
     return (
-      <div class="container">
+      <div className="Container">
         <Card className="from_address">
           <CardHeader className="text_address">
             ที่อยู่สำหรับการจัดส่ง
