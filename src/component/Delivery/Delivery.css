@@ -1,17 +1,54 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 
 .text_status {
-    font-size: 40px;
+    margin-top: 15px;
+    font-size: 50px;
+    color: #243e5a;
+    font-family: "Kanit",
+        sans-serif;
     text-align: center;
-    font-family: "Kanit", sans-serif;
 }
 
 .from_status {
-    margin-top: 20px;
+    margin-top: 30px;
     padding-left: 150px;
     padding-right: 150px;
     text-align: center;
     font-family: "Kanit",
-    sans-serif;
-    font-size: 16px;
+        sans-serif;
+
+}
+
+.font_status {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.img_menu {
+    width: 70px;
+    height: 80px;
+    text-align: center;
+}
+
+.img_meal {
+    width: 70px;
+    height: 80px;
+    text-align: center;
+}
+
+.img_product {
+    width: 70px;
+    height: 80px;
+    text-align: center;
+}
+
+.img_delivery {
+    width: 70px;
+    height: 80px;
+    text-align: center;
+}
+.img_breakfast{
+    width: 70px;
+    height: 80px;
+    text-align: center;
 }
