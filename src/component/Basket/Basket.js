@@ -56,7 +56,7 @@ class Basket extends Component {
   render() {
     return (
       <div>
-        <MenuSelect/>
+        <MenuSelect />
         <div class="container-fluid">
           <div className="text_basket">อาหารในตะกร้า</div>
           <div class="row">
@@ -98,6 +98,9 @@ class Basket extends Component {
                   </div>
                 </CardFooter>
               </Card>
+              <br></br>
+              <br></br>
+              <br></br>
             </div>
             <div class="col-6 col-md-4 ">
               <div class="card from_money">

@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+
+.from_addressdelivery {
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: "Kanit", sans-serif;
+}
+
+.addressdelivery {
+    color: #231942;
+    font-size: 18px;
+    font-family: "Kanit", sans-serif;
+}
+.from_payments{
+text-align: center;
+}
+.bt_nextone{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    font-family: "Kanit",
+    sans-serif;
+}
+.bt_next {
+    margin-left: 10px;
+    margin-top: 15px;
+    font-size: 14px;
+    font-family: "Kanit", sans-serif;
+}
+.bt_back {
+    margin-right: 10px;
+    margin-top: 15px;
+    font-size: 14px;
+    font-family: "Kanit", sans-serif;
+    
+}
+.from_check{
+    margin-left:30px ;
+    margin-top: 10px;
+}
+.text_paymentconfirm{
+    font-size: 16px;
+    font-family: "Kanit",sans-serif;
+}
+.text_code{
+    font-size: 14px;
+}
