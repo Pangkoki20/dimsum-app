@@ -1,6 +1,17 @@
 import React, { Component } from "react";
-import { Row, Col, Button, Input, FormGroup, Label } from "reactstrap";
+import {
+  Row,
+  Col,
+  Button,
+  Input,
+  FormGroup,
+  CardBody,
+  CardTitle,
+  Card,
+  Label
+} from "reactstrap";
 import "./Order.css";
+// import axios from "axios";
 import img_address from "../../imgorder/address.png";
 import img_pay from "../../imgorder/pay.png";
 import img_confirm from "../../imgorder/confirm.png";
@@ -11,8 +22,58 @@ class Order extends Component {
   onUserChanged = address => {
     this.setState({ address });
   };
+  //   constructor(props) {
+  //     super(props);
+  //     this.state = {
+  //       numhouse: "",
+  //       nummoo: "",
+  //       lane: "",
+  //       tambon: "",
+  //       amphoe: "",
+  //       changwat: "",
+  //       postcode:"",
+  //       message: ""
+  //     };
+  //   }
+  //      handleInputChange = e => {
+  //     const { address, value } = e.target;
+  //     this.setState({ [address]: value });
+  //     this.setState({ message: "" });
+  //     console.log({ [address]: value });
+  //   };
+  //   address = e => {
+  //     e.preventDefault();
+  //     try {
+  //       const data = {
+  //         numhouse: this.state.numhouse,
+  //         nummoo: this.state.nummoo,
+  //         lane: this.state.lane,
+  //         tambon: this.state.tambon,
+  //         amphoe: this.state.amphoe,
+  //         changwat: this.state.changwat,
+  //         postcode: this.state.changwat
+  //       };
+  //       console.log("ข้อมูลที่กำลังจะ่ส่งไป ....  ", data);
+  //       axios.post(`http://localhost:3001/api/users/create`, data).then(res => {
+  //         const { data } = res;
+  //         this.setState({ message: data.message });
+
+  //         // this.props.history.push(`../OrderConfirm/Order.js`);
+  //       });
+  //     } catch (error) {
+  //       console.log("Error : ", error);
+  //   }
+  // };
   render() {
-    const { numhouse, nummoo, lane, tambon, amphoe, changwat } = this.state;
+    const {
+      numhouse,
+      nummoo,
+      lane,
+      tambon,
+      amphoe,
+      changwat,
+      postcode
+    } = this.state;
     return (
       <div class="container">
         <div class="card shadow-lg p-3 mb-5  bg-white rounded">
@@ -93,18 +154,18 @@ class Order extends Component {
                   ></Input>
                   <Input
                     className="from_addressdelivery"
-                    type="amphoe"
-                    name="amphoe"
-                    value={amphoe}
+                    type="changwat"
+                    name="changwat"
+                    value={changwat}
                     placeholder="จังหวัด"
                     onChange={this.handleInputChange}
                     required
                   ></Input>
                   <Input
                     className="from_addressdelivery"
-                    type="changwat"
-                    name="changwat"
-                    value={changwat}
+                    type="postcode"
+                    name="postcode"
+                    value={postcode}
                     placeholder="รหัสไปรษณีย์"
                     onChange={this.handleInputChange}
                     required
@@ -164,7 +225,20 @@ class Order extends Component {
               {this.state.step === 3 ? (
                 <div className="from_addressdelivery">
                   <div className="addressdelivery"> ยืนยันการสั่งซื้อ</div>
-                  <div></div>
+                  <div>
+                    <Card>
+                      <CardBody>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        
+                      </CardBody>
+                    </Card>
+                  </div>
 
                   <div className="from_payments">
                     <Button className="bt_ok" color="success" href="/Delivery">

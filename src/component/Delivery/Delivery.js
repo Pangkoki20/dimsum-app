@@ -21,7 +21,7 @@ class Delivery extends Component {
           <div className="text_status">ติดตามสถานะการจัดส่ง</div>
           <div className="from_status">
             <Row>
-              <Col>
+              <Col className="frame_status">
                 <Card body className="border border-warning rounded">
                   <div>
                     <img
@@ -32,7 +32,7 @@ class Delivery extends Component {
                   <div className="font_status">สั่งอาหารแล้ว</div>
                 </Card>
               </Col>
-              <Col>
+              <Col className="frame_status">
                 <Card body className="border border-warning rounded">
                   <div>
                     <img className="img_menu img-fluid" src={img_menu} />
@@ -40,7 +40,7 @@ class Delivery extends Component {
                   <div className="font_status">ได้รับรายการอาหารแล้ว</div>
                 </Card>
               </Col>
-              <Col>
+              <Col className="frame_status">
                 <Card body className="border border-warning rounded">
                   <div>
                     <img className="img_meal img-fluid" src={img_meal} />
@@ -48,7 +48,7 @@ class Delivery extends Component {
                   <div className="font_status">กำลังเตรียมอาหาร</div>
                 </Card>
               </Col>
-              <Col>
+              <Col className="frame_status">
                 <Card body className="border border-warning rounded">
                   <div>
                     <img className="img_product img-fluid" src={img_product} />
@@ -56,7 +56,7 @@ class Delivery extends Component {
                   <div className="font_status">อาหารของคุณพร้อมส่ง</div>
                 </Card>
               </Col>
-              <Col>
+              <Col className="frame_status">
                 <Card body className="border border-warning rounded">
                   <div>
                     <img
@@ -67,7 +67,7 @@ class Delivery extends Component {
                   <div className="font_status">อาหารกำลังจัดส่ง</div>
                 </Card>
               </Col>
-              <Col>
+              <Col className="frame_status">
                 <Card body className="border border-warning rounded">
                   <div>
                     <img

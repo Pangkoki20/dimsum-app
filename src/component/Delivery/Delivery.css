@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
-
 .text_status {
     margin-top: 15px;
     font-size: 50px;
@@ -11,17 +10,18 @@
 
 .from_status {
     margin-top: 30px;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 100px;
+    padding-right: 100px;
     text-align: center;
     font-family: "Kanit",
         sans-serif;
-
 }
-
+.frame_status{
+    
+}
 .font_status {
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: 16px;
+    margin-top: 8px;
 }
 .text-addre{
     font-size: 20px;
@@ -76,4 +76,11 @@
     width: 70px;
     height: 80px;
     text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .frame_status {
+        widows: 100px;
+        height: 50px;
+    }
 }
