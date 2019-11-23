@@ -5,15 +5,12 @@ import {
   CardHeader,
   CardFooter,
   CardBody,
-  Input,
   CardText,
-  ButtonGroup,
   Row,
   Col
 } from "reactstrap";
 import "./Basket.css";
 import img_gps from "../../imgbasket/confirmation.png";
-import img_add from "../../imgbasket/plus.png";
 import MenuSelect from "../MenuSelect/MenuSelect";
 class Basket extends Component {
   state = {

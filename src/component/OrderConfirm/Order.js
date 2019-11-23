@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Row, Col, Button, Input, FormGroup, Label } from "reactstrap";
-import "./OrderConfirm.css";
 import "./Order.css";
 import img_address from "../../imgorder/address.png";
 import img_pay from "../../imgorder/pay.png";
@@ -19,7 +18,7 @@ class Order extends Component {
         <div class="card shadow-lg p-3 mb-5  bg-white rounded">
           <div className="text_basketconfirm">ยืนยันการสั่งซื้อ</div>
           <Row className="from_order">
-            <Col xs="6" sm="4">
+            <Col xs="4" sm="4">
               <div>
                 <Button outline color="info" size="lg" block>
                   <div>
@@ -67,7 +66,7 @@ class Order extends Component {
                   ></Input>
                   <div className="bt_nextone">
                     <Button
-                      color="warning"
+                      color="success"
                       onClick={() => {
                         this.setState({ step: this.state.step + 1 });
                       }}
@@ -80,7 +79,7 @@ class Order extends Component {
                 ""
               )}
             </Col>
-            <Col xs="6" sm="4">
+            <Col xs="4" sm="4">
               <div>
                 <Button outline color="info" size="lg" block>
                   <div>
@@ -132,7 +131,7 @@ class Order extends Component {
                 ""
               )}
             </Col>
-            <Col xs="6" sm="4">
+            <Col xs="4" sm="4">
               <div>
                 <Button outline color="info" size="lg" block>
                   <div>
@@ -157,9 +156,9 @@ class Order extends Component {
                   <Button
                     className="bt_next"
                     color="success"
-                    onClick={() => {}}
+                    href="/Delivery"
                   >
-                  ยืนยัน
+                    ยืนยัน
                   </Button>
                 </div>
               ) : (

@@ -23,7 +23,12 @@
     font-size: 20px;
     margin-top: 10px;
 }
-
+.text-addre{
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: "Kanit",
+    sans-serif;
+}
 .img_menu {
     width: 70px;
     height: 80px;
@@ -48,6 +53,26 @@
     text-align: center;
 }
 .img_breakfast{
+    width: 70px;
+    height: 80px;
+    text-align: center;
+}
+.img_foodorder{
+    width: 70px;
+    height: 80px;
+    text-align: center;
+}
+.img_address{
+    width: 70px;
+    height: 80px;
+    text-align: center;
+}
+.img_pay{
+    width: 70px;
+    height: 80px;
+    text-align: center;
+}
+.img_confirm{
     width: 70px;
     height: 80px;
     text-align: center;

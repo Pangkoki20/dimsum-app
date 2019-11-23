@@ -34,7 +34,7 @@ class MenuSelect extends Component {
         </NavItem>
         <NavItem>
           <NavLink className="" href="/Delivery">
-            ตรวจสอบสถานะการจัดส่ง
+            ติดตามสถานะการจัดส่ง
           </NavLink>
         </NavItem>
         <NavItem className="ml-auto">
