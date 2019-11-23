@@ -12,7 +12,7 @@ class Order extends Component {
     this.setState({ address });
   };
   render() {
-    const { address } = this.state;
+    const { numhouse, nummoo, lane, tambon, amphoe, changwat } = this.state;
     return (
       <div class="container">
         <div class="card shadow-lg p-3 mb-5  bg-white rounded">
@@ -31,53 +31,6 @@ class Order extends Component {
                   <div className="text-addre">ที่อยู่สำหรับการจัดส่ง</div>
                 </Button>
               </div>
-              {this.state.step === 1 ? (
-                <div className="from_addressdelivery">
-                  <div className="addressdelivery">
-                    กรอกที่อยู่สำหรับการจัดส่ง
-                  </div>
-                  <Input
-                    className="from_addressdelivery"
-                    placeholder="บ้านเลขที่"
-                  ></Input>
-                  <Input
-                    className="from_addressdelivery"
-                    placeholder="หมู่ที่"
-                  ></Input>
-                  <Input
-                    className="from_addressdelivery"
-                    placeholder="ซอย/ตรอก"
-                  ></Input>
-                  <Input
-                    className="from_addressdelivery"
-                    placeholder="ตำบล"
-                  ></Input>
-                  <Input
-                    className="from_addressdelivery"
-                    placeholder="อำเภอ"
-                  ></Input>
-                  <Input
-                    className="from_addressdelivery"
-                    placeholder="จังหวัด"
-                  ></Input>
-                  <Input
-                    className="from_addressdelivery"
-                    placeholder="รหัสไปรษณีย์"
-                  ></Input>
-                  <div className="bt_nextone">
-                    <Button
-                      color="success"
-                      onClick={() => {
-                        this.setState({ step: this.state.step + 1 });
-                      }}
-                    >
-                      ถัดไป
-                    </Button>
-                  </div>
-                </div>
-              ) : (
-                ""
-              )}
             </Col>
             <Col xs="4" sm="4">
               <div>
@@ -88,6 +41,86 @@ class Order extends Component {
                   <div className="text-addre">วิธีการชำระเงิน</div>
                 </Button>
               </div>
+              {this.state.step === 1 ? (
+                <div className="from_addressdelivery">
+                  <div className="addressdelivery">
+                    กรอกที่อยู่สำหรับการจัดส่ง
+                  </div>
+                  <Input
+                    className="from_addressdelivery"
+                    type="numhouse"
+                    name="numhouse"
+                    value={numhouse}
+                    placeholder="บ้านเลขที่"
+                    onChange={this.handleInputChange}
+                    required
+                  />
+                  <Input
+                    className="from_addressdelivery"
+                    type="nummoo"
+                    name="nummoo"
+                    value={nummoo}
+                    placeholder="หมู่ที่"
+                    onChange={this.handleInputChange}
+                    required
+                  ></Input>
+                  <Input
+                    className="from_addressdelivery"
+                    type="lane"
+                    name="lane"
+                    value={lane}
+                    placeholder="ซอย/ตรอก"
+                    onChange={this.handleInputChange}
+                    required
+                  ></Input>
+                  <Input
+                    className="from_addressdelivery"
+                    type="tambon"
+                    name="tambon"
+                    value={tambon}
+                    placeholder="ตำบล"
+                    onChange={this.handleInputChange}
+                    required
+                  ></Input>
+                  <Input
+                    className="from_addressdelivery"
+                    type="amphoe"
+                    name="amphoe"
+                    value={amphoe}
+                    placeholder="อำเภอ"
+                    onChange={this.handleInputChange}
+                    required
+                  ></Input>
+                  <Input
+                    className="from_addressdelivery"
+                    type="amphoe"
+                    name="amphoe"
+                    value={amphoe}
+                    placeholder="จังหวัด"
+                    onChange={this.handleInputChange}
+                    required
+                  ></Input>
+                  <Input
+                    className="from_addressdelivery"
+                    type="changwat"
+                    name="changwat"
+                    value={changwat}
+                    placeholder="รหัสไปรษณีย์"
+                    onChange={this.handleInputChange}
+                    required
+                  ></Input>
+                  <div className="bt_nextone">
+                    <Button
+                      color="danger"
+                      onClick={() => {
+                        this.setState({ step: this.state.step + 1 });
+                      }}
+                    >
+                      ถัดไป
+                    </Button>
+                  </div>
+                </div>
+              ) : null}
               {this.state.step === 2 ? (
                 <div className="from_addressdelivery">
                   <div className="addressdelivery">เลือกวิธีการชำระเงิน</div>
@@ -103,12 +136,12 @@ class Order extends Component {
                       <div className="text_paymentconfirm">อื่น ๆ</div>
                     </Label>
                   </FormGroup>
-                  <div className="addressdelivery">โค้ดส่วนลดของคุณ</div>
+                  <div className="code">โค้ดส่วนลดของคุณ</div>
                   <Input className="text_code" placeholder="โค้ดของคุณ" />
                   <div className="from_payments">
                     <Button
                       className="bt_back"
-                      color="primary"
+                      color="secondary"
                       onClick={() => {
                         this.setState({ step: this.state.step - 1 });
                       }}
@@ -118,7 +151,7 @@ class Order extends Component {
 
                     <Button
                       className="bt_next"
-                      color="warning"
+                      color="danger"
                       onClick={() => {
                         this.setState({ step: this.state.step + 1 });
                       }}
@@ -127,9 +160,19 @@ class Order extends Component {
                     </Button>
                   </div>
                 </div>
-              ) : (
-                ""
-              )}
+              ) : null}
+              {this.state.step === 3 ? (
+                <div className="from_addressdelivery">
+                  <div className="addressdelivery"> ยืนยันการสั่งซื้อ</div>
+                  <div></div>
+
+                  <div className="from_payments">
+                    <Button className="bt_ok" color="success" href="/Delivery">
+                      ยืนยัน
+                    </Button>
+                  </div>
+                </div>
+              ) : null}
             </Col>
             <Col xs="4" sm="4">
               <div>
@@ -140,30 +183,6 @@ class Order extends Component {
                   <div className="text-addre">ยืนยันการสั่งอาหาร</div>
                 </Button>
               </div>
-              {this.state.step === 3 ? (
-                <div className="from_addressdelivery">
-                  <div className="addressdelivery"> ยืนยันการสั่งซื้อ</div>
-
-                  <Button
-                    className="bt_back"
-                    color="danger"
-                    onClick={() => {
-                      this.setState({ step: this.state.step - 1 });
-                    }}
-                  >
-                    ย้อนกลับ
-                  </Button>
-                  <Button
-                    className="bt_next"
-                    color="success"
-                    href="/Delivery"
-                  >
-                    ยืนยัน
-                  </Button>
-                </div>
-              ) : (
-                ""
-              )}
             </Col>
           </Row>
         </div>
