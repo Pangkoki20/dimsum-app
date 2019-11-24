@@ -1,4 +1,6 @@
-.card_menuorder {
+@import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+
+.card_orderkitchen {
     margin-top: 20px;
     text-align: center;
     font-family: "Kanit",
@@ -14,4 +16,13 @@
 
 .from_orderkitchen {
     margin-top: 20px;
+}
+.text_menuorder{
+    text-align: center;
+}
+.bt_received{
+    text-align: right;
+}
+.bt_cooking{
+    text-align: left;
 }
