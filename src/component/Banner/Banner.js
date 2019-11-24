@@ -23,6 +23,9 @@ export default class Banner extends React.Component {
             เริ่มสั่งอาหาร
           </Button>
         </div>
+        <br></br>
+        <br></br>
+        <br></br>
       </Container>
     );
   }

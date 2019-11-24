@@ -24,7 +24,7 @@ class MenuOrder extends Component {
               <Row>
                 <Col xs="1">ลำดับ</Col>
                 <Col>รายการ</Col>
-                <Col xs="5">สถานะ</Col>
+                <Col className="test_statusorder">สถานะ</Col>
               </Row>
             </CardHeader>
             <CardBody>
