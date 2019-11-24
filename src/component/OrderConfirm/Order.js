@@ -6,12 +6,11 @@ import {
   Input,
   FormGroup,
   CardBody,
-  CardTitle,
   Card,
   Label
 } from "reactstrap";
 import "./Order.css";
-// import axios from "axios";
+import axios from "axios";
 import img_address from "../../imgorder/address.png";
 import img_pay from "../../imgorder/pay.png";
 import img_confirm from "../../imgorder/confirm.png";
@@ -22,48 +21,49 @@ class Order extends Component {
   onUserChanged = address => {
     this.setState({ address });
   };
-  //   constructor(props) {
-  //     super(props);
-  //     this.state = {
-  //       numhouse: "",
-  //       nummoo: "",
-  //       lane: "",
-  //       tambon: "",
-  //       amphoe: "",
-  //       changwat: "",
-  //       postcode:"",
-  //       message: ""
-  //     };
-  //   }
-  //      handleInputChange = e => {
-  //     const { address, value } = e.target;
-  //     this.setState({ [address]: value });
-  //     this.setState({ message: "" });
-  //     console.log({ [address]: value });
-  //   };
-  //   address = e => {
-  //     e.preventDefault();
-  //     try {
-  //       const data = {
-  //         numhouse: this.state.numhouse,
-  //         nummoo: this.state.nummoo,
-  //         lane: this.state.lane,
-  //         tambon: this.state.tambon,
-  //         amphoe: this.state.amphoe,
-  //         changwat: this.state.changwat,
-  //         postcode: this.state.changwat
-  //       };
-  //       console.log("ข้อมูลที่กำลังจะ่ส่งไป ....  ", data);
-  //       axios.post(`http://localhost:3001/api/users/create`, data).then(res => {
-  //         const { data } = res;
-  //         this.setState({ message: data.message });
-
-  //         // this.props.history.push(`../OrderConfirm/Order.js`);
-  //       });
-  //     } catch (error) {
-  //       console.log("Error : ", error);
-  //   }
-  // };
+  constructor(props) {
+    super(props);
+    this.state1 = {
+      numhouse: "",
+      nummoo: "",
+      lane: "",
+      tambon: "",
+      amphoe: "",
+      changwat: "",
+      postcode: "",
+      code:"",
+      message: ""
+    };
+  }
+  handleInputChange = e => {
+    const { address, value } = e.target;
+    this.setState({ [address]: value });
+    this.setState({ message: "" });
+    console.log({ [address]: value });
+  };
+  address = e => {
+    e.preventDefault();
+    try {
+      const data = {
+        numhouse: this.state.numhouse,
+        nummoo: this.state.nummoo,
+        lane: this.state.lane,
+        tambon: this.state.tambon,
+        amphoe: this.state.amphoe,
+        changwat: this.state.changwat,
+        postcode: this.state.postcode,
+        code: this.state.code
+      };
+      console.log("ข้อมูลที่กำลังจะส่งไป ....  ", data);
+      axios.post(`http://localhost:3001/api/users/order`, data).then(res => {
+        const { data } = res;
+        this.setState({ message: data.message });
+        this.props.history.push(`/Order`);
+      });
+    } catch (error) {
+      console.log("Error : ", error);
+    }
+  };
   render() {
     const {
       numhouse,
@@ -72,7 +72,8 @@ class Order extends Component {
       tambon,
       amphoe,
       changwat,
-      postcode
+      postcode,
+      code
     } = this.state;
     return (
       <div class="container">
@@ -198,7 +199,15 @@ class Order extends Component {
                     </Label>
                   </FormGroup>
                   <div className="code">โค้ดส่วนลดของคุณ</div>
-                  <Input className="text_code" placeholder="โค้ดของคุณ" />
+                  <Input
+                    className="text_code"
+                    type="code"
+                    name="code"
+                    value={code}
+                    placeholder="โค้ดของคุณ"
+                    onChange={this.handleInputChange}
+                    required
+                  />
                   <div className="from_payments">
                     <Button
                       className="bt_back"
@@ -229,13 +238,8 @@ class Order extends Component {
                     <Card>
                       <CardBody>
                         <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        
+                        <div>
+                          <a>แก้ไขข้อมูลการสั่งซื้อ</a></div>
                       </CardBody>
                     </Card>
                   </div>

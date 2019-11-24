@@ -46,8 +46,7 @@ class Register extends Component {
     }
   };
   render() {
-    
-    const { firstname, lastname, email, password, phone, address } = this.state;
+    const { firstname, lastname, email, password, phone } = this.state;
     return (
       <div className="from_lo">
         <Container>
@@ -55,7 +54,7 @@ class Register extends Component {
             <Form className="form-register">
               <h2>
                 <b className="re">ลงทะเบียน</b>
-              </h2>{" "}
+              </h2>
               <Input
                 className="register "
                 type="text"
