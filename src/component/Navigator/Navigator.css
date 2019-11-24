@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
-
+@import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
 .fon-bar {
   font-family: 'Righteous', cursive;
   color: hsl(160, 31%, 77%);
@@ -15,7 +15,20 @@
     sans-serif;
     color: hsl(160, 31%, 77%);
     font-size: 18px;
-
+}
+.fon-logout{
+  margin-top: 10px;
+  color: hsl(160, 31%, 77%);
+  font-size: 20px;
+  font-family: 'Alata',
+  sans-serif;
+}
+.fon-logout:hover {
+  margin-top: 10px;
+  color: #eb9898;
+  font-size: 20px;
+  font-family: 'Alata',
+    sans-serif;
 }
 
 .bt_login {

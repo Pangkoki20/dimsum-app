@@ -86,7 +86,6 @@ class Basket extends Component {
                     </div>
                   );
                 })}
-
                 <CardFooter>
                   <div class="row">
                     <div class="col">จำนวนทั้งหมด</div>
@@ -100,7 +99,7 @@ class Basket extends Component {
               <br></br>
             </div>
             <div class="col-6 col-md-4 ">
-              <div class="card from_money">
+              <div class=" from_money">
                 <Card>
                   <CardHeader className="text_money">รวมทั้งหมด</CardHeader>
                   <CardBody>

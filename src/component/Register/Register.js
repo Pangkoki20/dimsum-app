@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, FormGroup, Input, Container, Button } from "reactstrap";
+import { Form,Input, Container, Button } from "reactstrap";
 import axios from "axios";
 import "./Register.css";
 
@@ -12,7 +12,7 @@ class Register extends Component {
       email: "",
       password: "",
       phone: "",
-      address: "",
+      // address: "",
       message: ""
     };
   }
@@ -31,7 +31,7 @@ class Register extends Component {
         email: this.state.email,
         password: this.state.password,
         phone: this.state.phone,
-        address: this.state.address
+        // address: this.state.address
       };
       console.log("ข้อมูลที่กำลังจะ่ส่งไป ....  ", data);
 

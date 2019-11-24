@@ -37,6 +37,11 @@ class MenuSelect extends Component {
             ติดตามสถานะการจัดส่ง
           </NavLink>
         </NavItem>
+        <NavItem>
+          <NavLink className="" href="/MenuOrder">
+            Order
+          </NavLink>
+        </NavItem>
         <NavItem className="ml-auto">
           <div className="input_search">
             <form class="form-inline ">

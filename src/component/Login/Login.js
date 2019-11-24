@@ -42,6 +42,7 @@ class Login extends Component {
 
         localStorage.setItem("token", data.token);
         this.props.history.push(`/`);
+        window.location.reload();
       });
     } catch (error) {
       console.log("Error : ", error);

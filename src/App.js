@@ -18,6 +18,7 @@ import Other from "./component/Other/Other";
 import ShowOrder from "./component/ShowOrder/ShowOrder";
 import Basket from "./component/Basket/Basket";
 import Order from "./component/OrderConfirm/Order";
+import MenuOrder from "./component/MemuOrder/MenuOrder";
 import "./App.css";
 
 class App extends Component {
@@ -56,6 +57,7 @@ class App extends Component {
           <Route exact path="/ShowOrder" component={ShowOrder} />
           <Route exact path="/Basket" component={Basket}/>
           <Route exact path="/Order" component={Order}/>
+          <Route exact path="/MenuOrder" component={MenuOrder}/>
         </Switch>
         {/* <Footer /> */}
       </div>

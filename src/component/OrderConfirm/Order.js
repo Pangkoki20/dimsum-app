@@ -31,7 +31,7 @@ class Order extends Component {
       amphoe: "",
       changwat: "",
       postcode: "",
-      code:"",
+      code: "",
       message: ""
     };
   }
@@ -64,6 +64,7 @@ class Order extends Component {
       console.log("Error : ", error);
     }
   };
+  
   render() {
     const {
       numhouse,
@@ -238,14 +239,21 @@ class Order extends Component {
                     <Card>
                       <CardBody>
                         <br></br>
-                        <div>
-                          <a>แก้ไขข้อมูลการสั่งซื้อ</a></div>
                       </CardBody>
                     </Card>
                   </div>
-
+                  <div className="from_editorder">
+                    <a className="edit_order" href="/Order">
+                      แก้ไขข้อมูลการสั่งซื้อ
+                    </a>
+                  </div>
                   <div className="from_payments">
-                    <Button className="bt_ok" color="success" href="/Delivery">
+                    <Button
+                      className="bt_ok"
+                      color="success"
+                      onClick={e => this.order(e)}
+                      href="/Delivery"
+                    >
                       ยืนยัน
                     </Button>
                   </div>
