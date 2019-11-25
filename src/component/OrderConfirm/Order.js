@@ -31,17 +31,18 @@ class Order extends Component {
       amphoe: "",
       changwat: "",
       postcode: "",
+      payment: "",
       code: "",
       message: ""
     };
   }
   handleInputChange = e => {
-    const { address, value } = e.target;
-    this.setState({ [address]: value });
+    const { order, value } = e.target;
+    this.setState({ [order]: value });
     this.setState({ message: "" });
-    console.log({ [address]: value });
+    console.log({ [order]: value });
   };
-  address = e => {
+  order = e => {
     e.preventDefault();
     try {
       const data = {
@@ -52,6 +53,7 @@ class Order extends Component {
         amphoe: this.state.amphoe,
         changwat: this.state.changwat,
         postcode: this.state.postcode,
+        payment: this.state.payment,
         code: this.state.code
       };
       console.log("ข้อมูลที่กำลังจะส่งไป ....  ", data);
@@ -64,7 +66,7 @@ class Order extends Component {
       console.log("Error : ", error);
     }
   };
-  
+
   render() {
     const {
       numhouse,
@@ -249,10 +251,10 @@ class Order extends Component {
                   </div>
                   <div className="from_payments">
                     <Button
+                      href="/Delivery"
                       className="bt_ok"
                       color="success"
                       onClick={e => this.order(e)}
-                      href="/Delivery"
                     >
                       ยืนยัน
                     </Button>
