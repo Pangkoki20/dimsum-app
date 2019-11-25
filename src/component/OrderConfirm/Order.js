@@ -109,7 +109,7 @@ class Order extends Component {
               {this.state.step === 1 ? (
                 <div className="from_addressdelivery">
                   <div className="addressdelivery">
-                    กรอกที่อยู่สำหรับการจัดส่ง
+                    กรอกที่อยู่สำหรับการจัดส่ง tttttttttttttt
                   </div>
                   <Input
                     className="from_addressdelivery"
