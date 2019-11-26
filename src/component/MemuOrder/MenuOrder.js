@@ -3,16 +3,42 @@ import {
   Card,
   CardHeader,
   CardBody,
-  CardText,
   CardFooter,
   Row,
   Col,
   Button
 } from "reactstrap";
 import "./MenuOrder.css";
+import axios from "axios";
 
 class MenuOrder extends Component {
+  state = {
+    persons: []
+  };
+
+  componentDidMount = () => {
+    axios.get(`http://localhost:3001/api/order`).then(res => {
+      const persons = res.data;
+      this.setState({ persons });
+    });
+  };
+
   render() {
+    const table = this.state.persons.map((text, index) => {
+      return (
+        <div key={index + 1}>
+          <CardBody>
+            <Row>
+              <Col xs="1">{index + 1}</Col>
+              <Col>{text.user_id} </Col>
+              <Col sm="4">
+                <Button href="/EachMenu">รับรายการอาหาร</Button>
+              </Col>
+            </Row>
+          </CardBody>
+        </div>
+      );
+    });
     return (
       <div>
         <div class="container-fluid">
@@ -24,30 +50,12 @@ class MenuOrder extends Component {
               <Row>
                 <Col xs="1">ลำดับ</Col>
                 <Col>รายการ</Col>
-                <Col className="test_statusorder">สถานะ</Col>
+                <Col sm="4" className="test_statusorder">
+                  สถานะ
+                </Col>
               </Row>
             </CardHeader>
-            <CardBody>
-              <Row>
-                <Col xs="1">1</Col>
-                <Col></Col>
-                <Col xs="auto" className="bt_received">
-                  <Button outline color="success">
-                    ได้รับรายการอาหารแล้ว
-                  </Button>
-                </Col>
-                <Col xs="auto" className="bt_cooking">
-                  <Button outline color="success">
-                    กำลังเตรียมอาหาร
-                  </Button>
-                </Col>
-                <Col xs="auto" className="bt_cooking">
-                  <Button outline color="success">
-                    สำเร็จ
-                  </Button>
-                </Col>
-              </Row>
-            </CardBody>
+            {table}
             <CardFooter>
               <div class="row">
                 <Col>จำนวนรายการอาหาร</Col>
@@ -60,33 +68,7 @@ class MenuOrder extends Component {
           <br></br>
           <br></br>
         </div>
-        {/* <div class="col-6 col-md-4 ">
-              <div class="from_orderkitchen">
-                <Card>
-                  <CardBody>
-                    <div className="d-flex">
-                      <div className="col-sm-8">
-                        <CardText className="tt_food"></CardText>
-                      </div>
-                      <div className="col-sm-4">
-                        <CardText className="tt_food"> </CardText>
-                      </div>
-                    </div>
-                    <div className="d-flex">
-                      <div className="col-sm-8">
-                        <CardText className="delivery_charge"></CardText>
-                      </div>
-                      <div className="col-sm-4">
-                        <CardText className="delivery_charge"></CardText>
-                      </div>
-                    </div>
-                  </CardBody>
-                </Card>
-              </div>
-            </div> */}
       </div>
-      //   </div>
-      // </div>
     );
   }
 }

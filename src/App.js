@@ -19,14 +19,14 @@ import ShowOrder from "./component/ShowOrder/ShowOrder";
 import Basket from "./component/Basket/Basket";
 import Order from "./component/OrderConfirm/Order";
 import MenuOrder from "./component/MemuOrder/MenuOrder";
+import EachMenuOrder from "./component/MemuOrder/EachMenuOrder";
 import "./App.css";
 
 class App extends Component {
-  
-    state = {
-      user: null
-    };
-  
+  state = {
+    user: null
+  };
+
   onUserChanged = user => {
     this.setState({ user });
   };
@@ -55,9 +55,10 @@ class App extends Component {
           <Route exact path="/Menu" component={Menu} />
           <Route exact path="/Other" component={Other} />
           <Route exact path="/ShowOrder" component={ShowOrder} />
-          <Route exact path="/Basket" component={Basket}/>
-          <Route exact path="/Order" component={Order}/>
-          <Route exact path="/MenuOrder" component={MenuOrder}/>
+          <Route exact path="/Basket" component={Basket} />
+          <Route exact path="/Order" component={Order} />
+          <Route exact path="/MenuOrder" component={MenuOrder} />
+          <Route exact path="/EachMenuOrder/:id" component={EachMenuOrder} />
         </Switch>
         {/* <Footer /> */}
       </div>
