@@ -39,9 +39,8 @@ class EachMenuOrder extends Component {
     });
     return (
       <div>
-        <div class="container-fluid">
-            
-            {table}</div>
+        <div className="container-fluid">{table}</div>
+        <div></div>
       </div>
     );
   }

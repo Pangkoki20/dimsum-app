@@ -32,7 +32,7 @@ class MenuOrder extends Component {
               <Col xs="1">{index + 1}</Col>
               <Col>{text.user_id} </Col>
               <Col sm="4">
-                <Button href="/EachMenu">รับรายการอาหาร</Button>
+                <Button href="/EachMenuOrder/:id">รับรายการอาหาร</Button>
               </Col>
             </Row>
           </CardBody>
@@ -41,10 +41,10 @@ class MenuOrder extends Component {
     });
     return (
       <div>
-        <div class="container-fluid">
+        <div className="container-fluid">
           <div className="text_orderkitchen">รายการอาหารที่เข้ามา</div>
-          {/* <div class="row">
-            <div class="col-12 col-md-8"> */}
+          {/* <div className="row">
+            <div className="col-12 col-md-8"> */}
           <Card className="card_orderkitchen">
             <CardHeader>
               <Row>
@@ -57,10 +57,10 @@ class MenuOrder extends Component {
             </CardHeader>
             {table}
             <CardFooter>
-              <div class="row">
+              <div className="row">
                 <Col>จำนวนรายการอาหาร</Col>
                 <Col xs="3">------</Col>
-                <div class="col col-lg-2">รายการ</div>
+                <div className="col col-lg-2">รายการ</div>
               </div>
             </CardFooter>
           </Card>

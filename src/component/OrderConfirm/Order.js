@@ -56,8 +56,8 @@ componentDidMount =()=> {
     let user = auth.getToken();
     let userDecode = auth.decodeToken(user);
     let uId = userDecode.id;
-    
-    //  if userDecode.role != "k"
+
+    //  if userDecode.role != "Kitchen"
     
     try {
       const data = {
@@ -299,7 +299,6 @@ componentDidMount =()=> {
                   </div>
                   <div className="from_payments">
                     <Button
-                      
                       className="bt_ok"
                       color="success"
                       // onClick={e => this.order(e)}

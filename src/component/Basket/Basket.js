@@ -54,7 +54,7 @@ class Basket extends Component {
     return (
       <div>
         <MenuSelect />
-        <div class="container-fluid">
+        <div className="container-fluid">
           <div className="text_basket">อาหารในตะกร้า</div>
           <div class="row">
             <div class="col-12 col-md-8">
@@ -78,7 +78,7 @@ class Basket extends Component {
                           <Col> {e.menu_price}</Col>
                           <Col className="img_trash">
                             <div onClick={() => this.toRemove(index)}>
-                              <i class="far fa-trash-alt"></i>
+                              <i className="far fa-trash-alt"></i>
                             </div>
                           </Col>
                         </Row>
@@ -87,10 +87,12 @@ class Basket extends Component {
                   );
                 })}
                 <CardFooter>
-                  <div class="row">
-                    <div class="col">จำนวนทั้งหมด</div>
-                    <div class="col col-lg-2">{this.state.order.length}</div>
-                    <div class="col col-lg-2">ชิ้น</div>
+                  <div className="row">
+                    <div className="col">จำนวนทั้งหมด</div>
+                    <div className="col col-lg-2">
+                      {this.state.order.length}
+                    </div>
+                    <div className="col col-lg-2">ชิ้น</div>
                   </div>
                 </CardFooter>
               </Card>
@@ -99,7 +101,7 @@ class Basket extends Component {
               <br></br>
             </div>
             <div class="col-6 col-md-4 ">
-              <div class=" from_money">
+              <div className="from_money">
                 <Card>
                   <CardHeader className="text_money">รวมทั้งหมด</CardHeader>
                   <CardBody>
@@ -128,9 +130,11 @@ class Basket extends Component {
                     </div>
                   </CardBody>
                   <CardFooter className="tt_money">
-                    <div class="row">
-                      <div class="col-sm-8"> รวม</div>
-                      <div class="col-sm-4">{this.state.priceAll + 30} </div>
+                    <div className="row">
+                      <div className="col-sm-8"> รวม</div>
+                      <div className="col-sm-4">
+                        {this.state.priceAll + 30}{" "}
+                      </div>
                     </div>
                   </CardFooter>
                 </Card>

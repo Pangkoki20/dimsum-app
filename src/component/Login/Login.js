@@ -52,7 +52,7 @@ class Login extends Component {
   render() {
     return (
       <div className="from_lo">
-        <div class="container-fluid">
+        <div className="container-fluid">
           <div className="form-login ">
             <Form>
               <FormGroup className="fon-log">

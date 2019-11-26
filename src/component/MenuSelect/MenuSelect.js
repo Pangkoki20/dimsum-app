@@ -39,19 +39,19 @@ class MenuSelect extends Component {
         </NavItem>
         <NavItem>
           <NavLink className="" href="/MenuOrder">
-            Order
+            รายการอาหารที่เข้ามา
           </NavLink>
         </NavItem>
         <NavItem className="ml-auto">
           <div className="input_search">
-            <form class="form-inline ">
+            <form className="form-inline ">
               <input
-                class="form-control mr-sm-2 rounded-pill"
+                className="form-control mr-sm-2 rounded-pill"
                 type="search"
                 placeholder=""
                 aria-label="Search"
               />
-              <button class="btn btn-primary " type="submit">
+              <button className="btn btn-primary " type="submit">
                 ค้นหา
               </button>
             </form>
