@@ -287,7 +287,11 @@ componentDidMount =()=> {
                   <div>
                     <Card>
                       <CardBody>
-                       { numhouse}, {nummoo}, {lane}, {tambon}, {amphoe}, {changwat},
+                        <div>
+                       { numhouse}
+                       </div> 
+                       <div>{nummoo}</div> 
+                      <div>{lane}</div>  <div>{tambon}</div> {amphoe}, {changwat},
                         {postcode}, {code}, {payment}
                       </CardBody>
                     </Card>
