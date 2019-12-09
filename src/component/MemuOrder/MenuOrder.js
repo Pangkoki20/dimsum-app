@@ -13,7 +13,10 @@ import axios from "axios";
 
 class MenuOrder extends Component {
   state = {
-    persons: []
+    order: [],
+    priceAll: 0,
+    total: 0,
+    check: 1
   };
 
   componentDidMount = () => {
@@ -24,45 +27,31 @@ class MenuOrder extends Component {
   };
 
   render() {
-    const table = this.state.persons.map((text, index) => {
-      return (
-        <div key={index + 1}>
-          <CardBody>
-            <Row>
-              <Col xs="1">{index + 1}</Col>
-              <Col>{text.user_id} </Col>
-              <Col sm="4">
-                <Button href="/EachMenuOrder/:id">รับรายการอาหาร</Button>
-              </Col>
-            </Row>
-          </CardBody>
-        </div>
-      );
-    });
     return (
       <div>
         <div className="container-fluid">
           <div className="text_orderkitchen">รายการอาหารที่เข้ามา</div>
-          {/* <div className="row">
-            <div className="col-12 col-md-8"> */}
           <Card className="card_orderkitchen">
             <CardHeader>
               <Row>
                 <Col xs="1">ลำดับ</Col>
                 <Col>รายการ</Col>
-                <Col sm="4" className="test_statusorder">
-                  สถานะ
-                </Col>
+                <Col sm="4">สถานะ</Col>
               </Row>
             </CardHeader>
-            {table}
-            <CardFooter>
-              <div className="row">
-                <Col>จำนวนรายการอาหาร</Col>
-                <Col xs="3">------</Col>
-                <div className="col col-lg-2">รายการ</div>
-              </div>
-            </CardFooter>
+            {this.state.order.map((e, index) => {
+              return (
+                <div key={index + 1}>
+                  <CardBody>
+                    <Row>
+                      <Col> {index + 1}</Col>
+                      <Col>{e.menu_name} </Col>
+                      <Col> {e.menu_price}</Col>
+                    </Row>
+                  </CardBody>
+                </div>
+              );
+            })}
           </Card>
           <br></br>
           <br></br>
