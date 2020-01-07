@@ -2,6 +2,7 @@ import React from "react";
 import Pic from "./Pic";
 import "./Banner.css";
 import { Container, Button } from "reactstrap";
+import img_home from "../../img/Home.png";
 import MenuSelect from "../MenuSelect/MenuSelect";
 
 export default class Banner extends React.Component {
@@ -9,9 +10,12 @@ export default class Banner extends React.Component {
     return (
       <Container>
         <div className="ban-size">
-          <div>
-            <Pic />
+          <div className="pic_hargao">
+            <img className="img_home img-fluid" src={img_home} />
           </div>
+          {/* <div>
+            <Pic />
+          </div> */}
         </div>
         <div className="bt_startfood">
           <Button

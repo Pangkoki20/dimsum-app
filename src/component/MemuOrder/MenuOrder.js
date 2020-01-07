@@ -3,22 +3,21 @@ import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   Row,
-  Col,
-  Button
+  Col
 } from "reactstrap";
 import "./MenuOrder.css";
 import axios from "axios";
 
 class MenuOrder extends Component {
   state = {
-    order: [],
-    priceAll: 0,
-    total: 0,
-    check: 1
+    order: []
   };
-
+  componentDidMount = () => {
+    let order = JSON.parse(localStorage.getItem("order"));
+    console.log("all order : ", order);
+    this.setState({ order: order });
+  };
   componentDidMount = () => {
     axios.get(`http://localhost:3001/api/order`).then(res => {
       const persons = res.data;
@@ -45,8 +44,8 @@ class MenuOrder extends Component {
                   <CardBody>
                     <Row>
                       <Col> {index + 1}</Col>
-                      <Col>{e.menu_name} </Col>
-                      <Col> {e.menu_price}</Col>
+                      <Col>{e.menu_food} </Col>
+                      <Col> {e.status}</Col>
                     </Row>
                   </CardBody>
                 </div>

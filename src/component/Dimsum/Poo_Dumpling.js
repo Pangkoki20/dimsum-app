@@ -44,7 +44,7 @@ export default class Poo_Dumpling extends Component {
                 <img className="img_poo img-fluid" src={dl_poo} />
               </div>
               <CardTitle className="text_menuname">ขนมจีบปู</CardTitle>
-              <CardText className="text_price">ราคา 50 .-</CardText>
+              <CardText className="text_price">ราคา 20 .-</CardText>
               <Button
                 onClick={this.sentOrder}
                 color="info"
