@@ -56,15 +56,15 @@ class Basket extends Component {
         <MenuSelect />
         <div className="container-fluid">
           <div className="text_basket">อาหารในตะกร้า</div>
-          <div class="row">
-            <div class="col-12 col-md-8">
+          <div className="row">
+            <div className="col-12 col-md-8">
               <Card className="card_food">
                 <CardHeader>
                   <Row>
                     <Col>ลำดับที่</Col>
                     <Col>ชื่ออาหาร</Col>
                     <Col>ราคา</Col>
-                    {/* <Col>จำนวน</Col> */}
+                    <Col>จำนวน</Col>
                     <Col>ลบออก</Col>
                   </Row>
                 </CardHeader>
@@ -76,6 +76,7 @@ class Basket extends Component {
                           <Col> {index + 1}</Col>
                           <Col>{e.menu_name} </Col>
                           <Col> {e.menu_price}</Col>
+                          <Col></Col>
                           <Col className="img_trash">
                             <div onClick={() => this.toRemove(index)}>
                               <i className="far fa-trash-alt"></i>
@@ -87,13 +88,7 @@ class Basket extends Component {
                   );
                 })}
                 <CardFooter>
-                  {/* <div className="row">
-                    <div className="col">จำนวนทั้งหมด</div>
-                    <div className="col col-lg-2">
-                      {this.state.order.length}
-                    </div>
-                    <div className="col col-lg-2">ชิ้น</div>
-                  </div> */}
+                  <div className="text_addfood">เลือกอาหารเพิ่ม</div>
                 </CardFooter>
               </Card>
               <br></br>
@@ -104,10 +99,10 @@ class Basket extends Component {
               <div className="from_money">
                 <Card>
                   <CardHeader className="text_money">รวมทั้งหมด</CardHeader>
-                  <div>
+                  <div className="table_num">
                     <div className="d-flex">
                       <div className="col-6">
-                        <CardText className="tt_food">จำนวนทั้งหมด</CardText>
+                        <CardText className="tt_food ">จำนวนอาหารที่สั่งทั้งหมด</CardText>
                       </div>
                       <div className="col">
                         <CardText className="tt_food text_num">
@@ -119,7 +114,7 @@ class Basket extends Component {
                       </div>
                     </div>
                   </div>
-                  <div>
+                  <div className="table_num">
                     <div className="d-flex">
                       <div className="col-6">
                         <CardText className="tt_food">
@@ -136,7 +131,7 @@ class Basket extends Component {
                       </div>
                     </div>
                   </div>
-                  <div>
+                  <div className="table_num">
                     <div className="d-flex">
                       <div className="col-6">
                         <CardText className="delivery_charge">
@@ -153,12 +148,14 @@ class Basket extends Component {
                       </div>
                     </div>
                   </div>
+                  <br></br>
                   <CardFooter className="tt_money">
                     <div className="row">
-                      <div className="col-sm-8"> รวม</div>
-                      <div className="col-sm-4">
-                        {this.state.priceAll + 30}{" "}
+                      <div className="col-6 "> รวม</div>
+                      <div className="col tt_money2">
+                        {this.state.priceAll + 30}
                       </div>
+                      <div className="col"> บาท</div>
                     </div>
                   </CardFooter>
                 </Card>

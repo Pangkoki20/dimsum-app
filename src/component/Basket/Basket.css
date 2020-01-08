@@ -7,7 +7,11 @@
         sans-serif;
     font-size: 20px;
 }
-
+.text_addfood{
+    font-family: "Kanit",
+    sans-serif;
+    font-size: 14px;
+}
 .add_food {
     margin-top: 10px;
     font-family: "Kanit",
@@ -69,13 +73,15 @@
     height: 50px;
     text-align: center !important;
 }
-
+.table_num{
+    margin-top: 15px;
+}
 .from_money {
     margin-top: 20px;
 }
 
 .text_money {
-    font-size: 25px;
+    font-size: 20px;
     font-family: "Kanit", sans-serif;
     text-align: center;
 }
@@ -101,11 +107,18 @@
 }
 
 .tt_money {
-    font-size: 22px;
+    font-size: 20px;
     font-family: "Kanit", sans-serif;
+    color: #01161e;
     text-align: center;
 }
-
+.tt_money2{
+    font-size: 22px;
+    font-family: "Kanit",
+    sans-serif;
+    color: #01161e;
+    text-align: center;
+}
 .address_customer {
     font-size: 25px;
     font-family: "Kanit",
