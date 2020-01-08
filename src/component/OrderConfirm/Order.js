@@ -137,9 +137,9 @@ componentDidMount =()=> {
               {this.state.step === 1 ? (
                 <div className="from_addressdelivery">
                   <div className="addressdelivery">
-                    กรอกที่อยู่สำหรับการจัดส่ง
+                    ที่อยู่สำหรับการจัดส่ง
                   </div>
-                  <Input
+                  {/* <Input
                     className="from_addressdelivery"
                     type="text"
                     name="numhouse"
@@ -208,7 +208,7 @@ componentDidMount =()=> {
                     placeholder="รหัสไปรษณีย์"
                     onChange={this.handleInputChange}
                     required
-                  ></Input>
+                  ></Input> */}
                   <div className="bt_nextone">
                     <Button
                       color="danger"

@@ -87,13 +87,13 @@ class Basket extends Component {
                   );
                 })}
                 <CardFooter>
-                  <div className="row">
+                  {/* <div className="row">
                     <div className="col">จำนวนทั้งหมด</div>
                     <div className="col col-lg-2">
                       {this.state.order.length}
                     </div>
                     <div className="col col-lg-2">ชิ้น</div>
-                  </div>
+                  </div> */}
                 </CardFooter>
               </Card>
               <br></br>
@@ -104,31 +104,55 @@ class Basket extends Component {
               <div className="from_money">
                 <Card>
                   <CardHeader className="text_money">รวมทั้งหมด</CardHeader>
-                  <CardBody>
+                  <div>
                     <div className="d-flex">
-                      <div className="col-sm-8">
+                      <div className="col-6">
+                        <CardText className="tt_food">จำนวนทั้งหมด</CardText>
+                      </div>
+                      <div className="col">
+                        <CardText className="tt_food text_num">
+                          {this.state.order.length}
+                        </CardText>
+                      </div>
+                      <div className="col">
+                        <CardText className="tt_food text_unit">ชิ้น</CardText>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="d-flex">
+                      <div className="col-6">
                         <CardText className="tt_food">
                           ราคาอาหารทั้งหมด
                         </CardText>
                       </div>
-                      <div className="col-sm-4">
-                        <CardText className="tt_food">
-                          {this.state.priceAll} บาท
+                      <div className="col">
+                        <CardText className="tt_food text_num">
+                          {this.state.priceAll}
                         </CardText>
                       </div>
+                      <div className="col">
+                        <CardText className="tt_food text_unit">บาท</CardText>
+                      </div>
                     </div>
-
+                  </div>
+                  <div>
                     <div className="d-flex">
-                      <div className="col-sm-8">
+                      <div className="col-6">
                         <CardText className="delivery_charge">
                           ค่าจัดส่ง
                         </CardText>
                       </div>
-                      <div className="col-sm-4">
-                        <CardText className="delivery_charge">30 บาท</CardText>
+                      <div className="col">
+                        <CardText className="delivery_charge text_num">
+                          30
+                        </CardText>
+                      </div>
+                      <div className="col">
+                        <CardText className="tt_food text_unit">บาท</CardText>
                       </div>
                     </div>
-                  </CardBody>
+                  </div>
                   <CardFooter className="tt_money">
                     <div className="row">
                       <div className="col-sm-8"> รวม</div>

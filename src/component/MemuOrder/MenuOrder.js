@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  Row,
-  Col
-} from "reactstrap";
+import { Card, CardHeader, CardBody, Row, Col, Table } from "reactstrap";
 import "./MenuOrder.css";
 import axios from "axios";
 
@@ -18,44 +12,35 @@ class MenuOrder extends Component {
     console.log("all order : ", order);
     this.setState({ order: order });
   };
-  componentDidMount = () => {
-    axios.get(`http://localhost:3001/api/order`).then(res => {
-      const persons = res.data;
-      this.setState({ persons });
-    });
-  };
 
   render() {
     return (
-      <div>
-        <div className="container-fluid">
-          <div className="text_orderkitchen">รายการอาหารที่เข้ามา</div>
-          <Card className="card_orderkitchen">
-            <CardHeader>
-              <Row>
-                <Col xs="1">ลำดับ</Col>
-                <Col>รายการ</Col>
-                <Col sm="4">สถานะ</Col>
-              </Row>
-            </CardHeader>
-            {this.state.order.map((e, index) => {
-              return (
-                <div key={index + 1}>
-                  <CardBody>
-                    <Row>
-                      <Col> {index + 1}</Col>
-                      <Col>{e.menu_food} </Col>
-                      <Col> {e.status}</Col>
-                    </Row>
-                  </CardBody>
-                </div>
-              );
-            })}
-          </Card>
-          <br></br>
-          <br></br>
-          <br></br>
-        </div>
+      <div className="container-fluid">
+        <div className="text_orderkitchen">รายการอาหารที่เข้ามา</div>
+        <Card className="card_orderkitchen">
+          <CardHeader>
+            <Table hover>
+              <th>ลำดับ</th>
+              <th>รายการ</th>
+              <th>สถานะ</th>
+            </Table>
+          </CardHeader>
+          {this.state.order.map((e, index) => {
+            return (
+              <Table>
+                <CardBody>
+                  <Table hover>
+                    <tbody>
+                      <tr>
+                        <td> {index + 1}</td>
+                      </tr>
+                    </tbody>
+                  
+                </CardBody>
+             
+            );
+          })}
+          </Table>
       </div>
     );
   }

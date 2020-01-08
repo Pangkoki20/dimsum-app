@@ -86,13 +86,17 @@
 }
 
 .tt_food {
-    font-size: 19px;
-    font-family: "Kanit",
-        sans-serif;
+    font-size: 18px;
+    font-family: "Kanit",sans-serif;
 }
-
+.text_num{
+    text-align: right;
+}
+.text_unit{
+    text-align: center;
+}
 .delivery_charge {
-    font-size: 19px;
+    font-size: 18px;
     font-family: "Kanit", sans-serif;
 }
 

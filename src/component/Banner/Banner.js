@@ -11,7 +11,7 @@ export default class Banner extends React.Component {
       <Container>
         <div className="ban-size">
           <div className="pic_hargao">
-            <img className="img_home img-fluid" src={img_home} />
+            <img className="img_home img-fluid " src={img_home} />
           </div>
           {/* <div>
             <Pic />
