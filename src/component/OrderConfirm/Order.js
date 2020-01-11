@@ -114,11 +114,7 @@ componentDidMount =()=> {
               <div>
                 <Button outline color="info" size="lg" block>
                   <div>
-                    <img
-                      className="img_address"
-                      src={img_address}
-                      href="/Address"
-                    />
+                    <img className="img_address"src={img_address} href="/Address"/>
                   </div>
                   <div className="text-addre">ที่อยู่สำหรับการจัดส่ง</div>
                 </Button>

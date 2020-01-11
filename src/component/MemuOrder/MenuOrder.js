@@ -9,7 +9,7 @@ import {
   CardText
 } from "reactstrap";
 import "./MenuOrder.css";
-import axios from "axios";
+// import axios from "axios";
 
 class MenuOrder extends Component {
   state = {
