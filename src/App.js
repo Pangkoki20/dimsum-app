@@ -13,7 +13,7 @@ import Delivery from "./component/Delivery/Delivery";
 import Contact from "./component/Contact/Contact";
 import Collapses from "./component/Collapses/Collapses";
 import Menu from "./component/Menu/Menu";
-// import Footer from "./component/Footer/Footer";
+import OrderFood from "./component/OrderFood/OrderFood";
 import ShowOrder from "./component/ShowOrder/ShowOrder";
 import Basket from "./component/Basket/Basket";
 import Order from "./component/OrderConfirm/Order";
@@ -105,6 +105,7 @@ class App extends Component {
             <Route exact path="/Basket" component={Basket} />
             <Route exact path="/Order" component={Order} />
             <Route exact path="/MenuOrder" component={MenuOrder} />
+            <Route exact path="/OrderFood" component={OrderFood}/>
             <Route exact path="/EachMenuOrder/:id" component={EachMenuOrder} />
           {/* </ProtectedRoute> */}
         </Switch>

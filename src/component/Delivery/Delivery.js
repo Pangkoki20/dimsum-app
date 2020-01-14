@@ -45,7 +45,7 @@ class Delivery extends Component {
                   <div>
                     <img className="img_meal img-fluid" src={img_meal} />
                   </div>
-                  <div className="font_status">กำลังเตรียมอาหาร</div>
+                  <div className="font_status">กำลังจัดเตรียมอาหาร</div>
                 </Card>
               </Col>
               <Col className="frame_status">
