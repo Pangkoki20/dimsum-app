@@ -9,7 +9,7 @@ import {
   Card,
   Label,
   Form,
-  CustomInput
+  UncontrolledCollapse
 } from "reactstrap";
 import "./Order.css";
 import axios from "axios";
@@ -176,7 +176,6 @@ class Order extends Component {
                       </Col>
                       <Col xs="auto">เพิ่มสถานที่ใหม่</Col>
                     </Row>
-
                     <div className="bt_nextone">
                       <Button
                         color="danger"

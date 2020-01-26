@@ -8,7 +8,7 @@ import {
   Button,
   CardText
 } from "reactstrap";
-import "./OrderFood.css"
+import "./OrderFood.css";
 class OrderFood extends Component {
   render() {
     return (
@@ -75,7 +75,7 @@ class OrderFood extends Component {
                 <div className="bt_readysend">
                   <div className="d-flex">
                     <div className="col">
-                      <Button color="info" size="lg" block>
+                      <Button color="info" size="lg" block href="/SenderStatus">
                         อาหารพร้อมส่ง
                       </Button>
                     </div>
