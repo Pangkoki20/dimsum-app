@@ -10,16 +10,38 @@ import {
   Col
 } from "reactstrap";
 import "./Basket.css";
+import axios from "axios";
 import img_gps from "../../imgbasket/confirmation.png";
 import MenuSelect from "../MenuSelect/MenuSelect";
 class Basket extends Component {
   state = {
+    user: null,
     order: [],
     priceAll: 0,
     total: 0,
     check: 1
   };
-  componentDidMount = () => {
+  onUserChanged = user => {
+    this.setState({ user });
+  };
+  componentDidMount = async nextProps => {
+    let token = localStorage.getItem("token");
+    if (token) {
+      if (token !== null) {
+        this.setState({ check: "login" });
+      }
+      console.log("me");
+      let res = await axios.post(`http://localhost:3001/api/users/me`, {
+        token
+      });
+      // if (!res) {
+      //   window.location.href = "/login";
+      //   return;
+      // }
+      this.setState({ user: res.data });
+    } else {
+      window.location.href = "/login";
+    }
     let order = JSON.parse(localStorage.getItem("order"));
     console.log("all order : ", order);
     this.setState({ order: order });
@@ -76,7 +98,32 @@ class Basket extends Component {
                           <Col> {index + 1}</Col>
                           <Col>{e.menu_name} </Col>
                           <Col> {e.menu_price}</Col>
-                          <Col></Col>
+                          <Col>
+                            <div
+                              className="btn-group"
+                              role="group"
+                              aria-label="First group"
+                            >
+                              <button
+                                type="button"
+                                className="btn btn-outline-info"
+                              >
+                                -
+                              </button>
+                              <button
+                                type="button"
+                                className="btn btn-outline-info"
+                              >
+                                1
+                              </button>
+                              <button
+                                type="button"
+                                className="btn btn-outline-info"
+                              >
+                                +
+                              </button>
+                            </div>
+                          </Col>
                           <Col className="img_trash">
                             <div onClick={() => this.toRemove(index)}>
                               <i className="far fa-trash-alt"></i>
@@ -87,9 +134,6 @@ class Basket extends Component {
                     </div>
                   );
                 })}
-                <CardFooter>
-                  <div className="text_addfood">เลือกอาหารเพิ่ม</div>
-                </CardFooter>
               </Card>
               <br></br>
               <br></br>
@@ -102,7 +146,9 @@ class Basket extends Component {
                   <div className="table_num">
                     <div className="d-flex">
                       <div className="col-6">
-                        <CardText className="tt_food ">จำนวนอาหารที่สั่งทั้งหมด</CardText>
+                        <CardText className="tt_food ">
+                          จำนวนอาหารที่สั่งทั้งหมด
+                        </CardText>
                       </div>
                       <div className="col">
                         <CardText className="tt_food text_num">

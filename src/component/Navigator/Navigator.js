@@ -6,7 +6,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  Button
 } from "reactstrap";
 import "./Navigator.css";
 import login from "../../imghome/user.png";
@@ -93,6 +94,24 @@ export default class Navigator extends React.Component {
                   </NavLink>
                 </NavItem>
               )}
+              {this.state.role === "sender" && this.state.check === "login" && (
+                <NavItem>
+                  <NavLink>
+                    <div className="Login">
+                      <h6 className="fon-barr">Sender</h6>
+                    </div>
+                  </NavLink>
+                </NavItem>
+              )}
+              {this.state.role === "kitchen" && this.state.check === "login" && (
+                <NavItem>
+                  <NavLink>
+                    <div className="Login">
+                      <h6 className="fon-barr">Kitchen</h6>
+                    </div>
+                  </NavLink>
+                </NavItem>
+              )}
 
               {this.state.check !== "login" && (
                 <NavItem>
@@ -106,8 +125,10 @@ export default class Navigator extends React.Component {
               {this.state.check === "login" && (
                 <NavItem>
                   <NavLink href="" onClick={this.logout}>
-                    <div>
-                      <h6 className="fon-logout">Logout</h6>
+                    <div className="Login fon-logout">
+                      <Button color="info">
+                        Logout
+                      </Button>
                     </div>
                   </NavLink>
                 </NavItem>

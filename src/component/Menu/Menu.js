@@ -8,8 +8,32 @@ import MenuNewEgg from "./MenuNewEgg";
 import MenuNewKanomgee from "./MenuNewKanomgee";
 import MenuNewSarapol from "./MenuNewSarapol";
 import MenuNewEggpan from "./MenuNewEngpan";
+import axios from "axios";
 class Menu extends Component {
-  componentDidMount() {
+  state = {
+    user: null
+  };
+  onUserChanged = user => {
+    this.setState({ user });
+  };
+  componentDidMount = async nextProps => {
+    let token = localStorage.getItem("token");
+    if (token) {
+      if (token !== null) {
+        this.setState({ check: "login" });
+      }
+      console.log("me");
+      let res = await axios.post(`http://localhost:3001/api/users/me`, {
+        token
+      });
+      // if (!res) {
+      //   window.location.href = "/login";
+      //   return;
+      // }
+      this.setState({ user: res.data });
+    } else {
+      window.location.href = "/login";
+    }
     document.title = "Dimsumahkong Delivery";
     // var oldItems = []
     var oldItems = JSON.parse(localStorage.getItem("order"));
@@ -22,7 +46,7 @@ class Menu extends Component {
       oldItems = JSON.parse(localStorage.getItem("order")) || [];
     }
     // var oldItems = JSON.parse(localStorage.getItem('order')) || [];
-  }
+  };
   render() {
     return (
       <div>

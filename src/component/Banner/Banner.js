@@ -2,8 +2,8 @@ import React from "react";
 import Pic from "./Pic";
 import "./Banner.css";
 import { Container, Button } from "reactstrap";
-import img_home from "../../img/Home.png";
-import MenuSelect from "../MenuSelect/MenuSelect";
+import img_home from "../../img/dim.png";
+// import MenuSelect from "../MenuSelect/MenuSelect";
 
 export default class Banner extends React.Component {
   render() {
@@ -11,7 +11,7 @@ export default class Banner extends React.Component {
       <Container>
         <div className="ban-size">
           <div className="pic_hargao">
-            <img className="img_home img-fluid " src={img_home} />
+            <img src={img_home} className="img_home img-fluid " />
           </div>
           {/* <div>
             <Pic />

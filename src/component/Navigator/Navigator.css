@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
+
 .fon-bar {
   font-family: 'Righteous', cursive;
   color: hsl(160, 31%, 77%);
@@ -11,26 +12,23 @@
 
 .fon-barr {
   margin-top: 10px;
-  font-family: "Kanit",
-    sans-serif;
-    color: hsl(160, 31%, 77%);
-    font-size: 18px;
-}
-.fon-logout{
-  margin-top: 10px;
+  font-family: "Kanit",sans-serif;
   color: hsl(160, 31%, 77%);
-  font-size: 20px;
-  font-family: 'Alata',
-  sans-serif;
-}
-.fon-logout:hover {
-  margin-top: 10px;
-  color: #eb9898;
-  font-size: 20px;
-  font-family: 'Alata',
-    sans-serif;
+  font-size: 18px;
 }
 
+.fon-logout {
+  /* margin-top: 10px; */
+  color: hsl(0, 0%, 3%);
+  font-size: 18px;
+  font-family: "Kanit",sans-serif;
+}
+
+.fon-logout:hover {
+  color: hsl(0, 0%, 3%);
+  font-size: 20px;
+  font-family: "Kanit",sans-serif;
+}
 .bt_login {
   text-align: center;
   margin-left: 20px;

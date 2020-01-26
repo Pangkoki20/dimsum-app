@@ -12,7 +12,34 @@ import img_product from "../../imgdelivery/product2.png";
 import img_delivery from "../../imgdelivery/delivery.png";
 import img_breakfast from "../../imgdelivery/breakfast.png";
 import img_foodorder from "../../imgdelivery/dish.png";
+import axios from "axios";
 class Delivery extends Component {
+  state = {
+    user: null
+  };
+
+  onUserChanged = user => {
+    this.setState({ user });
+  };
+  componentDidMount = async nextProps => {
+    let token = localStorage.getItem("token");
+    if (token) {
+      if (token !== null) {
+        this.setState({ check: "login" });
+      }
+      console.log("me");
+      let res = await axios.post(`http://localhost:3001/api/users/me`, {
+        token
+      });
+      // if (!res) {
+      //   window.location.href = "/login";
+      //   return;
+      // }
+      this.setState({ user: res.data });
+    } else {
+      window.location.href = "/login";
+    }
+  };
   render() {
     return (
       <div>

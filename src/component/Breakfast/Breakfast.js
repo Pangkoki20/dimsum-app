@@ -6,8 +6,26 @@ import Break_egg from "./Break_egg";
 import Break_fish from "./Break_fish";
 import Break_shrimp from "./Break_shrimp";
 import MenuSelect from "../MenuSelect/MenuSelect";
+import axios from "axios";
 class Breakfast extends Component {
-  componentDidMount() {
+  componentDidMount = async nextProps => {
+    let token = localStorage.getItem("token");
+    if (token) {
+      if (token !== null) {
+        this.setState({ check: "login" });
+      }
+      console.log("me");
+      let res = await axios.post(`http://localhost:3001/api/users/me`, {
+        token
+      });
+      // if (!res) {
+      //   window.location.href = "/login";
+      //   return;
+      // }
+      this.setState({ user: res.data });
+    } else {
+      window.location.href = "/login";
+    }
     document.title = "Dimsumahkong Delivery";
     // var oldItems = []
     var oldItems = JSON.parse(localStorage.getItem("order"));
@@ -20,7 +38,7 @@ class Breakfast extends Component {
       var oldItems = JSON.parse(localStorage.getItem("order")) || [];
     }
     // var oldItems = JSON.parse(localStorage.getItem('order')) || [];
-  }
+  };
   render() {
     return (
       <div>

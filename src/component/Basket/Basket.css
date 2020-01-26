@@ -8,8 +8,8 @@
     font-size: 20px;
 }
 .text_addfood{
-    font-family: "Kanit",
-    sans-serif;
+    font-family: "Kanit",sans-serif;
+    text-align: left;
     font-size: 14px;
 }
 .add_food {

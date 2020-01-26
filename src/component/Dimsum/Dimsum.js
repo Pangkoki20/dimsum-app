@@ -10,8 +10,32 @@ import Shrimp from "./Shrimp";
 import Hargao from "./Hargao";
 import Shrimp_Dumling from "./Shrimp_Dumling";
 import MenuSelect from "../MenuSelect/MenuSelect";
+import axios from "axios";
 class Dimsum extends Component {
-  componentDidMount() {
+  state = {
+    user: null
+  };
+  onUserChanged = user => {
+    this.setState({ user });
+  };
+  componentDidMount = async nextProps => {
+    let token = localStorage.getItem("token");
+    if (token) {
+      if (token !== null) {
+        this.setState({ check: "login" });
+      }
+      console.log("me");
+      let res = await axios.post(`http://localhost:3001/api/users/me`, {
+        token
+      });
+      // if (!res) {
+      //   window.location.href = "/login";
+      //   return;
+      // }
+      this.setState({ user: res.data });
+    } else {
+      window.location.href = "/login";
+    }
     document.title = "Dimsumahkong Delivery";
     // var oldItems = []
     var oldItems = JSON.parse(localStorage.getItem("order"));
@@ -24,7 +48,7 @@ class Dimsum extends Component {
       oldItems = JSON.parse(localStorage.getItem("order")) || [];
     }
     // var oldItems = JSON.parse(localStorage.getItem('order')) || [];
-  }
+  };
   render() {
     return (
       <div>

@@ -21,7 +21,7 @@ import MenuOrder from "./component/MemuOrder/MenuOrder";
 import EachMenuOrder from "./component/MemuOrder/EachMenuOrder";
 import "./App.css";
 import axios from "axios";
-import ProtectedRoute from "./component/ProtectedRoute";
+// import ProtectedRoute from "./component/ProtectedRoute";
 class App extends Component {
   state = {
     user: null
@@ -30,31 +30,26 @@ class App extends Component {
   onUserChanged = user => {
     this.setState({ user });
   };
-
-  componentWillMount 
-
-  // componentDidMount = async nextProps => {
-  //   let token = localStorage.getItem("token");
-  //   if (token) {
-  //     // if (token !== null) {
-  //     //   this.setState({ check: "login" });
-  //     // }
-  //     console.log("me");
-  //     let res = await axios.post(`http://localhost:3001/api/users/me`, {
-  //       token
-  //     });
-  //     if (!res) {
-  //       window.location.href = "/login"
-  //       return
-  //     }
-  //     this.setState({ user: res.data });
-  //   }
-  // };
-
+  componentDidMount = async nextProps => {
+    let token = localStorage.getItem("token");
+    if (token) {
+      if (token !== null) {
+        this.setState({ check: "login" });
+      }
+      console.log("me");
+      let res = await axios.post(`http://localhost:3001/api/users/me`, {
+        token
+      });
+      if (!res) {
+        window.location.href = "/login";
+        return;
+      }
+      this.setState({ user: res.data });
+    }
+  };
   render() {
     const { user } = this.state;
     // console.log({ user });
-
     return (
       <div>
         <Navigator user={user} />
@@ -65,48 +60,21 @@ class App extends Component {
             path="/login"
             component={() => <Login onUserChanged={this.onUserChanged} />}
           />
-          {/* {user ? (
-            <Fragment>
-              <Route exact path="/register" component={Register} />
-              <Route exact path="/Dimsum" component={Dimsum} />
-              <Route exact path="/Breakfast" component={Breakfast} />
-              <Route exact path="/Fastfood" component={Fastfood} />
-              <Route exact path="/Drink" component={Drink} />
-              <Route exact path="/Delivery" component={Delivery} />
-              <Route exact path="/Contact" component={Contact} />
-              <Route exact path="Collapses" component={Collapses} />
-              <Route exact path="/Menu" component={Menu} />
-              <Route exact path="/ShowOrder" component={ShowOrder} />
-              <Route exact path="/Basket" component={Basket} />
-              <Route exact path="/Order" component={Order} />
-              <Route exact path="/MenuOrder" component={MenuOrder} />
-              <Route
-                exact
-                path="/EachMenuOrder/:id"
-                component={EachMenuOrder}
-              />
-            </Fragment>
-          ) : (
-            // <Redirect to="/login" />
-            <Fragment />
-          )} */}
-
-          {/* <ProtectedRoute> */}
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/Dimsum" component={Dimsum} />
-            <Route exact path="/Breakfast" component={Breakfast} />
-            <Route exact path="/Fastfood" component={Fastfood} />
-            <Route exact path="/Drink" component={Drink} />
-            <Route exact path="/Delivery" component={Delivery} />
-            <Route exact path="/Contact" component={Contact} />
-            <Route exact path="Collapses" component={Collapses} />
-            <Route exact path="/Menu" component={Menu} />
-            <Route exact path="/ShowOrder" component={ShowOrder} />
-            <Route exact path="/Basket" component={Basket} />
-            <Route exact path="/Order" component={Order} />
-            <Route exact path="/MenuOrder" component={MenuOrder} />
-            <Route exact path="/OrderFood" component={OrderFood}/>
-            <Route exact path="/EachMenuOrder/:id" component={EachMenuOrder} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/Dimsum" component={Dimsum} />
+          <Route exact path="/Breakfast" component={Breakfast} />
+          <Route exact path="/Fastfood" component={Fastfood} />
+          <Route exact path="/Drink" component={Drink} />
+          <Route exact path="/Delivery" component={Delivery} />
+          <Route exact path="/Contact" component={Contact} />
+          <Route exact path="Collapses" component={Collapses} />
+          <Route exact path="/Menu" component={Menu} />
+          <Route exact path="/ShowOrder" component={ShowOrder} />
+          <Route exact path="/Basket" component={Basket} />
+          <Route exact path="/Order" component={Order} />
+          <Route exact path="/MenuOrder" component={MenuOrder} />
+          <Route exact path="/OrderFood" component={OrderFood} />
+          <Route exact path="/EachMenuOrder/:id" component={EachMenuOrder} />
           {/* </ProtectedRoute> */}
         </Switch>
         {/* <Footer /> */}

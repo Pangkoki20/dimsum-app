@@ -7,13 +7,18 @@ import {
   FormGroup,
   CardBody,
   Card,
-  Label,Form
+  Label,
+  Form,
+  CustomInput
 } from "reactstrap";
 import "./Order.css";
 import axios from "axios";
 import img_address from "../../imgorder/address.png";
 import img_pay from "../../imgorder/pay.png";
 import img_confirm from "../../imgorder/confirm.png";
+import img_savelocation from "../../imgorder/home.png";
+import img_location from "../../imgorder/target.png";
+import img_newaddress from "../../imgorder/P.png";
 import auth from "../service/index";
 class Order extends Component {
   state = {
@@ -35,14 +40,14 @@ class Order extends Component {
       payment: "1",
       code: "",
       message: "",
-      order:[]
+      order: []
     };
   }
-componentDidMount =()=> {
-      let order = JSON.parse(localStorage.getItem("order"));
-      console.log("all order : ", order);
-      this.setState({ order: order });
-} 
+  componentDidMount = () => {
+    let order = JSON.parse(localStorage.getItem("order"));
+    console.log("all order : ", order);
+    this.setState({ order: order });
+  };
 
   handleInputChange = e => {
     const { name, value } = e.target;
@@ -58,7 +63,7 @@ componentDidMount =()=> {
     let uId = userDecode.id;
 
     //  if userDecode.role != "Kitchen"
-    
+
     try {
       const data = {
         numhouse: this.state.numhouse,
@@ -114,7 +119,11 @@ componentDidMount =()=> {
               <div>
                 <Button outline color="info" size="lg" block>
                   <div>
-                    <img className="img_address"src={img_address} href="/Address"/>
+                    <img
+                      className="img_address"
+                      src={img_address}
+                      href="/Address"
+                    />
                   </div>
                   <div className="text-addre">ที่อยู่สำหรับการจัดส่ง</div>
                 </Button>
@@ -130,184 +139,146 @@ componentDidMount =()=> {
                 </Button>
               </div>
               <Form onSubmit={this.sentOrder}>
-              {this.state.step === 1 ? (
-                <div className="from_addressdelivery">
-                  <div className="addressdelivery">
-                    ที่อยู่สำหรับการจัดส่ง
-                  </div>
-                  {/* <Input
-                    className="from_addressdelivery"
-                    type="text"
-                    name="numhouse"
-                    id="numhouse"
-                    value={this.state.numhouse}
-                    placeholder="บ้านเลขที่"
-                    onChange={this.handleInputChange}
-                    required
-                  />
-                  <Input
-                    className="from_addressdelivery"
-                    type="text"
-                    name="nummoo"
-                    id="nummoo"
-                    value={this.state.nummoo}
-                    placeholder="หมู่ที่"
-                    onChange={this.handleInputChange}
-                    required
-                  ></Input>
-                  <Input
-                    className="from_addressdelivery"
-                    type="text"
-                    name="lane"
-                    id="lane"
-                    value={this.state.lane}
-                    placeholder="ซอย/ตรอก"
-                    onChange={this.handleInputChange}
-                    required
-                  ></Input>
-                  <Input
-                    className="from_addressdelivery"
-                    type="text"
-                    name="tambon"
-                    id="tambo"
-                    value={this.state.tambon}
-                    placeholder="ตำบล"
-                    onChange={this.handleInputChange}
-                    required
-                  ></Input>
-                  <Input
-                    className="from_addressdelivery"
-                    type="text"
-                    name="amphoe"
-                    id="amphoe"
-                    value={this.state.amphoe}
-                    placeholder="อำเภอ"
-                    onChange={this.handleInputChange}
-                    required
-                  ></Input>
-                  <Input
-                    className="from_addressdelivery"
-                    type="text"
-                    name="changwat"
-                    id="code"
-                    value={this.state.changwat}
-                    placeholder="จังหวัด"
-                    onChange={this.handleInputChange}
-                    required
-                  ></Input>
-                  <Input
-                    className="from_addressdelivery"
-                    type="postcode"
-                    name="postcode"
-                    id="code"
-                    value={this.state.postcode}
-                    placeholder="รหัสไปรษณีย์"
-                    onChange={this.handleInputChange}
-                    required
-                  ></Input> */}
-                  <div className="bt_nextone">
-                    <Button
-                      color="danger"
-                      onClick={() => {
-                        this.setState({ step: this.state.step + 1 });
-                      }}
-                    >
-                      ถัดไป
-                    </Button>
-                  </div>
-                </div>
-              ) : null}
-              {this.state.step === 2 ? (
-                <div className="from_addressdelivery">
-                  <div className="addressdelivery">เลือกวิธีการชำระเงิน</div>
-                  <FormGroup check className="from_check">
-                    <Label check>
-                      <Input
-                        type="radio"
-                        name="payment"
-                        value="1"
-                        checked={this.state.payment === "1"}
-                        onChange={this.handleInputChange}
-                      />
-                      <div className="text_paymentconfirm">ชำระเงินปลายทาง</div>
-                    </Label>
-                  </FormGroup>
-                  <FormGroup check className="from_check">
-                    <Label check>
-                      <Input
-                        type="radio"
-                        name="payment"
-                        value="2"
-                        checked={this.state.payment === "2"}
-                        onChange={this.handleInputChange}
-                      />
-                      <div className="text_paymentconfirm">อื่น ๆ</div>
-                    </Label>
-                  </FormGroup>
-                  <div className="code">โค้ดส่วนลดของคุณ</div>
-                  <Input
-                    className="text_code"
-                    type="text"
-                    name="code"
-                    value={this.state.code}
-                    placeholder="โค้ดของคุณ"
-                    onChange={this.handleInputChange}
-                    
-                  />
-                  <div className="from_payments">
-                    <Button
-                      className="bt_back"
-                      color="secondary"
-                      onClick={() => {
-                        this.setState({ step: this.state.step - 1 });
-                      }}
-                    >
-                      ย้อนกลับ
-                    </Button>
+                {this.state.step === 1 ? (
+                  <div className="from_addressdelivery">
+                    <div className="addressdelivery">
+                      ที่อยู่สำหรับการจัดส่ง
+                    </div>
 
-                    <Button
-                      className="bt_next"
-                      color="danger"
-                      onClick={() => {
-                        this.setState({ step: this.state.step + 1 });
-                      }}
-                    >
-                      ถัดไป
-                    </Button>
-                  </div>
-                </div>
-              ) : null}
-              {this.state.step === 3 ? (
-                <div className="from_addressdelivery">
-                  <div className="addressdelivery"> ยืนยันการสั่งซื้อ</div>
-                  <div>
-                    <Card>
-                      <CardBody>
+                    <Row>
+                      <Col xs="1">
                         <div>
-                       { numhouse}
-                       </div> 
-                       <div>{nummoo}</div> 
-                      <div>{lane}</div>  <div>{tambon}</div> {amphoe}, {changwat},
-                        {postcode}, {code}, {payment}
-                      </CardBody>
-                    </Card>
+                          <img
+                            className="img_savelocation"
+                            src={img_savelocation}
+                          />
+                        </div>
+                      </Col>
+                      <Col xs="auto">สถานที่ที่บันทึกไว้</Col>
+                    </Row>
+                    <Row>
+                      <Col xs="1">
+                        <div>
+                          <img className="img_location" src={img_location} />
+                        </div>
+                      </Col>
+                      <Col xs="auto">ตำแหน่งปัจจุบัน</Col>
+                    </Row>
+
+                    <Row>
+                      <Col xs="1">
+                        <div>
+                          <img
+                            className="img_newaddress"
+                            src={img_newaddress}
+                          />
+                        </div>
+                      </Col>
+                      <Col xs="auto">เพิ่มสถานที่ใหม่</Col>
+                    </Row>
+
+                    <div className="bt_nextone">
+                      <Button
+                        color="danger"
+                        onClick={() => {
+                          this.setState({ step: this.state.step + 1 });
+                        }}
+                      >
+                        ถัดไป
+                      </Button>
+                    </div>
                   </div>
-                  <div className="from_editorder">
-                    <a className="edit_order" href="/Order">
-                      แก้ไขข้อมูลการสั่งซื้อ
-                    </a>
+                ) : null}
+                {this.state.step === 2 ? (
+                  <div className="from_addressdelivery">
+                    <div className="addressdelivery">เลือกวิธีการชำระเงิน</div>
+                    <FormGroup check className="from_check">
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="payment"
+                          value="1"
+                          checked={this.state.payment === "1"}
+                          onChange={this.handleInputChange}
+                        />
+                        <div className="text_paymentconfirm">
+                          ชำระเงินปลายทาง
+                        </div>
+                      </Label>
+                    </FormGroup>
+                    <FormGroup check className="from_check">
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="payment"
+                          value="2"
+                          checked={this.state.payment === "2"}
+                          onChange={this.handleInputChange}
+                        />
+                        <div className="text_paymentconfirm">อื่น ๆ</div>
+                      </Label>
+                    </FormGroup>
+                    <div className="code">โค้ดส่วนลดของคุณ</div>
+                    <Input
+                      className="text_code"
+                      type="text"
+                      name="code"
+                      value={this.state.code}
+                      placeholder="โค้ดของคุณ"
+                      onChange={this.handleInputChange}
+                    />
+                    <div className="from_payments">
+                      <Button
+                        className="bt_back"
+                        color="secondary"
+                        onClick={() => {
+                          this.setState({ step: this.state.step - 1 });
+                        }}
+                      >
+                        ย้อนกลับ
+                      </Button>
+
+                      <Button
+                        className="bt_next"
+                        color="danger"
+                        onClick={() => {
+                          this.setState({ step: this.state.step + 1 });
+                        }}
+                      >
+                        ถัดไป
+                      </Button>
+                    </div>
                   </div>
-                  <div className="from_payments">
-                    <Button
-                      className="bt_ok"
-                      color="success"
-                      // onClick={e => this.order(e)}
-                    >
-                      ยืนยัน
-                    </Button>
+                ) : null}
+                {this.state.step === 3 ? (
+                  <div className="from_addressdelivery">
+                    <div className="addressdelivery"> ยืนยันการสั่งซื้อ</div>
+                    <div>
+                      <Card>
+                        <CardBody>
+                          <div>{numhouse}</div>
+                          <div>{nummoo}</div>
+                          <div>{lane}</div> <div>{tambon}</div> {amphoe},{" "}
+                          {changwat},{postcode}, {code}, {payment}
+                        </CardBody>
+                      </Card>
+                    </div>
+                    <div className="from_editorder">
+                      <a className="edit_order" href="/Order">
+                        แก้ไขข้อมูลการสั่งซื้อ
+                      </a>
+                    </div>
+                    <div className="from_payments">
+                      <Button
+                        className="bt_ok"
+                        color="success"
+                        // onClick={e => this.order(e)}
+                      >
+                        ยืนยัน
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              ) : null}
+                ) : null}
               </Form>
             </Col>
             <Col xs="4" sm="4">
