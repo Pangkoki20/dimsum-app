@@ -13,32 +13,29 @@ class SenderOrder extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <div className="text_senderorder">อาหารพร้อมส่ง</div>
-        <div className="row">
-          <div className="col-12 col-md-8">
-            <Card className="card_orderkitchen">
-              <CardHeader>
-                <Row>
-                  <Col>รายการ</Col>
-                  <Col xs="3">สถานะ</Col>
-                </Row>
-              </CardHeader>
-              <div>
-                <CardBody>
-                  <Row>
-                    <Col></Col>
-                    <Col xs="3">
-                      <Button color="danger" outline href="/OrderFood">
-                        ส่งอาหาร
-                      </Button>
-                    </Col>
-                  </Row>
-                </CardBody>
-              </div>
-            </Card>
-            <br></br>
+        <div className="text_senderorder">ข้อมูลของลูกค้า </div>
+
+        <Card className="card_orderkitchen">
+          <CardHeader>
+            <Row>
+              <Col>รายละเอียด</Col>
+              <Col xs="3">สถานะ</Col>
+            </Row>
+          </CardHeader>
+          <div>
+            <CardBody>
+              <Row>
+                <Col></Col>
+                <Col xs="3">
+                  <Button color="danger" outline href="/OrderFood">
+                    กำลังจัดส่งอาหาร
+                  </Button>
+                </Col>
+              </Row>
+            </CardBody>
           </div>
-        </div>
+        </Card>
+        <br></br>
       </div>
     );
   }

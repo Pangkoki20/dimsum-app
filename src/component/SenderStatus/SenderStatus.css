@@ -6,3 +6,10 @@
     font-family: "Kanit",
     sans-serif;
 }
+.card_senderstatus {
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Kanit",
+    sans-serif;
+    font-size: 20px;
+}
