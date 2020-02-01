@@ -19,7 +19,8 @@ class Basket extends Component {
     order: [],
     priceAll: 0,
     total: 0,
-    check: 1
+    check: 1,
+    count: 0
   };
   onUserChanged = user => {
     this.setState({ user });
@@ -72,6 +73,25 @@ class Basket extends Component {
     this.setState({ priceAll: this.state.priceAll });
   }
 
+  addCount = index => {
+    this.state.order.map((e, i) => {
+      if (index !== i) {
+        return this.setState({
+          count: this.state.count + 1
+        });
+      }
+    });
+  };
+  removeCount = index => {
+    this.state.order.map((e, i) => {
+      if (index === i) {
+        return this.setState({
+          count: this.state.count - 1
+        });
+      }
+    });
+  };
+
   render() {
     return (
       <div>
@@ -107,6 +127,7 @@ class Basket extends Component {
                               <button
                                 type="button"
                                 className="btn btn-outline-info"
+                                onClick={() => this.removeCount(index)}
                               >
                                 -
                               </button>
@@ -114,11 +135,12 @@ class Basket extends Component {
                                 type="button"
                                 className="btn btn-outline-info"
                               >
-                                1
+                                {this.state.count}
                               </button>
                               <button
                                 type="button"
                                 className="btn btn-outline-info"
+                                onClick={() => this.addCount(index)}
                               >
                                 +
                               </button>

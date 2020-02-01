@@ -9,7 +9,8 @@ class Login extends Component {
     super(props);
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      user: ""
     };
   }
   handleInputChange = e => {
@@ -18,7 +19,18 @@ class Login extends Component {
     this.setState({ message: "" });
     console.log({ [name]: value });
   };
-
+  componentDidMount = async nextProps => {
+  
+      let res = await axios.post(`http://localhost:3001/api/users/me`, {
+       
+      });
+      // if (!res) {
+      //   window.location.href = "/login";
+      //   return;
+      // }
+      this.setState({ user: res.data.role });
+    
+  };
   toRegister = e => {
     this.props.history.push("/register");
   };
@@ -35,13 +47,10 @@ class Login extends Component {
 
       axios.post(`http://localhost:3001/api/users/login`, data).then(res => {
         const { data } = res;
-        console.log("res : ", res.data);
         this.setState({ message: data.message });
-
         this.props.onUserChanged(res);
-
         localStorage.setItem("token", data.token);
-        this.props.history.push(`/`);
+        this.props.history.push(`/Menu`);
         window.location.reload();
       });
     } catch (error) {
@@ -50,6 +59,7 @@ class Login extends Component {
   };
 
   render() {
+    console.log("Res", this.state.user);
     return (
       <div className="from_lo">
         <div className="container-fluid">

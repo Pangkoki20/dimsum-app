@@ -54,21 +54,30 @@ class MenuOrder extends Component {
                   <Col xs="3">สถานะ</Col>
                 </Row>
               </CardHeader>
-              <div>
-                <CardBody>
-                  <Row>
-                    <Col></Col>
-                    <Col>
-                      <div></div>
-                    </Col>
-                    <Col xs="3">
-                      <Button color="danger" outline href="/OrderFood">
-                        รับรายการอาหาร
-                      </Button>
-                    </Col>
-                  </Row>
-                </CardBody>
-              </div>
+              {this.state.order.map((e, index) => {
+                return (
+                  <div key={index + 1}>
+                    <CardBody>
+                      {index === 0 ? (
+                        <Row>
+                          <Col> {index + 1}</Col>
+                          <Col>{e.menu_name} </Col>
+                          <Col xs="3">
+                            <Button color="danger" outline href="/OrderFood">
+                              รับรายการอาหาร
+                            </Button>
+                          </Col>
+                        </Row>
+                      ) : (
+                        <Row  > 
+                          <Col> {index + 1}</Col>
+                          <Col>{e.menu_name} </Col>
+                        </Row>
+                      )}
+                    </CardBody>
+                  </div>
+                );
+              })}
             </Card>
             <br></br>
           </div>

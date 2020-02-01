@@ -45,16 +45,14 @@ export default class Navigator extends React.Component {
       if (token !== null) {
         this.setState({ check: "login" });
       }
-      console.log("me");
       let res = await axios.post(`http://localhost:3001/api/users/me`, {
         token
       });
-      this.setState({ role: res.data.role });
+      this.setState({ role: res.data.role });    
     }
   };
 
   render() {
-    console.log(this.state.role);
     return (
       <div>
         <Navbar className="bar" light expand="md">
