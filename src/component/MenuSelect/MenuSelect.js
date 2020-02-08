@@ -4,35 +4,42 @@ import "./MenuSelect.css";
 import basket from "../../imgshop/shopping-basket.png";
 import "../Basket/Basket";
 import axios from "axios";
+import auth from '../service/index'
 class MenuSelect extends Component {
   state = {
     user: null
   };
-  onUserChanged = user => {
-    this.setState({ user });
-  };
-  componentDidMount = async nextProps => {
-    let token = localStorage.getItem("token");
-    if (token) {
-      if (token !== null) {
-        this.setState({ check: "login" });
-      }
-      let res = await axios.post(`http://localhost:3001/api/users/me`, {
-        token
-      });
-      // if (!res) {
-      //   window.location.href = "/login";
-      //   return;
-      // }
-      this.setState({ user: res.data.role });
-    } else {
-      window.location.href = "/login";
-    }
-  };
+
+  // componentDidMount = async nextProps => {
+  //   let token = localStorage.getItem("token");
+  //   if (token) {
+  //     if (token !== null) {
+  //       this.setState({ check: "login" });
+  //     }
+  //     let res = await axios.post(`http://localhost:3001/api/users/me`, {
+  //       token
+  //     });
+  //     // if (!res) {
+  //     //   window.location.href = "/login";
+  //     //   return;
+  //     // }
+  //     this.setState({ user: res.data.role });
+  //   } else {
+  //     window.location.href = "/login";
+  //   }
+  // };
+  componentDidMount() {
+		let user = auth.getToken()
+		let userDecoded = auth.decodeToken(user)
+    let uRole = userDecoded.role 
+    this.setState({ user: uRole });
+  
+	
+	}
   render() {
     return (
       <div>
-        {this.state.user === "admin" ? (
+        {this.state.user === "user" ? (
           <Nav className="from_menusel">
             <NavItem>
               <NavLink className="border-right" href="/Menu">

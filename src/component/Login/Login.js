@@ -28,7 +28,7 @@ class Login extends Component {
       //   window.location.href = "/login";
       //   return;
       // }
-      this.setState({ user: res.data.role });
+      // this.setState({ user: res.data.role });
     
   };
   toRegister = e => {

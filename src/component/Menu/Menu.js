@@ -9,6 +9,7 @@ import MenuNewKanomgee from "./MenuNewKanomgee";
 import MenuNewSarapol from "./MenuNewSarapol";
 import MenuNewEggpan from "./MenuNewEngpan";
 import axios from "axios";
+import auth from '../service/index'
 class Menu extends Component {
   state = {
     user: null
@@ -46,6 +47,14 @@ class Menu extends Component {
       oldItems = JSON.parse(localStorage.getItem("order")) || [];
     }
     // var oldItems = JSON.parse(localStorage.getItem('order')) || [];
+
+    let user = auth.getToken();
+    let userDecoded = auth.decodeToken(user);
+    let uRole = userDecoded.role;
+    // this.setState({ user: uRole });
+    if (uRole === "sender") {
+      this.props.history.push("/SenderStatus");
+    }
   };
   render() {
     return (
