@@ -1,4 +1,4 @@
-import React, {  } from "react";
+import React from "react";
 import {
   Collapse,
   Navbar,
@@ -13,6 +13,7 @@ import "./Navigator.css";
 import login from "../../imghome/user.png";
 import auth from "../service";
 import axios from "axios";
+import token from "../../component/service";
 export default class Navigator extends React.Component {
   constructor(props) {
     super(props);
@@ -39,20 +40,49 @@ export default class Navigator extends React.Component {
     //  if (nextProps.user !== null) {
     //    this.setState({ check: "login" });
     //  }
-
-    let token = localStorage.getItem("token");
-    if (token) {
-      if (token !== null) {
-        this.setState({ check: "login" });
-      }
-      let res = await axios.post(`http://localhost:3001/api/users/me`, {
-        token
-      });
-      this.setState({ role: res.data.role });    
-    }
+    // let token = localStorage.getItem("token");
+    // if (token) {
+    //   if (token !== null) {
+    //     this.setState({ check: "login" });
+    //   }
+    //   let res = await axios.post(`http://localhost:3001/api/users/me`, {
+    //     token
+    //   });
+    //   console.log(res);
+    // }
+    // let role = localStorage.getItem("role");
+    // this.setState({ role });
   };
 
   render() {
+    // if (
+    //   (token.decodeToken(localStorage.getItem("token")) &&
+    //     token.decodeToken(localStorage.getItem("token")).role) !==
+    //   this.state.role
+    // ) {
+    //   if (
+    //     token.decodeToken(localStorage.getItem("token")) &&
+    //     token.decodeToken(localStorage.getItem("token")).role
+    //   )
+    //     console.log(token.decodeToken(localStorage.getItem("token")).role);
+    //   this.setState({
+    //     role:
+    //       token.decodeToken(localStorage.getItem("token")) &&
+    //       token.decodeToken(localStorage.getItem("token")).role,
+    //     check: "login"
+    //   });
+    // }
+    if (localStorage.getItem("token")) {
+      if (
+        token.decodeToken(localStorage.getItem("token")).role !==
+        this.state.role
+      ) {
+        this.setState({
+          role: token.decodeToken(localStorage.getItem("token")).role,
+          check: "login"
+        });
+      }
+    }
     return (
       <div>
         <Navbar className="bar" light expand="md">
@@ -124,9 +154,7 @@ export default class Navigator extends React.Component {
                 <NavItem>
                   <NavLink href="" onClick={this.logout}>
                     <div className="Login fon-logout">
-                      <Button color="info">
-                        Logout
-                      </Button>
+                      <Button color="info">Logout</Button>
                     </div>
                   </NavLink>
                 </NavItem>

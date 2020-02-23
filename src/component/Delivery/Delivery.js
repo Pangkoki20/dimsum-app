@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-import {
-  Card,
-  Row,
-  Col
-} from "reactstrap";
+import { Card, Row, Col } from "reactstrap";
 import "./Delivery.css";
 import MenuSelect from "../MenuSelect/MenuSelect";
 import img_menu from "../../imgdelivery/menu.png";
@@ -27,7 +23,6 @@ class Delivery extends Component {
       if (token !== null) {
         this.setState({ check: "login" });
       }
-      console.log("me");
       let res = await axios.post(`http://localhost:3001/api/users/me`, {
         token
       });

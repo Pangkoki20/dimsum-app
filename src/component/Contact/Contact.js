@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container} from "reactstrap";
+import { Container } from "reactstrap";
 import "./Contact.css";
 import Collapses from "../Collapses/Collapses";
 import piccon from "../../img/customer.png";
@@ -17,7 +17,6 @@ class Contact extends Component {
       if (token !== null) {
         this.setState({ check: "login" });
       }
-      console.log("me");
       let res = await axios.post(`http://localhost:3001/api/users/me`, {
         token
       });
@@ -44,7 +43,6 @@ class Contact extends Component {
         <br></br>
         <br></br>
         <br></br>
-      
       </Container>
     );
   }

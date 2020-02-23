@@ -13,7 +13,8 @@ import axios from "axios";
 class MenuOrder extends Component {
   state = {
     user: null,
-    order: []
+    order: [],
+    menu: []
   };
   onUserChanged = user => {
     this.setState({ user });
@@ -24,7 +25,6 @@ class MenuOrder extends Component {
       if (token !== null) {
         this.setState({ check: "login" });
       }
-      console.log("me");
       let res = await axios.post(`http://localhost:3001/api/users/me`, {
         token
       });
@@ -36,9 +36,13 @@ class MenuOrder extends Component {
     } else {
       window.location.href = "/login";
     }
-    let order = JSON.parse(localStorage.getItem("order"));
-    console.log("all order : ", order);
-    this.setState({ order: order });
+    // let order = JSON.parse(localStorage.getItem("order"));
+    // console.log("all order : ", order);
+    // this.setState({ order: order });
+    let order = await axios.get(`http://localhost:3001/api/order`);
+    this.setState({ order: order.data });
+    let menu = await axios.get(`http://localhost:3001/api/menu`);
+    this.setState({ menu: menu.data });
   };
   render() {
     return (
@@ -54,29 +58,31 @@ class MenuOrder extends Component {
                   <Col xs="3">สถานะ</Col>
                 </Row>
               </CardHeader>
-              {this.state.order.map((e, index) => {
-                return (
-                  <div key={index + 1}>
-                    <CardBody>
-                      {index === 0 ? (
+              {this.state.menu.map((e, index) => {
+                if (
+                  e.order_id !==
+                  this.state.order.map(item => {
+                    return item.id;
+                  })
+                ) {
+                  return (
+                    <div key={index + 1}>
+                      <CardBody>
                         <Row>
-                          <Col> {index + 1}</Col>
-                          <Col>{e.menu_name} </Col>
+                          <Col xs="3"> {e.order_id}</Col>
+                          <Col>{e.namefood} </Col>
                           <Col xs="3">
                             <Button color="danger" outline href="/OrderFood">
                               รับรายการอาหาร
                             </Button>
                           </Col>
                         </Row>
-                      ) : (
-                        <Row  > 
-                          <Col> {index + 1}</Col>
-                          <Col>{e.menu_name} </Col>
-                        </Row>
-                      )}
-                    </CardBody>
-                  </div>
-                );
+                      </CardBody>
+                    </div>
+                  );
+                } else {
+                  return false;
+                }
               })}
             </Card>
             <br></br>
@@ -91,7 +97,9 @@ class MenuOrder extends Component {
                       <CardText className="tt_food ">Order ทั้งหมด</CardText>
                     </div>
                     <div className="col">
-                      <CardText className="tt_food text_num"></CardText>
+                      <CardText className="tt_food text_num">
+                        {this.state.order.length}
+                      </CardText>
                     </div>
                     <div className="col">
                       <CardText className="tt_food text_unit">Order</CardText>

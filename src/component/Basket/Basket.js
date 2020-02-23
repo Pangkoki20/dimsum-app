@@ -31,7 +31,6 @@ class Basket extends Component {
       if (token !== null) {
         this.setState({ check: "login" });
       }
-      console.log("me");
       let res = await axios.post(`http://localhost:3001/api/users/me`, {
         token
       });

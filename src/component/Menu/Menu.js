@@ -9,7 +9,7 @@ import MenuNewKanomgee from "./MenuNewKanomgee";
 import MenuNewSarapol from "./MenuNewSarapol";
 import MenuNewEggpan from "./MenuNewEngpan";
 import axios from "axios";
-import auth from '../service/index'
+import auth from "../service/index";
 class Menu extends Component {
   state = {
     user: null
@@ -23,7 +23,6 @@ class Menu extends Component {
       if (token !== null) {
         this.setState({ check: "login" });
       }
-      console.log("me");
       let res = await axios.post(`http://localhost:3001/api/users/me`, {
         token
       });

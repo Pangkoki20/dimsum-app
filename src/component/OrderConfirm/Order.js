@@ -271,7 +271,7 @@ class Order extends Component {
                       <Button
                         className="bt_ok"
                         color="success"
-                        // onClick={e => this.order(e)}
+                        onClick={e => this.sentOrder(e)}
                       >
                         ยืนยัน
                       </Button>

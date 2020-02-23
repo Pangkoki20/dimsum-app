@@ -7,6 +7,7 @@
         sans-serif;
     font-size: 20px;
 }
+
 .text_orderkitchen {
     font-size: 40px;
     text-align: center;
@@ -17,18 +18,23 @@
 .from_orderkitchen {
     margin-top: 20px;
 }
-.text_menuorder{
+
+.text_menuorder {
     text-align: center;
 }
-.bt_received{
+
+.bt_received {
     text-align: right;
 }
-.bt_cooking{
+
+.bt_cooking {
     text-align: left;
 }
-.test_statusorder{
+
+.test_statusorder {
     text-align: center;
 }
-.bt_receivefooditems{
+
+.bt_receivefooditems {
     text-align: right;
 }

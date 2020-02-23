@@ -4,6 +4,7 @@ import { Form, FormGroup, Input, Button } from "reactstrap";
 import axios from "axios";
 import "./Login.css";
 import lo from "../../img/login.png";
+import token from "../../component/service";
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -20,16 +21,16 @@ class Login extends Component {
     console.log({ [name]: value });
   };
   componentDidMount = async nextProps => {
-  
-      let res = await axios.post(`http://localhost:3001/api/users/me`, {
-       
-      });
-      // if (!res) {
-      //   window.location.href = "/login";
-      //   return;
-      // }
-      // this.setState({ user: res.data.role });
-    
+    let res = await axios.get(`http://localhost:3001/api/users`);
+    console.log(res.data);
+    // let res = await axios.post(`http://localhost:3001/api/users/me`, {
+
+    // });
+    // if (!res) {
+    //   window.location.href = "/login";
+    //   return;
+    // }
+    // this.setState({ user: res.data.role });
   };
   toRegister = e => {
     this.props.history.push("/register");
@@ -47,11 +48,22 @@ class Login extends Component {
 
       axios.post(`http://localhost:3001/api/users/login`, data).then(res => {
         const { data } = res;
-        this.setState({ message: data.message });
-        this.props.onUserChanged(res);
-        localStorage.setItem("token", data.token);
-        this.props.history.push(`/Menu`);
-        window.location.reload();
+        if (data) {
+          this.setState({ message: data.message });
+          this.props.onUserChanged(res);
+          localStorage.setItem("token", data.token);
+          let { role } = token.decodeToken(data.token);
+          localStorage.setItem("role", role);
+          if (role === "kitchen") {
+            this.props.history.push(`/MenuOrder`);
+          } else if (role === "sender") {
+            this.props.history.push(`/SenderStatus`);
+          } else if (role === "user") {
+            this.props.history.push(`/Menu`);
+          }
+        }
+
+        // window.location.reload();
       });
     } catch (error) {
       console.log("Error : ", error);
