@@ -21,6 +21,7 @@ import MenuOrder from "./component/MemuOrder/MenuOrder";
 import EachMenuOrder from "./component/MemuOrder/EachMenuOrder";
 import SenderOrder from "./component/SenderOrder/SenderOrder";
 import SenderStatus from "./component/SenderStatus/SenderStatus";
+import SenderCustomer from "./component/SenderCustomer/SenderCustomer";
 
 import "./App.css";
 import axios from "axios";
@@ -77,9 +78,9 @@ class App extends Component {
           <Route exact path="/MenuOrder" component={MenuOrder} />
           <Route exact path="/OrderFood" component={OrderFood} />
           <Route exact path="/EachMenuOrder/:id" component={EachMenuOrder} />
-          <Route exact path="/SenderOrder" component={SenderOrder}/>
-          <Route exact path="/SenderStatus" component={SenderStatus}/>
-          
+          <Route exact path="/SenderOrder" component={SenderOrder} />
+          <Route exact path="/SenderStatus" component={SenderStatus} />
+          <Route exact path="/SenderCustomer" component={SenderCustomer} />
           {/* </ProtectedRoute> */}
         </Switch>
         {/* <Footer /> */}

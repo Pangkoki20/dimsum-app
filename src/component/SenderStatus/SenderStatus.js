@@ -60,7 +60,7 @@ class SenderStatus extends Component {
                         <Col xs="3"> {e.order_id}</Col>
                         <Col>{e.namefood} </Col>
                         <Col xs="3">
-                          <Button color="danger" outline href="/OrderFood">
+                          <Button color="danger" outline href="/SenderCustomer">
                             พร้อมส่งอาหาร
                           </Button>
                         </Col>

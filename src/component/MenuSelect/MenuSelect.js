@@ -4,7 +4,7 @@ import "./MenuSelect.css";
 import basket from "../../imgshop/shopping-basket.png";
 import "../Basket/Basket";
 import axios from "axios";
-import auth from '../service/index'
+import auth from "../service/index";
 class MenuSelect extends Component {
   state = {
     user: null
@@ -29,13 +29,11 @@ class MenuSelect extends Component {
   //   }
   // };
   componentDidMount() {
-		let user = auth.getToken()
-		let userDecoded = auth.decodeToken(user)
-    let uRole = userDecoded.role 
+    let user = auth.getToken();
+    let userDecoded = auth.decodeToken(user);
+    let uRole = userDecoded.role;
     this.setState({ user: uRole });
-  
-	
-	}
+  }
   render() {
     return (
       <div>
@@ -69,11 +67,6 @@ class MenuSelect extends Component {
             <NavItem>
               <NavLink className="" href="/Delivery">
                 ติดตามสถานะการจัดส่ง
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink className="" href="/MenuOrder">
-                รายการอาหารที่เข้ามา
               </NavLink>
             </NavItem>
             <NavItem className="ml-auto">
@@ -129,11 +122,7 @@ class MenuSelect extends Component {
         )}
         {this.state.user === "sender" ? (
           <Nav className="from_menusel">
-           
-              <NavLink  href="/SenderStatus">
-                อาหารพร้อมส่ง
-              </NavLink>
-            
+            <NavLink href="/SenderStatus">อาหารพร้อมส่ง</NavLink>
           </Nav>
         ) : (
           ""
