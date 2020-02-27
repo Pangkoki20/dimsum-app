@@ -88,6 +88,7 @@ class Order extends Component {
       console.log("ข้อมูลที่กำลังจะส่งไป ....  ", data);
       axios.post(`http://localhost:3001/api/order/create`, data).then(res => {
         const { data } = res;
+        //orderNo.
         this.setState({ message: data.message });
         let oldItems = [];
         localStorage.setItem("order", JSON.stringify(oldItems));

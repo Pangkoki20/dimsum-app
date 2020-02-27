@@ -60,6 +60,8 @@ class Login extends Component {
             this.props.history.push(`/SenderStatus`);
           } else if (role === "user") {
             this.props.history.push(`/Menu`);
+          } else if (role === "admin") {
+            this.props.history.push(`/Menu`);
           }
         }
 

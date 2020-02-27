@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import "./Menu.css";
 import img_buk from "../../imgfastfoood/บะกุ๊ดเต๋แนะนำ.png";
-import BTBasket from "../BTBasket/BTBasket";
 
 class MenuNewBuk extends Component {
   state = {
@@ -23,11 +22,17 @@ class MenuNewBuk extends Component {
       menu_value: 1,
       menu_price: this.state.menu_price
     };
-    oldItems.push(newData);
-    localStorage.setItem("order", JSON.stringify(oldItems));
-    console.log(" data : ", newData);
-    this.setState({ menu_value: 0 });
-    this.setState({ remark: "" });
+    const isHaveMenuAlready = oldItems.find(
+      menu => menu.menu_name === this.state.menu_name
+    );
+
+    if (!isHaveMenuAlready) {
+      oldItems.push(newData);
+      localStorage.setItem("order", JSON.stringify(oldItems));
+      console.log(" data : ", newData);
+      this.setState({ menu_value: 0 });
+      this.setState({ remark: "" });
+    }
   };
 
   handleInputChange = e => {

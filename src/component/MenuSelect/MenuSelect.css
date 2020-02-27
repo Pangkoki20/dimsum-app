@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+
 .from_menusel {
   font-family: "Kanit",
     sans-serif;
   font-size: 18px;
 }
+
 .input_search {
   font-family: "Kanit",
     sans-serif;
@@ -11,10 +13,17 @@
   width: 300px;
   margin-right: 0px !important;
 }
-.basket{
-    margin-right: 10px;
-    margin-top:-10px;
+
+.basket {
+
+  margin-top: -10px;
 }
+
+.text_numorder {
+  margin-top: -10px;
+  margin-left: 50px;
+}
+
 @media only screen and (max-width: 768px) {
   .input_search {
     font-size: 8px;

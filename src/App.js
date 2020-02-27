@@ -70,7 +70,7 @@ class App extends Component {
           <Route exact path="/Breakfast" component={Breakfast} />
           <Route exact path="/Fastfood" component={Fastfood} />
           <Route exact path="/Drink" component={Drink} />
-          <Route exact path="/Delivery" component={Delivery} />
+          <Route exact path="/Delivery/:id" component={Delivery} />
           <Route exact path="/Contact" component={Contact} />
           <Route exact path="Collapses" component={Collapses} />
           <Route exact path="/Menu" component={Menu} />

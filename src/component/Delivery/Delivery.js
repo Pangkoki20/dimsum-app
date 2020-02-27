@@ -19,6 +19,11 @@ class Delivery extends Component {
   };
   componentDidMount = async nextProps => {
     let token = localStorage.getItem("token");
+    const orders = await localStorage.getItem("order");
+    console.log({ orders });
+    //get params
+    const orderId = this.props.match.params.id;
+    console.log({ orderId });
     if (token) {
       if (token !== null) {
         this.setState({ check: "login" });

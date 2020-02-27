@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import dl_poo from "../../imgdimsum/ขนมจีบปู.png";
-import BTBasket from "../BTBasket/BTBasket";
 export default class Poo_Dumpling extends Component {
   state = {
     menu_name: "ขนมจีบปู",
@@ -21,11 +20,16 @@ export default class Poo_Dumpling extends Component {
       menu_value: 1,
       menu_price: this.state.menu_price
     };
-    oldItems.push(newData);
-    localStorage.setItem("order", JSON.stringify(oldItems));
-    console.log(" data : ", newData);
-    this.setState({ menu_value: 0 });
-    this.setState({ remark: "" });
+    const isHaveMenuAlready = oldItems.find(
+      menu => menu.menu_name === this.state.menu_name
+    );
+    if (!isHaveMenuAlready) {
+      oldItems.push(newData);
+      localStorage.setItem("order", JSON.stringify(oldItems));
+      console.log(" data : ", newData);
+      this.setState({ menu_value: 0 });
+      this.setState({ remark: "" });
+    }
   };
 
   handleInputChange = e => {

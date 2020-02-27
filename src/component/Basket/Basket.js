@@ -73,28 +73,61 @@ class Basket extends Component {
   }
 
   addCount = index => {
-    this.state.order.map((e, i) => {
-      if (index !== i) {
-        return this.setState({
-          count: this.state.count + 1
-        });
+    const { order } = this.state;
+    const newOrder = order.reduce((acc, next, indexArrrr) => {
+      if (index === indexArrrr) {
+        return [
+          ...acc,
+          {
+            ...next,
+            menu_value: (next.menu_value += 1)
+          }
+        ];
       }
+      return [
+        ...acc,
+        {
+          ...next
+        }
+      ];
+    }, []);
+    console.log({ newOrder });
+    this.setState({
+      order: newOrder
     });
   };
   removeCount = index => {
-    this.state.order.map((e, i) => {
-      if (index === i) {
-        return this.setState({
-          count: this.state.count - 1
-        });
+    const { order } = this.state;
+    const newOrder = order.reduce((acc, next, indexArrrr) => {
+      if (index === indexArrrr) {
+        return [
+          ...acc,
+          {
+            ...next,
+            menu_value: (next.menu_value -= 1)
+          }
+        ];
       }
+      return [
+        ...acc,
+        {
+          ...next
+        }
+      ];
+    }, []);
+    console.log({ newOrder });
+    this.setState({
+      order: newOrder
     });
   };
-
   render() {
+    const numberOfMenus = this.state.order.reduce(
+      (acc, next) => acc + next.menu_value,
+      0
+    );
     return (
       <div>
-        <MenuSelect />
+        <MenuSelect numberOnBucket={numberOfMenus} />
         <div className="container-fluid">
           <div className="text_basket">อาหารในตะกร้า</div>
           <div className="row">
@@ -105,7 +138,7 @@ class Basket extends Component {
                     <Col>ลำดับที่</Col>
                     <Col>ชื่ออาหาร</Col>
                     <Col>ราคา</Col>
-                    {/* <Col>จำนวน</Col> */}
+                    <Col>จำนวน</Col>
                     <Col>ลบออก</Col>
                   </Row>
                 </CardHeader>
@@ -117,24 +150,33 @@ class Basket extends Component {
                           <Col> {index + 1}</Col>
                           <Col>{e.menu_name} </Col>
                           <Col> {e.menu_price}</Col>
-                          {/* <Col>
+                          <Col>
                             <div
                               className="btn-group"
                               role="group"
-                              aria-label="First group"
+                              aria-label=""
                             >
+                              {e.menu_value > 1 ? (
+                                <button
+                                  type="button"
+                                  className="btn btn-outline-info"
+                                  onClick={() => this.removeCount(index)}
+                                >
+                                  -
+                                </button>
+                              ) : (
+                                <button
+                                  type="button"
+                                  className="btn btn-outline-info"
+                                >
+                                  -
+                                </button>
+                              )}
                               <button
                                 type="button"
                                 className="btn btn-outline-info"
-                                onClick={() => this.removeCount(index)}
                               >
-                                -
-                              </button>
-                              <button
-                                type="button"
-                                className="btn btn-outline-info"
-                              >
-                                {this.state.count}
+                                {e.menu_value}
                               </button>
                               <button
                                 type="button"
@@ -144,7 +186,7 @@ class Basket extends Component {
                                 +
                               </button>
                             </div>
-                          </Col> */}
+                          </Col>
                           <Col className="img_trash">
                             <div onClick={() => this.toRemove(index)}>
                               <i className="far fa-trash-alt"></i>

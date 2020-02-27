@@ -32,6 +32,7 @@ class SenderStatus extends Component {
     this.setState({ order: order.data });
     let menu = await axios.get(`http://localhost:3001/api/menu`);
     this.setState({ menu: menu.data });
+    console.log({ menu: menu.data });
   };
   render() {
     return (

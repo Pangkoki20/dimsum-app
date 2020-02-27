@@ -5,7 +5,6 @@ import {
   CardBody,
   Row,
   Col,
-  CardFooter,
   Container,
   Button
 } from "reactstrap";
