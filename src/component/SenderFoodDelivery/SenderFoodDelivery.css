@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+
+.img_fooddelivery {
+    text-align: center;
+}
+
+.text_fooddelivery {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10px;
+    color: #369621;
+    font-family: "Kanit",
+        sans-serif;
+}

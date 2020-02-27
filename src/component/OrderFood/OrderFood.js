@@ -75,7 +75,12 @@ class OrderFood extends Component {
                 <div className="bt_readysend">
                   <div className="d-flex">
                     <div className="col">
-                      <Button color="info" size="lg" block href="/SenderStatus">
+                      <Button
+                        color="info"
+                        size="lg"
+                        block
+                        href="/KitchenFoodFinish"
+                      >
                         อาหารพร้อมส่ง
                       </Button>
                     </div>

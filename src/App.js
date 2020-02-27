@@ -22,6 +22,8 @@ import EachMenuOrder from "./component/MemuOrder/EachMenuOrder";
 import SenderOrder from "./component/SenderOrder/SenderOrder";
 import SenderStatus from "./component/SenderStatus/SenderStatus";
 import SenderCustomer from "./component/SenderCustomer/SenderCustomer";
+import SenderFoodDelivery from "./component/SenderFoodDelivery/SenderFoodDelivery";
+import KitchenFoodFinish from "./component/KitchenFoodFinish/KitchenFoodFinish";
 
 import "./App.css";
 import axios from "axios";
@@ -81,6 +83,16 @@ class App extends Component {
           <Route exact path="/SenderOrder" component={SenderOrder} />
           <Route exact path="/SenderStatus" component={SenderStatus} />
           <Route exact path="/SenderCustomer" component={SenderCustomer} />
+          <Route
+            exact
+            path="/SenderFoodDelivery"
+            component={SenderFoodDelivery}
+          />
+          <Route
+            exact
+            path="/KitchenFoodFinish"
+            component={KitchenFoodFinish}
+          />
           {/* </ProtectedRoute> */}
         </Switch>
         {/* <Footer /> */}

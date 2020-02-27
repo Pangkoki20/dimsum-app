@@ -29,7 +29,7 @@ class SenderCustomer extends Component {
 
         <br></br>
         <div className="bt_shipping">
-          <Button outline color="danger">
+          <Button outline color="danger" href="/SenderFoodDelivery">
             กำลังจัดส่ง
           </Button>
         </div>
