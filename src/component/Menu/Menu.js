@@ -12,7 +12,6 @@ import axios from "axios";
 import auth from "../service/index";
 class Menu extends Component {
   state = {
-    user: null,
     order: []
   };
   onUserChanged = user => {

@@ -7,7 +7,7 @@ import axios from "axios";
 import auth from "../service/index";
 class MenuSelect extends Component {
   state = {
-    user: null
+    order: []
   };
 
   // componentDidMount = async nextProps => {
@@ -71,7 +71,7 @@ class MenuSelect extends Component {
                 ติดตามสถานะการจัดส่ง
               </NavLink>
             </NavItem>
-            <NavItem className="ml-auto">
+            {/* <NavItem className="ml-auto">
               <div className="input_search">
                 <form className="form-inline ">
                   <input
@@ -85,8 +85,8 @@ class MenuSelect extends Component {
                   </button>
                 </form>
               </div>
-            </NavItem>
-            <NavLink href="Basket">
+            </NavItem> */}
+            <NavLink className="from_basket" href="Basket">
               <div className="text_numorder">
                 <img className="basket" src={basket} />
                 <span className="badge-danger badge-pill ">
@@ -130,7 +130,7 @@ class MenuSelect extends Component {
                 ติดตามสถานะการจัดส่ง
               </NavLink>
             </NavItem>
-            <NavItem className="ml-auto">
+            {/* <NavItem className="ml-auto">
               <div className="input_search">
                 <form className="form-inline ">
                   <input
@@ -144,12 +144,14 @@ class MenuSelect extends Component {
                   </button>
                 </form>
               </div>
-            </NavItem>
-            <NavLink href="Basket">
+            </NavItem> */}
+            <NavLink className="from_basket" href="Basket">
               <img className="basket" src={basket} />
-              <span className="badge badge-danger badge-pill">
-                {numberOnBucket}
-              </span>
+              <div className="text_numorder">
+                <span className="badge-danger badge-pill">
+                  {numberOnBucket}
+                </span>
+              </div>
             </NavLink>
           </Nav>
         ) : (
