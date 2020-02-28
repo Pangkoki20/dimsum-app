@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, CardHeader, CardBody, Row, Col, Button } from "reactstrap";
+import { Table, Container, Button, Card } from "reactstrap";
 import "./SenderStatus.css";
 import axios from "axios";
 class SenderStatus extends Component {
@@ -38,11 +38,11 @@ class SenderStatus extends Component {
     return (
       <div className="container-fluid ">
         <div className="text_senderstatus">อาหารพร้อมส่ง</div>
-        <div className="card_senderstatus">
+        {/* <div className="card_senderstatus">
           <Card>
             <CardHeader>
               <Row>
-                <Col xs="3">ลำดับ</Col>
+                <Col xs="3">order_id</Col>
                 <Col>รายการ</Col>
                 <Col xs="3">สถานะ</Col>
               </Row>
@@ -75,7 +75,27 @@ class SenderStatus extends Component {
             })}
           </Card>
           <br></br>
-        </div>
+        </div> */}
+        <Container className="themed-container" fluid="xl">
+          <Table hover className="table_senderstatus">
+            <thead>
+              <tr className="text_tablesenderstatus">
+                <th>order_id</th>
+                <th>สถานะ</th>
+              </tr>
+            </thead>
+            <tbody className="table_senderstatus">
+              <tr>
+                <th scope="row"></th>
+                <td>
+                  <Button color="danger" outline href="/SenderCustomer">
+                    พร้อมส่งอาหาร
+                  </Button>
+                </td>
+              </tr>
+            </tbody>
+          </Table>
+        </Container>
       </div>
     );
   }

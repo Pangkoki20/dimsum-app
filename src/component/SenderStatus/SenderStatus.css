@@ -1,15 +1,27 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 
-.text_senderstatus{
+.text_senderstatus {
     font-size: 40px;
     text-align: center;
     font-family: "Kanit",
-    sans-serif;
+        sans-serif;
 }
+
 .card_senderstatus {
     margin-top: 20px;
     text-align: center;
     font-family: "Kanit",
-    sans-serif;
+        sans-serif;
     font-size: 20px;
+}
+
+.table_senderstatus {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.text_tablesenderstatus {
+    font-family: "Kanit",
+        sans-serif;
+    font-size: 18px;
 }

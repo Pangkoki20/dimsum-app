@@ -71,7 +71,7 @@ class MenuSelect extends Component {
                 ติดตามสถานะการจัดส่ง
               </NavLink>
             </NavItem>
-            {/* <NavItem className="ml-auto">
+            <NavItem className="ml-auto">
               <div className="input_search">
                 <form className="form-inline ">
                   <input
@@ -85,7 +85,7 @@ class MenuSelect extends Component {
                   </button>
                 </form>
               </div>
-            </NavItem> */}
+            </NavItem>
             <NavLink className="from_basket" href="Basket">
               <div className="text_numorder">
                 <img className="basket" src={basket} />
@@ -130,7 +130,7 @@ class MenuSelect extends Component {
                 ติดตามสถานะการจัดส่ง
               </NavLink>
             </NavItem>
-            {/* <NavItem className="ml-auto">
+            <NavItem className="ml-auto">
               <div className="input_search">
                 <form className="form-inline ">
                   <input
@@ -144,7 +144,7 @@ class MenuSelect extends Component {
                   </button>
                 </form>
               </div>
-            </NavItem> */}
+            </NavItem>
             <NavLink className="from_basket" href="Basket">
               <img className="basket" src={basket} />
               <div className="text_numorder">

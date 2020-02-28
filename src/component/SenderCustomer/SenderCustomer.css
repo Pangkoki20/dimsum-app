@@ -1,3 +1,11 @@
 .bt_shipping {
     text-align: center;
 }
+
+.card_sendercustomer {
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Kanit",
+        sans-serif;
+    font-size: 20px;
+}
