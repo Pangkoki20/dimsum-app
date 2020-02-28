@@ -24,6 +24,9 @@ import SenderStatus from "./component/SenderStatus/SenderStatus";
 import SenderCustomer from "./component/SenderCustomer/SenderCustomer";
 import SenderFoodDelivery from "./component/SenderFoodDelivery/SenderFoodDelivery";
 import KitchenFoodFinish from "./component/KitchenFoodFinish/KitchenFoodFinish";
+import FoodOrder from "./component/FoodOrder/FoodOrder";
+import ListUser from "./component/ListUser/ListUser";
+import DeliveryFood from "./component/DeliveryFood/DeliveryFood";
 
 import "./App.css";
 import axios from "axios";
@@ -77,12 +80,19 @@ class App extends Component {
           <Route exact path="/ShowOrder" component={ShowOrder} />
           <Route exact path="/Basket" component={Basket} />
           <Route exact path="/Order" component={Order} />
-          <Route exact path="/MenuOrder" component={MenuOrder} />
+          <Route exact path="/ListUser" component={ListUser} />
+          <Route
+            exact
+            path="/MenuOrder/:userid/:orderid"
+            component={MenuOrder}
+          />
+          <Route exact path="/FoodOrder/:userid" component={FoodOrder} />
           <Route exact path="/OrderFood" component={OrderFood} />
           <Route exact path="/EachMenuOrder/:id" component={EachMenuOrder} />
           <Route exact path="/SenderOrder" component={SenderOrder} />
           <Route exact path="/SenderStatus" component={SenderStatus} />
           <Route exact path="/SenderCustomer" component={SenderCustomer} />
+          <Route exact path="/DeliveryFood" component={DeliveryFood} />
           <Route
             exact
             path="/SenderFoodDelivery"

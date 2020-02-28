@@ -1,101 +1,50 @@
 import React, { Component } from "react";
-import { Table, Container, Button, Card } from "reactstrap";
+import { Card, CardHeader, CardBody, Row, Col, Button } from "reactstrap";
 import "./SenderStatus.css";
 import axios from "axios";
 class SenderStatus extends Component {
   state = {
-    user: null,
-    order: [],
-    menu: []
+    order: []
   };
   onUserChanged = user => {
     this.setState({ user });
   };
   componentDidMount = async nextProps => {
-    let token = localStorage.getItem("token");
-    if (token) {
-      if (token !== null) {
-        this.setState({ check: "login" });
-      }
-      let res = await axios.post(`http://localhost:3001/api/users/me`, {
-        token
-      });
-      // if (!res) {
-      //   window.location.href = "/login";
-      //   return;
-      // }
-      this.setState({ user: res.data });
-    } else {
-      window.location.href = "/login";
-    }
     let order = await axios.get(`http://localhost:3001/api/order`);
     this.setState({ order: order.data });
-    let menu = await axios.get(`http://localhost:3001/api/menu`);
-    this.setState({ menu: menu.data });
-    console.log({ menu: menu.data });
   };
   render() {
     return (
       <div className="container-fluid ">
-        <div className="text_senderstatus">อาหารพร้อมส่ง</div>
-        {/* <div className="card_senderstatus">
-          <Card>
-            <CardHeader>
-              <Row>
-                <Col xs="3">order_id</Col>
-                <Col>รายการ</Col>
-                <Col xs="3">สถานะ</Col>
-              </Row>
-            </CardHeader>
-            {this.state.menu.map((e, index) => {
-              if (
-                e.order_id !==
-                this.state.order.map(item => {
-                  return item.id;
-                })
-              ) {
-                return (
-                  <div key={index + 1}>
+        <div className="text_senderstatus">ออเดอร์อาหารพร้อมส่ง</div>
+        <div className="row">
+          <div className="col-md-6 offset-md-3">
+            <Card className="card_orderkitchen">
+              <CardHeader>
+                <Row>
+                  <Col>order_id</Col>
+                  <Col>สถานะ</Col>
+                </Row>
+              </CardHeader>
+              {this.state.order.map(order => {
+                if (order.status == "4")
+                  return (
                     <CardBody>
                       <Row>
-                        <Col xs="3"> {e.order_id}</Col>
-                        <Col>{e.namefood} </Col>
-                        <Col xs="3">
-                          <Button color="danger" outline href="/SenderCustomer">
-                            พร้อมส่งอาหาร
+                        <Col>{order.id}</Col>
+                        <Col>
+                          <Button color="danger" outline href="/DeliveryFood">
+                            จัดส่งอาหาร
                           </Button>
                         </Col>
                       </Row>
                     </CardBody>
-                  </div>
-                );
-              } else {
-                return false;
-              }
-            })}
-          </Card>
-          <br></br>
-        </div> */}
-        <Container className="themed-container" fluid="xl">
-          <Table hover className="table_senderstatus">
-            <thead>
-              <tr className="text_tablesenderstatus">
-                <th>order_id</th>
-                <th>สถานะ</th>
-              </tr>
-            </thead>
-            <tbody className="table_senderstatus">
-              <tr>
-                <th scope="row"></th>
-                <td>
-                  <Button color="danger" outline href="/SenderCustomer">
-                    พร้อมส่งอาหาร
-                  </Button>
-                </td>
-              </tr>
-            </tbody>
-          </Table>
-        </Container>
+                  );
+                else return null;
+              })}
+            </Card>
+          </div>
+        </div>
       </div>
     );
   }

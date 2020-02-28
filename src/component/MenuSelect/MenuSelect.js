@@ -160,7 +160,7 @@ class MenuSelect extends Component {
         {this.state.user === "kitchen" ? (
           <Nav className="from_menusel">
             <NavItem>
-              <NavLink className="" href="/MenuOrder">
+              <NavLink className="" href="/ListUser">
                 รายการอาหารที่เข้ามา
               </NavLink>
             </NavItem>

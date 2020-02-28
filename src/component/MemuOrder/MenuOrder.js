@@ -1,13 +1,5 @@
 import React, { Component } from "react";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  Row,
-  Col,
-  Button,
-  CardText
-} from "reactstrap";
+import { Card, CardHeader, CardBody, Row, Col, Button } from "reactstrap";
 import "./MenuOrder.css";
 import axios from "axios";
 class MenuOrder extends Component {
@@ -47,24 +39,41 @@ class MenuOrder extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <div className="text_orderkitchen">รายการอาหารที่เข้ามา</div>
+        <div className="text_orderkitchen">รายการอาหาร</div>
         <div className="row">
-          <div className="col-12 col-md-8">
+          <div className="col-md-6 offset-md-3">
             <Card className="card_orderkitchen">
               <CardHeader>
                 <Row>
-                  <Col xs="3">ลำดับที่</Col>
+                  <Col xs="3">order_id</Col>
                   <Col>รายการ</Col>
                   <Col xs="3">สถานะ</Col>
                 </Row>
               </CardHeader>
               {this.state.menu.map((e, index) => {
                 if (
-                  e.order_id !==
-                  this.state.order.map(item => {
-                    return item.id;
-                  })
+                  // e.order_id !==
+                  // this.state.order.map(item => {
+                  //   return item.id;
+                  // })
+                  e.order_id == this.props.match.params.orderid &&
+                  this.state.order.find(order => order.id == e.order_id) &&
+                  this.state.order.find(order => order.id == e.order_id)
+                    .user_id == this.props.match.params.userid
                 ) {
+                  console.log(
+                    "e.order_id = ",
+                    e.order_id,
+                    " ",
+                    "urlorder = ",
+                    this.props.match.params.orderid,
+                    " ",
+                    this.state.order.find(order => order.id == e.order_id) &&
+                      this.state.order.find(order => order.id == e.order_id)
+                        .user_id
+                  );
+                  if (index === 0) {
+                  }
                   return (
                     <div key={index + 1}>
                       <CardBody>
@@ -72,7 +81,7 @@ class MenuOrder extends Component {
                           <Col xs="3"> {e.order_id}</Col>
                           <Col>{e.namefood} </Col>
                           <Col xs="3">
-                            <Button color="danger" outline href="/OrderFood">
+                            <Button color="danger" outline href="">
                               รับรายการอาหาร
                             </Button>
                           </Col>
@@ -86,56 +95,15 @@ class MenuOrder extends Component {
               })}
             </Card>
             <br></br>
-          </div>
-          <div class="col-6 col-md-4 ">
-            <div className="from_money">
-              <Card>
-                {/* <CardHeader className="text_money">Order</CardHeader> */}
-                <div className="table_num">
-                  <div className="d-flex">
-                    <div className="col-6">
-                      <CardText className="tt_food ">Order ทั้งหมด</CardText>
-                    </div>
-                    <div className="col">
-                      <CardText className="tt_food text_num">
-                        {this.state.order.length}
-                      </CardText>
-                    </div>
-                    <div className="col">
-                      <CardText className="tt_food text_unit">Order</CardText>
-                    </div>
-                  </div>
-                </div>
-                <div className="table_num">
-                  <div className="d-flex">
-                    <div className="col-6">
-                      <CardText className="tt_food">Order ที่รับแล้ว</CardText>
-                    </div>
-                    <div className="col">
-                      <CardText className="tt_food text_num"></CardText>
-                    </div>
-                    <div className="col">
-                      <CardText className="tt_food text_unit">Order</CardText>
-                    </div>
-                  </div>
-                </div>
-                <div className="table_num">
-                  <div className="d-flex">
-                    <div className="col-6">
-                      <CardText className="tt_food">
-                        Order ที่ยังไม่รับ
-                      </CardText>
-                    </div>
-                    <div className="col">
-                      <CardText className="tt_food text_num"></CardText>
-                    </div>
-                    <div className="col">
-                      <CardText className="tt_food text_unit">Order</CardText>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            </div>
+            <Button
+              className="bt_foodready"
+              color="primary"
+              size="lg"
+              block
+              href="/KitchenFoodFinish"
+            >
+              อาหารพร้อมส่ง
+            </Button>
           </div>
         </div>
       </div>

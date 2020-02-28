@@ -20,40 +20,22 @@ class SenderCustomer extends Component {
                   <Row>
                     <Col xs="3"></Col>
                     <Col></Col>
-                    <Col xs="3">
-                      <Button
-                        className="bt_shipping"
-                        outline
-                        color="danger"
-                        href="/SenderFoodDelivery"
-                      >
-                        กำลังจัดส่ง
-                      </Button>
-                    </Col>
+                    <Col xs="3"></Col>
                   </Row>
                 </CardBody>
               </div>
             </Card>
           </Col>
-          <div>
-            <Col xs="4">
-              <Card>
-                <CardHeader>
-                  <Row>
-                    <Col>ข้อมูลลูกค้า</Col>
-                  </Row>
-                </CardHeader>
-                <div>
-                  <CardBody>
-                    <Row>
-                      <Col xs="1"></Col>
-                    </Row>
-                  </CardBody>
-                </div>
-              </Card>
-            </Col>
-          </div>
           <br></br>
+          <Button
+            className="bt_already"
+            color="primary"
+            size="lg"
+            block
+            href="/SenderFoodDelivery"
+          >
+            เรียบร้อยแล้ว
+          </Button>
         </div>
       </div>
     );

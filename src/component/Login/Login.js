@@ -48,14 +48,14 @@ class Login extends Component {
 
       axios.post(`http://localhost:3001/api/users/login`, data).then(res => {
         const { data } = res;
-        if (data) {
+        if (data && data.token) {
           this.setState({ message: data.message });
           this.props.onUserChanged(res);
           localStorage.setItem("token", data.token);
           let { role } = token.decodeToken(data.token);
           localStorage.setItem("role", role);
           if (role === "kitchen") {
-            this.props.history.push(`/MenuOrder`);
+            this.props.history.push(`/ListUser`);
           } else if (role === "sender") {
             this.props.history.push(`/SenderStatus`);
           } else if (role === "user") {

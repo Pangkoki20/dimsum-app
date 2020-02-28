@@ -38,3 +38,10 @@
 .bt_receivefooditems {
     text-align: right;
 }
+
+.bt_foodready {
+    font-size: 20px;
+    text-align: center;
+    font-family: "Kanit",
+        sans-serif;
+}

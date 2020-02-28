@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+
 .text_status {
     margin-top: 15px;
     font-size: 50px;
@@ -9,26 +10,28 @@
 }
 
 .from_status {
-    margin-top: 30px;
+    margin-top: 50px;
     padding-left: 100px;
     padding-right: 100px;
     text-align: center;
     font-family: "Kanit",
         sans-serif;
 }
-.frame_status{
-    
-}
+
+.frame_status {}
+
 .font_status {
     font-size: 14px;
     margin-top: 8px;
 }
-.text-addre{
+
+.text-addre {
     font-size: 20px;
     margin-top: 10px;
     font-family: "Kanit",
-    sans-serif;
+        sans-serif;
 }
+
 .img_menu {
     width: 70px;
     height: 80px;
@@ -52,27 +55,32 @@
     height: 80px;
     text-align: center;
 }
-.img_breakfast{
+
+.img_breakfast {
     width: 70px;
     height: 80px;
     text-align: center;
 }
-.img_foodorder{
+
+.img_foodorder {
     width: 70px;
     height: 80px;
     text-align: center;
 }
-.img_address{
+
+.img_address {
     width: 70px;
     height: 80px;
     text-align: center;
 }
-.img_pay{
+
+.img_pay {
     width: 70px;
     height: 80px;
     text-align: center;
 }
-.img_confirm{
+
+.img_confirm {
     width: 70px;
     height: 80px;
     text-align: center;
