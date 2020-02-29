@@ -14,13 +14,17 @@
   margin-right: 10px !important;
 }
 
-.basket {
+.text_numorder {
+  font-size: 13px;
+  margin-left: 10px !important;
+}
+
+.from_basket {
   margin-top: -10px;
 }
 
-.text_numorder {
-  font-size: 13px;
-  margin-left: 31px !important;
+.bt_num {
+  margin-right: 10px;
 }
 
 @media only screen and (max-width: 768px) {

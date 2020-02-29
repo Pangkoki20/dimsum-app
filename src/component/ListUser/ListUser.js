@@ -27,7 +27,7 @@ class ListUser extends Component {
             <Card className="card_orderkitchen">
               <CardHeader>
                 <Row>
-                  <Col xs="3">ลำดับที่</Col>
+                  <Col xs="3">user_id</Col>
                   <Col>ชื่อ</Col>
                   <Col>นามสกุล</Col>
                   <Col>เบอร์โทร</Col>
@@ -35,32 +35,32 @@ class ListUser extends Component {
                 </Row>
               </CardHeader>
               {this.state.users.map((user, index) => {
-                // if (user.role === "user")
-                if (true)
-                  return (
-                    <div key={index + 1}>
-                      <CardBody>
-                        <Row>
-                          <Col xs="3"> {user.id}</Col>
-                          <Col>{user.firstname} </Col>
-                          <Col>{user.lastname} </Col>
-                          <Col>{user.phone} </Col>
-                          <Col xs="3">
-                            <Button
-                              color="danger"
-                              outline
-                              href={`/FoodOrder/${user.id}`}
-                            >
-                              รับรายการอาหาร
-                            </Button>
-                          </Col>
-                        </Row>
-                      </CardBody>
-                    </div>
-                  );
-                else {
-                  return null;
-                }
+                if (user.role === "user")
+                  if (true)
+                    return (
+                      <div key={index + 1}>
+                        <CardBody>
+                          <Row>
+                            <Col xs="3"> {user.id}</Col>
+                            <Col>{user.firstname} </Col>
+                            <Col>{user.lastname} </Col>
+                            <Col>{user.phone} </Col>
+                            <Col xs="3">
+                              <Button
+                                color="danger"
+                                outline
+                                href={`/FoodOrder/${user.id}`}
+                              >
+                                รับรายการอาหาร
+                              </Button>
+                            </Col>
+                          </Row>
+                        </CardBody>
+                      </div>
+                    );
+                  else {
+                    return null;
+                  }
               })}
             </Card>
             <br></br>

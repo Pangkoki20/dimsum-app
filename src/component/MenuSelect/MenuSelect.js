@@ -146,9 +146,9 @@ class MenuSelect extends Component {
               </div>
             </NavItem>
             <NavLink className="from_basket" href="Basket">
-              <img className="basket" src={basket} />
               <div className="text_numorder">
-                <span className="badge-danger badge-pill">
+                <img className="basket" src={basket} />
+                <span className="badge-danger badge-pill ">
                   {numberOnBucket}
                 </span>
               </div>

@@ -27,6 +27,13 @@
     text-align: right;
 }
 
+.bt_receivetwo {
+    font-size: 20px;
+    text-align: center;
+    font-family: "Kanit",
+        sans-serif;
+}
+
 .bt_cooking {
     text-align: left;
 }

@@ -45,9 +45,9 @@ class MenuOrder extends Component {
             <Card className="card_orderkitchen">
               <CardHeader>
                 <Row>
-                  <Col xs="3">order_id</Col>
+                  {/* <Col xs="3">order_id</Col> */}
                   <Col>รายการ</Col>
-                  <Col xs="3">สถานะ</Col>
+                  <Col>จำนวน</Col>
                 </Row>
               </CardHeader>
               {this.state.menu.map((e, index) => {
@@ -78,13 +78,9 @@ class MenuOrder extends Component {
                     <div key={index + 1}>
                       <CardBody>
                         <Row>
-                          <Col xs="3"> {e.order_id}</Col>
+                          {/* <Col xs="3"> {e.order_id}</Col> */}
                           <Col>{e.namefood} </Col>
-                          <Col xs="3">
-                            <Button color="danger" outline href="">
-                              รับรายการอาหาร
-                            </Button>
-                          </Col>
+                          <Col></Col>
                         </Row>
                       </CardBody>
                     </div>
@@ -94,6 +90,12 @@ class MenuOrder extends Component {
                 }
               })}
             </Card>
+            <br></br>
+            <div className="bt_receivetwo">
+              <Button color="danger" size="lg" block outline href="">
+                รับรายการอาหาร
+              </Button>
+            </div>
             <br></br>
             <Button
               className="bt_foodready"
