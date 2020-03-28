@@ -1,23 +1,32 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
-.from_lo{
-  padding-left: 500px ;
-  padding-right: 500px;
-}
+
 .form-login {
   margin-top: 150px;
-  margin-bottom: 100px;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  margin-bottom: 50px;
   text-align: center;
-  border:3px ;
+  border: 3px;
+
 }
-.text_login{
-   text-align: center;
-   font-size: 30px;
-     font-family: "Kanit",
-     sans-serif;
+
+.text_login {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 25px;
+  font-family: "Kanit",
+    sans-serif;
+  color: #003366;
 }
+
+.from_inputemail {
+  margin-top: 20px;
+}
+
+.from_inputpass {
+  margin-top: 20px;
+
+}
+
 .btn-login {
   margin-top: 30px;
   text-align: center !important;
@@ -30,7 +39,7 @@
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 18px;
+  font-size: 17px !important;
   font-family: "Kanit", sans-serif;
 }
 
@@ -44,22 +53,24 @@
 
 .input-login {
   width: 400px !important;
-  height: 50px !important;
+  height: 40px !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  margin-top: 35px;
   padding: 10px;
   font-family: "Kanit", sans-serif;
+  font-size: 16px !important;
+
 }
 
 .logo {
-  height: 200px;
+  height: 130px;
+  text-align: center;
 }
 
 .forget-pass {
-  font-size: 20px;
-  margin-left: 300px;
-  font-family: "Kanit",sans-serif;
+  font-size: 15px;
+  font-family: "Kanit", sans-serif;
+  text-align: right;
 }
 
 .reg {
@@ -68,59 +79,5 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .lo {
-    margin-top: 90px;
-    height: 80px;
-    width: 80px;
-  }
-
-  .input-login {
-    margin: 20px 50px 15px 50px;
-    width: 250px !important;
-    height: 35px !important;
-    font-size: 12px !important;
-    text-align: center;
-  }
-
-  .btn-login {
-    margin-top: 50px;
-    text-align: center;
-    width: 200px !important;
-    height: 40px !important;
-    padding: 15px !important;
-    font-family: "Kanit", sans-serif;
-  }
-
-  .text-re {
-    font-size: 12px;
-    padding: 15px !important;
-  }
-
-  .form-login {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -50px;
-    text-align: center;
-  }
-
-  .btn-register {
-    font-size: 12px;
-    font-family: "Kanit", sans-serif;
-    margin-top: 5px;
-  }
-
-  .fon-btl {
-    font-family: "Montserrat Alternates", sans-serif;
-  }
-
-  .forget-pass {
-    font-size: 10px;
-    margin-right: 50px;
-  }
-
-  .btn-forgot {
-    margin-top: 10px;
-    font-size: 12px;
-    font-family: "Kanit", sans-serif;
-  }
+  .from_lo {}
 }

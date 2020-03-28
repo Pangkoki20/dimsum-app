@@ -4,7 +4,7 @@
 
 .fon-bar {
   font-family: 'Righteous', cursive;
-  color: hsl(160, 31%, 77%);
+  color: #003366;
   font-size: 30px;
   margin-top: 10px;
   margin-right: 10px;
@@ -12,37 +12,38 @@
 
 .fon-barr {
   margin-top: 10px;
-  font-family: "Kanit",sans-serif;
-  color: hsl(160, 31%, 77%);
-  font-size: 18px;
+  font-family: "Kanit", sans-serif;
+  color: #003366;
+  font-size: 16px;
 }
 
 .fon-logout {
   /* margin-top: 10px; */
   color: hsl(0, 0%, 3%);
   font-size: 18px;
-  font-family: "Kanit",sans-serif;
+  font-family: "Kanit", sans-serif;
 }
 
 .fon-logout:hover {
   color: hsl(0, 0%, 3%);
   font-size: 20px;
-  font-family: "Kanit",sans-serif;
+  font-family: "Kanit", sans-serif;
 }
+
 .bt_login {
+  margin-top: 4px;
   text-align: center;
-  margin-left: 20px;
-  height: 40px;
-  width: 40px;
-  text-align: center;
+  font-family: "Kanit",
+    sans-serif;
+  background-color: #66CCFF;
 }
 
 .fon-barr:hover {
-  color: #2ccef6;
+  color: #1e8da8;
 }
 
 .bar {
-  background-color: #1d6a96;
+  background-color: #F8F8FF;
   border-color: aliceblue;
 }
 

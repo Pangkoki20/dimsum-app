@@ -99,17 +99,17 @@ export default class Navigator extends React.Component {
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <NavLink href="/">
-                  <h6 className="fon-barr">หน้าหลัก</h6>
+                  <div className="fon-barr">หน้าหลัก</div>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/Menu">
-                  <h6 className="fon-barr">สั่งอาหาร</h6>
+                  <div className="fon-barr">สั่งอาหาร</div>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/Contact">
-                  <h6 className="fon-barr">ติดต่อเรา</h6>
+                  <div className="fon-barr">ติดต่อเรา</div>
                 </NavLink>
               </NavItem>
 
@@ -117,7 +117,7 @@ export default class Navigator extends React.Component {
                 <NavItem>
                   <NavLink>
                     <div className="Login">
-                      <h6 className="fon-barr">ADMIN </h6>
+                      <div className="fon-barr">ADMIN </div>
                     </div>
                   </NavLink>
                 </NavItem>
@@ -126,7 +126,7 @@ export default class Navigator extends React.Component {
                 <NavItem>
                   <NavLink>
                     <div className="Login">
-                      <h6 className="fon-barr">Sender</h6>
+                      <div className="fon-barr">Sender</div>
                     </div>
                   </NavLink>
                 </NavItem>
@@ -134,19 +134,18 @@ export default class Navigator extends React.Component {
               {this.state.role === "kitchen" && this.state.check === "login" && (
                 <NavItem>
                   <NavLink>
-                    <div className="Login">
-                      <h6 className="fon-barr">Kitchen</h6>
-                    </div>
+                    <div className="fon-barr">Kitchen</div>
                   </NavLink>
                 </NavItem>
               )}
 
               {this.state.check !== "login" && (
                 <NavItem>
-                  <NavLink href="Login">
-                    <div className="Login ">
-                      <img className="login bt_login" src={login} />
+                  <NavLink href="/Login">
+                    <div className="bt_login">
+                      <Button color=" primary">เข้าสู่ระบบ</Button>
                     </div>
+                    {/* <img className="login " src={login} /> */}
                   </NavLink>
                 </NavItem>
               )}

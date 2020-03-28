@@ -1,29 +1,28 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
-.img_home{
-   /* width: 100%; */
-}
-.img {
-  width: 300px !important;
-  height: 80px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  display: block;
-}
+
 .ban-size {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
 }
+
 .text {
   margin-top: 20px;
   font-family: "Kanit", sans-serif;
 }
-.bt_startfood{
-  margin-top: 30px;
+
+.bt_startfood {
+  margin-top: 15px;
   text-align: center;
   font-family: "Kanit",
-  sans-serif;
-  font-size: 22px;
+    sans-serif;
+
 }
+
+.fon_btstfood {
+  font-size: 22 px;
+  color: #134577;
+}
+
 @media only screen and (max-width: 768px) {
   .img {
     height: 20px !important;
@@ -32,6 +31,7 @@
     margin-right: auto !important;
     display: block;
   }
+
   .ban-size {
     margin-top: 20px;
     text-align: center;
