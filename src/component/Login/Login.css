@@ -1,16 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
 
 .form-login {
-  margin-top: 150px;
-  margin-bottom: 50px;
+  margin-top: 70px;
   text-align: center;
-  border: 3px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
 
+.logo {
+  height: 130px;
+  text-align: center;
+  margin-top: 100px;
 }
 
 .text_login {
-  margin-top: 15px;
+  margin-top: 20px;
   text-align: center;
   font-size: 25px;
   font-family: "Kanit",
@@ -18,21 +24,29 @@
   color: #003366;
 }
 
+.from_input {
+  text-align: center !important;
+}
+
 .from_inputemail {
-  margin-top: 20px;
+  margin-top: 10px;
+  text-align: center !important;
 }
 
 .from_inputpass {
-  margin-top: 20px;
-
+  margin-top: 10px;
+  text-align: center !important;
 }
 
 .btn-login {
-  margin-top: 30px;
+  margin-top: 15px;
   text-align: center !important;
-  padding: 15px !important;
-  font-size: 18px !important;
-  font-family: "Kanit", sans-serif;
+  color: #eff6fd !important;
+  font-size: 16px !important;
+  font-family: 'Prompt',
+    sans-serif;
+
+
 }
 
 .btn-forgot {
@@ -43,41 +57,72 @@
   font-family: "Kanit", sans-serif;
 }
 
-.text-re {
-  margin-top: 50px;
-  text-align: center;
-  padding: 15px !important;
-  text-align: center !important;
-  font-family: "Kanit", sans-serif;
-}
-
 .input-login {
   width: 400px !important;
   height: 40px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
   padding: 10px;
   font-family: "Kanit", sans-serif;
-  font-size: 16px !important;
+  font-size: 15px !important;
 
-}
-
-.logo {
-  height: 130px;
-  text-align: center;
 }
 
 .forget-pass {
   font-size: 15px;
   font-family: "Kanit", sans-serif;
-  text-align: right;
+  margin-left: 320px;
+  margin-top: 5px;
 }
 
-.reg {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
+@media only screen and (max-width: 767px) {
+  .form-login {
+    width: 100%;
+  }
 
-@media only screen and (max-width: 768px) {
-  .from_lo {}
+  .logo {
+    height: 80px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .text_login {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .from_inputemail {
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .from_inputpass {
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .btn-login {
+    margin-top: 5px;
+    text-align: center !important;
+    font-size: 14px !important;
+  }
+
+  .btn-forgot {
+
+    font-size: 12px !important;
+  }
+
+  .input-login {
+    width: 300px !important;
+    height: 30px !important;
+    font-size: 12px !important;
+
+  }
+
+  .forget-pass {
+    font-size: 12px;
+    margin-left: 240px;
+    margin-top: 5px;
+  }
 }

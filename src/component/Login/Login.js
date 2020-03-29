@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import { Form, FormGroup, Input, Button } from "reactstrap";
+import { Form, FormGroup, Input, Button, Container } from "reactstrap";
 import axios from "axios";
 import "./Login.css";
 import logo_login from "../../img/logo_login.png";
@@ -75,13 +75,13 @@ class Login extends Component {
   render() {
     console.log("Res", this.state.user);
     return (
-      <div className="container-fluid">
-        <div className="form-login ">
-          <Form>
-            <FormGroup>
-              <span>
-                <img className="logo" src={logo_login} />
-                <div className="text_login">เข้าสู่ระบบ</div>
+      <div className="container form-login ">
+        <span>
+          <img className="logo" src={logo_login} />
+          <div className="text_login ">เข้าสู่ระบบ</div>
+          <div className="row justify-content-md-center">
+            <Form className="from_input ">
+              <FormGroup>
                 <div className="from_inputemail">
                   <Input
                     className="input-login"
@@ -104,32 +104,31 @@ class Login extends Component {
                     onChange={this.handleInputChange}
                   />
                 </div>
-                <a href="/">
-                  <p className="forget-pass"> ลืมรหัสผ่าน </p>
-                </a>{" "}
-              </span>
-            </FormGroup>
-            <Button
-              href="/"
-              className="btn-login"
-              color="info"
-              onClick={e => this.login(e)}
-            >
-              ลงชื่อเข้าใช้งาน
-            </Button>
 
-            <div className="btn-forgot ">
-              <lable className="reg">หากคุณยังไม่เป็นสมาชิก </lable>
-              <a href="/Register">สมัครสมาชิก</a>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-            </div>
-          </Form>
-        </div>
+                <a href="/">
+                  <p className="forget-pass ">ลืมรหัสผ่าน</p>
+                </a>
+              </FormGroup>
+            </Form>
+          </div>
+          <Button
+            href="/"
+            className="btn-login"
+            color="info"
+            onClick={e => this.login(e)}
+          >
+            ลงชื่อเข้าใช้งาน
+          </Button>
+
+          <div className="btn-forgot ">
+            <lable className="reg">หากคุณยังไม่เป็นสมาชิก </lable>
+            <a href="/Register">สมัครสมาชิก</a>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+          </div>
+        </span>
       </div>
     );
   }
