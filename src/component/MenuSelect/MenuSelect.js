@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { Nav, NavLink, NavItem, Badge } from "reactstrap";
+import { Nav, NavLink, NavItem } from "reactstrap";
 import "./MenuSelect.css";
 import basket from "../../imgshop/shopping-basket.png";
 import "../Basket/Basket";
-import axios from "axios";
 import auth from "../service/index";
 class MenuSelect extends Component {
   state = {
@@ -40,7 +39,7 @@ class MenuSelect extends Component {
     return (
       <div>
         {this.state.user === "user" ? (
-          <Nav className="from_menusel">
+          <Nav className="from_menuselect">
             <NavItem>
               <NavLink className="border-right" href="/Menu">
                 เมนูแนะนำ
@@ -71,7 +70,7 @@ class MenuSelect extends Component {
                 ติดตามสถานะการจัดส่ง
               </NavLink>
             </NavItem>
-            <NavItem className="ml-auto">
+            {/* <NavItem className="ml-auto">
               <div className="input_search">
                 <form className="form-inline ">
                   <input
@@ -85,15 +84,17 @@ class MenuSelect extends Component {
                   </button>
                 </form>
               </div>
+            </NavItem> */}
+            <NavItem className="ml-auto">
+              <NavLink className="from_basket" href="Basket">
+                <div className="text_numorder">
+                  <img className="basket" src={basket} />
+                  <span className="badge-danger badge-pill ">
+                    {numberOnBucket}
+                  </span>
+                </div>
+              </NavLink>
             </NavItem>
-            <NavLink className="from_basket" href="Basket">
-              <div className="text_numorder">
-                <img className="basket" src={basket} />
-                <span className="badge-danger badge-pill ">
-                  {numberOnBucket}
-                </span>
-              </div>
-            </NavLink>
           </Nav>
         ) : (
           ""
@@ -130,7 +131,7 @@ class MenuSelect extends Component {
                 ติดตามสถานะการจัดส่ง
               </NavLink>
             </NavItem>
-            <NavItem className="ml-auto">
+            {/* <NavItem className="ml-auto">
               <div className="input_search">
                 <form className="form-inline ">
                   <input
@@ -144,8 +145,8 @@ class MenuSelect extends Component {
                   </button>
                 </form>
               </div>
-            </NavItem>
-            <NavLink className="from_basket" href="Basket">
+            </NavItem> */}
+            <NavLink className="ml-auto" href="Basket">
               <div className="text_numorder">
                 <img className="basket" src={basket} />
                 <span className="badge-danger badge-pill ">

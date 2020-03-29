@@ -1,18 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 
-.from_menusel {
+.from_menuselect {
   font-family: "Kanit",
     sans-serif;
-  font-size: 18px;
+  font-size: 16px;
+
 }
 
+/* 
 .input_search {
   font-family: "Kanit",
     sans-serif;
   font-size: 16px;
   width: 300px;
   margin-right: 10px !important;
-}
+} */
 
 .text_numorder {
   font-size: 13px;
@@ -23,16 +25,18 @@
   margin-top: -10px;
 }
 
-.bt_num {
-  margin-right: 10px;
-}
-
 @media only screen and (max-width: 768px) {
-  .input_search {
-    font-size: 8px;
+  .from_menuselect {
+    font-size: 13px;
+
   }
 
-  .basket {
-    margin-right: 10px;
+  .text_numorder {
+    font-size: 9px;
+    margin-left: 10px !important;
+  }
+
+  .from_basket {
+    margin-top: -10px;
   }
 }

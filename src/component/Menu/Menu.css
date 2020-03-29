@@ -1,15 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 
-.menuform {
+/* .menuform {
   padding-left: 300px;
   padding-right: 300px;
-}
+} */
 
 .form-menu {
   margin-top: 10px;
   text-align: center;
 
 }
+
 .img_egg {
   height: 200px;
   width: 250px;
@@ -65,16 +66,18 @@
   text-align: center;
   color: rgb(13, 43, 175);
 }
-.text_price{
-    font-family: "Kanit",
+
+.text_price {
+  font-family: "Kanit",
     sans-serif;
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .from_mn {
   margin-top: 50px !important;
   text-align: center;
 }
+
 .text_menuname {
   font-size: 20px;
   font-family: "Kanit",
@@ -84,6 +87,7 @@
   text-align: center;
   color: rgb(90, 91, 160);
 }
+
 .text_menuname:hover {
   color: rgb(57, 13, 107);
 }
