@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form,Input, Container, Button } from "reactstrap";
+import { Form, Input, Container, Button, FormGroup } from "reactstrap";
 import axios from "axios";
 import "./Register.css";
 
@@ -30,7 +30,7 @@ class Register extends Component {
         lastname: this.state.lastname,
         email: this.state.email,
         password: this.state.password,
-        phone: this.state.phone,
+        phone: this.state.phone
         // address: this.state.address
       };
       console.log("ข้อมูลที่กำลังจะ่ส่งไป ....  ", data);
@@ -48,60 +48,64 @@ class Register extends Component {
   render() {
     const { firstname, lastname, email, password, phone } = this.state;
     return (
-      <div className="from_lo">
-        <Container>
-          <div className="log">
-            <Form className="form-register">
-              <h2>
-                <b className="re">ลงทะเบียน</b>
-              </h2>
-              <Input
-                className="register "
-                type="text"
-                name="firstname"
-                value={firstname}
-                placeholder="ชื่อจริง"
-                onChange={this.handleInputChange}
-                required
-              />
-              <Input
-                className="register"
-                type="text"
-                name="lastname"
-                value={lastname}
-                placeholder="นามสกุล"
-                onChange={this.handleInputChange}
-                required
-              />
-              <Input
-                className="register"
-                type="email"
-                name="email"
-                value={email}
-                placeholder="อีเมล์ของผู้ใช้"
-                onChange={this.handleInputChange}
-                required
-              />
-              <Input
-                className="register"
-                type="password"
-                name="password"
-                value={password}
-                placeholder="รหัสผ่าน"
-                onChange={this.handleInputChange}
-                required
-              />
-              <Input
-                className="register"
-                type="phone"
-                name="phone"
-                value={phone}
-                placeholder="เบอร์โทรศัพท์"
-                onChange={this.handleInputChange}
-                required
-              />
-              {/* <Input
-                className="register"
+      <div className="container form-register">
+        <span>
+          <div className="text_register">ลงทะเบียน</div>
+          <div className="row justify-content-md-center">
+            <Form className="form-input">
+              <FormGroup>
+                <Input
+                  className="input_register"
+                  type="text"
+                  name="firstname"
+                  value={firstname}
+                  placeholder="ชื่อจริง"
+                  onChange={this.handleInputChange}
+                  required
+                />
+
+                <Input
+                  className="input_register"
+                  type="text"
+                  name="lastname"
+                  value={lastname}
+                  placeholder="นามสกุล"
+                  onChange={this.handleInputChange}
+                  required
+                />
+
+                <Input
+                  className="input_register"
+                  type="email"
+                  name="email"
+                  value={email}
+                  placeholder="อีเมล์ของผู้ใช้"
+                  onChange={this.handleInputChange}
+                  required
+                />
+
+                <Input
+                  className="input_register"
+                  type="password"
+                  name="password"
+                  value={password}
+                  placeholder="รหัสผ่าน"
+                  onChange={this.handleInputChange}
+                  required
+                />
+
+                <Input
+                  className="input_register"
+                  type="phone"
+                  name="phone"
+                  value={phone}
+                  placeholder="เบอร์โทรศัพท์"
+                  onChange={this.handleInputChange}
+                  required
+                />
+
+                {/* <Input
+                className="input_register"
                 type="address"
                 name="address"
                 value={address}
@@ -109,26 +113,25 @@ class Register extends Component {
                 onChange={this.handleInputChange}
                 required
               /> */}
-              <Button
-                className="btn-register"
-                color="info"
-                onClick={e => this.register(e)}
-              >
-                ลงทะเบียน
-              </Button>
-              <div className="btn-forgot">
-                <lable className="reg">หากคุณเป็นสมาชิกแล้ว </lable>
-                <a href="/Login" className="bt-register">
-                  ลงชื่อเข้าใช้งาน
-                </a>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-              </div>
+              </FormGroup>
             </Form>
           </div>
-        </Container>
+          <Button
+            className="btn-register"
+            color="info"
+            onClick={e => this.register(e)}
+          >
+            ลงทะเบียน
+          </Button>
+          <div className="btn-forgot">
+            <lable className="reg">หากคุณเป็นสมาชิกแล้ว </lable>
+            <a href="/Login">ลงชื่อเข้าใช้งาน</a>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+          </div>
+        </span>
       </div>
     );
   }

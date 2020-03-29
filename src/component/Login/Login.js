@@ -82,32 +82,28 @@ class Login extends Component {
           <div className="row justify-content-md-center">
             <Form className="from_input ">
               <FormGroup>
-                <div className="from_inputemail">
-                  <Input
-                    className="input-login"
-                    type="email"
-                    name="email"
-                    id="exampleEmail"
-                    placeholder="อีเมล์ของผู้ใช้"
-                    value={this.state.email}
-                    onChange={this.handleInputChange}
-                  />
-                </div>
-                <div className="from_inputpass">
-                  <Input
-                    className="input-login"
-                    type="password"
-                    name="password"
-                    id="examplePassword"
-                    value={this.state.password}
-                    placeholder="รหัสผ่านของผู้ใช้"
-                    onChange={this.handleInputChange}
-                  />
-                </div>
-
+                <Input
+                  className="input-login"
+                  type="email"
+                  name="email"
+                  id="exampleEmail"
+                  placeholder="อีเมล์ของผู้ใช้"
+                  value={this.state.email}
+                  onChange={this.handleInputChange}
+                />
+                <Input
+                  className="input-login"
+                  type="password"
+                  name="password"
+                  id="examplePassword"
+                  value={this.state.password}
+                  placeholder="รหัสผ่านของผู้ใช้"
+                  onChange={this.handleInputChange}
+                />
+                {/* 
                 <a href="/">
                   <p className="forget-pass ">ลืมรหัสผ่าน</p>
-                </a>
+                </a> */}
               </FormGroup>
             </Form>
           </div>

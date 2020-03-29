@@ -28,16 +28,6 @@
   text-align: center !important;
 }
 
-.from_inputemail {
-  margin-top: 10px;
-  text-align: center !important;
-}
-
-.from_inputpass {
-  margin-top: 10px;
-  text-align: center !important;
-}
-
 .btn-login {
   margin-top: 15px;
   text-align: center !important;
@@ -63,7 +53,7 @@
   padding: 10px;
   font-family: "Kanit", sans-serif;
   font-size: 15px !important;
-
+  margin-top: 10px;
 }
 
 .forget-pass {
@@ -73,7 +63,7 @@
   margin-top: 5px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .form-login {
     width: 100%;
   }
@@ -90,18 +80,6 @@
     font-size: 18px;
   }
 
-  .from_inputemail {
-    margin-top: 10px;
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-
-  .from_inputpass {
-    margin-top: 10px;
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-
   .btn-login {
     margin-top: 5px;
     text-align: center !important;
@@ -109,7 +87,6 @@
   }
 
   .btn-forgot {
-
     font-size: 12px !important;
   }
 

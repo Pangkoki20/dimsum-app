@@ -1,56 +1,63 @@
 @import url("https://fonts.googleapis.com/css?family=Kodchasan&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
+
 .form-register {
-  margin-top: 150px;
-  margin-bottom: 100px;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  margin-top: 70px;
   text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
 }
-.register {
-  margin-top: 20px;
-  padding: 10px;
-  width: 400px !important;
-  height: 50px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  font-family: "Kanit", sans-serif;
-}
-.re {
-  font-size: 50px;
-  text-align: center;
-  color: rgb(10, 85, 172);
+
+.text_register {
   margin-top: 30px;
-   font-family: "Kanit", sans-serif;
-}
-.btn-register {
-  margin-top: 50px;
-  text-align: center !important;
-  padding: 15px !important;
-  font-size: 22px !important;
-  font-family: "Kanit", sans-serif;
-}
-.bt-register {
-  font-size: 20px;
-  margin-top: 25px;
-  text-align: center !important;
-  font-family: "Kanit", sans-serif;
-}
-.btn-forgot {
-  font-size: 20px;
-  margin-top: 15px;
   text-align: center;
-  font-family: "Kanit", sans-serif;
+  font-size: 30px;
+  color: #003366;
+  font-family: "Kanit",
+    sans-serif;
 }
+
+.input_register {
+  width: 400px !important;
+  height: 40px !important;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 15px !important;
+  font-family: "Kanit",
+    sans-serif;
+}
+
+.btn-register {
+  margin-top: 15px;
+  text-align: center !important;
+  color: #eff6fd !important;
+  font-size: 16px !important;
+  font-family: 'Prompt',
+    sans-serif;
+}
+
 @media only screen and (max-width: 768px) {
-  .re {
-    font-size: 20px;
-    text-align: center;
-    font-family: "Kanit", sans-serif;
+  form-register {
+    width: 100%;
   }
-  .form-login {
-    margin-top: 90px;
-    height: 100px;
+
+  .text_register {
+    margin-top: 10px;
     text-align: center;
+    font-size: 18px;
   }
+
+  .input_register {
+    width: 300px !important;
+    height: 30px !important;
+    font-size: 12px !important;
+  }
+
+  .btn-register {
+    margin-top: 5px;
+    text-align: center !important;
+    font-size: 14px !important;
+  }
+
 }
