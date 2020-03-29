@@ -40,7 +40,7 @@ export default class Break_fast extends Component {
         <Container>
           <div className="form-menu">
             <Card body>
-              <div className="pic_bf">
+              <div className="pic_bf row justify-content-md-center">
                 <img className="img_bf img-fluid" src={bf_bf} />
               </div>
               <CardTitle className="text_menuname">ชุดอาหารเช้า</CardTitle>
@@ -50,7 +50,7 @@ export default class Break_fast extends Component {
                 color="info"
                 className="btn-basket"
               >
-                เพิ่มไปยังตะกร้า
+                <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>
             </Card>
           </div>

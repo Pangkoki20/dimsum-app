@@ -44,7 +44,7 @@ export default class Poo_Dumpling extends Component {
         <Container>
           <div className="form-menu">
             <Card body>
-              <div className="pic_dlpoo">
+              <div className="pic_dlpoo row justify-content-md-center">
                 <img className="img_poo img-fluid" src={dl_poo} />
               </div>
               <CardTitle className="text_menuname">ขนมจีบปู</CardTitle>
@@ -54,7 +54,7 @@ export default class Poo_Dumpling extends Component {
                 color="info"
                 className="btn-basket"
               >
-                เพิ่มไปยังตะกร้า
+                <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>
             </Card>
           </div>

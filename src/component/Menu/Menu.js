@@ -65,7 +65,7 @@ class Menu extends Component {
     return (
       <div>
         <MenuSelect numberOnBucket={numberOfMenus} />
-        <div className="menuform container">
+        <div className="container">
           <div className="text-menu">เมนูแนะนำ</div>
           <Row>
             <Col xs="6" sm="4">

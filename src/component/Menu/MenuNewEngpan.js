@@ -45,7 +45,7 @@ class MenuNewEggpan extends Component {
           {/* <img className="img_menu" src={imgmenu} /> */}
           <div className="form-menu">
             <Card body>
-              <div className="pic_eggpan">
+              <div className="pic_eggpan row justify-content-md-center">
                 <img className="img_eggpan img-fluid" src={img_eggpan} />
               </div>
               <CardTitle className="text_menuname">ไข่กะทะ</CardTitle>
@@ -55,7 +55,7 @@ class MenuNewEggpan extends Component {
                 color="info"
                 className="btn-basket"
               >
-                เพิ่มไปยังตะกร้า
+                <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>
             </Card>
           </div>

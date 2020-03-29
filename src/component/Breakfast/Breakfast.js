@@ -51,24 +51,23 @@ class Breakfast extends Component {
     return (
       <div>
         <MenuSelect numberOnBucket={numberOfMenus} />
-        <div>
+        <div className="container">
           <div className="textname-breakfast">อาหารเช้า</div>
-          <div className="menuform">
-            <Row>
-              <Col xs="6" sm="4">
-                <Break_fast />
-              </Col>
-              <Col xs="6" sm="4">
-                <Break_egg />
-              </Col>
-              <Col xs="6" sm="4">
-                <Break_fish />
-              </Col>
-              <Col xs="6" sm="4">
-                <Break_shrimp />
-              </Col>
-            </Row>
-          </div>
+
+          <Row>
+            <Col xs="6" sm="4">
+              <Break_fast />
+            </Col>
+            <Col xs="6" sm="4">
+              <Break_egg />
+            </Col>
+            <Col xs="6" sm="4">
+              <Break_fish />
+            </Col>
+            <Col xs="6" sm="4">
+              <Break_shrimp />
+            </Col>
+          </Row>
         </div>
       </div>
     );

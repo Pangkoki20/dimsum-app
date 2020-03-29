@@ -40,7 +40,7 @@ export default class Break_fish extends Component {
         <Container>
           <div className="form-menu">
             <Card body>
-              <div className="pic_buk">
+              <div className="pic_buk row justify-content-md-center">
                 <img className="img_bffish img-fluid" src={bf_fish} />
               </div>
               <CardTitle className="text_menuname">ปลาทิพย์ทอด</CardTitle>
@@ -50,7 +50,7 @@ export default class Break_fish extends Component {
                 color="info"
                 className="btn-basket"
               >
-                เพิ่มไปยังตะกร้า
+                <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>
             </Card>
           </div>

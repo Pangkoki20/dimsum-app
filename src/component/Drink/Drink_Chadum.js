@@ -46,7 +46,7 @@ export default class Drink_Greentea extends Component {
         <Container>
           <div className="form-menu">
             <Card body>
-              <div>
+              <div className="pic_buk row justify-content-md-center">
                 <img className="img_chadum img-fluid" src={chadum} />
               </div>
               <CardTitle className="text_menuname">ชาดำเย็น</CardTitle>
@@ -56,7 +56,7 @@ export default class Drink_Greentea extends Component {
                 color="info"
                 className="btn-basket"
               >
-                เพิ่มไปยังตะกร้า
+                <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>
             </Card>
           </div>

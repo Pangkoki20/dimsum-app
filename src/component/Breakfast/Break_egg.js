@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Card, CardText, CardTitle,Button } from "reactstrap";
+import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import bf_egg from "../../imgbreakfast/ไข่กะทะ.png";
 export default class Break_egg extends Component {
   state = {
@@ -39,7 +39,7 @@ export default class Break_egg extends Component {
         <Container>
           <div className="form-menu">
             <Card body>
-              <div className="pic_bfegg">
+              <div className="pic_bfegg row justify-content-md-center">
                 <img className="img_bfegg img-fluid" src={bf_egg} />
               </div>
               <CardTitle className="text_menuname">ไข่กะทะ</CardTitle>
@@ -49,7 +49,7 @@ export default class Break_egg extends Component {
                 color="info"
                 className="btn-basket"
               >
-                เพิ่มไปยังตะกร้า
+                <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>
             </Card>
           </div>

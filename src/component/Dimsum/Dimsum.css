@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
 
 .textname-dimsum {
-  text-align: center;
-  font-size: 50px;
   margin-top: 15px;
-  color: #243e5a;
+  font-size: 35px;
+  color: rgb(0, 96, 175);
   font-family: "Kanit",
     sans-serif;
+  text-align: center;
 }
 
 .textname-dimsum:hover {
@@ -44,10 +44,12 @@
   height: 200px;
   width: 250px;
 }
+
 .text_namemenu {
   font-size: 20px;
   text-align: center;
 }
+
 .basket {
   width: 40px;
   height: 40px;

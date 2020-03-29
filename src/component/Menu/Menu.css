@@ -1,64 +1,63 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 
-/* .menuform {
-  padding-left: 300px;
-  padding-right: 300px;
-} */
-
 .form-menu {
-  margin-top: 10px;
-  text-align: center;
+  margin-top: 20px;
 
+}
+
+.text-menu {
+  margin-top: 15px;
+  font-size: 35px;
+  color: rgb(0, 96, 175);
+  font-family: "Kanit", sans-serif;
+  text-align: center;
+}
+
+.text-menu:hover {
+  text-decoration: none;
+  color: rgb(15, 97, 219);
 }
 
 .img_egg {
   height: 200px;
   width: 250px;
+  margin-top: 2px;
 }
 
 .img_jopoo {
   height: 200px;
   width: 250px;
-
+  margin-top: 2px;
 }
 
 .img_buk {
   height: 200px;
   width: 250px;
+  margin-top: 2px;
 }
 
 .img_eggpan {
   height: 200px;
   width: 250px;
+  margin-top: 2px;
 }
 
 .img_kanomgee {
   height: 200px;
   width: 250px;
+  margin-top: 2px;
 }
 
 .img_sarapol {
   height: 200px;
   width: 250px;
+  margin-top: 2px;
 }
 
 .img_egg {
   height: 200px;
   width: 250px;
-}
-
-.text-menu {
-  margin-top: 15px;
-  font-size: 50px;
-  color: #243e5a;
-  font-family: "Kanit", sans-serif;
-  text-align: center;
-
-}
-
-.text-menu:hover {
-  text-decoration: none;
-  color: #00758d;
+  margin-top: 2px;
 }
 
 .text_menucom {
@@ -70,7 +69,7 @@
 .text_price {
   font-family: "Kanit",
     sans-serif;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .from_mn {
@@ -79,15 +78,23 @@
 }
 
 .text_menuname {
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Kanit",
     sans-serif;
   margin-top: 15px;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
   color: rgb(90, 91, 160);
 }
 
 .text_menuname:hover {
   color: rgb(57, 13, 107);
+}
+
+.bt_basket {
+  text-align: center !important;
+  color: #eff6fd !important;
+  font-size: 14px !important;
+  font-family: 'Prompt',
+    sans-serif;
 }

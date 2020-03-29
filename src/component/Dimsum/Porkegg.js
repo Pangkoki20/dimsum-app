@@ -46,7 +46,7 @@ export default class Porkegg extends Component {
         <Container>
           <div className="form-menu">
             <Card body>
-              <div className="pic_pokegg">
+              <div className="pic_pokegg row justify-content-md-center">
                 <img className="img_pokegg img-fluid" src={dl_pokegg} />
               </div>
               <CardTitle className="text_menuname">ขนมจีบหมูไข่เค็ม</CardTitle>
@@ -56,7 +56,7 @@ export default class Porkegg extends Component {
                 color="info"
                 className="btn-basket"
               >
-                เพิ่มไปยังตะกร้า
+                <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>
             </Card>
           </div>

@@ -46,7 +46,7 @@ export default class Fast_Chicken extends Component {
         <Container>
           <div className="form-menu">
             <Card body>
-              <div className="pic_buk">
+              <div className="pic_buk row justify-content-md-center">
                 <img className="img_ffchicken img-fluid" src={ff_chicken} />
               </div>
               <CardTitle className="text_menuname">ข้าวมันไก่</CardTitle>
@@ -56,7 +56,7 @@ export default class Fast_Chicken extends Component {
                 color="info"
                 className="btn-basket"
               >
-                เพิ่มไปยังตะกร้า
+                <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>
             </Card>
           </div>

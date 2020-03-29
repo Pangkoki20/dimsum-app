@@ -42,7 +42,7 @@ export default class Hargao extends Component {
         <Container>
           <div className="form-menu">
             <Card body>
-              <div className="pic_hargao">
+              <div className="pic_hargao row justify-content-md-center">
                 <img className="img_hargao img-fluid" src={dl_hargao} />
               </div>
               <CardTitle className="text_menuname">ฮะเก๋า</CardTitle>
@@ -52,7 +52,7 @@ export default class Hargao extends Component {
                 color="info"
                 className="btn-basket"
               >
-                เพิ่มไปยังตะกร้า
+                <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>
             </Card>
           </div>

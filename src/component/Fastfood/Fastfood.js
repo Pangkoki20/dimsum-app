@@ -60,33 +60,32 @@ class Fastfood extends Component {
     return (
       <div>
         <MenuSelect numberOnBucket={numberOfMenus} />
-        <div>
+        <div className="container">
           <div className="textname-fastfood">อาหารจานเดียว</div>
-          <div className="menuform">
-            <Row>
-              <Col xs="6" sm="4">
-                <Fast_Babutte />
-              </Col>
-              <Col xs="6" sm="4">
-                <Fast_Chicken />
-              </Col>
-              <Col xs="6" sm="4">
-                <Fast_Duck />
-              </Col>
-              <Col xs="6" sm="4">
-                <Fast_Porkleg />
-              </Col>
-              <Col xs="6" sm="4">
-                <Fast_Redpork />
-              </Col>
-              <Col xs="6" sm="4">
-                <Fast_Crispypork />
-              </Col>
-              <Col xs="6" sm="4">
-                <Fast_Rice />
-              </Col>
-            </Row>
-          </div>
+
+          <Row>
+            <Col xs="6" sm="4">
+              <Fast_Babutte />
+            </Col>
+            <Col xs="6" sm="4">
+              <Fast_Chicken />
+            </Col>
+            <Col xs="6" sm="4">
+              <Fast_Duck />
+            </Col>
+            <Col xs="6" sm="4">
+              <Fast_Porkleg />
+            </Col>
+            <Col xs="6" sm="4">
+              <Fast_Redpork />
+            </Col>
+            <Col xs="6" sm="4">
+              <Fast_Crispypork />
+            </Col>
+            <Col xs="6" sm="4">
+              <Fast_Rice />
+            </Col>
+          </Row>
         </div>
       </div>
     );

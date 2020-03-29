@@ -57,30 +57,28 @@ class Drink extends Component {
     return (
       <div>
         <MenuSelect numberOnBucket={numberOfMenus} />
-        <div>
+        <div className="container">
           <div className="textname-drink">เครื่องดื่ม</div>
-          <div className="menuform">
-            <Row>
-              <Col xs="6" sm="4">
-                <Drink_Chaice />
-              </Col>
-              <Col xs="6" sm="4">
-                <Drink_Coffee />
-              </Col>
-              <Col xs="6" sm="4">
-                <Drink_chamanow />
-              </Col>
-              <Col xs="6" sm="4">
-                <Drink_Ovantin />
-              </Col>
-              <Col xs="6" sm="4">
-                <Drink_Greentea />
-              </Col>
-              <Col xs="6" sm="4">
-                <Drink_Chadum />
-              </Col>
-            </Row>
-          </div>
+          <Row>
+            <Col xs="6" sm="4">
+              <Drink_Chaice />
+            </Col>
+            <Col xs="6" sm="4">
+              <Drink_Coffee />
+            </Col>
+            <Col xs="6" sm="4">
+              <Drink_chamanow />
+            </Col>
+            <Col xs="6" sm="4">
+              <Drink_Ovantin />
+            </Col>
+            <Col xs="6" sm="4">
+              <Drink_Greentea />
+            </Col>
+            <Col xs="6" sm="4">
+              <Drink_Chadum />
+            </Col>
+          </Row>
         </div>
       </div>
     );

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Container, Table, Button, Row, Col } from "reactstrap";
 import "./Dimsum.css";
 // import Paginat from "../Paginat/Paginat";
-import BTHome from "../BTHome/BTHome";
 import Pork_Dumpling from "./Pork_Dumpling";
 import Porkegg from "./Porkegg";
 import Poo_Dumpling from "./Poo_Dumpling";
@@ -61,30 +60,29 @@ class Dimsum extends Component {
     return (
       <div>
         <MenuSelect numberOnBucket={numberOfMenus} />
-        <div>
+        <div className="container">
           <div className="textname-dimsum">ติ่มซำ </div>
-          <div className="menuform">
-            <Row>
-              <Col xs="6" sm="4">
-                <Pork_Dumpling />
-              </Col>
-              <Col xs="6" sm="4">
-                <Porkegg />
-              </Col>
-              <Col xs="6" sm="4">
-                <Poo_Dumpling />
-              </Col>
-              <Col xs="6" sm="4">
-                <Shrimp />
-              </Col>
-              <Col xs="6" sm="4">
-                <Hargao />
-              </Col>
-              <Col xs="6" sm="4">
-                <Shrimp_Dumling />
-              </Col>
-            </Row>
-          </div>
+
+          <Row>
+            <Col xs="6" sm="4">
+              <Pork_Dumpling />
+            </Col>
+            <Col xs="6" sm="4">
+              <Porkegg />
+            </Col>
+            <Col xs="6" sm="4">
+              <Poo_Dumpling />
+            </Col>
+            <Col xs="6" sm="4">
+              <Shrimp />
+            </Col>
+            <Col xs="6" sm="4">
+              <Hargao />
+            </Col>
+            <Col xs="6" sm="4">
+              <Shrimp_Dumling />
+            </Col>
+          </Row>
         </div>
       </div>
     );
