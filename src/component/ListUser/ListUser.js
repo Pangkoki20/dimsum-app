@@ -1,13 +1,5 @@
 import React, { Component } from "react";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  Row,
-  Col,
-  Button,
-  CardText
-} from "reactstrap";
+import { Card, CardHeader, CardBody, Row, Col, Button } from "reactstrap";
 import axios from "axios";
 import "./ListUser.css";
 class ListUser extends Component {
@@ -21,10 +13,10 @@ class ListUser extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <div className="text_orderkitchen">ข้อมูลลูกค้า</div>
+        <div className="text_customer">ข้อมูลลูกค้า</div>
         <div className="row">
           <div className="col-12">
-            <Card className="card_orderkitchen">
+            <Card className="card_listorder">
               <CardHeader>
                 <Row>
                   <Col xs="3">user_id</Col>
@@ -47,6 +39,7 @@ class ListUser extends Component {
                             <Col>{user.phone} </Col>
                             <Col xs="3">
                               <Button
+                                className="bt_listorder"
                                 color="danger"
                                 outline
                                 href={`/FoodOrder/${user.id}`}

@@ -15,11 +15,10 @@
   text-align: center;
   font-family: "Kanit",
     sans-serif;
-
 }
 
 .fon_btstfood {
-  font-size: 22 px;
+  font-size: 18px !important;
   color: #134577;
 }
 
@@ -35,5 +34,18 @@
   .ban-size {
     margin-top: 20px;
     text-align: center;
+  }
+
+  .bt_startfood {
+    margin-top: 15px;
+    text-align: center;
+    font-family: "Kanit",
+      sans-serif;
+    font-size: 12px;
+  }
+
+  .fon_btstfood {
+    font-size: 12px !important;
+    color: #134577;
   }
 }

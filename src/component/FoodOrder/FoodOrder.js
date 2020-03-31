@@ -21,10 +21,10 @@ class FoodOrder extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <div className="text_orderkitchen">ออเดอร์อาหาร</div>
+        <div className="text_foodorder">ออเดอร์อาหาร</div>
         <div className="row">
           <div className="col-md-6 offset-md-3">
-            <Card className="card_orderkitchen">
+            <Card className="card_foodorder">
               <CardHeader>
                 <Row>
                   <Col>order_id</Col>

@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+
+.text_customer {
+    color: #003366;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Kanit",
+        sans-serif;
+}
+
+.card_listorder {
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Kanit",
+        sans-serif;
+    font-size: 16px;
+}
+
+.bt_listorder {
+    font-size: 14px;
+}
