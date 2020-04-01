@@ -9,7 +9,58 @@ import {
   CardText
 } from "reactstrap";
 import "./OrderFood.css";
+import axios from "axios";
+import auth from "../service/index";
 class OrderFood extends Component {
+  state = {
+    user: null,
+    allData: []
+  };
+
+  onUserChanged = user => {
+    this.setState({ user });
+  };
+  componentDidMount = async nextProps => {
+    let token = localStorage.getItem("token");
+    const orders = await localStorage.getItem("order");
+    console.log({ orders });
+    //get params
+    const orderId = this.props.match.params.id;
+    console.log({ orderId });
+    if (token) {
+      if (token !== null) {
+        this.setState({ check: "login" });
+      }
+      let res = await axios.post(`http://localhost:3001/api/users/me`, {
+        token
+      });
+      // if (!res) {
+      //   window.location.href = "/login";
+      //   return;
+      // }
+      this.setState({ user: res.data });
+    } else {
+      window.location.href = "/login";
+    }
+
+    let user = auth.getToken();
+    let userDecoded = auth.decodeToken(user);
+    let userId = userDecoded.id;
+    let userFirstName = userDecoded.firstname;
+    let userLastName = userDecoded.lastname;
+    let userRole = userDecoded.role;
+    this.getAllOrder(userId);
+  };
+
+  async getAllOrder(userId) {
+    await axios
+      .get(`http://localhost:3001/api/order/orderbyuser/${userId}`)
+      .then(res => {
+        const { data } = res.data;
+        console.log("res : ", res.data);
+        this.setState({ allData: res.data });
+      });
+  }
   render() {
     return (
       <div className="container-fluid">
