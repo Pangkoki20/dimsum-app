@@ -6,19 +6,19 @@ import piccon from "../../img/customer.png";
 import axios from "axios";
 class Contact extends Component {
   state = {
-    user: null
+    user: null,
   };
-  onUserChanged = user => {
+  onUserChanged = (user) => {
     this.setState({ user });
   };
-  componentDidMount = async nextProps => {
+  componentDidMount = async (nextProps) => {
     let token = localStorage.getItem("token");
     if (token) {
       if (token !== null) {
         this.setState({ check: "login" });
       }
       let res = await axios.post(`http://localhost:3001/api/users/me`, {
-        token
+        token,
       });
       // if (!res) {
       //   window.location.href = "/login";
@@ -34,7 +34,7 @@ class Contact extends Component {
       <Container>
         <div className="foo">
           <span>
-            <img className="piccon" src={piccon} />
+            <img className="piccon" src={piccon} alt="" />
           </span>
           <div className="text-cont"> Contact Us </div>
           <Collapses />

@@ -4,12 +4,12 @@ import "./SenderStatus.css";
 import axios from "axios";
 class SenderStatus extends Component {
   state = {
-    order: []
+    order: [],
   };
-  onUserChanged = user => {
+  onUserChanged = (user) => {
     this.setState({ user });
   };
-  componentDidMount = async nextProps => {
+  componentDidMount = async (nextProps) => {
     let order = await axios.get(`http://localhost:3001/api/order`);
     this.setState({ order: order.data });
   };
@@ -26,8 +26,8 @@ class SenderStatus extends Component {
                   <Col>สถานะ</Col>
                 </Row>
               </CardHeader>
-              {this.state.order.map(order => {
-                if (order.status == "4")
+              {this.state.order.map((order) => {
+                if (order.status === "4")
                   return (
                     <CardBody>
                       <Row>

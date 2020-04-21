@@ -1,9 +1,9 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import Main from "./Main";
 import Login from "./component/Login/Login";
 import Navigator from "./component/Navigator/Navigator";
 import Register from "./component/Register/Register";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Dimsum from "./component/Dimsum/Dimsum";
 import Breakfast from "./component/Breakfast/Breakfast";
@@ -27,26 +27,25 @@ import KitchenFoodFinish from "./component/KitchenFoodFinish/KitchenFoodFinish";
 import FoodOrder from "./component/FoodOrder/FoodOrder";
 import ListUser from "./component/ListUser/ListUser";
 import DeliveryFood from "./component/DeliveryFood/DeliveryFood";
-
 import "./App.css";
 import axios from "axios";
 // import ProtectedRoute from "./component/ProtectedRoute";
 class App extends Component {
   state = {
-    user: null
+    user: null,
   };
 
-  onUserChanged = user => {
+  onUserChanged = (user) => {
     this.setState({ user });
   };
-  componentDidMount = async nextProps => {
+  componentDidMount = async (nextProps) => {
     let token = localStorage.getItem("token");
     if (token) {
       if (token !== null) {
         this.setState({ check: "login" });
       }
       let res = await axios.post(`http://localhost:3001/api/users/me`, {
-        token
+        token,
       });
       if (!res) {
         window.location.href = "/login";

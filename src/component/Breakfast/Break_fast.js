@@ -6,10 +6,10 @@ export default class Break_fast extends Component {
   state = {
     menu_name: "อาหารเช้า",
     menu_value: 0,
-    menu_price: 40
+    menu_price: 40,
   };
 
-  sentOrder = e => {
+  sentOrder = (e) => {
     e.preventDefault();
 
     var oldItems = JSON.parse(localStorage.getItem("order")) || [];
@@ -19,7 +19,7 @@ export default class Break_fast extends Component {
     const newData = {
       menu_name: this.state.menu_name,
       menu_value: 1,
-      menu_price: this.state.menu_price
+      menu_price: this.state.menu_price,
     };
     oldItems.push(newData);
     localStorage.setItem("order", JSON.stringify(oldItems));
@@ -28,7 +28,7 @@ export default class Break_fast extends Component {
     this.setState({ remark: "" });
   };
 
-  handleInputChange = e => {
+  handleInputChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
     this.setState({ please: "" });
@@ -41,7 +41,7 @@ export default class Break_fast extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_bf row justify-content-md-center">
-                <img className="img_bf img-fluid" src={bf_bf} />
+                <img className="img_bf img-fluid" src={bf_bf} alt="" />
               </div>
               <CardTitle className="text_menuname">ชุดอาหารเช้า</CardTitle>
               <CardText className="text_price">ราคา 40 .-</CardText>

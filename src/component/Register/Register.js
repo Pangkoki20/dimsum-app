@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Input, Container, Button, FormGroup } from "reactstrap";
+import { Form, Input, Button, FormGroup } from "reactstrap";
 import axios from "axios";
 import "./Register.css";
 
@@ -13,16 +13,16 @@ class Register extends Component {
       password: "",
       phone: "",
       // address: "",
-      message: ""
+      message: "",
     };
   }
-  handleInputChange = e => {
+  handleInputChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
     this.setState({ message: "" });
     console.log({ [name]: value });
   };
-  register = e => {
+  register = (e) => {
     e.preventDefault();
     try {
       const data = {
@@ -30,12 +30,12 @@ class Register extends Component {
         lastname: this.state.lastname,
         email: this.state.email,
         password: this.state.password,
-        phone: this.state.phone
+        phone: this.state.phone,
         // address: this.state.address
       };
       console.log("ข้อมูลที่กำลังจะ่ส่งไป ....  ", data);
 
-      axios.post(`http://localhost:3001/api/users/create`, data).then(res => {
+      axios.post(`http://localhost:3001/api/users/create`, data).then((res) => {
         const { data } = res;
         this.setState({ message: data.message });
 
@@ -119,7 +119,7 @@ class Register extends Component {
           <Button
             className="btn-register"
             color="info"
-            onClick={e => this.register(e)}
+            onClick={(e) => this.register(e)}
           >
             ลงทะเบียน
           </Button>

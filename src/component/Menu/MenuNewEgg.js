@@ -6,7 +6,7 @@ import BTBasket from "../BTBasket/BTBasket";
 class MenuNewEgg extends Component {
   state = { menu_name: "ไข่ลวก", menu_value: 0, menu_price: 30 };
 
-  sentOrder = e => {
+  sentOrder = (e) => {
     e.preventDefault();
 
     var oldItems = JSON.parse(localStorage.getItem("order")) || [];
@@ -16,10 +16,10 @@ class MenuNewEgg extends Component {
     const newData = {
       menu_name: this.state.menu_name,
       menu_value: 1,
-      menu_price: this.state.menu_price
+      menu_price: this.state.menu_price,
     };
     const isHaveMenuAlready = oldItems.find(
-      menu => menu.menu_name === this.state.menu_name
+      (menu) => menu.menu_name === this.state.menu_name
     );
 
     if (!isHaveMenuAlready) {
@@ -31,7 +31,7 @@ class MenuNewEgg extends Component {
     }
   };
 
-  handleInputChange = e => {
+  handleInputChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
     this.setState({ please: "" });
@@ -45,7 +45,7 @@ class MenuNewEgg extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_egg row justify-content-md-center">
-                <img className="img_egg img-fluid" src={img_egg} />
+                <img className="img_egg img-fluid" src={img_egg} alt="" />
               </div>
               <CardTitle className="text_menuname">ไข่ลวก</CardTitle>
               <CardText className="text_price">ราคา 30 .-</CardText>

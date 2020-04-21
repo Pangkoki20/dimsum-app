@@ -6,7 +6,7 @@ class KitchenFoodFinish extends Component {
   render() {
     return (
       <div className="from_cooking">
-        <img className="cooking img-fluid" src={cooking} />
+        <img className="cooking img-fluid" src={cooking} alt="" />
         <div className="text_cooking">จัดเตรียมอาหารเรียบร้อยแล้ว</div>
       </div>
     );

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import "./Fastfood.css";
-import Paginat from "../Paginat/Paginat";
 import Fast_Chicken from "./Fast_Chicken";
 import Fast_Rice from "./Fast_Rice";
 import Fast_Babutte from "./Fast_Babutte";
@@ -9,18 +8,17 @@ import Fast_Duck from "./Fast_Duck";
 import Fast_Porkleg from "./Fast_Porkleg";
 import Fast_Redpork from "./Fast_Redpork";
 import Fast_Crispypork from "./Fast_Crispypork";
-import BTHome from "../BTHome/BTHome";
 import MenuSelect from "../MenuSelect/MenuSelect";
 import axios from "axios";
 class Fastfood extends Component {
   state = {
     user: null,
-    order: []
+    order: [],
   };
-  onUserChanged = user => {
+  onUserChanged = (user) => {
     this.setState({ user });
   };
-  componentDidMount = async nextProps => {
+  componentDidMount = async (nextProps) => {
     let order = JSON.parse(localStorage.getItem("order"));
     this.setState({ order: order });
     let token = localStorage.getItem("token");
@@ -29,7 +27,7 @@ class Fastfood extends Component {
         this.setState({ check: "login" });
       }
       let res = await axios.post(`http://localhost:3001/api/users/me`, {
-        token
+        token,
       });
       // if (!res) {
       //   window.location.href = "/login";

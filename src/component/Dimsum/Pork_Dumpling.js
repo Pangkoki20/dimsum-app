@@ -5,10 +5,10 @@ export default class Pork_Dumpling extends Component {
   state = {
     menu_name: "ขนมจีบหมู",
     menu_value: 0,
-    menu_price: 20
+    menu_price: 20,
   };
 
-  sentOrder = e => {
+  sentOrder = (e) => {
     e.preventDefault();
 
     var oldItems = JSON.parse(localStorage.getItem("order")) || [];
@@ -18,10 +18,10 @@ export default class Pork_Dumpling extends Component {
     const newData = {
       menu_name: this.state.menu_name,
       menu_value: 1,
-      menu_price: this.state.menu_price
+      menu_price: this.state.menu_price,
     };
     const isHaveMenuAlready = oldItems.find(
-      menu => menu.menu_name === this.state.menu_name
+      (menu) => menu.menu_name === this.state.menu_name
     );
 
     if (!isHaveMenuAlready) {
@@ -33,7 +33,7 @@ export default class Pork_Dumpling extends Component {
     }
   };
 
-  handleInputChange = e => {
+  handleInputChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
     this.setState({ please: "" });
@@ -46,7 +46,7 @@ export default class Pork_Dumpling extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_pok row justify-content-md-center">
-                <img className="img_pok img-fluid" src={dl_pok} />
+                <img className="img_pok img-fluid" src={dl_pok} alt="" />
               </div>
               <CardTitle className="text_menuname">ขนมจีบหมู</CardTitle>
               <CardText className="text_price">ราคา 20 .-</CardText>

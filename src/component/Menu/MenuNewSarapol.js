@@ -2,16 +2,14 @@ import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import "./Menu.css";
 import img_sarapol from "../../imgbreakfast/ซาลาเปาทอด.png";
-import BTBasket from "../BTBasket/BTBasket";
-
 class MenuNewSarapol extends Component {
   state = {
     menu_name: "ซาลาเปาทอด",
     menu_value: 0,
-    menu_price: 10
+    menu_price: 10,
   };
 
-  sentOrder = e => {
+  sentOrder = (e) => {
     e.preventDefault();
 
     var oldItems = JSON.parse(localStorage.getItem("order")) || [];
@@ -21,10 +19,10 @@ class MenuNewSarapol extends Component {
     const newData = {
       menu_name: this.state.menu_name,
       menu_value: 1,
-      menu_price: this.state.menu_price
+      menu_price: this.state.menu_price,
     };
     const isHaveMenuAlready = oldItems.find(
-      menu => menu.menu_name === this.state.menu_name
+      (menu) => menu.menu_name === this.state.menu_name
     );
 
     if (!isHaveMenuAlready) {
@@ -36,7 +34,7 @@ class MenuNewSarapol extends Component {
     }
   };
 
-  handleInputChange = e => {
+  handleInputChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
     this.setState({ please: "" });
@@ -50,7 +48,11 @@ class MenuNewSarapol extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_egg row justify-content-md-center">
-                <img className="img_sarapol img-fluid" src={img_sarapol} />
+                <img
+                  className="img_sarapol img-fluid"
+                  src={img_sarapol}
+                  alt=""
+                />
               </div>
               <CardTitle className="text_menuname">ซาลาเปาทอด</CardTitle>
               <CardText className="text_price">ราคา 10 .-</CardText>

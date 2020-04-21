@@ -7,7 +7,7 @@ import auth from "../service/index";
 class MenuSelect extends Component {
   state = {
     order: [],
-    countBasket: 0
+    countBasket: 0,
   };
 
   // componentDidMount = async nextProps => {
@@ -90,7 +90,7 @@ class MenuSelect extends Component {
             <NavItem className="ml-auto">
               <NavLink className="from_basket" href="Basket">
                 <div className="text_numorder">
-                  <img className="basket" src={basket} />
+                  <img className="basket" src={basket} alt="" />
                   <span className="badge-danger badge-pill ">
                     {numberOnBucket}
                   </span>
@@ -150,7 +150,7 @@ class MenuSelect extends Component {
             </NavItem> */}
             <NavLink className="ml-auto" href="Basket">
               <div className="text_numorder">
-                <img className="basket" src={basket} />
+                <img className="basket" src={basket} alt="" />
                 <span className="badge-danger badge-pill ">
                   {numberOnBucket}
                 </span>

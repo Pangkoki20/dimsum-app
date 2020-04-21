@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { Container, Table, Button, Row, Col } from "reactstrap";
+import { Row, Col } from "reactstrap";
 import "./Dimsum.css";
-// import Paginat from "../Paginat/Paginat";
 import Pork_Dumpling from "./Pork_Dumpling";
 import Porkegg from "./Porkegg";
 import Poo_Dumpling from "./Poo_Dumpling";
@@ -12,12 +11,12 @@ import MenuSelect from "../MenuSelect/MenuSelect";
 import axios from "axios";
 class Dimsum extends Component {
   state = {
-    order: []
+    order: [],
   };
-  onUserChanged = user => {
+  onUserChanged = (user) => {
     this.setState({ user });
   };
-  componentDidMount = async nextProps => {
+  componentDidMount = async (nextProps) => {
     let order = JSON.parse(localStorage.getItem("order"));
     this.setState({ order: order });
     let token = localStorage.getItem("token");
@@ -29,7 +28,7 @@ class Dimsum extends Component {
       this.setState({ order: order });
       let token = localStorage.getItem("token");
       let res = await axios.post(`http://localhost:3001/api/users/me`, {
-        token
+        token,
       });
       // if (!res) {
       //   window.location.href = "/login";

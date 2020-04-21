@@ -12,12 +12,12 @@ import axios from "axios";
 class Drink extends Component {
   state = {
     user: null,
-    order: []
+    order: [],
   };
-  onUserChanged = user => {
+  onUserChanged = (user) => {
     this.setState({ user });
   };
-  componentDidMount = async nextProps => {
+  componentDidMount = async (nextProps) => {
     let order = JSON.parse(localStorage.getItem("order"));
     this.setState({ order: order });
     let token = localStorage.getItem("token");
@@ -26,7 +26,7 @@ class Drink extends Component {
         this.setState({ check: "login" });
       }
       let res = await axios.post(`http://localhost:3001/api/users/me`, {
-        token
+        token,
       });
       // if (!res) {
       //   window.location.href = "/login";

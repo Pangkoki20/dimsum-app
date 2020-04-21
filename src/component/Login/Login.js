@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import { Form, FormGroup, Input, Button, Container } from "reactstrap";
+import { Form, FormGroup, Input, Button } from "reactstrap";
 import axios from "axios";
 import "./Login.css";
 import logo_login from "../../img/logo_login.png";
@@ -11,16 +11,16 @@ class Login extends Component {
     this.state = {
       email: "",
       password: "",
-      user: ""
+      user: "",
     };
   }
-  handleInputChange = e => {
+  handleInputChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
     this.setState({ message: "" });
     console.log({ [name]: value });
   };
-  componentDidMount = async nextProps => {
+  componentDidMount = async (nextProps) => {
     let res = await axios.get(`http://localhost:3001/api/users`);
     console.log(res.data);
     // let res = await axios.post(`http://localhost:3001/api/users/me`, {
@@ -32,21 +32,21 @@ class Login extends Component {
     // }
     // this.setState({ user: res.data.role });
   };
-  toRegister = e => {
+  toRegister = (e) => {
     this.props.history.push("/register");
   };
 
-  login = e => {
+  login = (e) => {
     e.preventDefault();
     console.log("dimsum");
 
     try {
       const data = {
         email: this.state.email,
-        password: this.state.password
+        password: this.state.password,
       };
 
-      axios.post(`http://localhost:3001/api/users/login`, data).then(res => {
+      axios.post(`http://localhost:3001/api/users/login`, data).then((res) => {
         const { data } = res;
         if (data && data.token) {
           this.setState({ message: data.message });
@@ -77,7 +77,7 @@ class Login extends Component {
     return (
       <div className="container form-login ">
         <span>
-          <img className="logo" src={logo_login} />
+          <img className="logo" src={logo_login} alt="" />
           <div className="text_login ">เข้าสู่ระบบ</div>
           <div className="row justify-content-md-center">
             <Form className="from_input ">
@@ -111,7 +111,7 @@ class Login extends Component {
             href="/"
             className="btn-login"
             color="info"
-            onClick={e => this.login(e)}
+            onClick={(e) => this.login(e)}
           >
             ลงชื่อเข้าใช้งาน
           </Button>

@@ -4,9 +4,9 @@ import axios from "axios";
 import "./ListUser.css";
 class ListUser extends Component {
   state = {
-    users: []
+    users: [],
   };
-  componentDidMount = async nextProps => {
+  componentDidMount = async (nextProps) => {
     let user = await axios.get(`http://localhost:3001/api/users`);
     this.setState({ users: user.data });
   };

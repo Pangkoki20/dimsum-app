@@ -6,7 +6,7 @@ class SenderFoodDelivery extends Component {
   render() {
     return (
       <div className="img_fooddelivery">
-        <img className=" img-fluid" src={img_fooddelivery} />
+        <img className=" img-fluid" src={img_fooddelivery} alt="" />
         <div className="text_fooddelivery">ส่งอาหารเรียบร้อยแล้ว</div>
       </div>
     );

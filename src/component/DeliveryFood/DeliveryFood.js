@@ -6,7 +6,11 @@ class DeliveryFood extends Component {
   render() {
     return (
       <div className="from_deliveryfood ">
-        <img className=" img_deliveryfood img-fluid" src={img_deliveryfood} />
+        <img
+          className=" img_deliveryfood img-fluid"
+          src={img_deliveryfood}
+          alt=""
+        />
         <div className="text_deliveryfood">กำลังจัดส่งอาหาร</div>
       </div>
     );

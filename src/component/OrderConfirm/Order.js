@@ -9,7 +9,6 @@ import {
   Card,
   Label,
   Form,
-  UncontrolledCollapse
 } from "reactstrap";
 import "./Order.css";
 import axios from "axios";
@@ -22,9 +21,9 @@ import img_newaddress from "../../imgorder/P.png";
 import auth from "../service/index";
 class Order extends Component {
   state = {
-    step: 1
+    step: 1,
   };
-  onUserChanged = address => {
+  onUserChanged = (address) => {
     this.setState({ address });
   };
   constructor(props) {
@@ -40,7 +39,7 @@ class Order extends Component {
       payment: "1",
       code: "",
       message: "",
-      order: []
+      order: [],
     };
   }
   componentDidMount = () => {
@@ -49,13 +48,13 @@ class Order extends Component {
     this.setState({ order: order });
   };
 
-  handleInputChange = e => {
+  handleInputChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
     this.setState({ message: "" });
     console.log({ [name]: value });
   };
-  sentOrder = e => {
+  sentOrder = (e) => {
     e.preventDefault();
     console.log("dimsum");
     let user = auth.getToken();
@@ -77,16 +76,16 @@ class Order extends Component {
         code: this.state.code,
         user_id: uId,
 
-        order: this.state.order.map($obj => {
+        order: this.state.order.map(($obj) => {
           return {
             menu_name: $obj.menu_name,
             menu_value: $obj.menu_value,
-            menu_price: $obj.menu_price
+            menu_price: $obj.menu_price,
           };
-        })
+        }),
       };
       console.log("ข้อมูลที่กำลังจะส่งไป ....  ", data);
-      axios.post(`http://localhost:3001/api/order/create`, data).then(res => {
+      axios.post(`http://localhost:3001/api/order/create`, data).then((res) => {
         const { data } = res;
         //orderNo.
         this.setState({ message: data.message });
@@ -109,7 +108,7 @@ class Order extends Component {
       changwat,
       postcode,
       code,
-      payment
+      payment,
     } = this.state;
     return (
       <div className="container">
@@ -124,6 +123,7 @@ class Order extends Component {
                       className="img_address"
                       src={img_address}
                       href="/Address"
+                      alt=""
                     />
                   </div>
                   <div className="text-addre">ที่อยู่สำหรับการจัดส่ง</div>
@@ -134,7 +134,7 @@ class Order extends Component {
               <div>
                 <Button outline color="info" size="lg" block>
                   <div>
-                    <img className="img_pay" src={img_pay} />
+                    <img className="img_pay" src={img_pay} alt="" />
                   </div>
                   <div className="text-addre">วิธีการชำระเงิน</div>
                 </Button>
@@ -152,6 +152,7 @@ class Order extends Component {
                           <img
                             className="img_savelocation"
                             src={img_savelocation}
+                            alt=""
                           />
                         </div>
                       </Col>
@@ -160,7 +161,11 @@ class Order extends Component {
                     <Row>
                       <Col xs="1">
                         <div>
-                          <img className="img_location" src={img_location} />
+                          <img
+                            className="img_location"
+                            src={img_location}
+                            alt=""
+                          />
                         </div>
                       </Col>
                       <Col xs="auto">ตำแหน่งปัจจุบัน</Col>
@@ -172,6 +177,7 @@ class Order extends Component {
                           <img
                             className="img_newaddress"
                             src={img_newaddress}
+                            alt=""
                           />
                         </div>
                       </Col>
@@ -272,7 +278,7 @@ class Order extends Component {
                       <Button
                         className="bt_ok"
                         color="success"
-                        onClick={e => this.sentOrder(e)}
+                        onClick={(e) => this.sentOrder(e)}
                       >
                         ยืนยัน
                       </Button>
@@ -285,7 +291,7 @@ class Order extends Component {
               <div>
                 <Button outline color="info" size="lg" block>
                   <div>
-                    <img className="img_confirm" src={img_confirm} />
+                    <img className="img_confirm" src={img_confirm} alt="" />
                   </div>
                   <div className="text-addre">ยืนยันการสั่งอาหาร</div>
                 </Button>

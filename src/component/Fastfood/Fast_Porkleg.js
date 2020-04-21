@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import ff_porkleg from "../../imgfastfoood/ข้าวขาหมู.png";
-import BTBasket from "../BTBasket/BTBasket";
 export default class Fast_Porkleg extends Component {
   state = {
     menu_name: "ข้าวขาหมู",
     menu_value: 0,
-    menu_price: 50
+    menu_price: 50,
   };
 
-  sentOrder = e => {
+  sentOrder = (e) => {
     e.preventDefault();
 
     var oldItems = JSON.parse(localStorage.getItem("order")) || [];
@@ -19,10 +18,10 @@ export default class Fast_Porkleg extends Component {
     const newData = {
       menu_name: this.state.menu_name,
       menu_value: 1,
-      menu_price: this.state.menu_price
+      menu_price: this.state.menu_price,
     };
     const isHaveMenuAlready = oldItems.find(
-      menu => menu.menu_name === this.state.menu_name
+      (menu) => menu.menu_name === this.state.menu_name
     );
 
     if (!isHaveMenuAlready) {
@@ -34,7 +33,7 @@ export default class Fast_Porkleg extends Component {
     }
   };
 
-  handleInputChange = e => {
+  handleInputChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
     this.setState({ please: "" });
@@ -47,7 +46,12 @@ export default class Fast_Porkleg extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_buk row justify-content-md-center">
-                <img className="img_ffporkleg img-fluid" src={ff_porkleg} />
+                <img
+                  className="img_ffporkleg img-fluid"
+                  src={ff_porkleg}
+                  BTBasket
+                  alt=""
+                />
               </div>
               <CardTitle className="text_menuname">ข้าวขาหมู</CardTitle>
               <CardText className="text_price">ราคา 50 .-</CardText>

@@ -7,7 +7,7 @@ import {
   CardBody,
   CardText,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 import "./Basket.css";
 import axios from "axios";
@@ -20,24 +20,21 @@ class Basket extends Component {
     priceAll: 0,
     total: 0,
     check: 1,
-    count: 0
+    count: 0,
   };
-  onUserChanged = user => {
+  onUserChanged = (user) => {
     this.setState({ user });
   };
-  componentDidMount = async nextProps => {
+  componentDidMount = async (nextProps) => {
     let token = localStorage.getItem("token");
     if (token) {
       if (token !== null) {
         this.setState({ check: "login" });
       }
       let res = await axios.post(`http://localhost:3001/api/users/me`, {
-        token
+        token,
       });
-      // if (!res) {
-      //   window.location.href = "/login";
-      //   return;
-      // }
+
       this.setState({ user: res.data });
     } else {
       window.location.href = "/login";
@@ -52,7 +49,7 @@ class Basket extends Component {
     this.setState({ priceAll: this.state.priceAll });
   };
 
-  toRemove = index => {
+  toRemove = (index) => {
     console.log("index is ", index);
     const order = this.state.order;
     const afterObject = order.filter((o, i) => i !== index);
@@ -72,7 +69,7 @@ class Basket extends Component {
     this.setState({ priceAll: this.state.priceAll });
   }
 
-  addCount = index => {
+  addCount = (index) => {
     const { order } = this.state;
     const newOrder = order.reduce((acc, next, indexArrrr) => {
       if (index === indexArrrr) {
@@ -80,23 +77,23 @@ class Basket extends Component {
           ...acc,
           {
             ...next,
-            menu_value: (next.menu_value += 1)
-          }
+            menu_value: (next.menu_value += 1),
+          },
         ];
       }
       return [
         ...acc,
         {
-          ...next
-        }
+          ...next,
+        },
       ];
     }, []);
     console.log({ newOrder });
     this.setState({
-      order: newOrder
+      order: newOrder,
     });
   };
-  removeCount = index => {
+  removeCount = (index) => {
     const { order } = this.state;
     const newOrder = order.reduce((acc, next, indexArrrr) => {
       if (index === indexArrrr) {
@@ -104,20 +101,20 @@ class Basket extends Component {
           ...acc,
           {
             ...next,
-            menu_value: (next.menu_value -= 1)
-          }
+            menu_value: (next.menu_value -= 1),
+          },
         ];
       }
       return [
         ...acc,
         {
-          ...next
-        }
+          ...next,
+        },
       ];
     }, []);
     console.log({ newOrder });
     this.setState({
-      order: newOrder
+      order: newOrder,
     });
   };
   render() {
@@ -271,13 +268,26 @@ class Basket extends Component {
                 </Card>
               </div>
               <div className="address_customer">
-                <Button color="info" size="lg" block href="/Order">
+                <Button
+                  className="OrderConfirmation"
+                  color="info"
+                  size="lg"
+                  block
+                  href="/Order"
+                >
                   <img className="img_gps" src={img_gps} alt="" />
                   ยืนยันการสั่งซื้อ
                 </Button>
               </div>
               <div className="add_food">
-                <Button outline color="success" size="lg" block href="/Menu">
+                <Button
+                  className="OrderConfirmation"
+                  outline
+                  color="info"
+                  size="lg"
+                  block
+                  href="/Menu"
+                >
                   เพิ่มรายการอาหาร
                 </Button>
               </div>

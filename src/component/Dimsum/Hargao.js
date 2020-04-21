@@ -4,7 +4,7 @@ import dl_hargao from "../../imgdimsum/ฮะเก๋า.png";
 export default class Hargao extends Component {
   state = { menu_name: "ฮะเก๋า", menu_value: 0, menu_price: 20 };
 
-  sentOrder = e => {
+  sentOrder = (e) => {
     e.preventDefault();
 
     var oldItems = JSON.parse(localStorage.getItem("order")) || [];
@@ -14,11 +14,11 @@ export default class Hargao extends Component {
     const newData = {
       menu_name: this.state.menu_name,
       menu_value: 1,
-      menu_price: this.state.menu_price
+      menu_price: this.state.menu_price,
     };
 
     const isHaveMenuAlready = oldItems.find(
-      menu => menu.menu_name === this.state.menu_name
+      (menu) => menu.menu_name === this.state.menu_name
     );
 
     if (!isHaveMenuAlready) {
@@ -30,7 +30,7 @@ export default class Hargao extends Component {
     }
   };
 
-  handleInputChange = e => {
+  handleInputChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
     this.setState({ please: "" });
@@ -43,7 +43,7 @@ export default class Hargao extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_hargao row justify-content-md-center">
-                <img className="img_hargao img-fluid" src={dl_hargao} />
+                <img className="img_hargao img-fluid" src={dl_hargao} alt="" />
               </div>
               <CardTitle className="text_menuname">ฮะเก๋า</CardTitle>
               <CardText className="text_price">ราคา 20.-</CardText>

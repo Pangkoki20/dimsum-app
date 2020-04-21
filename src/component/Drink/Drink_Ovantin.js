@@ -6,10 +6,10 @@ export default class Drink_Ovantin extends Component {
   state = {
     menu_name: "โอวัลติน",
     menu_value: 0,
-    menu_price: 30
+    menu_price: 30,
   };
 
-  sentOrder = e => {
+  sentOrder = (e) => {
     e.preventDefault();
 
     var oldItems = JSON.parse(localStorage.getItem("order")) || [];
@@ -19,10 +19,10 @@ export default class Drink_Ovantin extends Component {
     const newData = {
       menu_name: this.state.menu_name,
       menu_value: 1,
-      menu_price: this.state.menu_price
+      menu_price: this.state.menu_price,
     };
     const isHaveMenuAlready = oldItems.find(
-      menu => menu.menu_name === this.state.menu_name
+      (menu) => menu.menu_name === this.state.menu_name
     );
 
     if (!isHaveMenuAlready) {
@@ -34,7 +34,7 @@ export default class Drink_Ovantin extends Component {
     }
   };
 
-  handleInputChange = e => {
+  handleInputChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
     this.setState({ please: "" });
@@ -47,7 +47,7 @@ export default class Drink_Ovantin extends Component {
           <div className="form-menu">
             <Card body>
               <div className="pic_buk row justify-content-md-center">
-                <img className="img_ovantin img-fluid" src={ovantin} />
+                <img className="img_ovantin img-fluid" src={ovantin} alt="" />
               </div>
               <CardTitle className="text_menuname">โอวัลตินเย็น</CardTitle>
               <CardText className="text_price">ราคา 30 .-</CardText>

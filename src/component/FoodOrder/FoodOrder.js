@@ -1,20 +1,12 @@
 import React, { Component } from "react";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  Row,
-  Col,
-  Button,
-  CardText
-} from "reactstrap";
+import { Card, CardHeader, CardBody, Row, Col, Button } from "reactstrap";
 import axios from "axios";
 import "./FoodOrder.css";
 class FoodOrder extends Component {
   state = {
-    order: []
+    order: [],
   };
-  componentDidMount = async nextProps => {
+  componentDidMount = async (nextProps) => {
     let order = await axios.get(`http://localhost:3001/api/order`);
     this.setState({ order: order.data });
   };
@@ -31,10 +23,10 @@ class FoodOrder extends Component {
                   <Col>สถานะ</Col>
                 </Row>
               </CardHeader>
-              {this.state.order.map(order => {
+              {this.state.order.map((order) => {
                 if (
-                  order.user_id != this.props.match.params.userid ||
-                  order.status != 3
+                  order.user_id !== this.props.match.params.userid ||
+                  order.status !== 3
                 )
                   return null;
                 else

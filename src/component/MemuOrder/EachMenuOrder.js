@@ -1,24 +1,16 @@
 import React, { Component } from "react";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Row,
-  Col,
-  Button
-} from "reactstrap";
+import { CardBody, Row, Col } from "reactstrap";
 import "./MenuOrder.css";
 import axios from "axios";
 
 class EachMenuOrder extends Component {
   state = {
-    persons: []
+    persons: [],
   };
   componentDidMount = () => {
     axios
       .get(`http://localhost:3001/api/order/${this.props.match.params.id}`)
-      .then(res => {
+      .then((res) => {
         const { persons } = res.data;
         this.setState({ persons });
       });

@@ -7,12 +7,10 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Button
+  Button,
 } from "reactstrap";
 import "./Navigator.css";
-import login from "../../imghome/user.png";
 import auth from "../service";
-import axios from "axios";
 import token from "../../component/service";
 export default class Navigator extends React.Component {
   constructor(props) {
@@ -21,22 +19,22 @@ export default class Navigator extends React.Component {
       isOpen: false,
       check: "",
       nameLogin: "",
-      role: ""
+      role: "",
     };
     this.toggle = this.toggle.bind(this);
   }
   toggle() {
     this.setState({
-      isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
     });
   }
 
-  logout = e => {
+  logout = (e) => {
     auth.clearToken();
     this.props.history.push("/");
   };
   //  componentWillReceiveProps;
-  componentDidMount = async nextProps => {
+  componentDidMount = async (nextProps) => {
     //  if (nextProps.user !== null) {
     //    this.setState({ check: "login" });
     //  }
@@ -79,7 +77,7 @@ export default class Navigator extends React.Component {
       ) {
         this.setState({
           role: token.decodeToken(localStorage.getItem("token")).role,
-          check: "login"
+          check: "login",
         });
       }
     }

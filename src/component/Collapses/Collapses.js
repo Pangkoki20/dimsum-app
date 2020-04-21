@@ -22,15 +22,13 @@ class Collapses extends Component {
             <CardTitle className="text-address">ที่อยู่ร้าน</CardTitle>
           </Card>
           <Card>
-            <a href="">
-              <CardImg
-                className="phone"
-                top
-                width=""
-                src={phone}
-                alt="Card image cap"
-              />
-            </a>
+            <CardImg
+              className="phone"
+              top
+              width=""
+              src={phone}
+              alt="Card image cap"
+            />
             <CardTitle className="text-phone">เบอร์โทรศัพท์</CardTitle>
           </Card>
           <Card>
