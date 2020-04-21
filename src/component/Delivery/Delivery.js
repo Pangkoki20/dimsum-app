@@ -48,7 +48,10 @@ class Delivery extends Component {
     let userFirstName = userDecoded.firstname;
     let userLastName = userDecoded.lastname;
     let userRole = userDecoded.role;
-    this.getAllOrder(userId);
+
+    this.checkComponent = setInterval(() => {
+      this.getAllOrder(userId);
+    }, 1000);
   };
 
   async getAllOrder(userId) {
@@ -61,7 +64,72 @@ class Delivery extends Component {
       });
   }
 
+  orderSuccess = () => {
+    let orderStatus = 0;
+    this.state.allData.map((data, index) => {
+      const { status } = data;
+      console.log("this status " + status);
+      orderStatus = status;
+    });
+    console.log("orderStatus: " + orderStatus);
+    if (orderStatus >= 1) {
+      return (
+        <Card body className="border border-success rounded green">
+          <div>
+            <img className="img_foodorder img-fluid" src={img_foodorder} />
+          </div>
+          <div className="font_status">สั่งอาหารแล้ว</div>
+        </Card>
+      );
+    } else {
+      return (
+        <Card body className="border border-success rounded">
+          <div>
+            <img className="img_foodorder img-fluid" src={img_foodorder} />
+          </div>
+          <div className="font_status">สั่งอาหารแล้ว</div>
+        </Card>
+      );
+    }
+  };
+
+  getOrderSuccess = () => {
+    let orderStatus = 0;
+    this.state.allData.map((data, index) => {
+      const { status } = data;
+      console.log("this status " + status);
+      orderStatus = status;
+    });
+    console.log("orderStatus: " + orderStatus);
+    if (orderStatus >= 2) {
+      return (
+        <Card body className="border border-success rounded green">
+          <div>
+            <img className="img_menu img-fluid" src={img_menu} />
+          </div>
+          <div className="font_status">ได้รับรายการอาหารแล้ว</div>
+        </Card>
+      );
+    } else {
+      return (
+        <Card body className="border border-success rounded">
+          <div>
+            <img className="img_menu img-fluid" src={img_menu} />
+          </div>
+          <div className="font_status">ได้รับรายการอาหารแล้ว</div>
+        </Card>
+      );
+    }
+  };
+
+  // renderDiv() {
+  //   return <div>Hello world</div>;
+  // }
+
   render() {
+    let orderSuccess = this.orderSuccess();
+    let getOrderSuccess = this.getOrderSuccess();
+    console.log("allData: " + this.state.allData);
     return (
       <div>
         <MenuSelect />
@@ -69,27 +137,10 @@ class Delivery extends Component {
           <div className="text_status">ติดตามสถานะการจัดส่ง</div>
           <div className="from_status">
             <Row>
+              <Col className="frame_status">{orderSuccess}</Col>
+              <Col className="frame_status">{getOrderSuccess}</Col>
               <Col className="frame_status">
-                <Card body className="border border-warning rounded">
-                  <div>
-                    <img
-                      className="img_foodorder img-fluid"
-                      src={img_foodorder}
-                    />
-                  </div>
-                  <div className="font_status">สั่งอาหารแล้ว</div>
-                </Card>
-              </Col>
-              <Col className="frame_status">
-                <Card body className="border border-warning rounded">
-                  <div>
-                    <img className="img_menu img-fluid" src={img_menu} />
-                  </div>
-                  <div className="font_status">ได้รับรายการอาหารแล้ว</div>
-                </Card>
-              </Col>
-              <Col className="frame_status">
-                <Card body className="border border-warning rounded">
+                <Card body className="border border-success rounded">
                   <div>
                     <img className="img_meal img-fluid" src={img_meal} />
                   </div>
@@ -97,7 +148,7 @@ class Delivery extends Component {
                 </Card>
               </Col>
               <Col className="frame_status">
-                <Card body className="border border-warning rounded">
+                <Card body className="border border-success rounded">
                   <div>
                     <img className="img_product img-fluid" src={img_product} />
                   </div>
@@ -105,7 +156,7 @@ class Delivery extends Component {
                 </Card>
               </Col>
               <Col className="frame_status">
-                <Card body className="border border-warning rounded">
+                <Card body className="border border-success rounded">
                   <div>
                     <img
                       className="img_delivery img-fluid"
@@ -116,7 +167,7 @@ class Delivery extends Component {
                 </Card>
               </Col>
               <Col className="frame_status">
-                <Card body className="border border-warning rounded">
+                <Card body className="border border-success rounded">
                   <div>
                     <img
                       className="img_breakfast img-fluid"
@@ -127,27 +178,6 @@ class Delivery extends Component {
                 </Card>
               </Col>
             </Row>
-            <Container className="p-4">
-              <Row>
-                All Orders
-                {this.state.allData.map(e => {
-                  return (
-                    <Col md={12}>
-                      <div className="p-3">
-                        order no.{e.id}, status : {e.status}{" "}
-                        {e.allMenu.map((e, i = 0) => {
-                          return (
-                            <div>
-                              {i + 1}.{e.namefood}
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </Col>
-                  );
-                })}
-              </Row>
-            </Container>
           </div>
         </div>
       </div>

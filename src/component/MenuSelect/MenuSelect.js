@@ -6,7 +6,8 @@ import "../Basket/Basket";
 import auth from "../service/index";
 class MenuSelect extends Component {
   state = {
-    order: []
+    order: [],
+    countBasket: 0
   };
 
   // componentDidMount = async nextProps => {
@@ -33,6 +34,7 @@ class MenuSelect extends Component {
     let uRole = userDecoded.role;
     this.setState({ user: uRole });
   }
+
   render() {
     const { numberOnBucket } = this.props;
     console.log({ numberOnBucket });

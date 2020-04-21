@@ -125,6 +125,7 @@ class Basket extends Component {
       (acc, next) => acc + next.menu_value,
       0
     );
+    console.log("number in Basket page: " + numberOfMenus);
     return (
       <div>
         <MenuSelect numberOnBucket={numberOfMenus} />
@@ -269,15 +270,15 @@ class Basket extends Component {
                   </CardFooter>
                 </Card>
               </div>
-              <div className="add_food">
-                <Button color="info" size="lg" block href="/Menu">
-                  เพิ่มรายการอาหาร
+              <div className="address_customer">
+                <Button color="info" size="lg" block href="/Order">
+                  <img className="img_gps" src={img_gps} alt="" />
+                  ยืนยันการสั่งซื้อ
                 </Button>
               </div>
-              <div className="address_customer">
-                <Button outline color="info" size="lg" block href="/Order">
-                  <img className="img_gps" src={img_gps} />
-                  ยืนยันการสั่งซื้อ
+              <div className="add_food">
+                <Button outline color="success" size="lg" block href="/Menu">
+                  เพิ่มรายการอาหาร
                 </Button>
               </div>
             </div>

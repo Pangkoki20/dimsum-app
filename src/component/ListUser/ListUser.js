@@ -10,6 +10,8 @@ class ListUser extends Component {
     let user = await axios.get(`http://localhost:3001/api/users`);
     this.setState({ users: user.data });
   };
+
+  getOrder = () => {};
   render() {
     return (
       <div className="container-fluid">
