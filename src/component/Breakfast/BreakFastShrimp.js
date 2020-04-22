@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
-import ff_crispypork from "../../imgfastfoood/ข้าวหมูกรอบ.png";
-import BTBasket from "../BTBasket/BTBasket";
-export default class Fast_Crispypork extends Component {
+import bf_shrimp from "../../imgbreakfast/กุ้งชุบแป้งทอด.png";
+export default class BreakFastShrimp extends Component {
   state = {
-    menu_name: "ข้าวหมูกรอบ",
+    menu_name: "กุ้งชุบแป้งทอด",
     menu_value: 0,
-    menu_price: 50
+    menu_price: 40,
   };
 
-  sentOrder = e => {
+  sentOrder = (e) => {
     e.preventDefault();
 
     var oldItems = JSON.parse(localStorage.getItem("order")) || [];
@@ -19,22 +18,16 @@ export default class Fast_Crispypork extends Component {
     const newData = {
       menu_name: this.state.menu_name,
       menu_value: 1,
-      menu_price: this.state.menu_price
+      menu_price: this.state.menu_price,
     };
-    const isHaveMenuAlready = oldItems.find(
-      menu => menu.menu_name === this.state.menu_name
-    );
-
-    if (!isHaveMenuAlready) {
-      oldItems.push(newData);
-      localStorage.setItem("order", JSON.stringify(oldItems));
-      console.log(" data : ", newData);
-      this.setState({ menu_value: 0 });
-      this.setState({ remark: "" });
-    }
+    oldItems.push(newData);
+    localStorage.setItem("order", JSON.stringify(oldItems));
+    console.log(" data : ", newData);
+    this.setState({ menu_value: 0 });
+    this.setState({ remark: "" });
   };
 
-  handleInputChange = e => {
+  handleInputChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
     this.setState({ please: "" });
@@ -48,16 +41,17 @@ export default class Fast_Crispypork extends Component {
             <Card body>
               <div className="pic_buk row justify-content-md-center">
                 <img
-                  className="img_ffcrispypork img-fluid"
-                  src={ff_crispypork}
+                  className="img_bfshrimp img-fluid"
+                  src={bf_shrimp}
+                  alt=""
                 />
               </div>
-              <CardTitle className="text_menuname">ข้าวหมูกรอบ</CardTitle>
-              <CardText className="text_price">ราคา 50 .-</CardText>
+              <CardTitle className="text_menuname">กุ้งชุบแป้งทอด</CardTitle>
+              <CardText className="text_price">ราคา 40 .-</CardText>
               <Button
                 onClick={this.sentOrder}
                 color="info"
-                className="btn-basket"
+                className="btn-basket bg-primary text-white"
               >
                 <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>

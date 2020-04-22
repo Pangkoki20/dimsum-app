@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
-import dl_pok from "../../imgdimsum/ขนมจีบหมู.png";
-export default class Pork_Dumpling extends Component {
+import ff_crispypork from "../../imgfastfoood/ข้าวหมูกรอบ.png";
+export default class FastFoodCrispypork extends Component {
   state = {
-    menu_name: "ขนมจีบหมู",
+    menu_name: "ข้าวหมูกรอบ",
     menu_value: 0,
-    menu_price: 20,
+    menu_price: 50,
   };
 
   sentOrder = (e) => {
@@ -44,12 +44,16 @@ export default class Pork_Dumpling extends Component {
       <div>
         <Container>
           <div className="form-menu">
-            <Card body>
-              <div className="pic_pok row justify-content-md-center">
-                <img className="img_pok img-fluid" src={dl_pok} alt="" />
+            <Card body className="border border-info">
+              <div className="pic_buk row justify-content-md-center">
+                <img
+                  className="img_ffcrispypork img-fluid"
+                  src={ff_crispypork}
+                  alt=""
+                />
               </div>
-              <CardTitle className="text_menuname">ขนมจีบหมู</CardTitle>
-              <CardText className="text_price">ราคา 20 .-</CardText>
+              <CardTitle className="text_menuname">ข้าวหมูกรอบ</CardTitle>
+              <CardText className="text_price">ราคา 50 .-</CardText>
               <Button
                 onClick={this.sentOrder}
                 color="info"

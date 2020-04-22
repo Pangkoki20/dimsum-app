@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
-import dl_shrimp from "../../imgdimsum/ขนมจีบกุ้ง.png";
-export default class Shrimp extends Component {
+import bf_egg from "../../imgbreakfast/ไข่กะทะ.png";
+export default class BreakFastEgg extends Component {
   state = {
-    menu_name: "ขนมจีบกุ้ง",
+    menu_name: "ไข่กะทะ",
     menu_value: 0,
-    menu_price: 20,
+    menu_price: 40,
   };
 
   sentOrder = (e) => {
@@ -20,17 +20,11 @@ export default class Shrimp extends Component {
       menu_value: 1,
       menu_price: this.state.menu_price,
     };
-    const isHaveMenuAlready = oldItems.find(
-      (menu) => menu.menu_name === this.state.menu_name
-    );
-
-    if (!isHaveMenuAlready) {
-      oldItems.push(newData);
-      localStorage.setItem("order", JSON.stringify(oldItems));
-      console.log(" data : ", newData);
-      this.setState({ menu_value: 0 });
-      this.setState({ remark: "" });
-    }
+    oldItems.push(newData);
+    localStorage.setItem("order", JSON.stringify(oldItems));
+    console.log(" data : ", newData);
+    this.setState({ menu_value: 0 });
+    this.setState({ remark: "" });
   };
 
   handleInputChange = (e) => {
@@ -44,16 +38,16 @@ export default class Shrimp extends Component {
       <div>
         <Container>
           <div className="form-menu">
-            <Card body>
-              <div className="pic_buk row justify-content-md-center">
-                <img className="img_shrimp img-fluid" src={dl_shrimp} alt="" />
+            <Card body className="border border-info">
+              <div className="pic_bfegg row justify-content-md-center">
+                <img className="img_bfegg img-fluid" src={bf_egg} alt="" />
               </div>
-              <CardTitle className="text_menuname">ขนมจีบกุ้ง</CardTitle>
-              <CardText className="text_price">ราคา 20 .-</CardText>
+              <CardTitle className="text_menuname">ไข่กะทะ</CardTitle>
+              <CardText className="text_price">ราคา 40 .-</CardText>
               <Button
                 onClick={this.sentOrder}
                 color="info"
-                className="btn-basket"
+                className="btn-basket bg-primary text-white"
               >
                 <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>

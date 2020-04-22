@@ -2,16 +2,17 @@
 @import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
 
 .textname-breakfast {
-    text-align: center;
-    font-size: 50px;
     margin-top: 15px;
-    color: #224870;
-    font-family: "Kanit", sans-serif;
+    font-size: 35px;
+    color: rgb(0, 96, 175);
+    font-family: "Kanit",
+        sans-serif;
+    text-align: center;
 }
 
 .textname-breakfast:hover {
     text-decoration: none;
-    color: #00758d;
+    color: rgb(15, 97, 219);
 }
 
 .img_bfegg {

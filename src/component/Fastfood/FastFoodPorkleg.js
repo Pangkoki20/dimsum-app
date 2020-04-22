@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
-import coffee from "../../imgdrink/กาแฟเย็น.png";
-import BTBasket from "../BTBasket/BTBasket";
-export default class Drink_Coffee extends Component {
+import ff_porkleg from "../../imgfastfoood/ข้าวขาหมู.png";
+export default class FastFoodPorkleg extends Component {
   state = {
-    menu_name: "กาแฟเย็น",
+    menu_name: "ข้าวขาหมู",
     menu_value: 0,
-    menu_price: 30,
+    menu_price: 50,
   };
 
   sentOrder = (e) => {
@@ -45,12 +44,16 @@ export default class Drink_Coffee extends Component {
       <div>
         <Container>
           <div className="form-menu">
-            <Card body>
+            <Card body className="border border-info">
               <div className="pic_buk row justify-content-md-center">
-                <img className="img_coffee img-fluid" src={coffee} alt="" />
+                <img
+                  className="img_ffporkleg img-fluid"
+                  src={ff_porkleg}
+                  alt=""
+                />
               </div>
-              <CardTitle className="text_menuname">กาแฟเย็น</CardTitle>
-              <CardText className="text_price">ราคา 30 .-</CardText>
+              <CardTitle className="text_menuname">ข้าวขาหมู</CardTitle>
+              <CardText className="text_price">ราคา 50 .-</CardText>
               <Button
                 onClick={this.sentOrder}
                 color="info"

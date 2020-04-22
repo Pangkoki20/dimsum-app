@@ -46,7 +46,7 @@ class MenuNewSarapol extends Component {
         <Container>
           {/* <img className="img_menu" src={imgmenu} /> */}
           <div className="form-menu">
-            <Card body>
+            <Card body className="border border-info">
               <div className="pic_egg row justify-content-md-center">
                 <img
                   className="img_sarapol img-fluid"
@@ -59,7 +59,7 @@ class MenuNewSarapol extends Component {
               <Button
                 onClick={this.sentOrder}
                 color="info"
-                className="btn-basket"
+                className="btn-basket bg-primary text-white"
               >
                 <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>

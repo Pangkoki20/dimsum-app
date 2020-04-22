@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
-import dl_poo from "../../imgdimsum/ขนมจีบปู.png";
-export default class Poo_Dumpling extends Component {
+import ovantin from "../../imgdrink/โอวัลติน.png";
+export default class DrinkOvantin extends Component {
   state = {
-    menu_name: "ขนมจีบปู",
+    menu_name: "โอวัลติน",
     menu_value: 0,
-    menu_price: 20,
+    menu_price: 30,
   };
 
   sentOrder = (e) => {
@@ -23,6 +23,7 @@ export default class Poo_Dumpling extends Component {
     const isHaveMenuAlready = oldItems.find(
       (menu) => menu.menu_name === this.state.menu_name
     );
+
     if (!isHaveMenuAlready) {
       oldItems.push(newData);
       localStorage.setItem("order", JSON.stringify(oldItems));
@@ -43,16 +44,16 @@ export default class Poo_Dumpling extends Component {
       <div>
         <Container>
           <div className="form-menu">
-            <Card body>
-              <div className="pic_dlpoo row justify-content-md-center">
-                <img className="img_poo img-fluid" src={dl_poo} alt="" />
+            <Card body className="border border-info">
+              <div className="pic_buk row justify-content-md-center">
+                <img className="img_ovantin img-fluid" src={ovantin} alt="" />
               </div>
-              <CardTitle className="text_menuname">ขนมจีบปู</CardTitle>
-              <CardText className="text_price">ราคา 20 .-</CardText>
+              <CardTitle className="text_menuname">โอวัลตินเย็น</CardTitle>
+              <CardText className="text_price">ราคา 30 .-</CardText>
               <Button
                 onClick={this.sentOrder}
                 color="info"
-                className="btn-basket"
+                className="btn-basket bg-primary text-white"
               >
                 <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>

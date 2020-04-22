@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
-import ovantin from "../../imgdrink/โอวัลติน.png";
-import BTBasket from "../BTBasket/BTBasket";
-export default class Drink_Ovantin extends Component {
+import dl_pokegg from "../../imgdimsum/ขนมจีบหมูไข่เค็ม.png";
+export default class PorkEggDumpling extends Component {
   state = {
-    menu_name: "โอวัลติน",
+    menu_name: "ขนมจีบหมูไข่เค็ม",
     menu_value: 0,
-    menu_price: 30,
+    menu_price: 20,
   };
 
   sentOrder = (e) => {
@@ -45,16 +44,16 @@ export default class Drink_Ovantin extends Component {
       <div>
         <Container>
           <div className="form-menu">
-            <Card body>
-              <div className="pic_buk row justify-content-md-center">
-                <img className="img_ovantin img-fluid" src={ovantin} alt="" />
+            <Card body className="border border-info">
+              <div className="pic_pokegg row justify-content-md-center">
+                <img className="img_pokegg img-fluid" src={dl_pokegg} alt="" />
               </div>
-              <CardTitle className="text_menuname">โอวัลตินเย็น</CardTitle>
-              <CardText className="text_price">ราคา 30 .-</CardText>
+              <CardTitle className="text_menuname">ขนมจีบหมูไข่เค็ม</CardTitle>
+              <CardText className="text_price">ราคา 20 .-</CardText>
               <Button
                 onClick={this.sentOrder}
                 color="info"
-                className="btn-basket"
+                className="btn-basket bg-primary text-white"
               >
                 <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>

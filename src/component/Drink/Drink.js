@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
-import Drink_Chaice from "./Drink_Chaice";
 import "./Drink.css";
-import Drink_Coffee from "./Drink_Coffee";
-import Drink_chamanow from "./Drink_chamanow";
-import Drink_Ovantin from "./Drink_Ovantin";
-import Drink_Greentea from "./Drink_Greentea";
-import Drink_Chadum from "./Drink_Chadum";
+import DrinkChaice from "./DrinkChaice";
+import DrinkCoffee from "./DrinkCoffee";
+import DrinkChamanow from "./DrinkChamanow";
+import DrinkOvantin from "./DrinkOvantin";
+import DrinkGreentea from "./DrinkGreentea";
+import DrinkChadum from "./DrinkChadum";
 import MenuSelect from "../MenuSelect/MenuSelect";
 import axios from "axios";
 class Drink extends Component {
@@ -25,6 +25,9 @@ class Drink extends Component {
       if (token !== null) {
         this.setState({ check: "login" });
       }
+      let order = JSON.parse(localStorage.getItem("order"));
+      this.setState({ order: order });
+      let token = localStorage.getItem("token");
       let res = await axios.post(`http://localhost:3001/api/users/me`, {
         token,
       });
@@ -42,10 +45,10 @@ class Drink extends Component {
     console.log("old first :", oldItems);
 
     if (oldItems == null) {
-      var oldItems = [];
+      oldItems = [];
       localStorage.setItem("order", JSON.stringify(oldItems));
     } else {
-      var oldItems = JSON.parse(localStorage.getItem("order")) || [];
+      oldItems = JSON.parse(localStorage.getItem("order")) || [];
     }
     // var oldItems = JSON.parse(localStorage.getItem('order')) || [];
   };
@@ -61,22 +64,22 @@ class Drink extends Component {
           <div className="textname-drink">เครื่องดื่ม</div>
           <Row>
             <Col xs="6" sm="4">
-              <Drink_Chaice />
+              <DrinkChaice />
             </Col>
             <Col xs="6" sm="4">
-              <Drink_Coffee />
+              <DrinkCoffee />
             </Col>
             <Col xs="6" sm="4">
-              <Drink_chamanow />
+              <DrinkChamanow />
             </Col>
             <Col xs="6" sm="4">
-              <Drink_Ovantin />
+              <DrinkOvantin />
             </Col>
             <Col xs="6" sm="4">
-              <Drink_Greentea />
+              <DrinkGreentea />
             </Col>
             <Col xs="6" sm="4">
-              <Drink_Chadum />
+              <DrinkChadum />
             </Col>
           </Row>
         </div>

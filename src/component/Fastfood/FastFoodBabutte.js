@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
-import ff_porkleg from "../../imgfastfoood/ข้าวขาหมู.png";
-export default class Fast_Porkleg extends Component {
+import ff_babutte from "../../imgfastfoood/บะกุ๊ดเต๋.png";
+export default class FastFoodBabutte extends Component {
   state = {
-    menu_name: "ข้าวขาหมู",
+    menu_name: "บะกุ๊ดเต๋",
     menu_value: 0,
     menu_price: 50,
   };
@@ -44,16 +44,15 @@ export default class Fast_Porkleg extends Component {
       <div>
         <Container>
           <div className="form-menu">
-            <Card body>
+            <Card body className="border border-info">
               <div className="pic_buk row justify-content-md-center">
                 <img
-                  className="img_ffporkleg img-fluid"
-                  src={ff_porkleg}
-                  BTBasket
+                  className="img_ffbabutte img-fluid"
+                  src={ff_babutte}
                   alt=""
                 />
               </div>
-              <CardTitle className="text_menuname">ข้าวขาหมู</CardTitle>
+              <CardTitle className="text_menuname">บะกุ๊ดเต๋</CardTitle>
               <CardText className="text_price">ราคา 50 .-</CardText>
               <Button
                 onClick={this.sentOrder}

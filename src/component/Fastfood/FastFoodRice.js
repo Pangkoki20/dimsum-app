@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
-import ff_redpork from "../../imgfastfoood/ข้าวหมูแดง.png";
-export default class Fast_Redpork extends Component {
+import ff_rice from "../../imgfastfoood/ข้าวเปล่า.png";
+export default class FastFoodRice extends Component {
   state = {
-    menu_name: "ข้าวหมูแดง",
+    menu_name: "ข้าวเปล่า",
     menu_value: 0,
-    menu_price: 50,
+    menu_price: 10,
   };
 
   sentOrder = (e) => {
@@ -20,7 +20,6 @@ export default class Fast_Redpork extends Component {
       menu_value: 1,
       menu_price: this.state.menu_price,
     };
-
     const isHaveMenuAlready = oldItems.find(
       (menu) => menu.menu_name === this.state.menu_name
     );
@@ -45,16 +44,12 @@ export default class Fast_Redpork extends Component {
       <div>
         <Container>
           <div className="form-menu">
-            <Card body>
+            <Card body className="border border-info">
               <div className="pic_buk row justify-content-md-center">
-                <img
-                  className="img_ffredpork img-fluid"
-                  src={ff_redpork}
-                  alt=""
-                />
+                <img className="img_ffrice img-fluid" src={ff_rice} alt="" />
               </div>
-              <CardTitle className="text_menuname">ข้าวหมูแดง</CardTitle>
-              <CardText className="text_price">ราคา 50 .-</CardText>
+              <CardTitle className="text_menuname">ข้าวเปล่า</CardTitle>
+              <CardText className="text_price">ราคา 10 .-</CardText>
               <Button
                 onClick={this.sentOrder}
                 color="info"

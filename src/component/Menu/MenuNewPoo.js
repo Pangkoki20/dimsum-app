@@ -42,7 +42,7 @@ class MenuNewPoo extends Component {
         <Container>
           {/* <img className="img_menu" src={imgmenu} /> */}
           <div className="form-menu">
-            <Card body>
+            <Card body className="border border-info">
               <div className="pic_jopoo row justify-content-md-center">
                 <img className="img_jopoo img-fluid" src={img_jopoo} alt="" />
               </div>
@@ -51,7 +51,7 @@ class MenuNewPoo extends Component {
               <Button
                 onClick={this.sentOrder}
                 color="info"
-                className="btn-basket"
+                className="btn-basket bg-primary text-white"
               >
                 <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>

@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
-import bf_egg from "../../imgbreakfast/ไข่กะทะ.png";
-export default class Break_egg extends Component {
+import ff_duck from "../../imgfastfoood/ข้าวหน้าเป็ด.png";
+export default class FastFoodDuck extends Component {
   state = {
-    menu_name: "ไข่กะทะ",
+    menu_name: "ข้าวหน้าเป็ด",
     menu_value: 0,
-    menu_price: 40,
+    menu_price: 50,
   };
 
   sentOrder = (e) => {
@@ -20,11 +20,17 @@ export default class Break_egg extends Component {
       menu_value: 1,
       menu_price: this.state.menu_price,
     };
-    oldItems.push(newData);
-    localStorage.setItem("order", JSON.stringify(oldItems));
-    console.log(" data : ", newData);
-    this.setState({ menu_value: 0 });
-    this.setState({ remark: "" });
+    const isHaveMenuAlready = oldItems.find(
+      (menu) => menu.menu_name === this.state.menu_name
+    );
+
+    if (!isHaveMenuAlready) {
+      oldItems.push(newData);
+      localStorage.setItem("order", JSON.stringify(oldItems));
+      console.log(" data : ", newData);
+      this.setState({ menu_value: 0 });
+      this.setState({ remark: "" });
+    }
   };
 
   handleInputChange = (e) => {
@@ -38,12 +44,12 @@ export default class Break_egg extends Component {
       <div>
         <Container>
           <div className="form-menu">
-            <Card body>
-              <div className="pic_bfegg row justify-content-md-center">
-                <img className="img_bfegg img-fluid" src={bf_egg} alt="" />
+            <Card body className="border border-info">
+              <div className="pic_buk row justify-content-md-center">
+                <img className="img_ffduck img-fluid" src={ff_duck} alt="" />
               </div>
-              <CardTitle className="text_menuname">ไข่กะทะ</CardTitle>
-              <CardText className="text_price">ราคา 40 .-</CardText>
+              <CardTitle className="text_menuname">ข้าวหน้าเป็ด</CardTitle>
+              <CardText className="text_price">ราคา 50 .-</CardText>
               <Button
                 onClick={this.sentOrder}
                 color="info"

@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import "./Fastfood.css";
-import Fast_Chicken from "./Fast_Chicken";
-import Fast_Rice from "./Fast_Rice";
-import Fast_Babutte from "./Fast_Babutte";
-import Fast_Duck from "./Fast_Duck";
-import Fast_Porkleg from "./Fast_Porkleg";
-import Fast_Redpork from "./Fast_Redpork";
-import Fast_Crispypork from "./Fast_Crispypork";
+import FastFoodChicken from "./FastFoodChicken";
+import FastFoodBabutte from "./FastFoodBabutte";
+import FastFoodDuck from "./FastFoodDuck";
+import FastFoodPorkleg from "./FastFoodPorkleg";
+import FastFoodRedpork from "./FastFoodRedpork";
+import FastFoodCrispypork from "./FastFoodCrispypork";
 import MenuSelect from "../MenuSelect/MenuSelect";
 import axios from "axios";
 class Fastfood extends Component {
@@ -26,6 +25,9 @@ class Fastfood extends Component {
       if (token !== null) {
         this.setState({ check: "login" });
       }
+      let order = JSON.parse(localStorage.getItem("order"));
+      this.setState({ order: order });
+      let token = localStorage.getItem("token");
       let res = await axios.post(`http://localhost:3001/api/users/me`, {
         token,
       });
@@ -43,10 +45,10 @@ class Fastfood extends Component {
     console.log("old first :", oldItems);
 
     if (oldItems == null) {
-      var oldItems = [];
+      oldItems = [];
       localStorage.setItem("order", JSON.stringify(oldItems));
     } else {
-      var oldItems = JSON.parse(localStorage.getItem("order")) || [];
+      oldItems = JSON.parse(localStorage.getItem("order")) || [];
     }
     // var oldItems = JSON.parse(localStorage.getItem('order')) || [];
   };
@@ -63,26 +65,26 @@ class Fastfood extends Component {
 
           <Row>
             <Col xs="6" sm="4">
-              <Fast_Babutte />
+              <FastFoodBabutte />
             </Col>
             <Col xs="6" sm="4">
-              <Fast_Chicken />
+              <FastFoodChicken />
             </Col>
             <Col xs="6" sm="4">
-              <Fast_Duck />
+              <FastFoodDuck />
             </Col>
             <Col xs="6" sm="4">
-              <Fast_Porkleg />
+              <FastFoodPorkleg />
             </Col>
             <Col xs="6" sm="4">
-              <Fast_Redpork />
+              <FastFoodRedpork />
             </Col>
             <Col xs="6" sm="4">
-              <Fast_Crispypork />
+              <FastFoodCrispypork />
             </Col>
-            <Col xs="6" sm="4">
-              <Fast_Rice />
-            </Col>
+            {/* <Col xs="6" sm="4">
+              <FastFoodRice />
+            </Col> */}
           </Row>
         </div>
       </div>

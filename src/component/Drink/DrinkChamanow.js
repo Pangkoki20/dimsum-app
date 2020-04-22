@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
-import dl_pokegg from "../../imgdimsum/ขนมจีบหมูไข่เค็ม.png";
-import BTBasket from "../BTBasket/BTBasket";
-export default class Porkegg extends Component {
+import chamanow from "../../imgdrink/ชามะนาว.png";
+export default class DrinkChamanow extends Component {
   state = {
-    menu_name: "ขนมจีบหมูไข่เค็ม",
+    menu_name: "ชามะนาว",
     menu_value: 0,
-    menu_price: 20,
+    menu_price: 30,
   };
 
   sentOrder = (e) => {
@@ -45,16 +44,16 @@ export default class Porkegg extends Component {
       <div>
         <Container>
           <div className="form-menu">
-            <Card body>
-              <div className="pic_pokegg row justify-content-md-center">
-                <img className="img_pokegg img-fluid" src={dl_pokegg} alt="" />
+            <Card body className="border border-info">
+              <div className="pic_buk row justify-content-md-center">
+                <img className="img_chamanow img-fluid" src={chamanow} alt="" />
               </div>
-              <CardTitle className="text_menuname">ขนมจีบหมูไข่เค็ม</CardTitle>
-              <CardText className="text_price">ราคา 20 .-</CardText>
+              <CardTitle className="text_menuname">ชามะนาวเย็น</CardTitle>
+              <CardText className="text_price">ราคา 30 .-</CardText>
               <Button
                 onClick={this.sentOrder}
                 color="info"
-                className="btn-basket"
+                className="btn-basket bg-primary text-white"
               >
                 <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>

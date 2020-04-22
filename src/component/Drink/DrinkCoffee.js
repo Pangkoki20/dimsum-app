@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
-import dl_shrimp from "../../imgdimsum/เกี๊ยวกุ้ง.png";
-export default class Shrimp_Dumling extends Component {
+import coffee from "../../imgdrink/กาแฟเย็น.png";
+export default class DrinkCoffee extends Component {
   state = {
-    menu_name: "เกี๊ยวกุ้ง",
+    menu_name: "กาแฟเย็น",
     menu_value: 0,
-    menu_price: 20,
+    menu_price: 30,
   };
 
   sentOrder = (e) => {
@@ -44,16 +44,16 @@ export default class Shrimp_Dumling extends Component {
       <div>
         <Container>
           <div className="form-menu">
-            <Card body>
-              <div className="pic_hrimp row justify-content-md-center">
-                <img className="img_shrimp img-fluid" src={dl_shrimp} alt="" />
+            <Card body className="border border-info">
+              <div className="pic_buk row justify-content-md-center">
+                <img className="img_coffee img-fluid" src={coffee} alt="" />
               </div>
-              <CardTitle className="text_menuname">เกี๊ยวกุ้ง</CardTitle>
-              <CardText className="text_price">ราคา 20 .-</CardText>
+              <CardTitle className="text_menuname">กาแฟเย็น</CardTitle>
+              <CardText className="text_price">ราคา 30 .-</CardText>
               <Button
                 onClick={this.sentOrder}
                 color="info"
-                className="btn-basket"
+                className="btn-basket bg-primary text-white"
               >
                 <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>

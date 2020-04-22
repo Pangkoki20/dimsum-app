@@ -15,13 +15,13 @@ class ListUser extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <div className="text_customer">ข้อมูลลูกค้า</div>
         <div className="row">
-          <div className="col-12">
+          <div className="col-sm-6">
+            <div className="text_customer">ข้อมูลลูกค้า</div>
             <Card className="card_listorder">
               <CardHeader>
                 <Row>
-                  <Col xs="3">user_id</Col>
+                  <Col xs="3">Order_id</Col>
                   <Col>ชื่อ</Col>
                   <Col>นามสกุล</Col>
                   <Col>เบอร์โทร</Col>
@@ -60,41 +60,6 @@ class ListUser extends Component {
             </Card>
             <br></br>
           </div>
-          {/* <div class="col-6 col-md-4 ">
-            <div className="from_money">
-              <Card>
-                <CardHeader className="text_money">Order</CardHeader>
-                <div className="table_num">
-                  <div className="d-flex">
-                    <div className="col-6">
-                      <CardText className="tt_food ">Order ทั้งหมด</CardText>
-                    </div>
-                    <div className="col">
-                      <CardText className="tt_food text_num">
-                        {this.state.order.length}
-                      </CardText>
-                    </div>
-                    <div className="col">
-                      <CardText className="tt_food text_unit">Order</CardText>
-                    </div>
-                  </div>
-                </div>
-                <div className="table_num">
-                  <div className="d-flex">
-                    <div className="col-6">
-                      <CardText className="tt_food">Order ที่รับแล้ว</CardText>
-                    </div>
-                    <div className="col">
-                      <CardText className="tt_food text_num"></CardText>
-                    </div>
-                    <div className="col">
-                      <CardText className="tt_food text_unit">Order</CardText>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            </div>
-          </div> */}
         </div>
       </div>
     );

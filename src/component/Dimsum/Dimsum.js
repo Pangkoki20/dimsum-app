@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import "./Dimsum.css";
-import Pork_Dumpling from "./Pork_Dumpling";
-import Porkegg from "./Porkegg";
-import Poo_Dumpling from "./Poo_Dumpling";
-import Shrimp from "./Shrimp";
-import Hargao from "./Hargao";
-import Shrimp_Dumling from "./Shrimp_Dumling";
+import PorkDumpling from "./PorkDumpling";
+import PorkEggDumpling from "./PorkEggDumpling";
+import PooDumpling from "./PooDumpling";
+import ShrimpJeeb from "./ShrimpJeeb";
+import HargaoShrimp from "./HargaoShrimp";
+import ShrimpDumling from "./ShrimpDumling";
 import MenuSelect from "../MenuSelect/MenuSelect";
 import axios from "axios";
 class Dimsum extends Component {
@@ -61,25 +61,24 @@ class Dimsum extends Component {
         <MenuSelect numberOnBucket={numberOfMenus} />
         <div className="container">
           <div className="textname-dimsum">ติ่มซำ </div>
-
           <Row>
             <Col xs="6" sm="4">
-              <Pork_Dumpling />
+              <PorkDumpling />
             </Col>
             <Col xs="6" sm="4">
-              <Porkegg />
+              <PorkEggDumpling />
             </Col>
             <Col xs="6" sm="4">
-              <Poo_Dumpling />
+              <PooDumpling />
             </Col>
             <Col xs="6" sm="4">
-              <Shrimp />
+              <ShrimpDumling />
             </Col>
             <Col xs="6" sm="4">
-              <Hargao />
+              <HargaoShrimp />
             </Col>
             <Col xs="6" sm="4">
-              <Shrimp_Dumling />
+              <ShrimpJeeb />
             </Col>
           </Row>
         </div>

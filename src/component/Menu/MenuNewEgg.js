@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import "./Menu.css";
 import img_egg from "../../imgdrink/ไข่ลวก.png";
-import BTBasket from "../BTBasket/BTBasket";
 class MenuNewEgg extends Component {
   state = { menu_name: "ไข่ลวก", menu_value: 0, menu_price: 30 };
 
@@ -43,7 +42,7 @@ class MenuNewEgg extends Component {
         <Container>
           {/* <img className="img_menu" src={imgmenu} /> */}
           <div className="form-menu">
-            <Card body>
+            <Card body className="border border-info">
               <div className="pic_egg row justify-content-md-center">
                 <img className="img_egg img-fluid" src={img_egg} alt="" />
               </div>
@@ -52,7 +51,7 @@ class MenuNewEgg extends Component {
               <Button
                 onClick={this.sentOrder}
                 color="info"
-                className="btn-basket"
+                className="btn-basket bg-primary text-white"
               >
                 <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>

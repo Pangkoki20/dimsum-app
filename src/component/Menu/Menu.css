@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
 
 .form-menu {
   margin-top: 20px;
@@ -67,7 +68,7 @@
 }
 
 .text_price {
-  font-family: "Kanit",
+  font-family: 'Prompt',
     sans-serif;
   font-size: 14px;
 }
@@ -78,8 +79,8 @@
 }
 
 .text_menuname {
-  font-size: 16px;
-  font-family: "Kanit",
+  font-size: 18px;
+  font-family: 'Prompt',
     sans-serif;
   margin-top: 15px;
   font-weight: bold;
@@ -93,7 +94,7 @@
 
 .bt_basket {
   text-align: center !important;
-  color: #eff6fd !important;
+
   font-size: 14px !important;
   font-family: 'Prompt',
     sans-serif;

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import chadum from "../../imgdrink/ชาดำเย็น.png";
 
-export default class Drink_Greentea extends Component {
+export default class DrinkChadum extends Component {
   state = {
     menu_name: "ชาดำเย็น",
     menu_value: 0,
@@ -45,7 +45,7 @@ export default class Drink_Greentea extends Component {
       <div>
         <Container>
           <div className="form-menu">
-            <Card body>
+            <Card body className="border border-info">
               <div className="pic_buk row justify-content-md-center">
                 <img className="img_chadum img-fluid" src={chadum} alt="" />
               </div>
@@ -54,7 +54,7 @@ export default class Drink_Greentea extends Component {
               <Button
                 onClick={this.sentOrder}
                 color="info"
-                className="btn-basket"
+                className="btn-basket bg-primary text-white"
               >
                 <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>

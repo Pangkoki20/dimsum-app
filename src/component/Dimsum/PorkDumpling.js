@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
-import bf_fish from "../../imgbreakfast/ปลาทิพย์ทอด.png";
-import BTBasket from "../BTBasket/BTBasket";
-export default class Break_fish extends Component {
+import dl_pok from "../../imgdimsum/ขนมจีบหมู.png";
+export default class PorkDumpling extends Component {
   state = {
-    menu_name: "ปลาทิพย์ทอด",
+    menu_name: "ขนมจีบหมู",
     menu_value: 0,
-    menu_price: 40,
+    menu_price: 20,
   };
 
   sentOrder = (e) => {
@@ -21,11 +20,17 @@ export default class Break_fish extends Component {
       menu_value: 1,
       menu_price: this.state.menu_price,
     };
-    oldItems.push(newData);
-    localStorage.setItem("order", JSON.stringify(oldItems));
-    console.log(" data : ", newData);
-    this.setState({ menu_value: 0 });
-    this.setState({ remark: "" });
+    const isHaveMenuAlready = oldItems.find(
+      (menu) => menu.menu_name === this.state.menu_name
+    );
+
+    if (!isHaveMenuAlready) {
+      oldItems.push(newData);
+      localStorage.setItem("order", JSON.stringify(oldItems));
+      console.log(" data : ", newData);
+      this.setState({ menu_value: 0 });
+      this.setState({ remark: "" });
+    }
   };
 
   handleInputChange = (e) => {
@@ -39,16 +44,16 @@ export default class Break_fish extends Component {
       <div>
         <Container>
           <div className="form-menu">
-            <Card body>
-              <div className="pic_buk row justify-content-md-center">
-                <img className="img_bffish img-fluid" src={bf_fish} alt="" />
+            <Card body className="border border-info">
+              <div className="pic_pok row justify-content-md-center">
+                <img className="img_pok img-fluid" src={dl_pok} alt="" />
               </div>
-              <CardTitle className="text_menuname">ปลาทิพย์ทอด</CardTitle>
-              <CardText className="text_price">ราคา 40 .-</CardText>
+              <CardTitle className="text_menuname">ขนมจีบหมู</CardTitle>
+              <CardText className="text_price">ราคา 20 .-</CardText>
               <Button
                 onClick={this.sentOrder}
                 color="info"
-                className="btn-basket"
+                className="btn-basket  bg-primary text-white"
               >
                 <div className="bt_basket">เพิ่มไปยังตะกร้า</div>
               </Button>
