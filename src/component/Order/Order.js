@@ -162,19 +162,6 @@ class Order extends Component {
                       <Col xs="1">
                         <div>
                           <img
-                            className="img_location"
-                            src={img_location}
-                            alt=""
-                          />
-                        </div>
-                      </Col>
-                      <Col xs="auto">ตำแหน่งปัจจุบัน</Col>
-                    </Row>
-
-                    <Row>
-                      <Col xs="1">
-                        <div>
-                          <img
                             className="img_newaddress"
                             src={img_newaddress}
                             alt=""
@@ -212,7 +199,7 @@ class Order extends Component {
                         </div>
                       </Label>
                     </FormGroup>
-                    <FormGroup check className="from_check">
+                    {/* <FormGroup check className="from_check">
                       <Label check>
                         <Input
                           type="radio"
@@ -223,8 +210,8 @@ class Order extends Component {
                         />
                         <div className="text_paymentconfirm">อื่น ๆ</div>
                       </Label>
-                    </FormGroup>
-                    <div className="code">โค้ดส่วนลดของคุณ</div>
+                    </FormGroup> */}
+                    {/* <div className="code">โค้ดส่วนลดของคุณ</div>
                     <Input
                       className="text_code"
                       type="text"
@@ -232,7 +219,7 @@ class Order extends Component {
                       value={this.state.code}
                       placeholder="โค้ดของคุณ"
                       onChange={this.handleInputChange}
-                    />
+                    /> */}
                     <div className="from_payments">
                       <Button
                         className="bt_back"

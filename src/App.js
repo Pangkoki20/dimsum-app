@@ -16,7 +16,7 @@ import Menu from "./component/Menu/Menu";
 import OrderFood from "./component/OrderFood/OrderFood";
 import ShowOrder from "./component/ShowOrder/ShowOrder";
 import Basket from "./component/Basket/Basket";
-import Order from "./component/OrderConfirm/Order";
+import Order from "./component/Order/Order";
 import MenuOrder from "./component/MemuOrder/MenuOrder";
 import EachMenuOrder from "./component/MemuOrder/EachMenuOrder";
 import SenderOrder from "./component/SenderOrder/SenderOrder";

@@ -87,9 +87,6 @@ export default class Navigator extends React.Component {
           <NavbarBrand>
             <NavbarBrand href="/">
               <span className="fon-bar"> Dimsumahkong Delivery</span>
-              {/* <span>
-                <img className="pic-1" src={logo} />
-              </span> */}
             </NavbarBrand>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
@@ -149,7 +146,7 @@ export default class Navigator extends React.Component {
               )}
               {this.state.check === "login" && (
                 <NavItem>
-                  <NavLink href="" onClick={this.logout}>
+                  <NavLink href="/" onClick={this.logout}>
                     <div className="Login fon-logout">
                       <Button color="info">Logout</Button>
                     </div>
