@@ -13,6 +13,7 @@ class Delivery extends Component {
   state = {
     user: null,
     allData: [],
+    order: [],
   };
 
   onUserChanged = (user) => {
@@ -22,7 +23,6 @@ class Delivery extends Component {
     let token = localStorage.getItem("token");
     const orders = await localStorage.getItem("order");
     console.log({ orders });
-    //get params
     const orderId = this.props.match.params.id;
     console.log({ orderId });
     if (token) {
@@ -32,10 +32,6 @@ class Delivery extends Component {
       let res = await axios.post(`http://localhost:3001/api/users/me`, {
         token,
       });
-      // if (!res) {
-      //   window.location.href = "/login";
-      //   return;
-      // }
       this.setState({ user: res.data });
     } else {
       window.location.href = "/login";
@@ -44,9 +40,6 @@ class Delivery extends Component {
     let user = auth.getToken();
     let userDecoded = auth.decodeToken(user);
     let userId = userDecoded.id;
-    // let userFirstName = userDecoded.firstname;
-    // let userLastName = userDecoded.lastname;
-    // let userRole = userDecoded.role;
 
     this.checkComponent = setInterval(() => {
       this.getAllOrder(userId);
@@ -57,212 +50,428 @@ class Delivery extends Component {
     await axios
       .get(`http://localhost:3001/api/order/orderbyuser/${userId}`)
       .then((res) => {
-        const { data } = res.data;
         console.log("res : ", res.data);
         this.setState({ allData: res.data });
       });
   }
 
-  orderSuccess = () => {
-    let orderStatus = 0;
-    this.state.allData.map((data, index) => {
-      const { status } = data;
-      console.log("this status " + status);
-      orderStatus = status;
-    });
-    console.log("orderStatus: " + orderStatus);
-    if (orderStatus >= 1) {
-      return (
-        <Card body className="border border-primary rounded green">
-          <div>
-            <img
-              className="img_foodorder img-fluid"
-              src={img_foodorder}
-              alt=""
-            />
-          </div>
-          <div className="font_status">สั่งอาหารแล้ว</div>
-        </Card>
-      );
-    } else {
-      return (
-        <Card body className="border border-primary rounded">
-          <div>
-            <img
-              className="img_foodorder img-fluid"
-              src={img_foodorder}
-              alt=""
-            />
-          </div>
-          <div className="font_status">สั่งอาหารแล้ว</div>
-        </Card>
-      );
-    }
-  };
-
-  getOrderSuccess = () => {
-    let orderStatus = 0;
-    this.state.allData.map((data, index) => {
-      const { status } = data;
-      console.log("this status " + status);
-      orderStatus = status;
-    });
-    console.log("orderStatus: " + orderStatus);
-    if (orderStatus >= 2) {
-      return (
-        <Card body className="border border-primary rounded green">
-          <div>
-            <img className="img_menu img-fluid" src={img_menu} alt="" />
-          </div>
-          <div className="font_status">ได้รับรายการอาหารแล้ว</div>
-        </Card>
-      );
-    } else {
-      return (
-        <Card body className="border border-primary rounded">
-          <div>
-            <img className="img_menu img-fluid" src={img_menu} alt="" />
-          </div>
-          <div className="font_status">ได้รับรายการอาหารแล้ว</div>
-        </Card>
-      );
-    }
-  };
-
-  preparingFood = () => {
-    let orderStatus = 0;
-    this.state.allData.map((data, index) => {
-      const { status } = data;
-      console.log("this status " + status);
-      orderStatus = status;
-    });
-    console.log("orderStatus: " + orderStatus);
-    if (orderStatus >= 3) {
-      return (
-        <Card body className="border border-primary rounded">
-          <div>
-            <img className="img_meal img-fluid" src={img_meal} alt="" />
-          </div>
-          <div className="font_status">กำลังจัดเตรียมอาหาร</div>
-        </Card>
-      );
-    } else {
-      return (
-        <Card body className="border border-primary rounded">
-          <div>
-            <img className="img_meal img-fluid" src={img_meal} alt="" />
-          </div>
-          <div className="font_status">กำลังจัดเตรียมอาหาร</div>
-        </Card>
-      );
-    }
-  };
-
-  readyToSend = () => {
-    let orderStatus = 0;
-    this.state.allData.map((data, index) => {
-      const { status } = data;
-      console.log("this status " + status);
-      orderStatus = status;
-    });
-    console.log("orderStatus: " + orderStatus);
-    if (orderStatus >= 4) {
-      return (
-        <Card body className="border border-primary rounded">
-          <div>
-            <img className="img_product img-fluid" src={img_product} alt="" />
-          </div>
-          <div className="font_status">อาหารของคุณพร้อมส่ง</div>
-        </Card>
-      );
-    } else {
-      return (
-        <Card body className="border border-primary rounded">
-          <div>
-            <img className="img_product img-fluid" src={img_product} alt="" />
-          </div>
-          <div className="font_status">อาหารของคุณพร้อมส่ง</div>
-        </Card>
-      );
-    }
-  };
-
-  foodReceived = () => {
-    let orderStatus = 0;
-    this.state.allData.map((data, index) => {
-      const { status } = data;
-      console.log("this status " + status);
-      orderStatus = status;
-    });
-    console.log("orderStatus: " + orderStatus);
-    if (orderStatus >= 5) {
-      return (
-        <Card body className="border border-primary rounded">
-          <div>
-            <img
-              className="img_breakfast img-fluid"
-              src={img_breakfast}
-              alt=""
-            />
-          </div>
-          <div className="font_status">คุณได้รับอาหารแล้ว</div>
-        </Card>
-      );
-    } else {
-      return (
-        <Card body className="border border-primary rounded">
-          <div>
-            <img
-              className="img_breakfast img-fluid"
-              src={img_breakfast}
-              alt=""
-            />
-          </div>
-          <div className="font_status">คุณได้รับอาหารแล้ว</div>
-        </Card>
-      );
-    }
-  };
   render() {
-    let orderSuccess = this.orderSuccess();
-    let getOrderSuccess = this.getOrderSuccess();
-    let preparingFood = this.preparingFood();
-    let readyToSend = this.readyToSend();
-    let foodReceived = this.foodReceived();
+    const numberOfMenus = this.state.order.reduce(
+      (acc, next) => acc + next.menu_value,
+      0
+    );
     console.log("allData: " + this.state.allData);
-    return (
-      <div>
-        <MenuSelect />
-        <div className="container-fluid">
-          <div className="text_status">ติดตามสถานะการจัดส่ง</div>
-          <div className="from_status">
+    const orderSuccess = this.state.allData.map((data, index) => {
+      const { status } = data;
+      console.log("this status " + status + "id: " + index);
+      console.log("tese", parseInt(data.status));
+      if (parseInt(data.status) === 1) {
+        return (
+          <div key={index}>
             <Row>
-              <Col className="frame_status">{orderSuccess}</Col>
-              <Col className="frame_status">{getOrderSuccess}</Col>
-              <Col className="frame_status">{preparingFood}</Col>
-              <Col className="frame_status">{readyToSend}</Col>
-              <Col className="frame_status">{foodReceived}</Col>
+              <Col md={12}>
+                <div className="p-3">
+                  {/* order no.{data.id}, status : {data.status} */}
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Card body className="border border-primary rounded green">
+                  <div>
+                    <img
+                      className="img_foodorder img-fluid"
+                      src={img_foodorder}
+                      alt=""
+                    />
+                  </div>
+                  <div className="font_status">สั่งอาหารแล้ว</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded">
+                  <div>
+                    <img className="img_menu img-fluid" src={img_menu} alt="" />
+                  </div>
+                  <div className="font_status">ได้รับรายการอาหารแล้ว</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded">
+                  <div>
+                    <img className="img_meal img-fluid" src={img_meal} alt="" />
+                  </div>
+                  <div className="font_status">กำลังจัดเตรียมอาหาร</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded">
+                  <div>
+                    <img
+                      className="img_product img-fluid"
+                      src={img_product}
+                      alt=""
+                    />
+                  </div>
+                  <div className="font_status">อาหารของคุณพร้อมส่ง</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded">
+                  <div>
+                    <img
+                      className="img_breakfast img-fluid"
+                      src={img_breakfast}
+                      alt=""
+                    />
+                  </div>
+                  <div className="font_status">คุณได้รับอาหารแล้ว</div>
+                </Card>
+              </Col>
             </Row>
           </div>
-          <Container className="p-4">
+        );
+      } else if (parseInt(data.status) === 2) {
+        return (
+          <div key={index}>
             <Row>
-              All Orders
-              {this.state.allData.map((e) => {
-                return (
-                  <Col md={12}>
-                    <div className="p-3">
-                      order no.{e.id}, status : {e.status}{" "}
-                      {/* {e.allMenu.map((e, i = 0) => {
-                        return (
-                          <div>
-                            {i + 1}.{e.namefood}
-                          </div>
-                        );
-                      })} */}
-                    </div>
-                  </Col>
-                );
-              })}
+              <Col md={12}>
+                <div className="p-3">
+                  {/* order no.{data.id}, status : {data.status} */}
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Card body className="border border-primary rounded green">
+                  <div>
+                    <img
+                      className="img_foodorder img-fluid"
+                      src={img_foodorder}
+                      alt=""
+                    />
+                  </div>
+                  <div className="font_status">สั่งอาหารแล้ว</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded green">
+                  <div>
+                    <img className="img_menu img-fluid" src={img_menu} alt="" />
+                  </div>
+                  <div className="font_status">ได้รับรายการอาหารแล้ว</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded">
+                  <div>
+                    <img className="img_meal img-fluid" src={img_meal} alt="" />
+                  </div>
+                  <div className="font_status">กำลังจัดเตรียมอาหาร</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded">
+                  <div>
+                    <img
+                      className="img_product img-fluid"
+                      src={img_product}
+                      alt=""
+                    />
+                  </div>
+                  <div className="font_status">อาหารของคุณพร้อมส่ง</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded">
+                  <div>
+                    <img
+                      className="img_breakfast img-fluid"
+                      src={img_breakfast}
+                      alt=""
+                    />
+                  </div>
+                  <div className="font_status">คุณได้รับอาหารแล้ว</div>
+                </Card>
+              </Col>
+            </Row>
+          </div>
+        );
+      } else if (parseInt(data.status) === 2) {
+        return (
+          <div key={index}>
+            <Row>
+              <Col md={12}>
+                <div className="p-3">
+                  {/* order no.{data.id}, status : {data.status} */}
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Card body className="border border-primary rounded green">
+                  <div>
+                    <img
+                      className="img_foodorder img-fluid"
+                      src={img_foodorder}
+                      alt=""
+                    />
+                  </div>
+                  <div className="font_status">สั่งอาหารแล้ว</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded green">
+                  <div>
+                    <img className="img_menu img-fluid" src={img_menu} alt="" />
+                  </div>
+                  <div className="font_status">ได้รับรายการอาหารแล้ว</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded">
+                  <div>
+                    <img className="img_meal img-fluid" src={img_meal} alt="" />
+                  </div>
+                  <div className="font_status">กำลังจัดเตรียมอาหาร</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded">
+                  <div>
+                    <img
+                      className="img_product img-fluid"
+                      src={img_product}
+                      alt=""
+                    />
+                  </div>
+                  <div className="font_status">อาหารของคุณพร้อมส่ง</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded">
+                  <div>
+                    <img
+                      className="img_breakfast img-fluid"
+                      src={img_breakfast}
+                      alt=""
+                    />
+                  </div>
+                  <div className="font_status">คุณได้รับอาหารแล้ว</div>
+                </Card>
+              </Col>
+            </Row>
+          </div>
+        );
+      } else if (parseInt(data.status) === 3) {
+        return (
+          <div key={index}>
+            <Row>
+              <Col md={12}>
+                <div className="p-3">
+                  {/* order no.{data.id}, status : {data.status} */}
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Card body className="border border-primary rounded green">
+                  <div>
+                    <img
+                      className="img_foodorder img-fluid"
+                      src={img_foodorder}
+                      alt=""
+                    />
+                  </div>
+                  <div className="font_status">สั่งอาหารแล้ว</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded green">
+                  <div>
+                    <img className="img_menu img-fluid" src={img_menu} alt="" />
+                  </div>
+                  <div className="font_status">ได้รับรายการอาหารแล้ว</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded green">
+                  <div>
+                    <img className="img_meal img-fluid" src={img_meal} alt="" />
+                  </div>
+                  <div className="font_status">กำลังจัดเตรียมอาหาร</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded">
+                  <div>
+                    <img
+                      className="img_product img-fluid"
+                      src={img_product}
+                      alt=""
+                    />
+                  </div>
+                  <div className="font_status">อาหารของคุณพร้อมส่ง</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded">
+                  <div>
+                    <img
+                      className="img_breakfast img-fluid"
+                      src={img_breakfast}
+                      alt=""
+                    />
+                  </div>
+                  <div className="font_status">คุณได้รับอาหารแล้ว</div>
+                </Card>
+              </Col>
+            </Row>
+          </div>
+        );
+      } else if (parseInt(data.status) === 4) {
+        return (
+          <div key={index}>
+            <Row>
+              <Col md={12}>
+                <div className="p-3">
+                  {/* order no.{data.id}, status : {data.status} */}
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Card body className="border border-primary rounded green">
+                  <div>
+                    <img
+                      className="img_foodorder img-fluid"
+                      src={img_foodorder}
+                      alt=""
+                    />
+                  </div>
+                  <div className="font_status">สั่งอาหารแล้ว</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded green">
+                  <div>
+                    <img className="img_menu img-fluid" src={img_menu} alt="" />
+                  </div>
+                  <div className="font_status">ได้รับรายการอาหารแล้ว</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded green">
+                  <div>
+                    <img className="img_meal img-fluid" src={img_meal} alt="" />
+                  </div>
+                  <div className="font_status">กำลังจัดเตรียมอาหาร</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded green">
+                  <div>
+                    <img
+                      className="img_product img-fluid"
+                      src={img_product}
+                      alt=""
+                    />
+                  </div>
+                  <div className="font_status">อาหารของคุณพร้อมส่ง</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded">
+                  <div>
+                    <img
+                      className="img_breakfast img-fluid"
+                      src={img_breakfast}
+                      alt=""
+                    />
+                  </div>
+                  <div className="font_status">คุณได้รับอาหารแล้ว</div>
+                </Card>
+              </Col>
+            </Row>
+          </div>
+        );
+      } else if (parseInt(data.status) === 5) {
+        return (
+          <div key={index}>
+            <Row>
+              <Col md={12}>
+                <div className="p-3">
+                  {/* order no.{data.id}, status : {data.status} */}
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Card body className="border border-primary rounded green">
+                  <div>
+                    <img
+                      className="img_foodorder img-fluid"
+                      src={img_foodorder}
+                      alt=""
+                    />
+                  </div>
+                  <div className="font_status">สั่งอาหารแล้ว</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded green">
+                  <div>
+                    <img className="img_menu img-fluid" src={img_menu} alt="" />
+                  </div>
+                  <div className="font_status">ได้รับรายการอาหารแล้ว</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded green">
+                  <div>
+                    <img className="img_meal img-fluid" src={img_meal} alt="" />
+                  </div>
+                  <div className="font_status">กำลังจัดเตรียมอาหาร</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded green">
+                  <div>
+                    <img
+                      className="img_product img-fluid"
+                      src={img_product}
+                      alt=""
+                    />
+                  </div>
+                  <div className="font_status">อาหารของคุณพร้อมส่ง</div>
+                </Card>
+              </Col>
+              <Col>
+                <Card body className="border border-primary rounded green">
+                  <div>
+                    <img
+                      className="img_breakfast img-fluid"
+                      src={img_breakfast}
+                      alt=""
+                    />
+                  </div>
+                  <div className="font_status">คุณได้รับอาหารแล้ว</div>
+                </Card>
+              </Col>
+            </Row>
+          </div>
+        );
+      }
+    });
+    return (
+      <div>
+        <MenuSelect numberOnBucket={numberOfMenus} />
+        <div className="container-fluid">
+          <div className="text_status">ติดตามสถานะการจัดส่ง</div>
+          <Container className="p-4">
+            ออเดอร์ของคุณ
+            <Row>
+              <div className="from_status">{orderSuccess}</div>
             </Row>
           </Container>
         </div>

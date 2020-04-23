@@ -16,7 +16,6 @@ import img_address from "../../imgorder/address.png";
 import img_pay from "../../imgorder/pay.png";
 import img_confirm from "../../imgorder/confirm.png";
 import img_savelocation from "../../imgorder/home.png";
-import img_location from "../../imgorder/target.png";
 import img_newaddress from "../../imgorder/P.png";
 import auth from "../service/index";
 class Order extends Component {
