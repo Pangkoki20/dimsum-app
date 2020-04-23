@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
-import bf_fish from "../../imgbreakfast/ปลาทิพย์ทอด.png";
+import bf_fish from "../../imgbreakfast/นักเก็ตไก่.png";
+import axios from "axios";
 export default class BreakFastFish extends Component {
   state = {
-    menu_name: "ปลาทิพย์ทอด",
+    menu_name: "นักเก็ตไก่",
     menu_value: 0,
     menu_price: 40,
   };
@@ -42,7 +43,7 @@ export default class BreakFastFish extends Component {
               <div className="pic_buk row justify-content-md-center">
                 <img className="img_bffish img-fluid" src={bf_fish} alt="" />
               </div>
-              <CardTitle className="text_menuname">ปลาทิพย์ทอด</CardTitle>
+              <CardTitle className="text_menuname">นักเก็ตไก่</CardTitle>
               <CardText className="text_price">ราคา 40 .-</CardText>
               <Button
                 onClick={this.sentOrder}

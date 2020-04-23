@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
-import greentea from "../../imgdrink/ชาเขียว.png";
+import bf_bf from "../../imgbreakfast/Fresh Spring.png";
 import axios from "axios";
-export default class DrinkGreentea extends Component {
+export default class BreakFastFreshSpring extends Component {
   state = {
-    menu_name: "ชาเขียว",
+    menu_name: "ปอเปี๊ยะทอด",
     menu_value: 0,
-    menu_price: 30,
+    menu_price: 40,
   };
 
   sentOrder = async (e) => {
@@ -59,11 +59,11 @@ export default class DrinkGreentea extends Component {
         <Container>
           <div className="form-menu">
             <Card body className="border border-info">
-              <div>
-                <img className="img_greentea img-fluid" src={greentea} alt="" />
+              <div className="pic_bf row justify-content-md-center">
+                <img className="img_bf img-fluid" src={bf_bf} alt="" />
               </div>
-              <CardTitle className="text_menuname">ชาเขียวเย็น</CardTitle>
-              <CardText className="text_price">ราคา 30 .-</CardText>
+              <CardTitle className="text_menuname">ปอเปี๊ยะทอด</CardTitle>
+              <CardText className="text_price">ราคา 40 .-</CardText>
               <Button
                 onClick={this.sentOrder}
                 color="info"

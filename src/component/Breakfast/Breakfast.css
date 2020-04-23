@@ -18,21 +18,25 @@
 .img_bfegg {
     height: 200px;
     width: 250px;
+    margin-top: 2px;
 }
 
 .img_bffish {
     height: 200px;
     width: 250px;
+    margin-top: 2px;
 }
 
 .img_bfshrimp {
     height: 200px;
     width: 250px;
+    margin-top: 2px;
 }
 
 .img_bf {
     height: 200px;
     width: 250px;
+    margin-top: 2px;
 }
 
 /* @media only screen and (max-width: 768px) {

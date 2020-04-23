@@ -19,20 +19,16 @@ class MenuSelect extends Component {
   //     let res = await axios.post(`http://localhost:3001/api/users/me`, {
   //       token
   //     });
-  //     // if (!res) {
-  //     //   window.location.href = "/login";
-  //     //   return;
-  //     // }
   //     this.setState({ user: res.data.role });
   //   } else {
   //     window.location.href = "/login";
   //   }
   // };
   componentDidMount() {
-    let user = auth.getToken();
-    let userDecoded = auth.decodeToken(user);
-    let uRole = userDecoded.role;
-    this.setState({ user: uRole });
+    // let user = auth.getToken();
+    // let userDecoded = auth.decodeToken(user);
+    // // let uRole = userDecoded.role;
+    // this.setState({ user: uRole });
   }
 
   render() {
@@ -40,6 +36,63 @@ class MenuSelect extends Component {
     console.log({ numberOnBucket });
     return (
       <div>
+        <Nav className="from_menuselect">
+          <NavItem>
+            <NavLink className="border-right" href="/Menu">
+              เมนูแนะนำ
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink className="border-right" href="/Dimsum">
+              ติ่มซำ
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink className="border-right" href="/Breakfast">
+              อาหารเช้า
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink className="border-right" href="/Fastfood">
+              อาหารจานเดียว
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink className="border-right" href="/Drink">
+              เครื่องดื่ม
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink className="" href="/Delivery">
+              ติดตามสถานะการจัดส่ง
+            </NavLink>
+          </NavItem>
+          {/* <NavItem className="ml-auto">
+              <div className="input_search">
+                <form className="form-inline ">
+                  <input
+                    className="form-control mr-sm-2 rounded-pill"
+                    type="search"
+                    placeholder=""
+                    aria-label="Search"
+                  />
+                  <button className="btn btn-primary " type="submit">
+                    ค้นหา
+                  </button>
+                </form>
+              </div>
+            </NavItem> */}
+          <NavItem className="ml-auto">
+            <NavLink className="from_basket" href="Basket">
+              <div className="text_numorder">
+                <img className="basket" src={basket} alt="" />
+                <span className="badge-danger badge-pill ">
+                  {numberOnBucket}
+                </span>
+              </div>
+            </NavLink>
+          </NavItem>
+        </Nav>
         {this.state.user === "user" ? (
           <Nav className="from_menuselect">
             <NavItem>
