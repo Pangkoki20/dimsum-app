@@ -27,7 +27,7 @@ class SenderStatus extends Component {
                 </Row>
               </CardHeader>
               {this.state.order.map((order) => {
-                if (order.status === "4")
+                if (order.status === "3")
                   return (
                     <CardBody>
                       <Row>
