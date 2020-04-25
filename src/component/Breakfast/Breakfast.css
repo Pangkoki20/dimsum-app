@@ -39,57 +39,31 @@
     margin-top: 2px;
 }
 
-/* @media only screen and (max-width: 768px) {
-.table-breakfast {
-    margin-top: 10px;
-}
-.textname-breakfast {
-    text-align: center;
-    font-size: 50px;
-    margin-top: 10px;
-    color: #224870;
-    font-family: "Kanit", sans-serif;
-}
+@media only screen and (max-width: 768px) {
 
-.textname-breakfast:hover {
-    text-decoration: none;
-    color: #00758d;
-}
+    .textname-breakfast {
+        margin-top: 15px;
+        font-size: 20px;
 
-.thead-bar {
-    margin-top: 10px;
-    font-size: 16px;
-    text-align: center;
-    font-family: "Kanit", sans-serif;
-}
+    }
 
-.tabel-breakfast {
-    text-align: center;
-    font-family: "Kanit", sans-serif;
-}
+    .img_bf {
+        height: 100px;
+        width: 250px;
+    }
 
-.img_bf {
-    height: 70px;
-    width: 70px;
-    text-align: center;
-}
+    .img_bfegg {
+        height: 100px;
+        width: 250px;
+    }
 
-.img_bfegg {
-    height: 70px;
-    width: 70px;
-    text-align: center;
-}
+    .img_bffish {
+        height: 100px;
+        width: 250px;
+    }
 
-.img_bffish {
-    height: 70px;
-    width: 70px;
-    text-align: center;
+    .img_bfshrimp {
+        height: 100px;
+        width: 250px;
+    }
 }
-
-.img_bfshrimp {
-    height: 70px;
-    width: 70px;
-    text-align: center;
-}
-}
- */

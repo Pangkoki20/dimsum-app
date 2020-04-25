@@ -59,7 +59,7 @@ class MenuNewBuk extends Component {
       <div>
         <Container>
           <div className="form-menu">
-            <Card body className="border border-info">
+            <Card body className="border border-info ">
               <div className="pic_buk row justify-content-md-center">
                 <img className="img_buk img-fluid" src={img_buk} alt="" />
               </div>
@@ -73,6 +73,8 @@ class MenuNewBuk extends Component {
               </Button>
             </Card>
           </div>
+          <br></br>
+          <br></br>
         </Container>
       </div>
     );

@@ -3,7 +3,6 @@
 
 .form-menu {
   margin-top: 20px;
-
 }
 
 .text-menu {
@@ -20,43 +19,43 @@
 }
 
 .img_egg {
-  height: 200px;
+  height: 250px;
   width: 250px;
   margin-top: 2px;
 }
 
 .img_jopoo {
-  height: 200px;
+  height: 250px;
   width: 250px;
   margin-top: 2px;
 }
 
 .img_buk {
-  height: 200px;
+  height: 250px;
   width: 250px;
   margin-top: 2px;
 }
 
 .img_eggpan {
-  height: 200px;
+  height: 250px;
   width: 250px;
   margin-top: 2px;
 }
 
 .img_kanomgee {
-  height: 200px;
+  height: 250px;
   width: 250px;
   margin-top: 2px;
 }
 
 .img_sarapol {
-  height: 200px;
+  height: 250px;
   width: 250px;
   margin-top: 2px;
 }
 
 .img_egg {
-  height: 200px;
+  height: 250px;
   width: 250px;
   margin-top: 2px;
 }
@@ -98,4 +97,64 @@
   font-size: 14px !important;
   font-family: 'Prompt',
     sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .text-menu {
+    margin-top: 15px;
+    font-size: 20px;
+  }
+
+  .img_egg {
+    height: 100px;
+    width: 250px;
+
+  }
+
+  .img_jopoo {
+    height: 100px;
+    width: 250px;
+
+  }
+
+  .img_buk {
+    height: 100px;
+    width: 250px;
+
+  }
+
+  .img_eggpan {
+    height: 100px;
+    width: 250px;
+
+  }
+
+  .img_kanomgee {
+    height: 100px;
+    width: 250px;
+  }
+
+  .img_sarapol {
+    height: 100px;
+    width: 250px;
+  }
+
+  .img_egg {
+    height: 100px;
+    width: 250px;
+  }
+
+  .text_menuname {
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  .text_price {
+    font-size: 12px;
+  }
+
+  .bt_basket {
+    font-size: 12px !important;
+  }
 }

@@ -18,7 +18,7 @@ export default class Banner extends React.Component {
         </div>
         <div className="bt_startfood">
           <Button color="info" size="lg" block href="/Menu">
-            <div className="fon_btstfood">เริ่มสั่งอาหาร</div>
+            <div className="fon_btstfood  text-white">เริ่มสั่งอาหาร</div>
           </Button>
         </div>
         <br></br>

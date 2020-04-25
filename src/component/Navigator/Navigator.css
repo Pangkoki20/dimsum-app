@@ -110,4 +110,10 @@
     font-size: 10px !important;
     font-weight: 100 !important;
   }
+
+  .bt_login {
+    margin-top: 4px;
+    text-align: center;
+    font-size: 12px !important;
+  }
 }

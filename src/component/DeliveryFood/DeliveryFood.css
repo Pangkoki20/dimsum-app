@@ -1,13 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 
-.from_deliveryfood {
-    text-align: center;
-    margin-top: 100px;
-}
-
-.img_deliveryfood {
-    height: 400px;
-    width: 400px;
+.fromDeliveryfood {
+    margin-top: 5px;
+    width: 1500px !important;
+    text-align: center !important;
 }
 
 .text_deliveryfood {
@@ -15,6 +11,12 @@
     font-size: 40px;
     margin-top: 10px;
     color: #369621;
+    font-family: "Kanit",
+        sans-serif;
+}
+
+.carddeliveryfood {
+    text-align: center;
     font-family: "Kanit",
         sans-serif;
 }

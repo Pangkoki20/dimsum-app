@@ -56,3 +56,52 @@
     width: 250px;
     margin-top: 2px;
 }
+
+@media only screen and (max-width: 768px) {
+    .textname-fastfood {
+        margin-top: 15px;
+        font-size: 20px;
+    }
+
+    .img_ffchicken {
+        height: 100px;
+        width: 250px;
+        margin-top: 2px;
+    }
+
+    .img_ffredpork {
+        height: 100px;
+        width: 250px;
+        margin-top: 2px;
+    }
+
+    .img_ffcrispypork {
+        height: 100px;
+        width: 250px;
+        margin-top: 2px;
+    }
+
+    .img_ffporkleg {
+        height: 100px;
+        width: 250px;
+        margin-top: 2px;
+    }
+
+    .img_ffduck {
+        height: 100px;
+        width: 250px;
+        margin-top: 2px;
+    }
+
+    .img_ffbabutte {
+        height: 100px;
+        width: 250px;
+        margin-top: 2px;
+    }
+
+    .img_ffrice {
+        height: 100px;
+        width: 250px;
+        margin-top: 2px;
+    }
+}

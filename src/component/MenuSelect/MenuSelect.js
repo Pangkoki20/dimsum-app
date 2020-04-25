@@ -3,7 +3,6 @@ import { Nav, NavLink, NavItem } from "reactstrap";
 import "./MenuSelect.css";
 import basket from "../../imgshop/shopping-basket.png";
 import "../Basket/Basket";
-import auth from "../service/index";
 class MenuSelect extends Component {
   state = {
     order: [],

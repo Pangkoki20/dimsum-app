@@ -1,17 +1,23 @@
 import React, { Component } from "react";
-import {} from "reactstrap";
+import { Card, CardHeader, Row, Col } from "reactstrap";
 import "./DeliveryFood.css";
-import img_deliveryfood from "../../imgshop/delivery-man.png";
 class DeliveryFood extends Component {
   render() {
     return (
-      <div className="from_deliveryfood ">
-        <img
-          className=" img_deliveryfood img-fluid"
-          src={img_deliveryfood}
-          alt=""
-        />
-        <div className="text_deliveryfood">กำลังจัดส่งอาหาร</div>
+      <div className="container-fluid ">
+        <div className="text_senderstatus">ข้อมูลลูกค้า</div>
+        <div className="row fromDeliveryfood">
+          <div className="col-md-6 offset-md-3 ">
+            <Card className="carddeliveryfood ">
+              <CardHeader>
+                <Row>
+                  <Col xs="3">Order_id</Col>
+                  <Col>ข้อมูลของลูกค้า</Col>
+                </Row>
+              </CardHeader>
+            </Card>
+          </div>
+        </div>
       </div>
     );
   }

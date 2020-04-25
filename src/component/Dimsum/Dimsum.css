@@ -60,3 +60,41 @@
   width: 40px;
   height: 40px;
 }
+
+@media only screen and (max-width: 768px) {
+  .basket {
+    width: 25px;
+    height: 25px;
+  }
+
+  .img_pok {
+    height: 100px;
+    width: 250px;
+  }
+
+  .img_pokegg {
+    height: 100px;
+    width: 250px;
+  }
+
+  .img_poo {
+    height: 100px;
+    width: 250px;
+  }
+
+  .img_shrimp {
+    height: 100px;
+    width: 250px;
+  }
+
+  .img_hargao {
+    height: 100px;
+    width: 250px;
+  }
+
+  .img_shrimp {
+    height: 100px;
+    width: 250px;
+  }
+
+}
