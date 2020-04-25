@@ -51,7 +51,7 @@ class Register extends Component {
       <div className="container form-register">
         <span>
           <div className="text_register">ลงทะเบียน</div>
-          <div className="row justify-content-md-center">
+          <div className="row justify-content-md-center inputlogin">
             <Form className="form-input">
               <FormGroup>
                 <Input

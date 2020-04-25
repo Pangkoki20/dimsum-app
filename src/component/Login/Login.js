@@ -79,7 +79,7 @@ class Login extends Component {
         <span>
           <img className="logo" src={logo_login} alt="" />
           <div className="text_login ">เข้าสู่ระบบ</div>
-          <div className="row justify-content-md-center">
+          <div className="row justify-content-md-center inputlogin">
             <Form className="from_input ">
               <FormGroup>
                 <Input

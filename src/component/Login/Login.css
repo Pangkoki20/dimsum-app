@@ -95,11 +95,18 @@
     height: 30px !important;
     font-size: 12px !important;
 
+
   }
 
   .forget-pass {
     font-size: 12px;
     margin-left: 240px;
     margin-top: 5px;
+  }
+
+  .inputlogin {
+    text-align: center !important;
+    padding-right: 37px;
+    padding-left: 37px;
   }
 }
