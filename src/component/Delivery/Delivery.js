@@ -3,7 +3,7 @@ import { Card, Row, Col, Container } from "reactstrap";
 import "./Delivery.css";
 import MenuSelect from "../MenuSelect/MenuSelect";
 import img_menu from "../../imgdelivery/menu.png";
-import img_meal from "../../imgdelivery/meal.png";
+// import img_meal from "../../imgdelivery/meal.png";
 import img_product from "../../imgdelivery/product2.png";
 import img_breakfast from "../../imgdelivery/breakfast.png";
 import img_foodorder from "../../imgdelivery/dish.png";
@@ -75,10 +75,13 @@ class Delivery extends Component {
                 </div>
               </Col>
             </Row>
-            <Row>
+            <Row xs="4" className="framedelivery">
               <Col>
-                <Card body className="border border-primary rounded green">
-                  <div>
+                <Card
+                  body
+                  className="fromdeliverysize border border-primary rounded green"
+                >
+                  <div className="">
                     <img
                       className="img_foodorder img-fluid"
                       src={img_foodorder}
@@ -89,23 +92,22 @@ class Delivery extends Component {
                 </Card>
               </Col>
               <Col>
-                <Card body className="border border-primary rounded">
+                <Card
+                  body
+                  className="fromdeliverysize border border-primary rounded"
+                >
                   <div>
                     <img className="img_menu img-fluid" src={img_menu} alt="" />
                   </div>
                   <div className="font_status">ได้รับรายการอาหารแล้ว</div>
                 </Card>
               </Col>
+
               <Col>
-                <Card body className="border border-primary rounded">
-                  <div>
-                    <img className="img_meal img-fluid" src={img_meal} alt="" />
-                  </div>
-                  <div className="font_status">กำลังจัดเตรียมอาหาร</div>
-                </Card>
-              </Col>
-              <Col>
-                <Card body className="border border-primary rounded">
+                <Card
+                  body
+                  className="fromdeliverysize border border-primary rounded"
+                >
                   <div>
                     <img
                       className="img_product img-fluid"
@@ -117,7 +119,10 @@ class Delivery extends Component {
                 </Card>
               </Col>
               <Col>
-                <Card body className="border border-primary rounded">
+                <Card
+                  body
+                  className="fromdeliverysize border border-primary rounded"
+                >
                   <div>
                     <img
                       className="img_breakfast img-fluid"
@@ -141,9 +146,12 @@ class Delivery extends Component {
                 </div>
               </Col>
             </Row>
-            <Row>
+            <Row xs="4" className="framedelivery">
               <Col>
-                <Card body className="border border-primary rounded green">
+                <Card
+                  body
+                  className="fromdeliverysize border border-primary rounded green"
+                >
                   <div>
                     <img
                       className="img_foodorder img-fluid"
@@ -155,7 +163,10 @@ class Delivery extends Component {
                 </Card>
               </Col>
               <Col>
-                <Card body className="border border-primary rounded green">
+                <Card
+                  body
+                  className="fromdeliverysize border border-primary rounded green"
+                >
                   <div>
                     <img className="img_menu img-fluid" src={img_menu} alt="" />
                   </div>
@@ -163,15 +174,10 @@ class Delivery extends Component {
                 </Card>
               </Col>
               <Col>
-                <Card body className="border border-primary rounded">
-                  <div>
-                    <img className="img_meal img-fluid" src={img_meal} alt="" />
-                  </div>
-                  <div className="font_status">กำลังจัดเตรียมอาหาร</div>
-                </Card>
-              </Col>
-              <Col>
-                <Card body className="border border-primary rounded">
+                <Card
+                  body
+                  className="fromdeliverysize border border-primary rounded"
+                >
                   <div>
                     <img
                       className="img_product img-fluid"
@@ -183,7 +189,10 @@ class Delivery extends Component {
                 </Card>
               </Col>
               <Col>
-                <Card body className="border border-primary rounded">
+                <Card
+                  body
+                  className="fromdeliverysize border border-primary rounded"
+                >
                   <div>
                     <img
                       className="img_breakfast img-fluid"
@@ -197,72 +206,6 @@ class Delivery extends Component {
             </Row>
           </div>
         );
-        // } else if (parseInt(data.status) === 3) {
-        //   return (
-        //     <div key={index}>
-        //       <Row>
-        //         <Col md={12}>
-        //           <div className="p-3">
-        //             {/* order no.{data.id}, status : {data.status} */}
-        //           </div>
-        //         </Col>
-        //       </Row>
-        //       <Row>
-        //         <Col>
-        //           <Card body className="border border-primary rounded green">
-        //             <div>
-        //               <img
-        //                 className="img_foodorder img-fluid"
-        //                 src={img_foodorder}
-        //                 alt=""
-        //               />
-        //             </div>
-        //             <div className="font_status">สั่งอาหารแล้ว</div>
-        //           </Card>
-        //         </Col>
-        //         <Col>
-        //           <Card body className="border border-primary rounded green">
-        //             <div>
-        //               <img className="img_menu img-fluid" src={img_menu} alt="" />
-        //             </div>
-        //             <div className="font_status">ได้รับรายการอาหารแล้ว</div>
-        //           </Card>
-        //         </Col>
-        //         <Col>
-        //           <Card body className="border border-primary rounded green">
-        //             <div>
-        //               <img className="img_meal img-fluid" src={img_meal} alt="" />
-        //             </div>
-        //             <div className="font_status">กำลังจัดเตรียมอาหาร</div>
-        //           </Card>
-        //         </Col>
-        //         <Col>
-        //           <Card body className="border border-primary rounded">
-        //             <div>
-        //               <img
-        //                 className="img_product img-fluid"
-        //                 src={img_product}
-        //                 alt=""
-        //               />
-        //             </div>
-        //             <div className="font_status">อาหารของคุณพร้อมส่ง</div>
-        //           </Card>
-        //         </Col>
-        //         <Col>
-        //           <Card body className="border border-primary rounded">
-        //             <div>
-        //               <img
-        //                 className="img_breakfast img-fluid"
-        //                 src={img_breakfast}
-        //                 alt=""
-        //               />
-        //             </div>
-        //             <div className="font_status">คุณได้รับอาหารแล้ว</div>
-        //           </Card>
-        //         </Col>
-        //       </Row>
-        //     </div>
-        //   );
       } else if (parseInt(data.status) === 3) {
         return (
           <div key={index}>
@@ -273,9 +216,12 @@ class Delivery extends Component {
                 </div>
               </Col>
             </Row>
-            <Row>
+            <Row xs="4" className="framedelivery">
               <Col>
-                <Card body className="border border-primary rounded green">
+                <Card
+                  body
+                  className="fromdeliverysize border border-primary rounded green"
+                >
                   <div>
                     <img
                       className="img_foodorder img-fluid"
@@ -287,23 +233,22 @@ class Delivery extends Component {
                 </Card>
               </Col>
               <Col>
-                <Card body className="border border-primary rounded green">
+                <Card
+                  body
+                  className="fromdeliverysize border border-primary rounded green"
+                >
                   <div>
                     <img className="img_menu img-fluid" src={img_menu} alt="" />
                   </div>
                   <div className="font_status">ได้รับรายการอาหารแล้ว</div>
                 </Card>
               </Col>
+
               <Col>
-                <Card body className="border border-primary rounded green">
-                  <div>
-                    <img className="img_meal img-fluid" src={img_meal} alt="" />
-                  </div>
-                  <div className="font_status">กำลังจัดเตรียมอาหาร</div>
-                </Card>
-              </Col>
-              <Col>
-                <Card body className="border border-primary rounded green">
+                <Card
+                  body
+                  className="fromdeliverysize border border-primary rounded green"
+                >
                   <div>
                     <img
                       className="img_product img-fluid"
@@ -315,7 +260,10 @@ class Delivery extends Component {
                 </Card>
               </Col>
               <Col>
-                <Card body className="border border-primary rounded">
+                <Card
+                  body
+                  className="fromdeliverysize border border-primary rounded"
+                >
                   <div>
                     <img
                       className="img_breakfast img-fluid"
@@ -339,9 +287,12 @@ class Delivery extends Component {
                 </div>
               </Col>
             </Row>
-            <Row>
+            <Row xs="4" className="framedelivery">
               <Col>
-                <Card body className="border border-primary rounded green">
+                <Card
+                  body
+                  className="fromdeliverysize border border-primary rounded green"
+                >
                   <div>
                     <img
                       className="img_foodorder img-fluid"
@@ -353,7 +304,10 @@ class Delivery extends Component {
                 </Card>
               </Col>
               <Col>
-                <Card body className="border border-primary rounded green">
+                <Card
+                  body
+                  className="fromdeliverysize border border-primary rounded green"
+                >
                   <div>
                     <img className="img_menu img-fluid" src={img_menu} alt="" />
                   </div>
@@ -361,15 +315,10 @@ class Delivery extends Component {
                 </Card>
               </Col>
               <Col>
-                <Card body className="border border-primary rounded green">
-                  <div>
-                    <img className="img_meal img-fluid" src={img_meal} alt="" />
-                  </div>
-                  <div className="font_status">กำลังจัดเตรียมอาหาร</div>
-                </Card>
-              </Col>
-              <Col>
-                <Card body className="border border-primary rounded green">
+                <Card
+                  body
+                  className="fromdeliverysize border border-primary rounded green"
+                >
                   <div>
                     <img
                       className="img_product img-fluid"
@@ -381,7 +330,10 @@ class Delivery extends Component {
                 </Card>
               </Col>
               <Col>
-                <Card body className="border border-primary rounded green">
+                <Card
+                  body
+                  className="fromdeliverysize border border-primary rounded green"
+                >
                   <div>
                     <img
                       className="img_breakfast img-fluid"
@@ -402,10 +354,9 @@ class Delivery extends Component {
         <MenuSelect numberOnBucket={numberOfMenus} />
         <div className="container-fluid">
           <div className="text_status">ติดตามสถานะการจัดส่ง</div>
-          <Container className="p-4">
-            ออเดอร์ของคุณ
-            <Row>
-              <div className="from_status">{orderSuccess}</div>
+          <Container>
+            <Row xs="4" className="fromdelivery">
+              <div className="font_status">{orderSuccess}</div>
             </Row>
           </Container>
         </div>

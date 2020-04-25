@@ -59,6 +59,8 @@ class ListUser extends Component {
                   <Col xs="4">สถานะ</Col>
                 </Row>
               </CardHeader>
+              {/* {this.state.order.map((order)
+              ) */}
               {this.state.users.map((user, index) => {
                 if (user.role === "user")
                   if (true)
@@ -66,11 +68,12 @@ class ListUser extends Component {
                       <div key={index + 1}>
                         <CardBody>
                           <Row>
-                            <Col xs="4"> {user.id}</Col>
+                            <Col xs="4"> </Col>
+                            {/* {order.id} */}
                             {/* <Col>{user.firstname} </Col>
                             <Col>{user.lastname} </Col>
                             <Col>{user.phone} </Col> */}
-                            <Col xs="4">User_id</Col>
+                            <Col xs="4">{user.id}</Col>
                             <Col xs="4">
                               <Button
                                 id="Popover1"
@@ -81,28 +84,33 @@ class ListUser extends Component {
                               >
                                 รับรายการอาหาร
                               </Button>
+                              <div className="row">
+                                <div className="col-sm-9 ">
+                                  <Popover
+                                    className="popup"
+                                    placement="right"
+                                    isOpen={this.state.popoverOpen}
+                                    target="Popover1"
+                                    toggle={this.toggle2}
+                                  >
+                                    <PopoverHeader className="menulistuser">
+                                      รายการอาหาร
+                                    </PopoverHeader>
+                                    <PopoverBody>
+                                      <div className="row  align-items-center tablelistuser">
+                                        <div className="col-6 col-md-4">
+                                          ลำดับที่
+                                        </div>
 
-                              <div className="from_menulistuser">
-                                <Popover
-                                  className="popup"
-                                  placement="right"
-                                  isOpen={this.state.popoverOpen}
-                                  target="Popover1"
-                                  toggle={this.toggle2}
-                                >
-                                  <PopoverHeader className="menulistuser">
-                                    รายการอาหาร
-                                  </PopoverHeader>
-                                  <PopoverBody>
-                                    <Card className="card_food">
-                                      <CardHeader>
-                                        <Row>
-                                          <Col>ลำดับที่</Col>
-                                          <Col>ชื่ออาหาร</Col>
+                                        <div className="col-6 col-md-4">
+                                          ชื่ออาหาร
+                                        </div>
 
-                                          <Col>จำนวน</Col>
-                                        </Row>
-                                      </CardHeader>
+                                        <div className="col-6 col-md-4">
+                                          จำนวน
+                                        </div>
+                                      </div>
+
                                       <CardBody>
                                         <Row>
                                           <Col></Col>
@@ -110,23 +118,23 @@ class ListUser extends Component {
                                           <Col></Col>
                                         </Row>
                                       </CardBody>
-                                    </Card>
-                                  </PopoverBody>
+                                    </PopoverBody>
 
-                                  <div className="btconfirm">
-                                    <Button
-                                      color="info"
-                                      onClick={() => {
-                                        this.setState({
-                                          popoverOpen: false,
-                                          modal: true,
-                                        });
-                                      }}
-                                    >
-                                      อาหารพร้อมส่ง
-                                    </Button>
-                                  </div>
-                                </Popover>
+                                    <div className="btconfirm">
+                                      <Button
+                                        color="info"
+                                        onClick={() => {
+                                          this.setState({
+                                            popoverOpen: false,
+                                            modal: true,
+                                          });
+                                        }}
+                                      >
+                                        อาหารพร้อมส่ง
+                                      </Button>
+                                    </div>
+                                  </Popover>
+                                </div>
                               </div>
                             </Col>
                             <Modal

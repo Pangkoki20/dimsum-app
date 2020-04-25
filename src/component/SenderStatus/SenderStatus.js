@@ -22,7 +22,7 @@ class SenderStatus extends Component {
             <Card className="card_orderkitchen">
               <CardHeader>
                 <Row>
-                  <Col>order_id</Col>
+                  <Col>Order_id</Col>
                   <Col>สถานะ</Col>
                 </Row>
               </CardHeader>

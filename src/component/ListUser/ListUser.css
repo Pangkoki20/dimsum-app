@@ -21,7 +21,12 @@
 }
 
 .popup {
-    margin-left: 100px;
+    margin-left: 100px !important;
+    max-width: 550px !important;
+}
+
+.popover {
+    width: 500px;
 }
 
 .btconfirm {
@@ -32,11 +37,17 @@
     text-align: center;
 }
 
-
 .menulistuser {
     font-family: "Kanit",
         sans-serif;
     font-size: 18px;
+    text-align: center;
+}
+
+.tablelistuser {
+    font-family: "Kanit",
+        sans-serif;
+    font-size: 14px;
     text-align: center;
 }
 
@@ -65,4 +76,10 @@
 .piccorrect {
     text-align: center !important;
     width: 100%;
+}
+
+.card_menulistuser {
+    font-family: "Kanit",
+        sans-serif;
+    font-size: 14px;
 }

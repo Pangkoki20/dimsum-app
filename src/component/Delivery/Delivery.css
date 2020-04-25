@@ -12,16 +12,34 @@
 .from_status {
     padding-left: 100px;
     padding-right: 100px;
-    text-align: center;
+    text-align: center !important;
     font-family: "Kanit",
         sans-serif;
 }
 
-.frame_status {}
+.fromdelivery {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.fromdeliverysize {
+    height: 150px;
+    width: 220px;
+    text-align: center;
+}
+
+.framedelivery {
+    text-align: center;
+}
 
 .font_status {
     font-size: 14px;
     margin-top: 8px;
+    font-family: "Kanit",
+        sans-serif;
+
 }
 
 .text-addre {
