@@ -30,6 +30,7 @@ export default class ShrimpJeeb extends Component {
       console.log(" data : ", newData);
       this.setState({ menu_value: 0 });
       this.setState({ remark: "" });
+      window.location.reload();
     }
   };
 

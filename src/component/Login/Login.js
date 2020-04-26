@@ -22,7 +22,8 @@ class Login extends Component {
   };
   componentDidMount = async (nextProps) => {
     let res = await axios.get(`http://localhost:3001/api/users`);
-    console.log(res.data);
+    console.log("ererdsfff", res.data);
+
     // let res = await axios.post(`http://localhost:3001/api/users/me`, {
 
     // });
@@ -48,11 +49,14 @@ class Login extends Component {
 
       axios.post(`http://localhost:3001/api/users/login`, data).then((res) => {
         const { data } = res;
+        console.log("resrr", res);
+
         if (data && data.token) {
           this.setState({ message: data.message });
           this.props.onUserChanged(res);
           localStorage.setItem("token", data.token);
           let { role } = token.decodeToken(data.token);
+          let { id } = token.decodeToken(data.token);
           localStorage.setItem("role", role);
           if (role === "kitchen") {
             this.props.history.push(`/ListUser`);
@@ -60,6 +64,7 @@ class Login extends Component {
             this.props.history.push(`/SenderStatus`);
           } else if (role === "user") {
             this.props.history.push(`/Menu`);
+            localStorage.setItem("user_id", id);
           } else if (role === "admin") {
             this.props.history.push(`/Menu`);
           }

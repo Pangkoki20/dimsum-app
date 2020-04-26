@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import dl_pokegg from "../../imgdimsum/ขนมจีบหมูไข่เค็ม.png";
+// import auth from "../service/index";
+// import axios from "axios";
 export default class PorkEggDumpling extends Component {
   state = {
     menu_name: "ขนมจีบหมูไข่เค็ม",
@@ -10,15 +12,13 @@ export default class PorkEggDumpling extends Component {
 
   sentOrder = (e) => {
     e.preventDefault();
-
     var oldItems = JSON.parse(localStorage.getItem("order")) || [];
-
-    console.log("sent !");
-
+    let uid = localStorage.getItem("user_id");
     const newData = {
       menu_name: this.state.menu_name,
       menu_value: 1,
       menu_price: this.state.menu_price,
+      user_id: uid,
     };
     const isHaveMenuAlready = oldItems.find(
       (menu) => menu.menu_name === this.state.menu_name

@@ -30,6 +30,8 @@ class MenuNewSarapol extends Component {
           (menu) => menu.menu_name === this.state.menu_name
         );
 
+        // console.log("resr", isHaveMenuAlready.menu_value);
+
         if (!isHaveMenuAlready) {
           oldItems.push(newData);
           localStorage.setItem("order", JSON.stringify(oldItems));
@@ -38,6 +40,17 @@ class MenuNewSarapol extends Component {
           this.setState({ remark: "" });
           window.location.reload();
         }
+        // else {
+        // let oldItems = {
+        //   menu_name: isHaveMenuAlready.menu_name,
+        //   menu_value: isHaveMenuAlready.menu_value + 1,
+        //   menu_price: isHaveMenuAlready.menu_price,
+        // };
+        // localStorage.setItem("order", JSON.stringify(oldItems));
+        // console.log(" data : ", newData);
+        // this.setState({ menu_value: this.state.value++ });
+        //   window.location.reload();
+        // }
       }
       let res = await axios.post(`http://localhost:3001/api/users/me`, {
         token,
