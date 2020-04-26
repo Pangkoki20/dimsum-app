@@ -8,7 +8,6 @@ import DrinkOvantin from "./DrinkOvantin";
 import DrinkGreentea from "./DrinkGreentea";
 import DrinkChadum from "./DrinkChadum";
 import MenuSelect from "../MenuSelect/MenuSelect";
-import axios from "axios";
 class Drink extends Component {
   state = {
     user: null,

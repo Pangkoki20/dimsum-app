@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import { Container } from "reactstrap";
+import { Container, Card, CardImg, CardColumns, CardTitle } from "reactstrap";
 import "./Contact.css";
-import Collapses from "../Collapses/Collapses";
 import piccon from "../../img/customer.png";
+import phone from "../../imgcollapses/call.png";
+import address from "../../imgcollapses/location.png";
+import facebook from "../../imgcollapses/facebook.png";
 import axios from "axios";
 class Contact extends Component {
   state = {
@@ -11,24 +13,7 @@ class Contact extends Component {
   onUserChanged = (user) => {
     this.setState({ user });
   };
-  componentDidMount = async (nextProps) => {
-    let token = localStorage.getItem("token");
-    if (token) {
-      if (token !== null) {
-        this.setState({ check: "login" });
-      }
-      let res = await axios.post(`http://localhost:3001/api/users/me`, {
-        token,
-      });
-      // if (!res) {
-      //   window.location.href = "/login";
-      //   return;
-      // }
-      this.setState({ user: res.data });
-    } else {
-      window.location.href = "/login";
-    }
-  };
+  componentDidMount = async (nextProps) => {};
   render() {
     return (
       <Container>
@@ -36,8 +21,45 @@ class Contact extends Component {
           <span>
             <img className="piccon" src={piccon} alt="" />
           </span>
-          <div className="text-cont"> Contact Us </div>
-          <Collapses />
+          <div className="text-cont">ติดต่อเรา</div>
+          <Container>
+            <CardColumns className="from_colla">
+              <Card>
+                <a href="https://www.google.co.th/maps/@8.0604407,98.9973333,3a,75y,334.76h,89.22t/data=!3m6!1e1!3m4!1sfQG9FGsw3Sx8Gw5FBal8og!2e0!7i13312!8i6656?hl=th">
+                  <CardImg
+                    className="address"
+                    top
+                    width=""
+                    src={address}
+                    alt="Card image cap"
+                  />
+                </a>
+                <CardTitle className="text-address">ที่อยู่ร้าน</CardTitle>
+              </Card>
+              <Card>
+                <CardImg
+                  className="phone"
+                  top
+                  width=""
+                  src={phone}
+                  alt="Card image cap"
+                />
+                <CardTitle className="text-phone">เบอร์โทรศัพท์</CardTitle>
+              </Card>
+              <Card>
+                <a href="https://www.facebook.com/%E0%B8%95%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%8B%E0%B8%B3%E0%B8%AD%E0%B8%B2%E0%B8%81%E0%B9%8B%E0%B8%87-716044961896140/?epa=SEARCH_BOX">
+                  <CardImg
+                    className="facebook"
+                    top
+                    width=""
+                    src={facebook}
+                    alt="Card image cap"
+                  />
+                </a>
+                <CardTitle className="text-facebook">Facebook</CardTitle>
+              </Card>
+            </CardColumns>
+          </Container>
         </div>
         <br></br>
         <br></br>

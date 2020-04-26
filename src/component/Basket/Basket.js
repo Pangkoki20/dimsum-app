@@ -150,14 +150,14 @@ class Basket extends Component {
                           <Col> {e.menu_price}</Col>
                           <Col>
                             <div
-                              className="btn-group"
+                              className="btn-group btaddfood"
                               role="group"
                               aria-label=""
                             >
                               {e.menu_value > 1 ? (
                                 <button
                                   type="button"
-                                  className="btn btn-outline-info"
+                                  className="btn btn-outline-info "
                                   onClick={() => this.removeCount(index)}
                                 >
                                   -
@@ -165,7 +165,7 @@ class Basket extends Component {
                               ) : (
                                 <button
                                   type="button"
-                                  className="btn btn-outline-info"
+                                  className="btn btn-outline-info btaddfood"
                                 >
                                   -
                                 </button>

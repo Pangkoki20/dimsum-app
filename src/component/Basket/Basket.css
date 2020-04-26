@@ -171,3 +171,173 @@
     font-family: "Kanit",
         sans-serif;
 }
+
+@media only screen and (max-width: 768px) {
+    .card_food {
+        margin-top: 20px;
+        text-align: center;
+        font-family: "Kanit",
+            sans-serif;
+        font-size: 15px;
+    }
+
+    .text_addfood {
+        font-family: "Kanit", sans-serif;
+        text-align: left;
+        font-size: 12px;
+    }
+
+    .add_food {
+        margin-top: 10px;
+        font-family: "Kanit",
+            sans-serif;
+        font-size: 15px;
+        text-align: right;
+    }
+
+    .btaddfood {
+        font-size: 12px !important;
+    }
+
+    .in_check {
+        width: 10px !important;
+    }
+
+    .check {
+        width: 20px;
+        height: 20px;
+    }
+
+    .tt_inputfood {
+        width: 100px;
+    }
+
+    .text_basket {
+        font-size: 30px;
+        text-align: center;
+        font-family: "Kanit", sans-serif;
+    }
+
+    .table-basket {
+        margin-top: 15px !important;
+        font-family: "Kanit", sans-serif;
+        text-align: center;
+    }
+
+    .item {
+        width: 400px;
+        height: 50px;
+        text-align: center !important;
+    }
+
+    .price_item {
+        width: 50px;
+        height: 50px;
+        text-align: center !important;
+    }
+
+    .add_remove {
+        width: 50px;
+        height: 50px;
+        text-align: center !important;
+        border: none;
+    }
+
+    .bt_addremove {
+        background-color: #ffffff;
+    }
+
+    .total_item {
+        width: 50px;
+        height: 50px;
+        text-align: center !important;
+    }
+
+    .table_num {
+        margin-top: 15px;
+    }
+
+    .from_money {
+        margin-top: 20px;
+    }
+
+    .text_money {
+        font-size: 16px;
+        font-family: "Kanit", sans-serif;
+        text-align: center;
+    }
+
+    .text_food {
+        font-size: 19px;
+        font-family: "Kanit", sans-serif;
+    }
+
+    .tt_food {
+        font-size: 12px;
+    }
+
+    .text_num {
+        text-align: right;
+    }
+
+    .text_unit {
+        text-align: center;
+    }
+
+    .delivery_charge {
+        font-size: 12px;
+    }
+
+    .tt_money {
+        font-size: 15px;
+    }
+
+    .tt_money2 {
+        font-size: 15px;
+    }
+
+    .address_customer {
+        font-size: 25px;
+        font-family: "Kanit",
+            sans-serif;
+        text-align: right;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .img_trash {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+    }
+
+    .img_trash:hover {
+        color: red;
+    }
+
+    .img_gps {
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+    }
+
+    .img_add {
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+    }
+
+    .footer_ttfood {
+        margin-left: 10px;
+    }
+
+    .OrderConfirmation {
+        font-size: 18px;
+        font-family: "Kanit",
+            sans-serif;
+    }
+
+}

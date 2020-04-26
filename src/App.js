@@ -11,7 +11,6 @@ import Fastfood from "./component/Fastfood/Fastfood";
 import Drink from "./component/Drink/Drink";
 import Delivery from "./component/Delivery/Delivery";
 import Contact from "./component/Contact/Contact";
-import Collapses from "./component/Collapses/Collapses";
 import Menu from "./component/Menu/Menu";
 import OrderFood from "./component/OrderFood/OrderFood";
 import ShowOrder from "./component/ShowOrder/ShowOrder";
@@ -74,7 +73,6 @@ class App extends Component {
           <Route exact path="/Drink" component={Drink} />
           <Route exact path="/Delivery" component={Delivery} />
           <Route exact path="/Contact" component={Contact} />
-          <Route exact path="Collapses" component={Collapses} />
           <Route exact path="/Menu" component={Menu} />
           <Route exact path="/ShowOrder" component={ShowOrder} />
           <Route exact path="/Basket" component={Basket} />
