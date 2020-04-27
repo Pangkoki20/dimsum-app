@@ -20,6 +20,7 @@ export default class PorkEggDumpling extends Component {
       menu_price: this.state.menu_price,
       user_id: uid,
     };
+
     const isHaveMenuAlready = oldItems.find(
       (menu) => menu.menu_name === this.state.menu_name
     );
