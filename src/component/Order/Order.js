@@ -143,34 +143,72 @@ class Order extends Component {
               <Form onSubmit={this.sentOrder}>
                 {this.state.step === 1 ? (
                   <div className="from_addressdelivery">
-                    <div className="addressdelivery">
-                      ที่อยู่สำหรับการจัดส่ง
-                    </div>
+                    <div className="addressdelivery"></div>
+                    <div className="addressdelivery">เพิ่มที่อยู่ปัจจุบัน</div>
+                    <Input
+                      className="from_addressdelivery"
+                      type="numhouse"
+                      name="numhouse"
+                      value={numhouse}
+                      placeholder="บ้านเลขที่"
+                      onChange={this.handleInputChange}
+                      required
+                    />
+                    <Input
+                      className="from_addressdelivery"
+                      type="nummoo"
+                      name="nummoo"
+                      value={nummoo}
+                      placeholder="หมู่ที่"
+                      onChange={this.handleInputChange}
+                      required
+                    ></Input>
+                    <Input
+                      className="from_addressdelivery"
+                      type="lane"
+                      name="lane"
+                      value={lane}
+                      placeholder="ซอย/ตรอก"
+                      onChange={this.handleInputChange}
+                      required
+                    ></Input>
+                    <Input
+                      className="from_addressdelivery"
+                      type="tambon"
+                      name="tambon"
+                      value={tambon}
+                      placeholder="ตำบล"
+                      onChange={this.handleInputChange}
+                      required
+                    ></Input>
+                    <Input
+                      className="from_addressdelivery"
+                      type="amphoe"
+                      name="amphoe"
+                      value={amphoe}
+                      placeholder="อำเภอ"
+                      onChange={this.handleInputChange}
+                      required
+                    ></Input>
+                    <Input
+                      className="from_addressdelivery"
+                      type="changwat"
+                      name="changwat"
+                      value={changwat}
+                      placeholder="จังหวัด"
+                      onChange={this.handleInputChange}
+                      required
+                    ></Input>
+                    <Input
+                      className="from_addressdelivery"
+                      type="postcode"
+                      name="postcode"
+                      value={postcode}
+                      placeholder="รหัสไปรษณีย์"
+                      onChange={this.handleInputChange}
+                      required
+                    ></Input>
 
-                    <Row>
-                      <Col xs="1">
-                        <div>
-                          <img
-                            className="img_savelocation"
-                            src={img_savelocation}
-                            alt=""
-                          />
-                        </div>
-                      </Col>
-                      <Col xs="auto">สถานที่ที่บันทึกไว้</Col>
-                    </Row>
-                    <Row>
-                      <Col xs="1">
-                        <div>
-                          <img
-                            className="img_newaddress"
-                            src={img_newaddress}
-                            alt=""
-                          />
-                        </div>
-                      </Col>
-                      <Col xs="auto">เพิ่มสถานที่ใหม่</Col>
-                    </Row>
                     <div className="bt_nextone">
                       <Button
                         color="danger"
@@ -200,7 +238,7 @@ class Order extends Component {
                         </div>
                       </Label>
                     </FormGroup>
-                    {/* <FormGroup check className="from_check">
+                    <FormGroup check className="from_check">
                       <Label check>
                         <Input
                           type="radio"
@@ -211,7 +249,7 @@ class Order extends Component {
                         />
                         <div className="text_paymentconfirm">อื่น ๆ</div>
                       </Label>
-                    </FormGroup> */}
+                    </FormGroup>
                     {/* <div className="code">โค้ดส่วนลดของคุณ</div>
                     <Input
                       className="text_code"

@@ -40,7 +40,7 @@ class MenuNewSarapol extends Component {
           this.setState({ remark: "" });
           window.location.reload();
         }
-        // else {
+        // else {    //Benz ลองเพิ่มเงื่อนไขนี้มา
         // let oldItems = {
         //   menu_name: isHaveMenuAlready.menu_name,
         //   menu_value: isHaveMenuAlready.menu_value + 1,

@@ -53,6 +53,7 @@ class Menu extends Component {
   };
   render() {
     const numberOfMenus = this.state.order.reduce(
+      //แล้วมา Bug ตรงนี้ !!!
       (acc, next) => acc + next.menu_value,
       0
     );
