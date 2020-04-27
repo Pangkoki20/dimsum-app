@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col } from "reactstrap";
+import { Row, Col, Container } from "reactstrap";
 import "./Menu.css";
 import MenuSelect from "../MenuSelect/MenuSelect";
 import MenuNewPoo from "./MenuNewPoo";
@@ -59,29 +59,31 @@ class Menu extends Component {
     return (
       <div>
         <MenuSelect numberOnBucket={numberOfMenus} />
-        <div className="container">
+        <Container>
           <div className="text-menu">เมนูแนะนำ</div>
-          <Row>
-            <Col xs="6" sm="4">
+          <Row xs="3">
+            <Col>
               <MenuNewSarapol />
             </Col>
-            <Col xs="6" sm="4">
+            <Col>
               <MenuNewEgg />
             </Col>
-            <Col xs="6" sm="4">
+            <Col>
               <MenuNewEggpan />
             </Col>
-            <Col xs="6" sm="4">
+          </Row>
+          <Row xs="3">
+            <Col>
               <MenuNewBuk />
             </Col>
-            <Col xs="6" sm="4">
+            <Col>
               <MenuNewPoo />
             </Col>
-            <Col xs="6" sm="4">
+            <Col>
               <MenuNewKanomgee />
             </Col>
           </Row>
-        </div>
+        </Container>
       </div>
     );
   }

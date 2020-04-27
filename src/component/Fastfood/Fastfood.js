@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col } from "reactstrap";
+import { Row, Col, Container } from "reactstrap";
 import "./Fastfood.css";
 import FastFoodChicken from "./FastFoodChicken";
 import FastFoodBabutte from "./FastFoodBabutte";
@@ -55,33 +55,35 @@ class Fastfood extends Component {
     return (
       <div>
         <MenuSelect numberOnBucket={numberOfMenus} />
-        <div className="container">
+        <Container>
           <div className="textname-fastfood">อาหารจานเดียว</div>
 
-          <Row>
-            <Col xs="6" sm="4">
+          <Row xs="3">
+            <Col>
               <FastFoodBabutte />
             </Col>
-            <Col xs="6" sm="4">
+            <Col>
               <FastFoodChicken />
             </Col>
-            <Col xs="6" sm="4">
+            <Col>
               <FastFoodDuck />
             </Col>
-            <Col xs="6" sm="4">
+          </Row>
+          <Row xs="3">
+            <Col>
               <FastFoodPorkleg />
             </Col>
-            <Col xs="6" sm="4">
+            <Col>
               <FastFoodRedpork />
             </Col>
-            <Col xs="6" sm="4">
+            <Col>
               <FastFoodCrispypork />
             </Col>
-            {/* <Col xs="6" sm="4">
+            {/* <Col>
               <FastFoodRice />
             </Col> */}
           </Row>
-        </div>
+        </Container>
       </div>
     );
   }

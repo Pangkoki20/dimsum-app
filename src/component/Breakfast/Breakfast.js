@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col } from "reactstrap";
+import { Row, Col, Container } from "reactstrap";
 import "./Breakfast.css";
 import BreakFastFood from "./BreakFastFood";
 import BreakFastEgg from "./BreakFastEgg";
@@ -55,30 +55,31 @@ class Breakfast extends Component {
     return (
       <div>
         <MenuSelect numberOnBucket={numberOfMenus} />
-        <div className="container">
-          <div className="textname-breakfast">อาหารเช้า</div>
-
-          <Row>
-            <Col xs="6" sm="4">
+        <div className="textname-breakfast">อาหารเช้า</div>
+        <Container>
+          <Row xs="3">
+            <Col>
               <BreakFastFood />
             </Col>
-            <Col xs="6" sm="4">
+            <Col>
               <BreakFastEgg />
             </Col>
-            <Col xs="6" sm="4">
+            <Col>
               <BreakFastFish />
             </Col>
-            <Col xs="6" sm="4">
+          </Row>
+          <Row xs="3">
+            <Col>
               <BreakFastShrimp />
             </Col>
-            <Col xs="6" sm="4">
+            <Col>
               <BreakFastFreshSpring />
             </Col>
-            <Col xs="6" sm="4">
+            <Col>
               <BreakFastShrimpParcelFried />
             </Col>
           </Row>
-        </div>
+        </Container>
       </div>
     );
   }

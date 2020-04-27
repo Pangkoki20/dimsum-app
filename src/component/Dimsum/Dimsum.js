@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col } from "reactstrap";
+import { Row, Col, Container } from "reactstrap";
 import "./Dimsum.css";
 import PorkDumpling from "./PorkDumpling";
 import PorkEggDumpling from "./PorkEggDumpling";
@@ -54,29 +54,31 @@ class Dimsum extends Component {
     return (
       <div>
         <MenuSelect numberOnBucket={numberOfMenus} />
-        <div className="container">
+        <Container>
           <div className="textname-dimsum">ติ่มซำ </div>
-          <Row>
-            <Col xs="6" sm="4">
+          <Row xs="3">
+            <Col>
               <PorkDumpling />
             </Col>
-            <Col xs="6" sm="4">
+            <Col>
               <PorkEggDumpling />
             </Col>
-            <Col xs="6" sm="4">
+            <Col>
               <PooDumpling />
             </Col>
-            <Col xs="6" sm="4">
+          </Row>
+          <Row xs="3">
+            <Col>
               <ShrimpDumling />
             </Col>
-            <Col xs="6" sm="4">
+            <Col>
               <HargaoShrimp />
             </Col>
-            <Col xs="6" sm="4">
+            <Col>
               <ShrimpJeeb />
             </Col>
           </Row>
-        </div>
+        </Container>
       </div>
     );
   }

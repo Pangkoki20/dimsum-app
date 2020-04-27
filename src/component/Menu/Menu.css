@@ -2,7 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
 
 .form-menu {
-  margin-top: 10px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  line-height: 1.5;
+
 }
 
 .text-menu {
@@ -18,43 +21,43 @@
 }
 
 .img_egg {
-  height: 250px;
+  height: 200px;
   width: 250px;
   margin-top: 2px;
 }
 
 .img_jopoo {
-  height: 250px;
+  height: 200px;
   width: 250px;
   margin-top: 2px;
 }
 
 .img_buk {
-  height: 250px;
+  height: 200px;
   width: 250px;
   margin-top: 2px;
 }
 
 .img_eggpan {
-  height: 250px;
+  height: 200px;
   width: 250px;
   margin-top: 2px;
 }
 
 .img_kanomgee {
-  height: 250px;
+  height: 200px;
   width: 250px;
   margin-top: 2px;
 }
 
 .img_sarapol {
-  height: 250px;
+  height: 200px;
   width: 250px;
   margin-top: 2px;
 }
 
 .img_egg {
-  height: 250px;
+  height: 200px;
   width: 250px;
   margin-top: 2px;
 }
@@ -69,6 +72,11 @@
   font-family: 'Prompt',
     sans-serif;
   font-size: 14px;
+}
+
+.from_mn {
+  margin-top: 50px !important;
+  text-align: center;
 }
 
 .text_menuname {
