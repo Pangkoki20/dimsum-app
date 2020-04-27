@@ -11,7 +11,6 @@ import MenuSelect from "../MenuSelect/MenuSelect";
 import axios from "axios";
 class Fastfood extends Component {
   state = {
-    user: null,
     order: [],
   };
   onUserChanged = (user) => {

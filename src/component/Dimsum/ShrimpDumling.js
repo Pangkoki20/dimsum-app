@@ -18,6 +18,7 @@ export default class ShrimpDumling extends Component {
     const newData = {
       menu_name: this.state.menu_name,
       menu_value: 1,
+
       menu_price: this.state.menu_price,
       user_id: uid,
     };

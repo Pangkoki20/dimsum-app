@@ -12,13 +12,14 @@ export default class ShrimpJeeb extends Component {
     e.preventDefault();
 
     var oldItems = JSON.parse(localStorage.getItem("order")) || [];
-
+    let uid = localStorage.getItem("user_id");
     console.log("sent !");
 
     const newData = {
       menu_name: this.state.menu_name,
       menu_value: 1,
       menu_price: this.state.menu_price,
+      user_id: uid,
     };
     const isHaveMenuAlready = oldItems.find(
       (menu) => menu.menu_name === this.state.menu_name

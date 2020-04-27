@@ -10,7 +10,6 @@ import DrinkChadum from "./DrinkChadum";
 import MenuSelect from "../MenuSelect/MenuSelect";
 class Drink extends Component {
   state = {
-    user: null,
     order: [],
   };
   onUserChanged = (user) => {

@@ -52,7 +52,6 @@ class Breakfast extends Component {
       (acc, next) => acc + next.menu_value,
       0
     );
-    console.log("number breakfast page: " + numberOfMenus);
     return (
       <div>
         <MenuSelect numberOnBucket={numberOfMenus} />

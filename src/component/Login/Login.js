@@ -22,8 +22,7 @@ class Login extends Component {
   };
   componentDidMount = async (nextProps) => {
     let res = await axios.get(`http://localhost:3001/api/users`);
-    console.log("ererdsfff", res.data);
-
+    console.log(res.data);
     // let res = await axios.post(`http://localhost:3001/api/users/me`, {
 
     // });
@@ -49,8 +48,6 @@ class Login extends Component {
 
       axios.post(`http://localhost:3001/api/users/login`, data).then((res) => {
         const { data } = res;
-        console.log("resrr", res);
-
         if (data && data.token) {
           this.setState({ message: data.message });
           this.props.onUserChanged(res);

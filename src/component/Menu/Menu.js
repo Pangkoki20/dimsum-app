@@ -48,7 +48,7 @@ class Menu extends Component {
     // let user = auth.getToken();
     // let userDecoded = auth.decodeToken(user);
     // let uRole = userDecoded.role;
-    // this.setState({ user: uRole });
+    // this.setState({ user: uRole })
     // if (uRole === "sender") {
     //   this.props.history.push("/SenderStatus");
     // }

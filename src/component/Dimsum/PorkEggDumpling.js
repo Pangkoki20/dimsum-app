@@ -10,7 +10,7 @@ export default class PorkEggDumpling extends Component {
     menu_price: 20,
   };
 
-  sentOrder = (e) => {
+  sentOrder = async (e) => {
     e.preventDefault();
     var oldItems = JSON.parse(localStorage.getItem("order")) || [];
     let uid = localStorage.getItem("user_id");
@@ -30,9 +30,9 @@ export default class PorkEggDumpling extends Component {
       console.log(" data : ", newData);
       this.setState({ menu_value: 0 });
       this.setState({ remark: "" });
+      window.location.reload();
     }
   };
-
   handleInputChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
