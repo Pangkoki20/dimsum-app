@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import dl_pok from "../../imgdimsum/ขนมจีบหมู.png";
+import axios from "axios";
 export default class PorkDumpling extends Component {
   state = {
     menu_name: "ขนมจีบหมู",
@@ -8,29 +9,42 @@ export default class PorkDumpling extends Component {
     menu_price: 20,
   };
 
-  sentOrder = (e) => {
+  sentOrder = async (e) => {
     e.preventDefault();
-    var oldItems = JSON.parse(localStorage.getItem("order")) || [];
-    let uid = localStorage.getItem("user_id");
-    console.log("sent !");
+    let token = localStorage.getItem("token");
+    if (token) {
+      if (token !== null) {
+        this.setState({ check: "login" });
+        var oldItems = JSON.parse(localStorage.getItem("order")) || [];
+        let uid = localStorage.getItem("user_id");
+        console.log("sent !");
 
-    const newData = {
-      menu_name: this.state.menu_name,
-      menu_value: 1,
-      menu_price: this.state.menu_price,
-      user_id: uid,
-    };
-    const isHaveMenuAlready = oldItems.find(
-      (menu) => menu.menu_name === this.state.menu_name
-    );
+        const newData = {
+          menu_name: this.state.menu_name,
+          menu_value: 1,
+          menu_price: this.state.menu_price,
+          user_id: uid,
+        };
 
-    if (!isHaveMenuAlready) {
-      oldItems.push(newData);
-      localStorage.setItem("order", JSON.stringify(oldItems));
-      console.log(" data : ", newData);
-      this.setState({ menu_value: 0 });
-      this.setState({ remark: "" });
-      window.location.reload();
+        const isHaveMenuAlready = oldItems.find(
+          (menu) => menu.menu_name === this.state.menu_name
+        );
+
+        if (!isHaveMenuAlready) {
+          oldItems.push(newData);
+          localStorage.setItem("order", JSON.stringify(oldItems));
+          console.log(" data : ", newData);
+          this.setState({ menu_value: 0 });
+          this.setState({ remark: "" });
+          window.location.reload();
+        }
+      }
+      let res = await axios.post(`http://localhost:3001/api/users/me`, {
+        token,
+      });
+      this.setState({ user: res.data });
+    } else {
+      window.location.href = "/login";
     }
   };
 

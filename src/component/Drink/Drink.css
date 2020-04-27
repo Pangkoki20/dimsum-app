@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
 
 .textname-drink {
-    margin-top: 15px;
     font-size: 35px;
     color: rgb(0, 96, 175);
     font-family: "Kanit",
@@ -16,37 +15,37 @@
 }
 
 .img_gt {
-    height: 200px;
+    height: 250px;
     width: 250px;
     margin-top: 2px;
 }
 
 .img_chadum {
-    height: 200px;
+    height: 250px;
     width: 250px;
     margin-top: 2px;
 }
 
 .img_chamanow {
-    height: 200px;
+    height: 250px;
     width: 250px;
     margin-top: 2px;
 }
 
 .img_coffee {
-    height: 200px;
+    height: 250px;
     width: 250px;
     margin-top: 2px;
 }
 
 .img_ovantin {
-    height: 200px;
+    height: 250px;
     width: 250px;
     margin-top: 2px;
 }
 
 .img_greentea {
-    height: 200px;
+    height: 250px;
     width: 250px;
     margin-top: 2px;
 }

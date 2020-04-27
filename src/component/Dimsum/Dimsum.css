@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
 
 .textname-dimsum {
-  margin-top: 15px;
   font-size: 35px;
   color: rgb(0, 96, 175);
   font-family: "Kanit",
@@ -12,41 +11,41 @@
 
 .textname-dimsum:hover {
   text-decoration: none;
-  color: #00758d;
+  color: rgb(15, 97, 219);
 }
 
 .img_pok {
-  height: 200px;
+  height: 250px;
   width: 250px;
   margin-top: 2px;
 }
 
 .img_pokegg {
-  height: 200px;
+  height: 250px;
   width: 250px;
   margin-top: 2px;
 }
 
 .img_poo {
-  height: 200px;
+  height: 250px;
   width: 250px;
   margin-top: 2px;
 }
 
 .img_shrimp {
-  height: 200px;
+  height: 250px;
   width: 250px;
   margin-top: 2px;
 }
 
 .img_hargao {
-  height: 200px;
+  height: 250px;
   width: 250px;
   margin-top: 2px;
 }
 
 .img_shrimp {
-  height: 200px;
+  height: 250px;
   width: 250px;
   margin-top: 2px;
 }

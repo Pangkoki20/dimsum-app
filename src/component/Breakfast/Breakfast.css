@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
 
 .textname-breakfast {
-    margin-top: 15px;
     font-size: 35px;
     color: rgb(0, 96, 175);
     font-family: "Kanit",
@@ -16,25 +15,25 @@
 }
 
 .img_bfegg {
-    height: 200px;
+    height: 250px;
     width: 250px;
     margin-top: 2px;
 }
 
 .img_bffish {
-    height: 200px;
+    height: 250px;
     width: 250px;
     margin-top: 2px;
 }
 
 .img_bfshrimp {
-    height: 200px;
+    height: 250px;
     width: 250px;
     margin-top: 2px;
 }
 
 .img_bf {
-    height: 200px;
+    height: 250px;
     width: 250px;
     margin-top: 2px;
 }

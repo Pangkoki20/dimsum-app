@@ -55,7 +55,6 @@ class MenuNewKanomgee extends Component {
     return (
       <div>
         <Container>
-          {/* <img className="img_menu" src={imgmenu} /> */}
           <div className="form-menu">
             <Card body className="border border-info">
               <div className="pic_kanomgee row justify-content-md-center">

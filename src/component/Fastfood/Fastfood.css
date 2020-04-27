@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
 
 .textname-fastfood {
-    margin-top: 15px;
     font-size: 35px;
     color: rgb(0, 96, 175);
     font-family: "Kanit",
@@ -16,43 +15,44 @@
 }
 
 .img_ffchicken {
-    height: 200px;
+    height: 250px;
     width: 250px;
     margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 .img_ffredpork {
-    height: 200px;
+    height: 250px;
     width: 250px;
     margin-top: 2px;
 }
 
 .img_ffcrispypork {
-    height: 200px;
+    height: 250px;
     width: 250px;
     margin-top: 2px;
 }
 
 .img_ffporkleg {
-    height: 200px;
+    height: 250px;
     width: 250px;
     margin-top: 2px;
 }
 
 .img_ffduck {
-    height: 200px;
+    height: 250px;
     width: 250px;
     margin-top: 2px;
 }
 
 .img_ffbabutte {
-    height: 200px;
+    height: 250px;
     width: 250px;
     margin-top: 2px;
 }
 
 .img_ffrice {
-    height: 200px;
+    height: 250px;
     width: 250px;
     margin-top: 2px;
 }

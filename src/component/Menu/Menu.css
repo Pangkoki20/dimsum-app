@@ -2,11 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
 
 .form-menu {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .text-menu {
-  margin-top: 15px;
   font-size: 35px;
   color: rgb(0, 96, 175);
   font-family: "Kanit", sans-serif;
@@ -70,11 +69,6 @@
   font-family: 'Prompt',
     sans-serif;
   font-size: 14px;
-}
-
-.from_mn {
-  margin-top: 50px !important;
-  text-align: center;
 }
 
 .text_menuname {

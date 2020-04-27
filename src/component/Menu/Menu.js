@@ -8,8 +8,6 @@ import MenuNewEgg from "./MenuNewEgg";
 import MenuNewKanomgee from "./MenuNewKanomgee";
 import MenuNewSarapol from "./MenuNewSarapol";
 import MenuNewEggpan from "./MenuNewEngpan";
-import axios from "axios";
-import auth from "../service/index";
 class Menu extends Component {
   state = {
     order: [],
