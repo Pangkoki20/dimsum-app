@@ -29,7 +29,7 @@ export default class BreakFastShrimpParcelFried extends Component {
         const isHaveMenuAlready = oldItems.find(
           (menu) => menu.menu_name === this.state.menu_name
         );
-
+        console.log("check data" + isHaveMenuAlready);
         if (!isHaveMenuAlready) {
           oldItems.push(newData);
           localStorage.setItem("order", JSON.stringify(oldItems));
@@ -37,8 +37,22 @@ export default class BreakFastShrimpParcelFried extends Component {
           this.setState({ menu_value: 0 });
           this.setState({ remark: "" });
           window.location.reload();
+        } else {
+          console.log("plus in basket");
+
+          oldItems.map((item, index) => {
+            //console.log(item.menu_value);
+            if (newData.menu_name === item.menu_name) {
+              item.menu_value++;
+            }
+            console.log(item);
+          });
+          console.log("new plus: " + oldItems);
+          //oldItems.push(newData);
+          localStorage.setItem("order", JSON.stringify(oldItems));
         }
       }
+      window.location.reload();
       let res = await axios.post(`http://localhost:3001/api/users/me`, {
         token,
       });

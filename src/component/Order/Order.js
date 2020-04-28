@@ -4,10 +4,8 @@ import {
   Col,
   Button,
   Input,
-  FormGroup,
   CardBody,
   Card,
-  Label,
   Form,
   CustomInput,
 } from "reactstrap";
@@ -17,8 +15,6 @@ import auth from "../service/index";
 import img_address from "../../imgorder/address.png";
 import img_pay from "../../imgorder/pay.png";
 import img_confirm from "../../imgorder/confirm.png";
-import img_savelocation from "../../imgorder/home.png";
-import img_newaddress from "../../imgorder/P.png";
 
 class Order extends Component {
   state = {
@@ -41,6 +37,7 @@ class Order extends Component {
       code: "",
       message: "",
       order: [],
+      selects: "",
     };
   }
   componentDidMount = () => {
@@ -75,6 +72,7 @@ class Order extends Component {
         postcode: this.state.postcode,
         payment: this.state.payment,
         code: this.state.code,
+        selects: this.state.selects,
         user_id: uId,
 
         order: this.state.order.map(($obj) => {
@@ -108,9 +106,8 @@ class Order extends Component {
       tambon,
       amphoe,
       changwat,
-      postcode,
-      code,
       payment,
+      selects,
     } = this.state;
     return (
       <div className="container">
@@ -144,86 +141,95 @@ class Order extends Component {
               <Form onSubmit={this.sentOrder}>
                 {this.state.step === 1 ? (
                   <div className="from_addressdelivery">
+                    <div className="addressdelivery">
+                      <b>เลือกที่อยู่สำหรับการจัดส่ง</b>
+                    </div>
                     <CustomInput
-                      className="addressdelivery"
+                      className="addressCurrent"
                       type="radio"
                       id="exampleCustomRadio"
                       name="customRadio"
+                      value="ที่อยู่ที่บันทึกไว้"
                       label="ที่อยู่ที่บันทึกไว้"
+                      onChange={(e) => {
+                        this.setState({ selects: e.target.value });
+                      }}
                     />
                     <CustomInput
                       className="addressCurrent"
                       type="radio"
                       id="exampleCustomRadio2"
                       name="customRadio"
+                      value="เพิ่มที่อยู่ปัจจุบัน"
                       label="เพิ่มที่อยู่ปัจจุบัน"
+                      onChange={(e) => {
+                        this.setState({ selects: e.target.value });
+                      }}
                     />
-                    <Input
-                      className="inputAddress"
-                      type="numhouse"
-                      name="numhouse"
-                      value={numhouse}
-                      placeholder="บ้านเลขที่"
-                      onChange={this.handleInputChange}
-                      required
-                    />
-                    <Input
-                      className="inputAddress"
-                      type="nummoo"
-                      name="nummoo"
-                      value={nummoo}
-                      placeholder="หมู่ที่"
-                      onChange={this.handleInputChange}
-                      required
-                    ></Input>
-                    <Input
-                      className="inputAddress"
-                      type="lane"
-                      name="lane"
-                      value={lane}
-                      placeholder="ซอย/ตรอก"
-                      onChange={this.handleInputChange}
-                      required
-                    ></Input>
-                    <Input
-                      className="inputAddress"
-                      type="tambon"
-                      name="tambon"
-                      value={tambon}
-                      placeholder="ตำบล"
-                      onChange={this.handleInputChange}
-                      required
-                    ></Input>
-                    <Input
-                      className="inputAddress"
-                      type="amphoe"
-                      name="amphoe"
-                      value={amphoe}
-                      placeholder="อำเภอ"
-                      onChange={this.handleInputChange}
-                      required
-                    ></Input>
-                    <Input
-                      className="inputAddress"
-                      type="changwat"
-                      name="changwat"
-                      value={changwat}
-                      placeholder="จังหวัด"
-                      onChange={this.handleInputChange}
-                      required
-                    ></Input>
-                    {/* <Input
-                      className="inputAddress"
-                      type="postcode"
-                      name="postcode"
-                      value={postcode}
-                      placeholder="รหัสไปรษณีย์"
-                      onChange={this.handleInputChange}
-                      required
-                    ></Input> */}
-
-                    <div className="bt_nextone">
+                    {this.state.selects === "เพิ่มที่อยู่ปัจจุบัน" ? (
+                      <div>
+                        <Input
+                          className="inputAddress"
+                          type="numhouse"
+                          name="numhouse"
+                          value={numhouse}
+                          placeholder="บ้านเลขที่"
+                          onChange={this.handleInputChange}
+                          required
+                        />
+                        <Input
+                          className="inputAddress"
+                          type="nummoo"
+                          name="nummoo"
+                          value={nummoo}
+                          placeholder="หมู่ที่"
+                          onChange={this.handleInputChange}
+                          required
+                        ></Input>
+                        <Input
+                          className="inputAddress"
+                          type="lane"
+                          name="lane"
+                          value={lane}
+                          placeholder="ซอย/ตรอก"
+                          onChange={this.handleInputChange}
+                          required
+                        ></Input>
+                        <Input
+                          className="inputAddress"
+                          type="tambon"
+                          name="tambon"
+                          value={tambon}
+                          placeholder="ตำบล"
+                          onChange={this.handleInputChange}
+                          required
+                        ></Input>
+                        <Input
+                          className="inputAddress"
+                          type="amphoe"
+                          name="amphoe"
+                          value={amphoe}
+                          placeholder="อำเภอ"
+                          onChange={this.handleInputChange}
+                          required
+                        ></Input>
+                        <Input
+                          className="inputAddress"
+                          type="changwat"
+                          name="changwat"
+                          value={changwat}
+                          placeholder="จังหวัด"
+                          onChange={this.handleInputChange}
+                          required
+                        ></Input>
+                      </div>
+                    ) : (
+                      <div></div>
+                    )}
+                    <div className="btNext">
                       <Button
+                        size="sm"
+                        className="bt_nextone"
                         color="danger"
                         onClick={() => {
                           this.setState({ step: this.state.step + 1 });
@@ -236,16 +242,18 @@ class Order extends Component {
                 ) : null}
                 {this.state.step === 2 ? (
                   <div className="from_addressdelivery">
-                    <div className="addressdelivery">เลือกวิธีการชำระเงิน</div>
+                    <div className="addressdelivery">
+                      <b>เลือกวิธีการชำระเงิน</b>
+                    </div>
                     <CustomInput
                       check
-                      className="addressdelivery"
+                      className="addressCurrent"
                       type="radio"
                       id="exampleCustomRadio3"
                       name="payment"
                       label="ชำระเงินปลายทาง"
-                      value="1"
-                      checked={this.state.payment === "1"}
+                      value="ชำระเงินปลายทาง"
+                      checked={this.state.payment === "ชำระเงินปลายทาง"}
                       onChange={this.handleInputChange}
                     />
                     <CustomInput
@@ -255,8 +263,8 @@ class Order extends Component {
                       id="exampleCustomRadio4"
                       name="payment"
                       label="อื่น ๆ"
-                      value="2"
-                      checked={this.state.payment === "2"}
+                      value="อื่น ๆ"
+                      checked={this.state.payment === "อื่น ๆ"}
                       onChange={this.handleInputChange}
                     />
                     {/* <div className="code">โค้ดส่วนลดของคุณ</div>
@@ -269,41 +277,62 @@ class Order extends Component {
                       onChange={this.handleInputChange}
                     /> */}
                     <div className="from_payments">
-                      <Button
-                        className="bt_back"
-                        color="secondary"
-                        onClick={() => {
-                          this.setState({ step: this.state.step - 1 });
-                        }}
-                      >
-                        ย้อนกลับ
-                      </Button>
+                      <div className="bt_nextotwo">
+                        <Button
+                          size="sm"
+                          className="bt_back"
+                          color="secondary"
+                          onClick={() => {
+                            this.setState({ step: this.state.step - 1 });
+                          }}
+                        >
+                          ย้อนกลับ
+                        </Button>
 
-                      <Button
-                        className="bt_next"
-                        color="danger"
-                        onClick={() => {
-                          this.setState({ step: this.state.step + 1 });
-                        }}
-                      >
-                        ถัดไป
-                      </Button>
+                        <Button
+                          size="sm"
+                          className="bt_next"
+                          color="danger"
+                          onClick={() => {
+                            this.setState({ step: this.state.step + 1 });
+                          }}
+                        >
+                          ถัดไป
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 ) : null}
                 {this.state.step === 3 ? (
                   <div className="from_addressdelivery">
-                    <div className="addressdelivery"> ยืนยันการสั่งซื้อ</div>
-                    <div>
-                      <Card>
-                        <CardBody>
-                          <div>{numhouse}</div>
-                          <div>{nummoo}</div>
-                          <div>{lane}</div> <div>{tambon}</div> {amphoe},{" "}
-                          {changwat},{postcode}, {code}, {payment}
-                        </CardBody>
-                      </Card>
+                    <div className="addressdelivery">
+                      <b>ข้อมูลยืนยันการสั่งซื้อ</b>
                     </div>
+                    <Card>
+                      <CardBody className="selects">
+                        <div>
+                          <b className="frontAddress">
+                            ที่อยู่สำหรับการจัดส่ง :{" "}
+                          </b>
+                          {selects}
+                        </div>
+
+                        <div className="textAddress">
+                          บ้านเลขที่ : {numhouse}{" "}
+                        </div>
+                        <div className="textAddress">หมู่ที่ : {nummoo}</div>
+                        <div className="textAddress">ซอย/ถนน : {lane} </div>
+                        <div className="textAddress">ตำบล : {tambon}</div>
+                        <div className="textAddress">อำเภอ : {amphoe}</div>
+                        <div className="textAddress">จังหวัด : {changwat}</div>
+
+                        <div>
+                          <b className="frontAddress">วิธีการชำระเงิน : </b>
+                          {payment}
+                        </div>
+                      </CardBody>
+                    </Card>
+
                     <div className="from_editorder">
                       <a className="edit_order" href="/Order">
                         แก้ไขข้อมูลการสั่งซื้อ
