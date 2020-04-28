@@ -140,6 +140,7 @@ class Basket extends Component {
                     <Col>ชื่ออาหาร</Col>
                     <Col>ราคา</Col>
                     <Col>จำนวน</Col>
+                    <Col>ราคารวม</Col>
                     <Col>ลบออก</Col>
                   </Row>
                 </CardHeader>
@@ -187,7 +188,8 @@ class Basket extends Component {
                                 +
                               </button>
                             </div>
-                          </Col>
+                          </Col>{" "}
+                          <Col></Col>
                           <Col className="img_trash">
                             <div onClick={() => this.toRemove(index)}>
                               <i className="far fa-trash-alt"></i>

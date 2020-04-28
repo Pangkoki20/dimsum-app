@@ -72,17 +72,6 @@ class ListUser extends Component {
                         <CardBody>
                           <Row>
                             <Col xs="4"> </Col>
-                            {/* {this.state.order.map((order) => {
-                              if (order.status === "3")
-                                return (
-                                  <CardBody>
-                                    <Row>
-                                      <Col>{order.id}</Col>
-                                    </Row>
-                                  </CardBody>
-                                );
-                              else return null;
-                            })} */}
                             <Col xs="4">{user.id}</Col>
                             <Col xs="4">
                               <Button

@@ -28,13 +28,12 @@ class Order extends Component {
     this.state1 = {
       numhouse: "",
       nummoo: "",
-      lane: "",
+      role: "",
       tambon: "",
       amphoe: "",
       changwat: "",
       postcode: "",
       payment: "1",
-      code: "",
       message: "",
       order: [],
       selects: "",
@@ -65,7 +64,7 @@ class Order extends Component {
       const data = {
         numhouse: this.state.numhouse,
         nummoo: this.state.nummoo,
-        lane: this.state.lane,
+        role: this.state.role,
         tambon: this.state.tambon,
         amphoe: this.state.amphoe,
         changwat: this.state.changwat,
@@ -102,7 +101,7 @@ class Order extends Component {
     const {
       numhouse,
       nummoo,
-      lane,
+      role,
       tambon,
       amphoe,
       changwat,
@@ -188,9 +187,9 @@ class Order extends Component {
                         ></Input>
                         <Input
                           className="inputAddress"
-                          type="lane"
-                          name="lane"
-                          value={lane}
+                          type="role"
+                          name="role"
+                          value={role}
                           placeholder="ซอย/ตรอก"
                           onChange={this.handleInputChange}
                           required
@@ -321,7 +320,7 @@ class Order extends Component {
                           บ้านเลขที่ : {numhouse}{" "}
                         </div>
                         <div className="textAddress">หมู่ที่ : {nummoo}</div>
-                        <div className="textAddress">ซอย/ถนน : {lane} </div>
+                        <div className="textAddress">ซอย/ถนน : {role} </div>
                         <div className="textAddress">ตำบล : {tambon}</div>
                         <div className="textAddress">อำเภอ : {amphoe}</div>
                         <div className="textAddress">จังหวัด : {changwat}</div>
