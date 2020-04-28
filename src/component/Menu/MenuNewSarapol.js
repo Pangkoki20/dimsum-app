@@ -30,28 +30,32 @@ class MenuNewSarapol extends Component {
         const isHaveMenuAlready = oldItems.find(
           (menu) => menu.menu_name === this.state.menu_name
         );
-        // console.log("resr", isHaveMenuAlready.menu_value);
+        console.log("check data" + isHaveMenuAlready);
 
         if (!isHaveMenuAlready) {
           oldItems.push(newData);
           localStorage.setItem("order", JSON.stringify(oldItems));
+          console.log("add data to basket");
           console.log(" data : ", newData);
           this.setState({ menu_value: 0 });
           this.setState({ remark: "" });
           window.location.reload();
+        } else {
+          console.log("plus in basket");
+
+          oldItems.map((item, index) => {
+            //console.log(item.menu_value);
+            if (newData.menu_name === item.menu_name) {
+              item.menu_value++;
+            }
+            console.log(item);
+          });
+          console.log("new plus: " + oldItems);
+          //oldItems.push(newData);
+          localStorage.setItem("order", JSON.stringify(oldItems));
         }
-        // else {    //Benz ลองเพิ่มเงื่อนไขนี้มา
-        // let oldItems = {
-        //   menu_name: isHaveMenuAlready.menu_name,
-        //   menu_value: isHaveMenuAlready.menu_value + 1,
-        //   menu_price: isHaveMenuAlready.menu_price,
-        // };
-        // localStorage.setItem("order", JSON.stringify(oldItems));
-        // console.log(" data : ", newData);
-        // this.setState({ menu_value: this.state.value++ });
-        //   window.location.reload();
-        // }
       }
+      window.location.reload();
       let res = await axios.post(`http://localhost:3001/api/users/me`, {
         token,
       });

@@ -21,6 +21,7 @@ class Basket extends Component {
     total: 0,
     check: 1,
     count: 0,
+    menu_value: 0,
   };
   onUserChanged = (user) => {
     this.setState({ user });
@@ -44,8 +45,10 @@ class Basket extends Component {
     this.setState({ order: order });
     order.map((e, index) => {
       this.state.priceAll = this.state.priceAll + e.menu_value * e.menu_price;
+      this.state.menu_value += e.menu_value;
       console.log("price all : ", this.state.priceAll);
     });
+    console.log("menu value: " + this.state.menu_value);
     this.setState({ priceAll: this.state.priceAll });
   };
 
@@ -213,7 +216,7 @@ class Basket extends Component {
                       </div>
                       <div className="col">
                         <CardText className="tt_food text_num">
-                          {this.state.order.length}
+                          {numberOfMenus}
                         </CardText>
                       </div>
                       <div className="col">

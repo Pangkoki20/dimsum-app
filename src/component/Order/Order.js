@@ -9,6 +9,7 @@ import {
   Card,
   Label,
   Form,
+  CustomInput,
 } from "reactstrap";
 import "./Order.css";
 import axios from "axios";
@@ -143,10 +144,22 @@ class Order extends Component {
               <Form onSubmit={this.sentOrder}>
                 {this.state.step === 1 ? (
                   <div className="from_addressdelivery">
-                    <div className="addressdelivery"></div>
-                    <div className="addressdelivery">เพิ่มที่อยู่ปัจจุบัน</div>
+                    <CustomInput
+                      className="addressdelivery"
+                      type="radio"
+                      id="exampleCustomRadio"
+                      name="customRadio"
+                      label="ที่อยู่ที่บันทึกไว้"
+                    />
+                    <CustomInput
+                      className="addressCurrent"
+                      type="radio"
+                      id="exampleCustomRadio2"
+                      name="customRadio"
+                      label="เพิ่มที่อยู่ปัจจุบัน"
+                    />
                     <Input
-                      className="from_addressdelivery"
+                      className="inputAddress"
                       type="numhouse"
                       name="numhouse"
                       value={numhouse}
@@ -155,7 +168,7 @@ class Order extends Component {
                       required
                     />
                     <Input
-                      className="from_addressdelivery"
+                      className="inputAddress"
                       type="nummoo"
                       name="nummoo"
                       value={nummoo}
@@ -164,7 +177,7 @@ class Order extends Component {
                       required
                     ></Input>
                     <Input
-                      className="from_addressdelivery"
+                      className="inputAddress"
                       type="lane"
                       name="lane"
                       value={lane}
@@ -173,7 +186,7 @@ class Order extends Component {
                       required
                     ></Input>
                     <Input
-                      className="from_addressdelivery"
+                      className="inputAddress"
                       type="tambon"
                       name="tambon"
                       value={tambon}
@@ -182,7 +195,7 @@ class Order extends Component {
                       required
                     ></Input>
                     <Input
-                      className="from_addressdelivery"
+                      className="inputAddress"
                       type="amphoe"
                       name="amphoe"
                       value={amphoe}
@@ -191,7 +204,7 @@ class Order extends Component {
                       required
                     ></Input>
                     <Input
-                      className="from_addressdelivery"
+                      className="inputAddress"
                       type="changwat"
                       name="changwat"
                       value={changwat}
@@ -199,15 +212,15 @@ class Order extends Component {
                       onChange={this.handleInputChange}
                       required
                     ></Input>
-                    <Input
-                      className="from_addressdelivery"
+                    {/* <Input
+                      className="inputAddress"
                       type="postcode"
                       name="postcode"
                       value={postcode}
                       placeholder="รหัสไปรษณีย์"
                       onChange={this.handleInputChange}
                       required
-                    ></Input>
+                    ></Input> */}
 
                     <div className="bt_nextone">
                       <Button
@@ -224,32 +237,28 @@ class Order extends Component {
                 {this.state.step === 2 ? (
                   <div className="from_addressdelivery">
                     <div className="addressdelivery">เลือกวิธีการชำระเงิน</div>
-                    <FormGroup check className="from_check">
-                      <Label check>
-                        <Input
-                          type="radio"
-                          name="payment"
-                          value="1"
-                          checked={this.state.payment === "1"}
-                          onChange={this.handleInputChange}
-                        />
-                        <div className="text_paymentconfirm">
-                          ชำระเงินปลายทาง
-                        </div>
-                      </Label>
-                    </FormGroup>
-                    <FormGroup check className="from_check">
-                      <Label check>
-                        <Input
-                          type="radio"
-                          name="payment"
-                          value="2"
-                          checked={this.state.payment === "2"}
-                          onChange={this.handleInputChange}
-                        />
-                        <div className="text_paymentconfirm">อื่น ๆ</div>
-                      </Label>
-                    </FormGroup>
+                    <CustomInput
+                      check
+                      className="addressdelivery"
+                      type="radio"
+                      id="exampleCustomRadio3"
+                      name="payment"
+                      label="ชำระเงินปลายทาง"
+                      value="1"
+                      checked={this.state.payment === "1"}
+                      onChange={this.handleInputChange}
+                    />
+                    <CustomInput
+                      check
+                      className="addressCurrent"
+                      type="radio"
+                      id="exampleCustomRadio4"
+                      name="payment"
+                      label="อื่น ๆ"
+                      value="2"
+                      checked={this.state.payment === "2"}
+                      onChange={this.handleInputChange}
+                    />
                     {/* <div className="code">โค้ดส่วนลดของคุณ</div>
                     <Input
                       className="text_code"
