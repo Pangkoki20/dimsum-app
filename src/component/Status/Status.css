@@ -5,12 +5,47 @@
     color: #243e5a;
     font-family: "Kanit",
         sans-serif;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+.formGroupStatus {
+    margin-top: 15px;
 }
 
 .fontStatus {
     font-size: 20px;
-    margin-top: 20px !important;
     color: #243e5a;
     font-family: "Kanit",
         sans-serif;
+    text-align: center !important;
+}
+
+.inputStatus {
+    text-align: center;
+    font-family: "Kanit",
+        sans-serif;
+    font-size: 14px;
+    margin-left: 5px;
+    width: 350px !important;
+    margin-top: 12px;
+}
+
+.fromChoiceStatus {
+    text-align: center;
+    font-family: "Kanit",
+        sans-serif;
+    margin-left: 220px;
+    margin-right: -40px;
+    margin-top: 10px;
+}
+
+.btAddStatus {
+    margin-left: -180px;
+    height: 35px;
+    width: 70px;
+    margin-top: 9px;
+    font-family: "Kanit",
+        sans-serif;
+    font-size: 16px;
 }
