@@ -1,10 +1,10 @@
 import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Main from "./Main";
 import Login from "./component/Login/Login";
 import Navigator from "./component/Navigator/Navigator";
 import Register from "./component/Register/Register";
-import { Switch, Route } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Dimsum from "./component/Dimsum/Dimsum";
 import Breakfast from "./component/Breakfast/Breakfast";
 import Fastfood from "./component/Fastfood/Fastfood";
@@ -26,6 +26,7 @@ import KitchenFoodFinish from "./component/KitchenFoodFinish/KitchenFoodFinish";
 import FoodOrder from "./component/FoodOrder/FoodOrder";
 import ListUser from "./component/ListUser/ListUser";
 import DeliveryFood from "./component/DeliveryFood/DeliveryFood";
+import Status from "./component/Status/Status";
 import "./App.css";
 import axios from "axios";
 // import ProtectedRoute from "./component/ProtectedRoute";
@@ -78,11 +79,7 @@ class App extends Component {
           <Route exact path="/Basket" component={Basket} />
           <Route exact path="/Order" component={Order} />
           <Route exact path="/ListUser" component={ListUser} />
-          <Route
-            exact
-            path="/MenuOrder/:userid/:orderid"
-            component={MenuOrder}
-          />
+          <Route exact path="/Status" component={Status} />
           <Route exact path="/FoodOrder/:userid" component={FoodOrder} />
           <Route exact path="/OrderFood" component={OrderFood} />
           <Route exact path="/EachMenuOrder/:id" component={EachMenuOrder} />
@@ -90,6 +87,11 @@ class App extends Component {
           <Route exact path="/SenderStatus" component={SenderStatus} />
           <Route exact path="/SenderCustomer" component={SenderCustomer} />
           <Route exact path="/DeliveryFood" component={DeliveryFood} />
+          <Route
+            exact
+            path="/MenuOrder/:userid/:orderid"
+            component={MenuOrder}
+          />
           <Route
             exact
             path="/SenderFoodDelivery"
