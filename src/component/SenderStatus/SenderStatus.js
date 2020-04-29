@@ -17,9 +17,9 @@ class SenderStatus extends Component {
     return (
       <div className="container-fluid ">
         <div className="text_senderstatus">ออเดอร์อาหารพร้อมส่ง</div>
-        <div className="row">
+        <div className="row fromDeliveryfood">
           <div className="col-md-6 offset-md-3">
-            <Card className="card_orderkitchen">
+            <Card className="cardDelivery">
               <CardHeader>
                 <Row>
                   <Col>Order_id</Col>
@@ -29,7 +29,7 @@ class SenderStatus extends Component {
               {this.state.order.map((order) => {
                 if (order.status === "3")
                   return (
-                    <CardBody>
+                    <CardBody className="cardDataUser">
                       <Row>
                         <Col>{order.id}</Col>
                         <Col>

@@ -153,7 +153,6 @@ class ListUser extends Component {
                           </ModalBody>
 
                           <div className="piccorrect">
-                            {" "}
                             <img
                               className="img_correct img-fluid"
                               src={correct}

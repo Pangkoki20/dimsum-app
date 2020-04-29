@@ -1,14 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 
 .fromDeliveryfood {
-    margin-top: 5px;
-    width: 1500px !important;
+    margin-top: 20px;
     text-align: center !important;
+}
+
+.formSender {
+    padding-left: 300px;
+    padding-right: 300px;
 }
 
 .text_deliveryfood {
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     margin-top: 10px;
     color: #369621;
     font-family: "Kanit",
@@ -21,14 +25,71 @@
         sans-serif;
 }
 
-@media only screen and (max-width: 768px) {
-    .carddeliveryfood {
+.cardDelivery {
+    font-family: "Kanit",
+        sans-serif;
+    font-size: 22px;
+    text-align: center;
+}
+
+.cardDataUser {
+    font-family: "Kanit",
+        sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+.btFoodDelivery {
+    margin-top: 30px;
+    text-align: center;
+    padding-left: 390px;
+    padding-right: 390px;
+}
+
+.fontBTFoodDelivery {
+    font-size: 20px;
+    font-family: "Kanit",
+        sans-serif;
+}
+
+.textNameCustomer {
+    font-size: 20px;
+    font-family: "Kanit",
+        sans-serif;
+    text-align: left;
+}
+
+.fontMoney {
+    font-size: 22px;
+    font-family: "Kanit",
+        sans-serif;
+    text-align: left;
+}
+
+.fontUnit {
+    font-size: 22px;
+    font-family: "Kanit",
+        sans-serif;
+    text-align: right;
+}
+
+@media only screen and (max-width: 375px) {
+    .fromDeliveryfood {
+        width: 500px !important;
+        text-align: center !important;
+    }
+
+    .cardDelivery {
+        font-family: "Kanit",
+            sans-serif;
+        font-size: 13px;
         text-align: center;
     }
 
-    .fromDeliveryfood {
-        margin-left: 50px;
-        margin-right: 50px;
-        text-align: center !important;
+    .cardDataUser {
+        font-family: "Kanit",
+            sans-serif;
+        font-size: 13px;
+        text-align: center;
     }
 }
