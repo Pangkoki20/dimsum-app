@@ -27,7 +27,7 @@ class ListUser extends Component {
     let user = await axios.get(`http://localhost:3001/api/users`);
     this.setState({ users: user.data });
     console.log("tetsa", this.state.users);
-    let order = await axios.get(`http://localhost:3001/api/order`);
+    let order = await axios.get(`http://localhost:3001/api/menu`);
     this.setState({ order: order.data });
   };
 
@@ -46,6 +46,14 @@ class ListUser extends Component {
   };
 
   render() {
+    const order_id = this.state.order.map((item, id) => {
+      console.log(item);
+      return <div key={id}>{item.order_id}</div>;
+    });
+    const user_id = this.state.order.map((item, id) => {
+      console.log(item);
+      return <div key={id}>{item.user_id}</div>;
+    });
     return (
       <div className="container-fluid">
         <div className="row">
@@ -64,115 +72,119 @@ class ListUser extends Component {
               </CardHeader>
               {/* {this.state.order.map((order)
               ) */}
-              {this.state.users.map((user, index) => {
+              {/* {this.state.users.map((user, index) => {
                 if (user.role === "user")
                   if (true)
                     return (
-                      <div key={index + 1}>
-                        <CardBody>
-                          <Row>
-                            <Col xs="4"> </Col>
-                            <Col xs="4">{user.id}</Col>
-                            <Col xs="4">
-                              <Button
-                                id="Popover1"
-                                className="bt_listorder"
-                                color="danger"
-                                outline
-                                // href={`/FoodOrder/${user.id}`}
+                      <div key={index + 1}> */}
+              {this.state.order.map((item, id) => {
+                console.log(item);
+                return (
+                  <div key={id}>
+                    {" "}
+                    <CardBody>
+                      <Row>
+                        <Col xs="4">{item.order_id}</Col>
+                        <Col xs="4">{item.user_id}</Col>
+                        <Col xs="4">
+                          <Button
+                            id="Popover1"
+                            className="bt_listorder"
+                            color="danger"
+                            outline
+                            // href={`/FoodOrder/${user.id}`}
+                          >
+                            รับรายการอาหาร
+                          </Button>
+                          <div className="row">
+                            <div className="col-sm-9 ">
+                              <Popover
+                                className="popup"
+                                placement="right"
+                                isOpen={this.state.popoverOpen}
+                                target="Popover1"
+                                toggle={this.toggle2}
                               >
-                                รับรายการอาหาร
-                              </Button>
-                              <div className="row">
-                                <div className="col-sm-9 ">
-                                  <Popover
-                                    className="popup"
-                                    placement="right"
-                                    isOpen={this.state.popoverOpen}
-                                    target="Popover1"
-                                    toggle={this.toggle2}
-                                  >
-                                    <PopoverHeader className="menulistuser">
-                                      รายการอาหาร
-                                    </PopoverHeader>
-                                    <PopoverBody>
-                                      <div className="row  align-items-center tablelistuser">
-                                        <div className="col-6 col-md-4">
-                                          ลำดับที่
-                                        </div>
-
-                                        <div className="col-6 col-md-4">
-                                          ชื่ออาหาร
-                                        </div>
-
-                                        <div className="col-6 col-md-4">
-                                          จำนวน
-                                        </div>
-                                      </div>
-
-                                      <CardBody>
-                                        <Row>
-                                          <Col></Col>
-                                          <Col></Col>
-                                          <Col></Col>
-                                        </Row>
-                                      </CardBody>
-                                    </PopoverBody>
-
-                                    <div className="btconfirm">
-                                      <Button
-                                        color="info"
-                                        onClick={() => {
-                                          this.setState({
-                                            popoverOpen: false,
-                                            modal: true,
-                                          });
-                                        }}
-                                      >
-                                        อาหารพร้อมส่ง
-                                      </Button>
+                                <PopoverHeader className="menulistuser">
+                                  รายการอาหาร
+                                </PopoverHeader>
+                                <PopoverBody>
+                                  <div className="row  align-items-center tablelistuser">
+                                    <div className="col-6 col-md-4">
+                                      ลำดับที่
                                     </div>
-                                  </Popover>
-                                </div>
-                              </div>
-                            </Col>
-                            <Modal
-                              isOpen={this.state.modal}
-                              toggle={this.toggle}
-                            >
-                              <ModalBody className="readytodeliver">
-                                อาหารของลูกค้าพร้อมส่ง
-                              </ModalBody>
 
-                              <div className="piccorrect">
-                                {" "}
-                                <img
-                                  className="img_correct img-fluid"
-                                  src={correct}
-                                  alt=""
-                                />
-                              </div>
-                              <br></br>
-                              <ModalFooter>
-                                <Button
-                                  className="btoksender"
-                                  color="info"
-                                  onClick={this.toggle}
-                                  size="sm"
-                                  block
-                                >
-                                  ตกลง
-                                </Button>
-                              </ModalFooter>
-                            </Modal>
-                          </Row>
-                        </CardBody>
-                      </div>
+                                    <div className="col-6 col-md-4">
+                                      ชื่ออาหาร
+                                    </div>
+
+                                    <div className="col-6 col-md-4">จำนวน</div>
+                                  </div>
+
+                                  <CardBody>
+                                    <Row>
+                                      <Col></Col>
+                                      <Col></Col>
+                                      <Col></Col>
+                                    </Row>
+                                  </CardBody>
+                                </PopoverBody>
+
+                                <div className="btconfirm">
+                                  <Button
+                                    color="info"
+                                    onClick={() => {
+                                      this.setState({
+                                        popoverOpen: false,
+                                        modal: true,
+                                      });
+                                    }}
+                                  >
+                                    อาหารพร้อมส่ง
+                                  </Button>
+                                </div>
+                              </Popover>
+                            </div>
+                          </div>
+                        </Col>
+                        <Modal isOpen={this.state.modal} toggle={this.toggle}>
+                          <ModalBody className="readytodeliver">
+                            อาหารของลูกค้าพร้อมส่ง
+                          </ModalBody>
+
+                          <div className="piccorrect">
+                            {" "}
+                            <img
+                              className="img_correct img-fluid"
+                              src={correct}
+                              alt=""
+                            />
+                          </div>
+                          <br></br>
+                          <ModalFooter>
+                            <Button
+                              className="btoksender"
+                              color="info"
+                              onClick={this.toggle}
+                              size="sm"
+                              block
+                            >
+                              ตกลง
+                            </Button>
+                          </ModalFooter>
+                        </Modal>
+                      </Row>
+                    </CardBody>
+                  </div>
+                );
+              })}
+              {/* ); */}
+              {/* </div>
                     );
                   else {
                     return null;
-                  }
-              })}
+                  } */}
+              {/* })} */}
             </Card>
             <br></br>
           </div>
