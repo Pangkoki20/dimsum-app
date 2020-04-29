@@ -26,7 +26,7 @@ import KitchenFoodFinish from "./component/KitchenFoodFinish/KitchenFoodFinish";
 import FoodOrder from "./component/FoodOrder/FoodOrder";
 import ListUser from "./component/ListUser/ListUser";
 import DeliveryFood from "./component/DeliveryFood/DeliveryFood";
-import Status from "./component/Status/Status";
+// import Status from "./component/Status/Status";
 import "./App.css";
 import axios from "axios";
 // import ProtectedRoute from "./component/ProtectedRoute";
@@ -79,7 +79,7 @@ class App extends Component {
           <Route exact path="/Basket" component={Basket} />
           <Route exact path="/Order" component={Order} />
           <Route exact path="/ListUser" component={ListUser} />
-          <Route exact path="/Status" component={Status} />
+          {/* <Route exact path="/Status" component={Status} /> */}
           <Route exact path="/FoodOrder/:userid" component={FoodOrder} />
           <Route exact path="/OrderFood" component={OrderFood} />
           <Route exact path="/EachMenuOrder/:id" component={EachMenuOrder} />
