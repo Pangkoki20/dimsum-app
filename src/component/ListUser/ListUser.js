@@ -56,9 +56,9 @@ class ListUser extends Component {
     });
     return (
       <div className="container-fluid">
+        <div className="text_customer">ข้อมูลลูกค้า</div>
         <div className="row">
           <div className="col-sm-6">
-            <div className="text_customer">ข้อมูลลูกค้า</div>
             <Card className="card_listorder">
               <CardHeader>
                 <Row>
@@ -91,7 +91,7 @@ class ListUser extends Component {
                             id="Popover1"
                             className="bt_listorder"
                             color="danger"
-                            outline
+
                             // href={`/FoodOrder/${user.id}`}
                           >
                             รับรายการอาหาร
@@ -110,17 +110,12 @@ class ListUser extends Component {
                                 </PopoverHeader>
                                 <PopoverBody>
                                   <div className="row  align-items-center tablelistuser">
-                                    <div className="col-6 col-md-4">
-                                      ลำดับที่
-                                    </div>
+                                    <div class="col col-lg-2">ลำดับที่</div>
 
-                                    <div className="col-6 col-md-4">
-                                      ชื่ออาหาร
-                                    </div>
+                                    <Col>ชื่ออาหาร</Col>
 
-                                    <div className="col-6 col-md-4">จำนวน</div>
+                                    <div class="col col-lg-2">จำนวน</div>
                                   </div>
-
                                   <CardBody>
                                     <Row>
                                       <Col></Col>
@@ -128,21 +123,28 @@ class ListUser extends Component {
                                       <Col></Col>
                                     </Row>
                                   </CardBody>
+                                  <br></br>
+                                  <br></br>
+                                  <br></br>
+                                  <Col>
+                                    <div className="formBTConfirm">
+                                      <Button
+                                        className="btconfirm"
+                                        color="info"
+                                        onClick={() => {
+                                          this.setState({
+                                            popoverOpen: false,
+                                            modal: true,
+                                          });
+                                        }}
+                                      >
+                                        อาหารพร้อมส่ง
+                                      </Button>
+                                    </div>
+                                  </Col>
                                 </PopoverBody>
 
-                                <div className="btconfirm">
-                                  <Button
-                                    color="info"
-                                    onClick={() => {
-                                      this.setState({
-                                        popoverOpen: false,
-                                        modal: true,
-                                      });
-                                    }}
-                                  >
-                                    อาหารพร้อมส่ง
-                                  </Button>
-                                </div>
+                                <div></div>
                               </Popover>
                             </div>
                           </div>

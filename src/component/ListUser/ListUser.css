@@ -2,52 +2,62 @@
 
 .text_customer {
     color: #003366;
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
     font-family: "Kanit",
         sans-serif;
 }
 
 .card_listorder {
+    max-width: 1200px;
     margin-top: 20px;
     text-align: center;
     font-family: "Kanit",
         sans-serif;
-    font-size: 16px;
+    font-size: 24px;
 }
 
 .bt_listorder {
-    font-size: 14px;
+    font-size: 18px;
+    height: 50px;
 }
 
 .popup {
-    margin-left: 100px !important;
-    max-width: 550px !important;
+    margin-left: 150px !important;
+    min-width: 1000px !important;
 }
 
 .popover {
-    width: 500px;
+    width: 1200;
+}
+
+.formBTConfirm {
+    text-align: center;
+
 }
 
 .btconfirm {
     margin: 10px;
     font-family: "Kanit",
         sans-serif;
-    font-size: 14px;
+    font-size: 22px !important;
+    height: 50px;
     text-align: center;
+    width: 700px;
 }
 
 .menulistuser {
     font-family: "Kanit",
         sans-serif;
-    font-size: 18px;
+    font-size: 24px;
     text-align: center;
+
 }
 
 .tablelistuser {
     font-family: "Kanit",
         sans-serif;
-    font-size: 14px;
+    font-size: 22px;
     text-align: center;
 }
 
