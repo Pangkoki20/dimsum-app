@@ -27,7 +27,7 @@ class ListUser extends Component {
     let user = await axios.get(`http://localhost:3001/api/users`);
     this.setState({ users: user.data });
     console.log("tetsa", this.state.users);
-    let order = await axios.get(`http://localhost:3001/api/menu`);
+    let order = await axios.get(`http://localhost:3001/api/order/me`);
     this.setState({ order: order.data });
   };
 
@@ -123,9 +123,6 @@ class ListUser extends Component {
                                       <Col></Col>
                                     </Row>
                                   </CardBody>
-                                  <br></br>
-                                  <br></br>
-                                  <br></br>
                                   <Col>
                                     <div className="formBTConfirm">
                                       <Button
@@ -179,13 +176,6 @@ class ListUser extends Component {
                   </div>
                 );
               })}
-              {/* ); */}
-              {/* </div>
-                    );
-                  else {
-                    return null;
-                  } */}
-              {/* })} */}
             </Card>
             <br></br>
           </div>
