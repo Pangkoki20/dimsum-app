@@ -31,9 +31,6 @@ class ListUser extends Component {
     // console.log("tetsa", this.state.users);
     let order = await axios.get(`http://localhost:3001/api/order`);
     this.setState({ order: order.data });
-    console.log("Order", this.state.order);
-    let menu = await axios.get(`http://localhost:3001/api/menu`);
-    this.setState({ menu: menu.data });
   };
 
   getOrder = () => {};
@@ -111,6 +108,7 @@ class ListUser extends Component {
                             color="danger"
                             onClick={() => {
                               this.orderMenu(item.user_id, item.id);
+                              console.log(item.id);
                             }}
                           >
                             รับรายการอาหาร
@@ -137,7 +135,7 @@ class ListUser extends Component {
                                 <div className="row  align-items-center tablelistuser">
                                   <Col>ลำดับที่</Col>
                                   <Col>ชื่ออาหาร</Col>
-                                  <Col>จำนวน</Col>
+                                  {/* <Col>จำนวน</Col> */}
                                 </div>
                                 <CardBody>
                                   {this.state.oderMenu.map((iteme, idxs) => {
@@ -148,8 +146,11 @@ class ListUser extends Component {
                                           className="row  align-items-center tablelistuser"
                                         >
                                           <Col>{iteme.id}</Col>
+                                          {console.log(iteme.id)}
+
                                           <Col>{iteme.namefood}</Col>
-                                          <Col></Col>
+                                          {console.log(iteme.namefood)}
+                                          {/* <Col>จำนวน</Col> */}
                                         </div>
                                       );
                                     }

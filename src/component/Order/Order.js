@@ -26,6 +26,7 @@ class Order extends Component {
   constructor(props) {
     super(props);
     this.state1 = {
+      menu_id: "",
       numhouse: "",
       nummoo: "",
       road: "",
@@ -68,7 +69,8 @@ class Order extends Component {
         tambon: this.state.tambon,
         amphoe: this.state.amphoe,
         changwat: this.state.changwat,
-        postcode: this.state.postcode,
+        menu_id: this.state.menu_id,
+        // postcode: this.state.postcode,
         payment: this.state.payment,
         code: this.state.code,
         selects: this.state.selects,
@@ -79,6 +81,7 @@ class Order extends Component {
             menu_name: $obj.menu_name,
             menu_value: $obj.menu_value,
             menu_price: $obj.menu_price,
+            menu_id: $obj.menu_id,
             userid: $obj.user_id,
           };
         }),
@@ -296,7 +299,7 @@ class Order extends Component {
                         </div>
 
                         <div className="textAddress">
-                          บ้านเลขที่ : {numhouse}{" "}
+                          บ้านเลขที่ : {numhouse}
                         </div>
                         <div className="textAddress">หมู่ที่ : {nummoo}</div>
                         <div className="textAddress">ซอย/ถนน : {road} </div>
