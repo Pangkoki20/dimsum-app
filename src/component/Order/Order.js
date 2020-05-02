@@ -28,7 +28,7 @@ class Order extends Component {
     this.state1 = {
       numhouse: "",
       nummoo: "",
-      role: "",
+      road: "",
       tambon: "",
       amphoe: "",
       changwat: "",
@@ -58,13 +58,13 @@ class Order extends Component {
     let userDecode = auth.decodeToken(user);
     let uId = userDecode.id;
 
-    //  if userDecode.role != "Kitchen"
+    //  if userDecode.road != "Kitchen"
 
     try {
       const data = {
         numhouse: this.state.numhouse,
         nummoo: this.state.nummoo,
-        role: this.state.role,
+        road: this.state.road,
         tambon: this.state.tambon,
         amphoe: this.state.amphoe,
         changwat: this.state.changwat,
@@ -101,7 +101,7 @@ class Order extends Component {
     const {
       numhouse,
       nummoo,
-      role,
+      road,
       tambon,
       amphoe,
       changwat,
@@ -140,9 +140,7 @@ class Order extends Component {
               <Form onSubmit={this.sentOrder}>
                 {this.state.step === 1 ? (
                   <div className="from_addressdelivery">
-                    <div className="addressdelivery">
-                      <b>เลือกที่อยู่สำหรับการจัดส่ง</b>
-                    </div>
+                    <div className="addressdelivery"></div>
                     {/* <CustomInput
                       className="addressCurrent"
                       type="radio"
@@ -187,9 +185,9 @@ class Order extends Component {
                         ></Input>
                         <Input
                           className="inputAddress"
-                          type="role"
-                          name="role"
-                          value={role}
+                          type="road"
+                          name="road"
+                          value={road}
                           placeholder="ซอย/ตรอก"
                           onChange={this.handleInputChange}
                           required
@@ -255,26 +253,7 @@ class Order extends Component {
                       checked={this.state.payment === "ชำระเงินปลายทาง"}
                       onChange={this.handleInputChange}
                     />
-                    {/* <CustomInput
-                      check
-                      className="addressCurrent"
-                      type="radio"
-                      id="exampleCustomRadio4"
-                      name="payment"
-                      label="อื่น ๆ"
-                      value="อื่น ๆ"
-                      checked={this.state.payment === "อื่น ๆ"}
-                      onChange={this.handleInputChange}
-                    /> */}
-                    {/* <div className="code">โค้ดส่วนลดของคุณ</div>
-                    <Input
-                      className="text_code"
-                      type="text"
-                      name="code"
-                      value={this.state.code}
-                      placeholder="โค้ดของคุณ"
-                      onChange={this.handleInputChange}
-                    /> */}
+
                     <div className="from_payments">
                       <div className="bt_nextotwo">
                         <Button
@@ -320,7 +299,7 @@ class Order extends Component {
                           บ้านเลขที่ : {numhouse}{" "}
                         </div>
                         <div className="textAddress">หมู่ที่ : {nummoo}</div>
-                        <div className="textAddress">ซอย/ถนน : {role} </div>
+                        <div className="textAddress">ซอย/ถนน : {road} </div>
                         <div className="textAddress">ตำบล : {tambon}</div>
                         <div className="textAddress">อำเภอ : {amphoe}</div>
                         <div className="textAddress">จังหวัด : {changwat}</div>

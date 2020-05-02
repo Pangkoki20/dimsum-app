@@ -20,15 +20,18 @@ class ListUser extends Component {
   state = {
     users: [],
     order: [],
+    menu: [],
     popoverOpen: false,
     modal: false,
+    oderMenu: [],
   };
   componentDidMount = async (nextProps) => {
     let user = await axios.get(`http://localhost:3001/api/users`);
     this.setState({ users: user.data });
-    console.log("tetsa", this.state.users);
+    // console.log("tetsa", this.state.users);
     let order = await axios.get(`http://localhost:3001/api/order`);
     this.setState({ order: order.data });
+    console.log("Order", this.state.order);
     let menu = await axios.get(`http://localhost:3001/api/menu`);
     this.setState({ menu: menu.data });
   };
@@ -47,14 +50,33 @@ class ListUser extends Component {
     });
   };
 
+  orderMenu = (id, orderid) => {
+    // console.log(orderid);
+    const oderMenu = this.state.menu.map((items) => {
+      if (id == items.user_id && orderid == items.order_id) {
+        return items;
+      } else {
+        return null;
+      }
+    });
+    this.setState({
+      oderMenu,
+    });
+    // console.log(this.state.oderMenu);
+  };
+
   render() {
     const order_id = this.state.order.map((item, id) => {
-      console.log(item);
+      // console.log(item);
       return <div key={id}>{item.order_id}</div>;
     });
     const user_id = this.state.order.map((item, id) => {
-      console.log(item);
+      // console.log(item);
       return <div key={id}>{item.user_id}</div>;
+    });
+    const menu = this.state.menu.map((item, id) => {
+      // console.log(item);
+      return <div key={id}>{item.id}</div>;
     });
     return (
       <div className="container-fluid">
@@ -72,15 +94,9 @@ class ListUser extends Component {
                   <Col xs="4">สถานะ</Col>
                 </Row>
               </CardHeader>
-              {/* {this.state.order.map((order)
-              ) */}
-              {/* {this.state.users.map((user, index) => {
-                if (user.role === "user")
-                  if (true)
-                    return (
-                      <div key={index + 1}> */}
+
               {this.state.order.map((item, id) => {
-                console.log(item);
+                // console.log(item);
                 return (
                   <div key={id}>
                     {" "}
@@ -93,61 +109,78 @@ class ListUser extends Component {
                             id="Popover1"
                             className="bt_listorder"
                             color="danger"
-
-                            // href={`/FoodOrder/${user.id}`}
+                            onClick={() => {
+                              this.orderMenu(item.user_id, item.id);
+                            }}
                           >
                             รับรายการอาหาร
                           </Button>
-                          <div className="row">
-                            <div className="col-sm-9 ">
-                              <Popover
-                                className="popup"
-                                placement="right"
-                                isOpen={this.state.popoverOpen}
-                                target="Popover1"
-                                toggle={this.toggle2}
-                              >
-                                <PopoverHeader className="menulistuser">
-                                  รายการอาหาร
-                                </PopoverHeader>
-                                <PopoverBody>
-                                  <div className="row  align-items-center tablelistuser">
-                                    <div class="col col-lg-2">ลำดับที่</div>
-
-                                    <Col>ชื่ออาหาร</Col>
-
-                                    <div class="col col-lg-2">จำนวน</div>
-                                  </div>
-                                  <CardBody>
-                                    <Row>
-                                      <Col> </Col>
-                                      <Col></Col>
-                                      <Col></Col>
-                                    </Row>
-                                  </CardBody>
-                                  <Col>
-                                    <div className="formBTConfirm">
-                                      <Button
-                                        className="btconfirm"
-                                        color="info"
-                                        onClick={() => {
-                                          this.setState({
-                                            popoverOpen: false,
-                                            modal: true,
-                                          });
-                                        }}
-                                      >
-                                        อาหารพร้อมส่ง
-                                      </Button>
-                                    </div>
-                                  </Col>
-                                </PopoverBody>
-
-                                <div></div>
-                              </Popover>
-                            </div>
-                          </div>
                         </Col>
+                        {/* {this.state.menu.map((items, ids) => {
+                          // console.log(items);
+                          // if (item.user_id == items.user_id) {
+                          return (
+                            <div key={ids}> */}
+                        <div className="row">
+                          <div className="col-sm-9 ">
+                            <Popover
+                              className="popup"
+                              placement="right"
+                              isOpen={this.state.popoverOpen}
+                              target="Popover1"
+                              toggle={this.toggle2}
+                            >
+                              <PopoverHeader className="menulistuser">
+                                รายการอาหาร
+                              </PopoverHeader>
+                              <PopoverBody>
+                                <div className="row  align-items-center tablelistuser">
+                                  <Col>ลำดับที่</Col>
+                                  <Col>ชื่ออาหาร</Col>
+                                  <Col>จำนวน</Col>
+                                </div>
+                                <CardBody>
+                                  {this.state.oderMenu.map((iteme, idxs) => {
+                                    if (iteme !== null) {
+                                      return (
+                                        <div
+                                          key={idxs}
+                                          className="row  align-items-center tablelistuser"
+                                        >
+                                          <Col>{iteme.id}</Col>
+                                          <Col>{iteme.namefood}</Col>
+                                          <Col></Col>
+                                        </div>
+                                      );
+                                    }
+                                  })}
+                                </CardBody>
+                                <Col>
+                                  <div className="formBTConfirm">
+                                    <Button
+                                      className="btconfirm"
+                                      color="info"
+                                      onClick={() => {
+                                        this.setState({
+                                          popoverOpen: false,
+                                          modal: true,
+                                        });
+                                      }}
+                                    >
+                                      อาหารพร้อมส่ง
+                                    </Button>
+                                  </div>
+                                </Col>
+                              </PopoverBody>
+                            </Popover>
+                          </div>
+                        </div>
+                        {/* </div>
+                          );
+                          // } else { */}
+                        {/* //   return null;
+                          // } */}
+                        {/* })} */}
                         <Modal isOpen={this.state.modal} toggle={this.toggle}>
                           <ModalBody className="readytodeliver">
                             อาหารของลูกค้าพร้อมส่ง
