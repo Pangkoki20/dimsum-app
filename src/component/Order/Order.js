@@ -143,7 +143,7 @@ class Order extends Component {
                     <div className="addressdelivery">
                       <b>เลือกที่อยู่สำหรับการจัดส่ง</b>
                     </div>
-                    <CustomInput
+                    {/* <CustomInput
                       className="addressCurrent"
                       type="radio"
                       id="exampleCustomRadio"
@@ -153,7 +153,7 @@ class Order extends Component {
                       onChange={(e) => {
                         this.setState({ selects: e.target.value });
                       }}
-                    />
+                    /> */}
                     <CustomInput
                       className="addressCurrent"
                       type="radio"
@@ -255,7 +255,7 @@ class Order extends Component {
                       checked={this.state.payment === "ชำระเงินปลายทาง"}
                       onChange={this.handleInputChange}
                     />
-                    <CustomInput
+                    {/* <CustomInput
                       check
                       className="addressCurrent"
                       type="radio"
@@ -265,7 +265,7 @@ class Order extends Component {
                       value="อื่น ๆ"
                       checked={this.state.payment === "อื่น ๆ"}
                       onChange={this.handleInputChange}
-                    />
+                    /> */}
                     {/* <div className="code">โค้ดส่วนลดของคุณ</div>
                     <Input
                       className="text_code"

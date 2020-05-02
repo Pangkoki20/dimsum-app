@@ -27,8 +27,10 @@ class ListUser extends Component {
     let user = await axios.get(`http://localhost:3001/api/users`);
     this.setState({ users: user.data });
     console.log("tetsa", this.state.users);
-    let order = await axios.get(`http://localhost:3001/api/order/me`);
+    let order = await axios.get(`http://localhost:3001/api/order`);
     this.setState({ order: order.data });
+    let menu = await axios.get(`http://localhost:3001/api/menu`);
+    this.setState({ menu: menu.data });
   };
 
   getOrder = () => {};
@@ -84,7 +86,7 @@ class ListUser extends Component {
                     {" "}
                     <CardBody>
                       <Row>
-                        <Col xs="4">{item.order_id}</Col>
+                        <Col xs="4">{item.id}</Col>
                         <Col xs="4">{item.user_id}</Col>
                         <Col xs="4">
                           <Button
@@ -118,7 +120,7 @@ class ListUser extends Component {
                                   </div>
                                   <CardBody>
                                     <Row>
-                                      <Col></Col>
+                                      <Col> </Col>
                                       <Col></Col>
                                       <Col></Col>
                                     </Row>
