@@ -14,6 +14,7 @@ import axios from "axios";
 class DeliveryFood extends Component {
   state = {
     order: [],
+    users: [],
   };
   onUserChanged = (address) => {
     this.setState({ address });
@@ -21,7 +22,6 @@ class DeliveryFood extends Component {
   constructor(props) {
     super(props);
     this.state1 = {
-      menu_id: "",
       numhouse: "",
       nummoo: "",
       road: "",
@@ -32,7 +32,6 @@ class DeliveryFood extends Component {
       payment: "1",
       message: "",
       order: [],
-      selects: "",
     };
   }
   componentDidMount = () => {
@@ -63,9 +62,6 @@ class DeliveryFood extends Component {
         tambon: this.state.tambon,
         amphoe: this.state.amphoe,
         changwat: this.state.changwat,
-        menu_id: this.state.menu_id,
-        code: this.state.code,
-        selects: this.state.selects,
       };
       console.log("ข้อมูลที่กำลังจะส่งไป ....  ", data);
       axios.post(`http://localhost:3001/api/order/create`, data).then((res) => {
@@ -90,7 +86,7 @@ class DeliveryFood extends Component {
             <Card>
               <CardHeader>
                 <Row className="cardDelivery">
-                  <Col xs="3">Order_id</Col>
+                  <Col xs="4">Order_id</Col>
                   <Col>ข้อมูลของลูกค้า</Col>
                 </Row>
               </CardHeader>
@@ -99,24 +95,56 @@ class DeliveryFood extends Component {
                   return (
                     <CardBody>
                       <Row>
-                        <Col className="cardDataUser" xs="3">
+                        <Col className="cardDataUser" xs="4">
                           {order.id}
                         </Col>
                         <div className="textNameCustomer">
-                          <Col className="fontNameCustomer">ชื่อลูกค้า :</Col>
-                          <Col>
+                          <Col>ชื่อลูกค้า :</Col>
+                          <Col className="fontNameCustomer">
                             ที่อยู่สำหรับการจัดส่ง :
-                            <Col>บ้านเลขที่ : {order.numhouse}</Col>
-                            {console.log(numhouse)}
-                            {order.nummoo}
-                            {order.road}
-                            {order.tambon}
-                            {order.amphoe}
-                            {order.changwat}
                           </Col>
-                          <Col>เบอร์โทรศัพท์ :</Col>
-                          <Col>วิธีการชำระเงิน :</Col>
-                          <br></br> <br></br> <br></br> <br></br> <br></br>
+                          <div>
+                            <Col className="fontAddress">
+                              บ้านเลขที่ :
+                              <b className="fontAddressfrom">
+                                {order.numhouse}
+                              </b>
+                            </Col>
+                            <Col className="fontAddress">
+                              หมู่ที่ :
+                              <b className="fontAddressfrom">{order.nummoo}</b>
+                            </Col>
+                            <Col className="fontAddress">
+                              ซอย/ตรอก :
+                              <b className="fontAddressfrom"> {order.road}</b>
+                            </Col>
+                            <Col className="fontAddress">
+                              ตำบล :
+                              <b className="fontAddressfrom">{order.tambon}</b>
+                            </Col>
+                            <Col className="fontAddress">
+                              อำเภอ :
+                              <b className="fontAddressfrom"> {order.amphoe}</b>
+                            </Col>
+                            <Col className="fontAddress">
+                              จังหวัด :
+                              <b className="fontAddressfrom">
+                                {order.changwat}
+                              </b>
+                            </Col>
+                          </div>
+                          <div>
+                            <Col className="fontNameCustomer">
+                              เบอร์โทรศัพท์ :
+                            </Col>
+                          </div>
+                          <div>
+                            <Col className="fontNameCustomer">
+                              วิธีการชำระเงิน :
+                              <b className="fontpayment"> {order.payment}</b>
+                            </Col>
+                          </div>
+                          <br></br> <br></br>
                         </div>
                       </Row>
                     </CardBody>

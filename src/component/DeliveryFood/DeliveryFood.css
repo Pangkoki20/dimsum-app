@@ -73,6 +73,29 @@
     text-align: right;
 }
 
+.fontAddress {
+    margin-left: 30px;
+    font-size: 16px;
+    font-family: "Kanit",
+        sans-serif;
+    margin-top: 7px;
+}
+
+.fontAddressfrom {
+    margin-left: 10px;
+}
+
+.fontpayment {
+    margin-left: 10px;
+    font-size: 16px;
+    font-family: "Kanit",
+        sans-serif;
+}
+
+.fontNameCustomer {
+    margin-top: 10px;
+}
+
 @media only screen and (max-width: 375px) {
     .fromDeliveryfood {
         width: 500px !important;

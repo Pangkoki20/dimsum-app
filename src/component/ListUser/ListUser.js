@@ -23,7 +23,6 @@ class ListUser extends Component {
     menu: [],
     popoverOpen: false,
     modal: false,
-    menuOrder: [],
     test: null,
   };
   componentDidMount = async (nextProps) => {
@@ -32,7 +31,6 @@ class ListUser extends Component {
     // console.log("tetsa", this.state.users);
     let order = await axios.get(`http://localhost:3001/api/order`);
     this.setState({ order: order.data });
-    console.log(this.state.order);
   };
 
   getOrder = () => {};
