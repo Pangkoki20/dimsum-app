@@ -163,7 +163,13 @@ class DeliveryFood extends Component {
           </div>
         </div>
         <div className="btFoodDelivery">
-          <Button className="fontBTFoodDelivery" color="danger" size="sm" block>
+          <Button
+            href="/SenderStatus"
+            className="fontBTFoodDelivery"
+            color="danger"
+            size="sm"
+            block
+          >
             ส่งอาหารเรียบร้อยแล้ว
           </Button>
         </div>
