@@ -64,20 +64,8 @@ class DeliveryFood extends Component {
         amphoe: this.state.amphoe,
         changwat: this.state.changwat,
         menu_id: this.state.menu_id,
-        // postcode: this.state.postcode,
-        // payment: this.state.payment,
         code: this.state.code,
         selects: this.state.selects,
-
-        order: this.state.order.map(($obj) => {
-          return {
-            menu_name: $obj.menu_name,
-            menu_value: $obj.menu_value,
-            menu_price: $obj.menu_price,
-            menu_id: $obj.menu_id,
-            userid: $obj.user_id,
-          };
-        }),
       };
       console.log("ข้อมูลที่กำลังจะส่งไป ....  ", data);
       axios.post(`http://localhost:3001/api/order/create`, data).then((res) => {
@@ -117,13 +105,14 @@ class DeliveryFood extends Component {
                         <div className="textNameCustomer">
                           <Col className="fontNameCustomer">ชื่อลูกค้า :</Col>
                           <Col>
-                            ที่อยู่สำหรับการจัดส่ง :{numhouse}
+                            ที่อยู่สำหรับการจัดส่ง :
+                            <Col>บ้านเลขที่ : {order.numhouse}</Col>
                             {console.log(numhouse)}
-                            {nummoo}
-                            {road}
-                            {tambon}
-                            {amphoe}
-                            {changwat}
+                            {order.nummoo}
+                            {order.road}
+                            {order.tambon}
+                            {order.amphoe}
+                            {order.changwat}
                           </Col>
                           <Col>เบอร์โทรศัพท์ :</Col>
                           <Col>วิธีการชำระเงิน :</Col>
