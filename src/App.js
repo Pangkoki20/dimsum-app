@@ -26,7 +26,9 @@ import KitchenFoodFinish from "./component/KitchenFoodFinish/KitchenFoodFinish";
 import FoodOrder from "./component/FoodOrder/FoodOrder";
 import ListUser from "./component/ListUser/ListUser";
 import DeliveryFood from "./component/DeliveryFood/DeliveryFood";
+import Footer from "./component/Footer/Footer";
 // import Status from "./component/Status/Status";
+
 import "./App.css";
 import axios from "axios";
 // import ProtectedRoute from "./component/ProtectedRoute";
@@ -86,7 +88,8 @@ class App extends Component {
           <Route exact path="/SenderOrder" component={SenderOrder} />
           <Route exact path="/SenderStatus" component={SenderStatus} />
           <Route exact path="/SenderCustomer" component={SenderCustomer} />
-          <Route exact path="/DeliveryFood" component={DeliveryFood} />
+          <Route exact path="/DeliveryFood/:id" component={DeliveryFood} />
+          <Route exact path="/Footer" component={Footer} />
           <Route
             exact
             path="/MenuOrder/:userid/:orderid"
@@ -104,7 +107,7 @@ class App extends Component {
           />
           {/* </ProtectedRoute> */}
         </Switch>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     );
   }

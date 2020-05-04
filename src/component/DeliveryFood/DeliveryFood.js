@@ -39,12 +39,27 @@ class DeliveryFood extends Component {
     console.log("all order : ", order);
     this.setState({ order: order });
   };
-
+  getOrder = async () => {
+    let order = await axios.get(`http://localhost:3001/api/order`);
+    this.setState({ order: order.data });
+  };
+  updateStatus = async (id, status) => {
+    let res = await axios.put(
+      `http://localhost:3001/api/order/updatebystatus/${id}`,
+      { status }
+    );
+    if (res.data.message === "Error") {
+    } else {
+      await this.getOrder();
+    }
+  };
   onUserChanged = (user) => {
     this.setState({ user });
   };
   componentDidMount = async (nextProps) => {
-    let order = await axios.get(`http://localhost:3001/api/order`);
+    let order = await axios.get(
+      `http://localhost:3001/api/order/${this.props.match.params.id}`
+    );
     this.setState({ order: order.data });
   };
 
@@ -77,7 +92,6 @@ class DeliveryFood extends Component {
     }
   };
   render() {
-    const { numhouse, nummoo, road, tambon, amphoe, changwat } = this.state;
     return (
       <div className="container-fluid formSender">
         <div className="text_senderstatus">ข้อมูลลูกค้า</div>
@@ -169,6 +183,9 @@ class DeliveryFood extends Component {
             color="danger"
             size="sm"
             block
+            onClick={() => {
+              this.updateStatus(this.props.match.params.id, 4);
+            }}
           >
             ส่งอาหารเรียบร้อยแล้ว
           </Button>

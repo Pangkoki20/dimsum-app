@@ -33,7 +33,11 @@ class SenderStatus extends Component {
                       <Row>
                         <Col>{order.id}</Col>
                         <Col>
-                          <Button color="danger" outline href="/DeliveryFood">
+                          <Button
+                            color="danger"
+                            outline
+                            href={`/DeliveryFood/${order.id}`}
+                          >
                             จัดส่งอาหาร
                           </Button>
                         </Col>

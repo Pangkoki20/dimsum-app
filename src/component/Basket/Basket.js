@@ -84,6 +84,7 @@ class Basket extends Component {
           },
         ];
       }
+      console.log("this menu++");
       return [
         ...acc,
         {
@@ -92,6 +93,8 @@ class Basket extends Component {
       ];
     }, []);
     console.log({ newOrder });
+    localStorage.setItem("order", JSON.stringify(newOrder));
+    this.getData();
     this.setState({
       order: newOrder,
     });
@@ -116,6 +119,8 @@ class Basket extends Component {
       ];
     }, []);
     console.log({ newOrder });
+    localStorage.setItem("order", JSON.stringify(newOrder));
+    this.getData();
     this.setState({
       order: newOrder,
     });
@@ -188,8 +193,8 @@ class Basket extends Component {
                                 +
                               </button>
                             </div>
-                          </Col>{" "}
-                          <Col></Col>
+                          </Col>
+                          <Col>{e.menu_value * e.menu_price}</Col>
                           <Col className="img_trash">
                             <div onClick={() => this.toRemove(index)}>
                               <i className="far fa-trash-alt"></i>

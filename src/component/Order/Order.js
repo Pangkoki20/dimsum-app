@@ -113,36 +113,27 @@ class Order extends Component {
     } = this.state;
     return (
       <div className="container">
-        <div className="card shadow-lg p-3 mb-5  bg-white rounded">
-          <div className="text_basketconfirm">ยืนยันการสั่งซื้อ</div>
-          <Row className="from_order">
-            <Col xs="4" sm="4">
-              <div>
-                <Button outline color="info" size="lg" block>
-                  <div>
-                    <img
-                      className="img_address"
-                      src={img_address}
-                      href="/Address"
-                      alt=""
-                    />
-                  </div>
-                  <div className="text-addre">ที่อยู่สำหรับการจัดส่ง</div>
-                </Button>
-              </div>
-            </Col>
-            <Col xs="4" sm="4">
-              <div>
-                <Button outline color="info" size="lg" block>
-                  <div>
-                    <img className="img_pay" src={img_pay} alt="" />
-                  </div>
-                  <div className="text-addre">วิธีการชำระเงิน</div>
-                </Button>
-              </div>
-              <Form onSubmit={this.sentOrder}>
+        <div className="text_basketconfirm">ยืนยันการสั่งซื้อ</div>
+        <div className="shadow p-3 mb-5 bg-white rounded">
+          <div className="from_orderDelivery">
+            <Row>
+              <Form>
                 {this.state.step === 1 ? (
-                  <div className="from_addressdelivery">
+                  <div className="from_addressdelivery ">
+                    <Card className="cardAddress" body outline color="primary">
+                      <div>
+                        <img
+                          className="img_address"
+                          src={img_address}
+                          href="/Address"
+                          alt=""
+                        />
+                      </div>
+                      <div className="text-addre">
+                        <b>ที่อยู่สำหรับการจัดส่ง</b>
+                      </div>
+                    </Card>
+
                     <div className="addressdelivery"></div>
                     {/* <CustomInput
                       className="addressCurrent"
@@ -156,7 +147,7 @@ class Order extends Component {
                       }}
                     /> */}
                     <CustomInput
-                      className="addressCurrent"
+                      className="addressCurrent font-weight-bold"
                       type="radio"
                       id="exampleCustomRadio2"
                       name="customRadio"
@@ -242,8 +233,16 @@ class Order extends Component {
                 ) : null}
                 {this.state.step === 2 ? (
                   <div className="from_addressdelivery">
+                    <Card className="cardAddress" body outline color="primary">
+                      <div>
+                        <img className="img_pay" src={img_pay} alt="" />
+                      </div>
+                      <div className="text-addre">
+                        <b>วิธีการชำระเงิน</b>
+                      </div>
+                    </Card>
                     <div className="addressdelivery">
-                      <b>เลือกวิธีการชำระเงิน</b>
+                      <b className="addressCurrent">เลือกวิธีการชำระเงิน</b>
                     </div>
                     <CustomInput
                       check
@@ -259,7 +258,7 @@ class Order extends Component {
 
                     <div className="from_payments">
                       <div className="bt_nextotwo">
-                        <Button
+                        {/* <Button
                           size="sm"
                           className="bt_back"
                           color="secondary"
@@ -268,7 +267,7 @@ class Order extends Component {
                           }}
                         >
                           ย้อนกลับ
-                        </Button>
+                        </Button> */}
 
                         <Button
                           size="sm"
@@ -286,33 +285,31 @@ class Order extends Component {
                 ) : null}
                 {this.state.step === 3 ? (
                   <div className="from_addressdelivery">
-                    <div className="addressdelivery">
-                      <b>ข้อมูลยืนยันการสั่งซื้อ</b>
-                    </div>
-                    <Card>
-                      <CardBody className="selects">
-                        <div>
-                          <b className="frontAddress">
-                            ที่อยู่สำหรับการจัดส่ง :{" "}
-                          </b>
-                          {selects}
-                        </div>
-
-                        <div className="textAddress">
-                          บ้านเลขที่ : {numhouse}
-                        </div>
-                        <div className="textAddress">หมู่ที่ : {nummoo}</div>
-                        <div className="textAddress">ซอย/ถนน : {road} </div>
-                        <div className="textAddress">ตำบล : {tambon}</div>
-                        <div className="textAddress">อำเภอ : {amphoe}</div>
-                        <div className="textAddress">จังหวัด : {changwat}</div>
-
-                        <div>
-                          <b className="frontAddress">วิธีการชำระเงิน : </b>
-                          {payment}
-                        </div>
-                      </CardBody>
+                    <Card className="cardAddress" body outline color="primary">
+                      <div>
+                        <img className="img_confirm" src={img_confirm} alt="" />
+                      </div>
+                      <div className="text-addre">
+                        <b>ยืนยันการสั่งอาหาร</b>
+                      </div>
                     </Card>
+                    <div className="addressdelivery">
+                      <b className="fontVerify">ข้อมูลยืนยันการสั่งซื้อ</b>
+                    </div>
+                    <div className="selects">
+                      <b className="frontAddress">ที่อยู่สำหรับการจัดส่ง :</b>
+                      {selects}
+                    </div>
+                    <div className="textAddress">บ้านเลขที่ : {numhouse}</div>
+                    <div className="textAddress">หมู่ที่ : {nummoo}</div>
+                    <div className="textAddress">ซอย/ถนน : {road} </div>
+                    <div className="textAddress">ตำบล : {tambon}</div>
+                    <div className="textAddress">อำเภอ : {amphoe}</div>
+                    <div className="textAddress">จังหวัด : {changwat}</div>
+                    <div>
+                      <b className="frontAddress">วิธีการชำระเงิน : </b>
+                      {payment}
+                    </div>
 
                     <div className="from_editorder">
                       <a className="edit_order" href="/Order">
@@ -331,18 +328,8 @@ class Order extends Component {
                   </div>
                 ) : null}
               </Form>
-            </Col>
-            <Col xs="4" sm="4">
-              <div>
-                <Button outline color="info" size="lg" block>
-                  <div>
-                    <img className="img_confirm" src={img_confirm} alt="" />
-                  </div>
-                  <div className="text-addre">ยืนยันการสั่งอาหาร</div>
-                </Button>
-              </div>
-            </Col>
-          </Row>
+            </Row>
+          </div>
         </div>
       </div>
     );

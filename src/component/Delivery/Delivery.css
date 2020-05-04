@@ -91,6 +91,12 @@
     background-color: #99efcf;
 }
 
+.fontOrder {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 @media only screen and (max-width: 768px) {
     .text_status {
         font-size: 25px;
@@ -170,4 +176,8 @@
         text-align: center;
     }
 
+    .fontOrder {
+        font-size: 15px !important;
+        margin-top: 10px;
+    }
 }

@@ -24,6 +24,7 @@ class ListUser extends Component {
     popoverOpen: false,
     modal: false,
     test: null,
+    select_id: null,
   };
   componentDidMount = async (nextProps) => {
     let user = await axios.get(`http://localhost:3001/api/users`);
@@ -33,14 +34,26 @@ class ListUser extends Component {
     this.setState({ order: order.data });
   };
 
-  getOrder = () => {};
+  getOrder = async () => {
+    let order = await axios.get(`http://localhost:3001/api/order`);
+    this.setState({ order: order.data });
+  };
 
-  toggle2 = () => {
+  toggle2 = async () => {
     this.setState({
       popoverOpen: !this.state.popoverOpen,
     });
   };
-
+  updateStatus = async (id, status) => {
+    let res = await axios.put(
+      `http://localhost:3001/api/order/updatebystatus/${id}`,
+      { status }
+    );
+    if (res.data.message === "Error") {
+    } else {
+      await this.getOrder();
+    }
+  };
   toggle = () => {
     this.setState({
       modal: !this.state.modal,
@@ -134,9 +147,9 @@ class ListUser extends Component {
     });
     return (
       <div className="container-fluid">
-        <div className="text_customer">ข้อมูลลูกค้า</div>
         <div className="row">
           <div className="col-sm-6">
+            <div className="text_customer">ข้อมูลลูกค้า</div>
             <Card className="card_listorder">
               <CardHeader>
                 <Row>
@@ -164,11 +177,15 @@ class ListUser extends Component {
                             id="Popover1"
                             className="bt_listorder"
                             color="danger"
-                            onClick={() => {
+                            onClick={async () => {
                               // this.orderMenu(item.user_id, item.id);
-                              this.setState({ test: id });
+                              await this.setState({
+                                test: id,
+                                select_id: item.id,
+                              });
                               console.log(item.id);
                               this.toggle2();
+                              this.updateStatus(this.state.select_id, 2);
                             }}
                           >
                             รับรายการอาหาร
@@ -197,7 +214,10 @@ class ListUser extends Component {
                             <Button
                               className="btoksender"
                               color="info"
-                              onClick={this.toggle}
+                              onClick={() => {
+                                this.toggle();
+                                this.updateStatus(this.state.select_id, 3);
+                              }}
                               size="sm"
                               block
                             >

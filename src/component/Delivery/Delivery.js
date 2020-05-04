@@ -3,7 +3,6 @@ import { Card, Row, Col, Container } from "reactstrap";
 import "./Delivery.css";
 import MenuSelect from "../MenuSelect/MenuSelect";
 import img_menu from "../../imgdelivery/menu.png";
-// import img_meal from "../../imgdelivery/meal.png";
 import img_product from "../../imgdelivery/product2.png";
 import img_breakfast from "../../imgdelivery/breakfast.png";
 import img_foodorder from "../../imgdelivery/dish.png";
@@ -70,8 +69,9 @@ class Delivery extends Component {
           <div key={index}>
             <Row>
               <Col md={12}>
-                <div className="p-3">
-                  {/* order no.{data.id}, status : {data.status} */}
+                <div className="fontOrder">
+                  <b>ออเดอร์ที่ : {data.id}</b>
+                  {/* status : {data.status} */}
                 </div>
               </Col>
             </Row>
@@ -141,8 +141,9 @@ class Delivery extends Component {
           <div key={index}>
             <Row>
               <Col md={12}>
-                <div className="p-3">
-                  {/* order no.{data.id}, status : {data.status} */}
+                <div className="fontOrder">
+                  <b>ออเดอร์ที่ : {data.id}</b>
+                  {/* status : {data.status} */}
                 </div>
               </Col>
             </Row>
@@ -211,7 +212,8 @@ class Delivery extends Component {
           <div key={index}>
             <Row>
               <Col md={12}>
-                <div className="p-3">
+                <div className="fontOrder">
+                  <b>ออเดอร์ที่ : {data.id}</b>
                   {/* order no.{data.id}, status : {data.status} */}
                 </div>
               </Col>
@@ -282,7 +284,8 @@ class Delivery extends Component {
           <div key={index}>
             <Row>
               <Col md={12}>
-                <div className="p-3">
+                <div className="fontOrder">
+                  <b> ออเดอร์ที่ : {data.id}</b>
                   {/* order no.{data.id}, status : {data.status} */}
                 </div>
               </Col>

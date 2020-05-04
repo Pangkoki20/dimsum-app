@@ -1,9 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 
+.from_orderDelivery {
+    text-align: center !important;
+}
+
+.cardAddress {
+    background-color: #ddfff7;
+}
+
+.fontVerify {
+    font-size: 22px;
+    text-align: center;
+
+}
+
 .from_addressdelivery {
     margin-top: 10px;
-    font-size: 14px;
+    margin-left: 100px;
+    margin-right: 250px;
     font-family: "Kanit", sans-serif;
+    width: 900px;
+
 }
 
 .text_basketconfirm {
@@ -17,14 +34,15 @@
 
 .text-addre {
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 25px;
     font-family: "Kanit",
         sans-serif;
+    color: #114b5f;
 }
 
 .inputAddress {
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 320px;
     width: 260px;
     height: 30px;
     font-size: 13px;
@@ -39,10 +57,11 @@
 
 .addressCurrent {
     color: #231942;
-    font-size: 15px;
+    font-size: 20px;
     font-family: "Kanit",
         sans-serif;
-    margin-top: 5px;
+    margin-top: 20px;
+    margin-right: 200px;
 }
 
 .code {
@@ -142,14 +161,18 @@
 }
 
 .selects {
-    margin-top: -10px !important;
+    margin-top: 15px !important;
 }
 
 .frontAddress {
-    font-size: 16px;
+    font-size: 18px;
+    margin-right: 150px;
+    margin-top: 20px;
+
 }
 
 .textAddress {
     font-size: 13px;
     margin-top: 5px;
+    margin-right: 120px;
 }

@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { footer } from "reactstrap";
+import {} from "reactstrap";
 import "./Footer.css";
 class Footer extends Component {
   render() {
     return (
       <div className="footer">
-        <p> © 2019 Dimsumahkong Delivery_Project_5935512014</p>
+        <p className="fontfooter"> © 2019 Dimsumahkong Delivery Project ©</p>
       </div>
     );
   }
