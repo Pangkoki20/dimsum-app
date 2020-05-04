@@ -15,6 +15,7 @@ class DeliveryFood extends Component {
   state = {
     order: [],
     users: [],
+    user: {},
   };
   onUserChanged = (address) => {
     this.setState({ address });
@@ -22,6 +23,7 @@ class DeliveryFood extends Component {
   constructor(props) {
     super(props);
     this.state1 = {
+      priceAll: "",
       numhouse: "",
       nummoo: "",
       road: "",
@@ -34,11 +36,11 @@ class DeliveryFood extends Component {
       order: [],
     };
   }
-  componentDidMount = () => {
-    let order = JSON.parse(localStorage.getItem("order"));
-    console.log("all order : ", order);
-    this.setState({ order: order });
-  };
+  // componentDidMount = () => {
+  //   let order = JSON.parse(localStorage.getItem("order"));
+  //   console.log("all order : ", order);
+  //   this.setState({ order: order });
+  // };
   getOrder = async () => {
     let order = await axios.get(`http://localhost:3001/api/order`);
     this.setState({ order: order.data });
@@ -61,6 +63,10 @@ class DeliveryFood extends Component {
       `http://localhost:3001/api/order/${this.props.match.params.id}`
     );
     this.setState({ order: order.data });
+    let user = await axios.get(`http://localhost:3001/api/users`);
+    this.setState({ users: user.data });
+    this.setState({ user: this.state.users[this.state.order[0].user_id - 1] });
+    console.log(this.state.user);
   };
 
   handleInputChange = (e) => {
@@ -71,6 +77,7 @@ class DeliveryFood extends Component {
 
     try {
       const data = {
+        priceAll: this.state.priceAll,
         numhouse: this.state.numhouse,
         nummoo: this.state.nummoo,
         road: this.state.road,
@@ -97,23 +104,27 @@ class DeliveryFood extends Component {
         <div className="text_senderstatus">ข้อมูลลูกค้า</div>
         <div className="row fromDeliveryfood">
           <div className="col-md-6 offset-md-3 ">
-            <Card>
-              <CardHeader>
-                <Row className="cardDelivery">
-                  <Col xs="4">Order_id</Col>
-                  <Col>ข้อมูลของลูกค้า</Col>
-                </Row>
-              </CardHeader>
-              {this.state.order.map((order) => {
-                if (order.status === "3")
-                  return (
+            {this.state.order.map((order) => {
+              if (order.status === "3")
+                return (
+                  <Card>
+                    <CardHeader>
+                      <Row className="cardDelivery">
+                        <Col xs="4">Order_id</Col>
+                        <Col>ข้อมูลของลูกค้า</Col>
+                      </Row>
+                    </CardHeader>
+
                     <CardBody>
                       <Row>
                         <Col className="cardDataUser" xs="4">
                           {order.id}
                         </Col>
                         <div className="textNameCustomer">
-                          <Col>ชื่อลูกค้า :</Col>
+                          <Col>
+                            ชื่อลูกค้า : {this.state.user.firstname}{" "}
+                            {this.state.user.lastname}
+                          </Col>
                           <Col className="fontNameCustomer">
                             ที่อยู่สำหรับการจัดส่ง :
                           </Col>
@@ -149,7 +160,7 @@ class DeliveryFood extends Component {
                           </div>
                           <div>
                             <Col className="fontNameCustomer">
-                              เบอร์โทรศัพท์ :
+                              เบอร์โทรศัพท์ : {this.state.user.phone}
                             </Col>
                           </div>
                           <div>
@@ -162,18 +173,24 @@ class DeliveryFood extends Component {
                         </div>
                       </Row>
                     </CardBody>
-                  );
-                else return null;
-              })}
-              <CardFooter>
-                <div className="row ">
-                  <div className="col fontMoney">
-                    จำนวนเงินที่ลูกค้าต้องชำระ{" "}
-                  </div>
-                  <div className="col col-lg-2 fontUnit">บาท</div>
-                </div>
-              </CardFooter>
-            </Card>
+
+                    <CardFooter>
+                      <div className="row ">
+                        <Col xs="6" className=" fontMoney">
+                          จำนวนเงินที่ลูกค้าต้องชำระ
+                        </Col>
+                        <Col xs="3" className="fontPriceAll">
+                          {order.priceAll}
+                        </Col>
+                        <Col xs="2" className=" fontUnit">
+                          บาท
+                        </Col>
+                      </div>
+                    </CardFooter>
+                  </Card>
+                );
+              else return null;
+            })}
           </div>
         </div>
         <div className="btFoodDelivery">
@@ -185,6 +202,7 @@ class DeliveryFood extends Component {
             block
             onClick={() => {
               this.updateStatus(this.props.match.params.id, 4);
+              console.log(this.props.match.params.id);
             }}
           >
             ส่งอาหารเรียบร้อยแล้ว

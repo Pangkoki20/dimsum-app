@@ -1,14 +1,5 @@
 import React, { Component } from "react";
-import {
-  Row,
-  Col,
-  Button,
-  Input,
-  CardBody,
-  Card,
-  Form,
-  CustomInput,
-} from "reactstrap";
+import { Row, Button, Input, Card, Form, CustomInput } from "reactstrap";
 import "./Order.css";
 import axios from "axios";
 import auth from "../service/index";
@@ -27,6 +18,7 @@ class Order extends Component {
     super(props);
     this.state1 = {
       menu_id: "",
+      priceAll: "",
       numhouse: "",
       nummoo: "",
       road: "",
@@ -63,6 +55,7 @@ class Order extends Component {
 
     try {
       const data = {
+        priceAll: this.state.priceAll,
         numhouse: this.state.numhouse,
         nummoo: this.state.nummoo,
         road: this.state.road,
@@ -78,6 +71,7 @@ class Order extends Component {
 
         order: this.state.order.map(($obj) => {
           return {
+            priceAll: $obj.menu_value * $obj.menu_price,
             menu_name: $obj.menu_name,
             menu_value: $obj.menu_value,
             menu_price: $obj.menu_price,
@@ -86,6 +80,10 @@ class Order extends Component {
           };
         }),
       };
+      data.priceAll = data.order.reduce((a, b) => {
+        return a.priceAll + b.priceAll;
+      });
+
       console.log("ข้อมูลที่กำลังจะส่งไป ....  ", data);
       axios.post(`http://localhost:3001/api/order/create`, data).then((res) => {
         const { data } = res;
@@ -102,6 +100,7 @@ class Order extends Component {
 
   render() {
     const {
+      priceAll,
       numhouse,
       nummoo,
       road,

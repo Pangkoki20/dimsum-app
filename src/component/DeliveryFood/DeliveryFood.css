@@ -96,6 +96,16 @@
     margin-top: 10px;
 }
 
+.fontPriceAll {
+    font-size: 25px;
+    font-family: "Kanit",
+        sans-serif;
+    margin-left: 10px;
+    text-align: center;
+    color: firebrick;
+
+}
+
 @media only screen and (max-width: 375px) {
     .fromDeliveryfood {
         width: 500px !important;
