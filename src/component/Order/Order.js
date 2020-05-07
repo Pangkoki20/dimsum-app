@@ -100,7 +100,6 @@ class Order extends Component {
 
   render() {
     const {
-      priceAll,
       numhouse,
       nummoo,
       road,
@@ -296,16 +295,24 @@ class Order extends Component {
                       <b className="fontVerify">ข้อมูลยืนยันการสั่งซื้อ</b>
                     </div>
                     <div className="selects">
-                      <b className="frontAddress">ที่อยู่สำหรับการจัดส่ง :</b>
+                      <b className="frontAddress">ที่อยู่สำหรับการจัดส่ง : </b>
                       {selects}
                     </div>
-                    <div className="textAddress">บ้านเลขที่ : {numhouse}</div>
-                    <div className="textAddress">หมู่ที่ : {nummoo}</div>
-                    <div className="textAddress">ซอย/ถนน : {road} </div>
-                    <div className="textAddress">ตำบล : {tambon}</div>
-                    <div className="textAddress">อำเภอ : {amphoe}</div>
-                    <div className="textAddress">จังหวัด : {changwat}</div>
-                    <div>
+                    <div className="selects textAddress ">
+                      บ้านเลขที่ : {numhouse}
+                    </div>
+                    <div className="selects textAddress ">
+                      หมู่ที่ : {nummoo}
+                    </div>
+                    <div className="selects textAddress ">
+                      ซอย/ถนน : {road}{" "}
+                    </div>
+                    <div className="selects textAddress ">ตำบล : {tambon}</div>
+                    <div className="selects textAddress ">อำเภอ : {amphoe}</div>
+                    <div className="selects textAddress ">
+                      จังหวัด : {changwat}
+                    </div>
+                    <div className="selects">
                       <b className="frontAddress">วิธีการชำระเงิน : </b>
                       {payment}
                     </div>

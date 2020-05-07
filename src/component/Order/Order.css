@@ -10,7 +10,7 @@
 
 .fontVerify {
     font-size: 22px;
-    text-align: center;
+    text-align: left !important;
 
 }
 
@@ -162,17 +162,16 @@
 
 .selects {
     margin-top: 15px !important;
+    margin-right: 600px;
 }
 
 .frontAddress {
     font-size: 18px;
-    margin-right: 150px;
-    margin-top: 20px;
-
 }
 
 .textAddress {
     font-size: 13px;
     margin-top: 5px;
-    margin-right: 120px;
+    margin-left: 20px;
+    text-align-last: left;
 }
