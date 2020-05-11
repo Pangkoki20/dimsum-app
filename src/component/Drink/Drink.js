@@ -61,24 +61,24 @@ class Drink extends Component {
         <Container>
           <div className="textname-drink">เครื่องดื่ม</div>
           <Row xs="3">
-            <Col>
+            <Col sm="4">
               <DrinkChaice />
             </Col>
-            <Col>
+            <Col sm="4">
               <DrinkCoffee />
             </Col>
-            <Col>
+            <Col sm="4">
               <DrinkChamanow />
             </Col>
           </Row>
           <Row xs="3">
-            <Col>
+            <Col sm="4">
               <DrinkOvantin />
             </Col>
-            <Col>
+            <Col sm="4">
               <DrinkGreentea />
             </Col>
-            <Col>
+            <Col sm="4">
               <DrinkChadum />
             </Col>
           </Row>

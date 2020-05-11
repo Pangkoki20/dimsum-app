@@ -57,24 +57,24 @@ class Dimsum extends Component {
         <Container>
           <div className="textname-dimsum">ติ่มซำ </div>
           <Row xs="3">
-            <Col>
+            <Col sm="4">
               <PorkDumpling />
             </Col>
-            <Col>
+            <Col sm="4">
               <PorkEggDumpling />
             </Col>
-            <Col>
+            <Col sm="4">
               <PooDumpling />
             </Col>
           </Row>
           <Row xs="3">
-            <Col>
+            <Col sm="4">
               <ShrimpDumling />
             </Col>
-            <Col>
+            <Col sm="4">
               <HargaoShrimp />
             </Col>
-            <Col>
+            <Col sm="4">
               <ShrimpJeeb />
             </Col>
           </Row>

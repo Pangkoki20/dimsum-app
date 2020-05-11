@@ -63,24 +63,24 @@ class Menu extends Component {
         <Container>
           <div className="text-menu">เมนูแนะนำ</div>
           <Row xs="3">
-            <Col>
+            <Col sm="4">
               <MenuNewSarapol />
             </Col>
-            <Col>
+            <Col sm="4">
               <MenuNewEgg />
             </Col>
-            <Col>
+            <Col sm="4">
               <MenuNewEggpan />
             </Col>
           </Row>
           <Row xs="3">
-            <Col>
+            <Col sm="4">
               <MenuNewBuk />
             </Col>
-            <Col>
+            <Col sm="4">
               <MenuNewPoo />
             </Col>
-            <Col>
+            <Col sm="4">
               <MenuNewKanomgee />
             </Col>
           </Row>

@@ -69,31 +69,43 @@
   .img_pok {
     height: 100px;
     width: 250px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
 
   .img_pokegg {
     height: 100px;
     width: 250px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
 
   .img_poo {
     height: 100px;
     width: 250px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
 
   .img_shrimp {
     height: 100px;
     width: 250px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
 
   .img_hargao {
     height: 100px;
     width: 250px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
 
   .img_shrimp {
     height: 100px;
     width: 250px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
 
 }

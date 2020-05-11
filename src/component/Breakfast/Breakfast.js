@@ -58,24 +58,24 @@ class Breakfast extends Component {
         <div className="textname-breakfast">อาหารเช้า</div>
         <Container>
           <Row xs="3">
-            <Col>
+            <Col sm="4">
               <BreakFastFood />
             </Col>
-            <Col>
+            <Col sm="4">
               <BreakFastEgg />
             </Col>
-            <Col>
+            <Col sm="4">
               <BreakFastFish />
             </Col>
           </Row>
           <Row xs="3">
-            <Col>
+            <Col sm="4">
               <BreakFastShrimp />
             </Col>
-            <Col>
+            <Col sm="4">
               <BreakFastFreshSpring />
             </Col>
-            <Col>
+            <Col sm="4">
               <BreakFastShrimpParcelFried />
             </Col>
           </Row>

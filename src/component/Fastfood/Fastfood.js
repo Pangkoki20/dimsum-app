@@ -59,24 +59,24 @@ class Fastfood extends Component {
           <div className="textname-fastfood">อาหารจานเดียว</div>
 
           <Row xs="3">
-            <Col>
+            <Col sm="4">
               <FastFoodBabutte />
             </Col>
-            <Col>
+            <Col sm="4">
               <FastFoodChicken />
             </Col>
-            <Col>
+            <Col sm="4">
               <FastFoodDuck />
             </Col>
           </Row>
           <Row xs="3">
-            <Col>
+            <Col sm="4">
               <FastFoodPorkleg />
             </Col>
-            <Col>
+            <Col sm="4">
               <FastFoodRedpork />
             </Col>
-            <Col>
+            <Col sm="4">
               <FastFoodCrispypork />
             </Col>
             {/* <Col>

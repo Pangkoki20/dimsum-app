@@ -54,42 +54,55 @@
     .textname-drink {
         margin-top: 15px;
         font-size: 20px;
-
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .img_gt {
         height: 100px;
         width: 250px;
         margin-top: 2px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .img_chadum {
         height: 100px;
         width: 250px;
         margin-top: 2px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .img_chamanow {
         height: 100px;
         width: 250px;
         margin-top: 2px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .img_coffee {
         height: 100px;
         width: 250px;
         margin-top: 2px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .img_ovantin {
         height: 100px;
         width: 250px;
         margin-top: 2px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .img_greentea {
         height: 100px;
         width: 250px;
         margin-top: 2px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 }

@@ -18,6 +18,7 @@
     height: 200px;
     width: 250px;
     margin-top: 2px;
+    text-align: center;
 }
 
 .img_bffish {
@@ -49,20 +50,28 @@
     .img_bf {
         height: 100px;
         width: 250px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .img_bfegg {
         height: 100px;
         width: 250px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .img_bffish {
         height: 100px;
         width: 250px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .img_bfshrimp {
         height: 100px;
         width: 250px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 }
