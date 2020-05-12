@@ -79,8 +79,8 @@ class ListUser extends Component {
   testFunc = () => {
     if (this.state.test || this.state.test === 0) {
       return (
-        <div className="row">
-          <div className="col-sm-9 ">
+        <Row>
+          <Col>
             <Popover
               className="popup"
               placement="right"
@@ -94,18 +94,18 @@ class ListUser extends Component {
               <PopoverBody>
                 {/* <div className="row  align-items-center tablelistuser"> */}
 
-                <Row className="row  align-items-center tablelistuser">
-                  <Col>ลำดับที่</Col>
-                  <Col>ชื่ออาหาร</Col>
+                <Row xs="3" className="align-items-center tablelistuser">
+                  <Col sm="4">ลำดับที่</Col>
+                  <Col sm="4">ชื่ออาหาร</Col>
                 </Row>
 
                 {this.state.order[this.state.test].allMenu.map(
                   (menu, index) => {
                     return (
                       <div className="row  align-items-center tablelistuser">
-                        <Col>{index + 1}</Col>
+                        <Col sm="4">{index + 1}</Col>
 
-                        <Col>{menu.namefood}</Col>
+                        <Col sm="4">{menu.namefood}</Col>
                       </div>
                     );
                   }
@@ -129,8 +129,8 @@ class ListUser extends Component {
                 </Col>
               </PopoverBody>
             </Popover>
-          </div>
-        </div>
+          </Col>
+        </Row>
       );
       // });
     }

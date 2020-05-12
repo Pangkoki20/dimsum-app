@@ -105,3 +105,100 @@
         sans-serif;
     font-size: 14px;
 }
+
+@media only screen and (max-width: 400px) {
+    .text_customer {
+        font-size: 20px;
+    }
+
+    .card_listorder {
+        font-size: 16px;
+    }
+
+    .bt_listorder {
+        font-size: 14px;
+        height: 35px;
+        width: 90px;
+    }
+
+    .popup {
+        margin-left: 150px !important;
+        min-width: 1000px !important;
+    }
+
+    .popover {
+        width: 1200;
+    }
+
+    .formBTConfirm {
+        text-align: center;
+
+    }
+
+    .modal-backdrop {
+        display: none;
+    }
+
+    .fade {
+        background-color: rgba(0, 0, 0, 0.137) !important;
+    }
+
+    .modal-content {
+        border: none !important;
+    }
+
+    .btconfirm {
+        margin: 10px;
+        font-family: "Kanit",
+            sans-serif;
+        font-size: 22px !important;
+        height: 50px;
+        text-align: center;
+        width: 700px;
+    }
+
+    .menulistuser {
+        font-family: "Kanit",
+            sans-serif;
+        font-size: 24px;
+        text-align: center;
+
+    }
+
+    .tablelistuser {
+        font-size: 16px;
+    }
+
+    .readytodeliver {
+        color: #10526e;
+        font-size: 30px;
+        text-align: center;
+        font-family: "Kanit",
+            sans-serif;
+        margin-top: 30px;
+    }
+
+    .btoksender {
+        font-size: 18px;
+        text-align: center;
+        font-family: "Kanit",
+            sans-serif;
+    }
+
+    .img_correct {
+        height: 120px;
+        width: 100px;
+
+    }
+
+    .piccorrect {
+        text-align: center !important;
+        width: 100%;
+    }
+
+    .card_menulistuser {
+        font-family: "Kanit",
+            sans-serif;
+        font-size: 14px;
+    }
+}

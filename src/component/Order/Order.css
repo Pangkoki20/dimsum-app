@@ -6,12 +6,15 @@
 
 .cardAddress {
     background-color: #ddfff7;
+    width: 800px;
+    margin-left: 80px;
+    margin-right: 160px;
 }
 
 .fontVerify {
     font-size: 22px;
     text-align: left !important;
-
+    margin-left: 80px;
 }
 
 .from_addressdelivery {
@@ -53,6 +56,7 @@
     font-size: 18px;
     font-family: "Kanit", sans-serif;
     margin-top: 5px;
+    text-align: left !important;
 }
 
 .addressCurrent {
@@ -62,6 +66,9 @@
         sans-serif;
     margin-top: 20px;
     margin-right: 200px;
+    text-align: left;
+    margin-right: 20px;
+    margin-left: 80px;
 }
 
 .code {
@@ -162,11 +169,13 @@
 
 .selects {
     margin-top: 15px !important;
-    margin-right: 600px;
+    text-align: left;
+    margin-left: 80px;
 }
 
 .frontAddress {
     font-size: 18px;
+    text-align: left !important;
 }
 
 .textAddress {
@@ -174,4 +183,171 @@
     margin-top: 5px;
     margin-left: 20px;
     text-align-last: left;
+    margin-left: 80px;
+}
+
+.textSelect {
+    text-align: left;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 400px) {
+    .cardAddress {
+        width: 150px;
+        text-align: center;
+
+    }
+
+    .fontVerify {
+        font-size: 15px;
+        text-align: left !important;
+
+    }
+
+    .from_orderDelivery {
+        text-align: center;
+        margin-right: 1200px;
+    }
+
+    .from_addressdelivery {
+        margin-top: 10px;
+    }
+
+    .text_basketconfirm {
+        margin-top: 15px;
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .text-addre {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    .inputAddress {
+        margin-top: 10px;
+        margin-left: 40px;
+        width: 150px;
+        height: 30px;
+        font-size: 13px;
+    }
+
+    .addressdelivery {
+        font-size: 18px;
+        margin-top: 5px;
+        text-align: left !important;
+    }
+
+    .addressCurrent {
+        font-size: 15px;
+    }
+
+    .code {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    .from_payments {
+        text-align: center;
+    }
+
+    .btNext {
+        text-align: center;
+    }
+
+    .bt_nextone {
+        text-align: center !important;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .bt_ok {
+        margin-left: 10px;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .bt_next {
+        margin-left: 10px;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .bt_back {
+        margin-right: 10px;
+        margin-top: 15px;
+        font-size: 14px;
+
+    }
+
+    .img_savelocation {
+        width: 20px;
+        height: 20px;
+        text-align: right;
+    }
+
+    .img_location {
+        width: 20px;
+        height: 20px;
+        text-align: right;
+    }
+
+    .img_newaddress {
+        width: 20px;
+        height: 20px;
+        text-align: right;
+    }
+
+    .from_check {
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+
+    .text_paymentconfirm {
+        font-size: 16px;
+        font-family: "Kanit", sans-serif;
+    }
+
+    .text_code {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .from_editorder {
+        text-align: right;
+    }
+
+    .edit_order {
+        color: #8d0001;
+        font-size: 14px;
+
+        font-family: "Kanit",
+            sans-serif;
+    }
+
+    .edit_order:hover {
+        color: #8d0001;
+    }
+
+    .selects {
+        margin-top: 15px !important;
+        text-align: left !important;
+        margin-left: 80px;
+    }
+
+    .frontAddress {
+        font-size: 16px;
+        text-align: left !important;
+    }
+
+    .textSelect {
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .textAddress {
+        font-size: 13px;
+        margin-top: 5px;
+        margin-left: 80px;
+    }
 }

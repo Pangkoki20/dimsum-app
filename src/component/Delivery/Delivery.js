@@ -76,12 +76,12 @@ class Delivery extends Component {
               </Col>
             </Row>
             <Row xs="4" className="framedelivery">
-              <Col>
+              <Col sm="3">
                 <Card
                   body
                   className="fromdeliverysize border border-primary rounded green"
                 >
-                  <div className="">
+                  <div>
                     <img
                       className="img_foodorder img-fluid"
                       src={img_foodorder}
@@ -91,7 +91,7 @@ class Delivery extends Component {
                   <div className="font_status">สั่งอาหารแล้ว</div>
                 </Card>
               </Col>
-              <Col>
+              <Col sm="3">
                 <Card
                   body
                   className="fromdeliverysize border border-primary rounded"
@@ -99,11 +99,11 @@ class Delivery extends Component {
                   <div>
                     <img className="img_menu img-fluid" src={img_menu} alt="" />
                   </div>
-                  <div className="font_status">ได้รับรายการอาหารแล้ว</div>
+                  <div className="font_status">รับรายการอาหารแล้ว</div>
                 </Card>
               </Col>
 
-              <Col>
+              <Col sm="3">
                 <Card
                   body
                   className="fromdeliverysize border border-primary rounded"
@@ -118,7 +118,7 @@ class Delivery extends Component {
                   <div className="font_status">อาหารของคุณพร้อมส่ง</div>
                 </Card>
               </Col>
-              <Col>
+              <Col sm="3">
                 <Card
                   body
                   className="fromdeliverysize border border-primary rounded"
@@ -148,7 +148,7 @@ class Delivery extends Component {
               </Col>
             </Row>
             <Row xs="4" className="framedelivery">
-              <Col>
+              <Col sm="3">
                 <Card
                   body
                   className="fromdeliverysize border border-primary rounded green"
@@ -163,7 +163,7 @@ class Delivery extends Component {
                   <div className="font_status">สั่งอาหารแล้ว</div>
                 </Card>
               </Col>
-              <Col>
+              <Col sm="3">
                 <Card
                   body
                   className="fromdeliverysize border border-primary rounded green"
@@ -174,7 +174,7 @@ class Delivery extends Component {
                   <div className="font_status">ได้รับรายการอาหารแล้ว</div>
                 </Card>
               </Col>
-              <Col>
+              <Col sm="3">
                 <Card
                   body
                   className="fromdeliverysize border border-primary rounded"
@@ -189,7 +189,7 @@ class Delivery extends Component {
                   <div className="font_status">อาหารของคุณพร้อมส่ง</div>
                 </Card>
               </Col>
-              <Col>
+              <Col sm="3">
                 <Card
                   body
                   className="fromdeliverysize border border-primary rounded"
@@ -219,7 +219,7 @@ class Delivery extends Component {
               </Col>
             </Row>
             <Row xs="4" className="framedelivery">
-              <Col>
+              <Col sm="3">
                 <Card
                   body
                   className="fromdeliverysize border border-primary rounded green"
@@ -234,7 +234,7 @@ class Delivery extends Component {
                   <div className="font_status">สั่งอาหารแล้ว</div>
                 </Card>
               </Col>
-              <Col>
+              <Col sm="3">
                 <Card
                   body
                   className="fromdeliverysize border border-primary rounded green"
@@ -246,7 +246,7 @@ class Delivery extends Component {
                 </Card>
               </Col>
 
-              <Col>
+              <Col sm="3">
                 <Card
                   body
                   className="fromdeliverysize border border-primary rounded green"
@@ -261,7 +261,7 @@ class Delivery extends Component {
                   <div className="font_status">อาหารของคุณพร้อมส่ง</div>
                 </Card>
               </Col>
-              <Col>
+              <Col sm="3">
                 <Card
                   body
                   className="fromdeliverysize border border-primary rounded"
@@ -291,7 +291,7 @@ class Delivery extends Component {
               </Col>
             </Row>
             <Row xs="4" className="framedelivery">
-              <Col>
+              <Col sm="3">
                 <Card
                   body
                   className="fromdeliverysize border border-primary rounded green"
@@ -306,7 +306,7 @@ class Delivery extends Component {
                   <div className="font_status">สั่งอาหารแล้ว</div>
                 </Card>
               </Col>
-              <Col>
+              <Col sm="3">
                 <Card
                   body
                   className="fromdeliverysize border border-primary rounded green"
@@ -317,7 +317,7 @@ class Delivery extends Component {
                   <div className="font_status">ได้รับรายการอาหารแล้ว</div>
                 </Card>
               </Col>
-              <Col>
+              <Col sm="3">
                 <Card
                   body
                   className="fromdeliverysize border border-primary rounded green"
@@ -332,7 +332,7 @@ class Delivery extends Component {
                   <div className="font_status">อาหารของคุณพร้อมส่ง</div>
                 </Card>
               </Col>
-              <Col>
+              <Col sm="3">
                 <Card
                   body
                   className="fromdeliverysize border border-primary rounded green"

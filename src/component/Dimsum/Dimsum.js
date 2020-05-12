@@ -54,8 +54,8 @@ class Dimsum extends Component {
     return (
       <div>
         <MenuSelect numberOnBucket={numberOfMenus} />
+        <div className="textname-dimsum">ติ่มซำ </div>
         <Container>
-          <div className="textname-dimsum">ติ่มซำ </div>
           <Row xs="3">
             <Col sm="4">
               <PorkDumpling />

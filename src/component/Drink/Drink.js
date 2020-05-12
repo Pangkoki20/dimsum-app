@@ -58,8 +58,8 @@ class Drink extends Component {
     return (
       <div>
         <MenuSelect numberOnBucket={numberOfMenus} />
+        <div className="textname-drink">เครื่องดื่ม</div>
         <Container>
-          <div className="textname-drink">เครื่องดื่ม</div>
           <Row xs="3">
             <Col sm="4">
               <DrinkChaice />

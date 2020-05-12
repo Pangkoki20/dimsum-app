@@ -101,7 +101,10 @@
 }
 
 .text_num {
-    text-align: right;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Kanit",
+        sans-serif;
 }
 
 .text_unit {
@@ -130,8 +133,6 @@
 
 .address_customer {
     font-size: 25px;
-    font-family: "Kanit",
-        sans-serif;
     text-align: right;
     margin-top: 10px;
     text-align: center;
@@ -178,8 +179,9 @@
         text-align: center;
         font-family: "Kanit",
             sans-serif;
-        font-size: 15px;
+        font-size: 12px;
     }
+
 
     .text_addfood {
         font-family: "Kanit", sans-serif;
@@ -196,7 +198,10 @@
     }
 
     .btaddfood {
-        font-size: 12px !important;
+        font-size: 10px !important;
+        width: 5px;
+        text-align: center;
+        margin-left: -24px;
     }
 
     .in_check {
@@ -213,7 +218,7 @@
     }
 
     .text_basket {
-        font-size: 30px;
+        font-size: 25px;
         text-align: center;
         font-family: "Kanit", sans-serif;
     }
@@ -257,8 +262,8 @@
         margin-top: 15px;
     }
 
-    .from_money {
-        margin-top: 20px;
+    .fcMoney {
+        text-align: center !important;
     }
 
     .text_money {
@@ -274,6 +279,7 @@
 
     .tt_food {
         font-size: 12px;
+        text-align: left;
     }
 
     .text_num {
@@ -286,6 +292,7 @@
 
     .delivery_charge {
         font-size: 12px;
+        text-align: left;
     }
 
     .tt_money {
@@ -335,9 +342,7 @@
     }
 
     .OrderConfirmation {
-        font-size: 18px;
-        font-family: "Kanit",
-            sans-serif;
+        font-size: 15px;
     }
 
 }

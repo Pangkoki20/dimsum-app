@@ -84,6 +84,9 @@ export default class HargaoShrimp extends Component {
               </Button>
             </Card>
           </div>
+
+          <br></br>
+          <br></br>
         </Container>
       </div>
     );

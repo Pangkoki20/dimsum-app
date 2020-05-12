@@ -81,7 +81,7 @@ class Order extends Component {
         }),
       };
       data.priceAll = data.order.reduce((a, b) => {
-        return a.priceAll + b.priceAll;
+        return a.priceAll + b.priceAll + 30;
       });
 
       console.log("ข้อมูลที่กำลังจะส่งไป ....  ", data);
@@ -256,17 +256,6 @@ class Order extends Component {
 
                     <div className="from_payments">
                       <div className="bt_nextotwo">
-                        {/* <Button
-                          size="sm"
-                          className="bt_back"
-                          color="secondary"
-                          onClick={() => {
-                            this.setState({ step: this.state.step - 1 });
-                          }}
-                        >
-                          ย้อนกลับ
-                        </Button> */}
-
                         <Button
                           size="sm"
                           className="bt_next"
@@ -294,8 +283,10 @@ class Order extends Component {
                     <div className="addressdelivery">
                       <b className="fontVerify">ข้อมูลยืนยันการสั่งซื้อ</b>
                     </div>
-                    <div className="selects">
-                      <b className="frontAddress">ที่อยู่สำหรับการจัดส่ง : </b>
+                    <div className="selects ">
+                      <b className="frontAddress textSelect">
+                        ที่อยู่สำหรับการจัดส่ง :{" "}
+                      </b>
                       {selects}
                     </div>
                     <div className="selects textAddress ">

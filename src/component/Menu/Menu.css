@@ -5,7 +5,7 @@
   margin-top: 20px;
   box-sizing: border-box;
   line-height: 1.5;
-
+  width: 300px;
 }
 
 .text-menu {
@@ -102,6 +102,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .form-menu {
+    width: 300px;
+  }
 
   .text-menu {
     margin-top: 15px;
@@ -110,53 +113,53 @@
 
   .img_egg {
     height: 100px;
-    width: 250px;
-    margin-left: 25px;
-    margin-right: 25px;
+    width: 150px;
+    margin-left: 70px;
+    margin-right: 70px;
 
   }
 
   .img_jopoo {
     height: 100px;
-    width: 250px;
-    margin-left: 25px;
-    margin-right: 25px;
+    width: 150px;
+    margin-left: 70px;
+    margin-right: 70px;
 
   }
 
   .img_buk {
     height: 100px;
-    width: 250px;
-    margin-left: 25px;
-    margin-right: 25px;
+    width: 150px;
+    margin-left: 70px;
+    margin-right: 70px;
   }
 
   .img_eggpan {
     height: 100px;
-    width: 250px;
-    margin-left: 25px;
-    margin-right: 25px;
+    width: 150px;
+    margin-left: 70px;
+    margin-right: 70px;
   }
 
   .img_kanomgee {
     height: 100px;
-    width: 250px;
-    margin-left: 25px;
-    margin-right: 25px;
+    width: 150px;
+    margin-left: 70px;
+    margin-right: 70px;
   }
 
   .img_sarapol {
     height: 100px;
-    width: 250px;
-    margin-left: 25px;
-    margin-right: 25px;
+    width: 150px;
+    margin-left: 70px;
+    margin-right: 70px;
   }
 
   .img_egg {
     height: 100px;
-    width: 250px;
-    margin-left: 25px;
-    margin-right: 25px;
+    width: 150px;
+    margin-left: 70px;
+    margin-right: 70px;
   }
 
   .text_menuname {

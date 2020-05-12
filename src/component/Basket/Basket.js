@@ -141,12 +141,24 @@ class Basket extends Component {
               <Card className="card_food">
                 <CardHeader>
                   <Row>
-                    <Col>ลำดับที่</Col>
-                    <Col>ชื่ออาหาร</Col>
-                    <Col>ราคา</Col>
-                    <Col>จำนวน</Col>
-                    <Col>ราคารวม</Col>
-                    <Col>ลบออก</Col>
+                    <Col xs="3" sm="2">
+                      ลำดับที่
+                    </Col>
+                    <Col xs="3" sm="2">
+                      ชื่ออาหาร
+                    </Col>
+                    <Col xs="3" sm="2">
+                      ราคา
+                    </Col>
+                    <Col xs="3" sm="2">
+                      จำนวน
+                    </Col>
+                    <Col xs="3" sm="2">
+                      ราคารวม
+                    </Col>
+                    <Col xs="3" sm="2">
+                      ลบออก
+                    </Col>
                   </Row>
                 </CardHeader>
                 {this.state.order.map((e, index) => {
@@ -154,10 +166,16 @@ class Basket extends Component {
                     <div key={index + 1}>
                       <CardBody>
                         <Row>
-                          <Col> {index + 1}</Col>
-                          <Col>{e.menu_name} </Col>
-                          <Col> {e.menu_price}</Col>
-                          <Col>
+                          <Col xs="3" sm="2">
+                            {index + 1}
+                          </Col>
+                          <Col xs="3" sm="2">
+                            {e.menu_name}
+                          </Col>
+                          <Col xs="3" sm="2">
+                            {e.menu_price}
+                          </Col>
+                          <Col xs="3" sm="2">
                             <div
                               className="btn-group btaddfood"
                               role="group"
@@ -166,7 +184,7 @@ class Basket extends Component {
                               {e.menu_value > 1 ? (
                                 <button
                                   type="button"
-                                  className="btn btn-outline-info "
+                                  className="btn btn-outline-info btaddfood"
                                   onClick={() => this.removeCount(index)}
                                 >
                                   -
@@ -181,21 +199,23 @@ class Basket extends Component {
                               )}
                               <button
                                 type="button"
-                                className="btn btn-outline-info"
+                                className="btn btn-outline-info btaddfood"
                               >
                                 {e.menu_value}
                               </button>
                               <button
                                 type="button"
-                                className="btn btn-outline-info"
+                                className="btn btn-outline-info btaddfood"
                                 onClick={() => this.addCount(index)}
                               >
                                 +
                               </button>
                             </div>
                           </Col>
-                          <Col>{e.menu_value * e.menu_price}</Col>
-                          <Col className="img_trash">
+                          <Col xs="3" sm="2">
+                            {e.menu_value * e.menu_price}
+                          </Col>
+                          <Col xs="3" sm="2" className="img_trash">
                             <div onClick={() => this.toRemove(index)}>
                               <i className="far fa-trash-alt"></i>
                             </div>
@@ -206,13 +226,10 @@ class Basket extends Component {
                   );
                 })}
               </Card>
-              <br></br>
-              <br></br>
-              <br></br>
             </div>
-            <div class="col-6 col-md-4 ">
+            <div class="col-6 col-md-4 fcMoney container">
               <div className="from_money">
-                <Card>
+                <Card className="">
                   <CardHeader className="text_money">รวมทั้งหมด</CardHeader>
                   <div className="table_num">
                     <div className="d-flex">
@@ -256,9 +273,7 @@ class Basket extends Component {
                         </CardText>
                       </div>
                       <div className="col">
-                        <CardText className="delivery_charge text_num">
-                          30
-                        </CardText>
+                        <CardText className="text_num">30</CardText>
                       </div>
                       <div className="col">
                         <CardText className="tt_food text_unit">บาท</CardText>

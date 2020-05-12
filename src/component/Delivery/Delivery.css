@@ -20,6 +20,8 @@
     height: 150px;
     width: 220px;
     text-align: center;
+    padding: 20px;
+    margin-top: 10px;
 }
 
 .framedelivery {
@@ -107,77 +109,76 @@
     }
 
     .fromdelivery {
-        padding-left: 10px;
-        padding-right: 10px;
         margin-left: 30px;
         margin-right: 30px;
+
     }
 
     .fromdeliverysize {
-        height: 80px;
-        width: 120px;
+        height: 90px;
+        width: 150px;
         text-align: center;
         padding: 10px;
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 35px;
+        margin-right: 35px;
     }
 
     .img_menu {
-        width: 35px;
+        width: 40px;
         height: 40px;
         text-align: center;
     }
 
     .img_meal {
-        width: 35px;
+        width: 40px;
         height: 40px;
         text-align: center;
     }
 
     .img_product {
-        width: 35px;
+        width: 40px;
         height: 40px;
         text-align: center;
     }
 
     .img_delivery {
-        width: 35px;
+        width: 40px;
         height: 40px;
         text-align: center;
     }
 
     .img_breakfast {
-        width: 35px;
+        width: 40px;
         height: 40px;
         text-align: center;
     }
 
     .img_foodorder {
-        width: 35px;
+        width: 40px;
         height: 40px;
         text-align: center;
     }
 
     .img_address {
-        width: 35px;
+        width: 40px;
         height: 40px;
         text-align: center;
     }
 
     .img_pay {
-        width: 35px;
+        width: 40px;
         height: 40px;
         text-align: center;
     }
 
     .img_confirm {
-        width: 35px;
+        width: 40px;
         height: 40px;
         text-align: center;
     }
 
     .fontOrder {
         font-size: 15px !important;
-        margin-top: 10px;
+        margin-top: 15px;
     }
 }

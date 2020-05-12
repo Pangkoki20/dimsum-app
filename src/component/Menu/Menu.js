@@ -60,8 +60,8 @@ class Menu extends Component {
     return (
       <div>
         <MenuSelect numberOnBucket={numberOfMenus} />
+        <div className="text-menu">เมนูแนะนำ</div>
         <Container>
-          <div className="text-menu">เมนูแนะนำ</div>
           <Row xs="3">
             <Col sm="4">
               <MenuNewSarapol />

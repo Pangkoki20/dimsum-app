@@ -55,9 +55,8 @@ class Fastfood extends Component {
     return (
       <div>
         <MenuSelect numberOnBucket={numberOfMenus} />
+        <div className="textname-fastfood">อาหารจานเดียว</div>
         <Container>
-          <div className="textname-fastfood">อาหารจานเดียว</div>
-
           <Row xs="3">
             <Col sm="4">
               <FastFoodBabutte />
