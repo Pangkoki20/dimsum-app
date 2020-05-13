@@ -112,19 +112,19 @@
 }
 
 .delivery_charge {
-    font-size: 18px;
+    font-size: 14 px;
     font-family: "Kanit", sans-serif;
 }
 
 .tt_money {
-    font-size: 20px;
+    font-size: 18px;
     font-family: "Kanit", sans-serif;
     color: #01161e;
     text-align: center;
 }
 
 .tt_money2 {
-    font-size: 22px;
+    font-size: 18px;
     font-family: "Kanit",
         sans-serif;
     color: #01161e;
@@ -291,7 +291,7 @@
     }
 
     .delivery_charge {
-        font-size: 12px;
+        font-size: 9px;
         text-align: left;
     }
 
