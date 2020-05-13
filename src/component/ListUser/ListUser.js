@@ -92,21 +92,21 @@ class ListUser extends Component {
                 รายการอาหาร
               </PopoverHeader>
               <PopoverBody>
-                {/* <div className="row  align-items-center tablelistuser"> */}
-
-                <Row xs="3" className="align-items-center tablelistuser">
-                  <Col sm="4">ลำดับที่</Col>
-                  <Col sm="4">ชื่ออาหาร</Col>
+                <Row xs="12" className="align-items-center tablelistuser">
+                  <Col>ลำดับที่</Col>
+                  <Col>ชื่ออาหาร</Col>
+                  <Col>จำนวน</Col>
                 </Row>
 
                 {this.state.order[this.state.test].allMenu.map(
                   (menu, index) => {
                     return (
-                      <div className="row  align-items-center tablelistuser">
-                        <Col sm="4">{index + 1}</Col>
+                      <Row xs="12" className="align-items-center tablelistuser">
+                        <Col>{index + 1}</Col>
 
-                        <Col sm="4">{menu.namefood}</Col>
-                      </div>
+                        <Col>{menu.namefood}</Col>
+                        <Col>{menu.value}</Col>
+                      </Row>
                     );
                   }
                 )}
@@ -138,11 +138,9 @@ class ListUser extends Component {
 
   render() {
     const order_id = this.state.order.map((item, id) => {
-      // console.log(item);
       return <div key={id}>{item.order_id}</div>;
     });
     const user_id = this.state.order.map((item, id) => {
-      // console.log(item);
       return <div key={id}>{item.user_id}</div>;
     });
     return (
@@ -155,9 +153,6 @@ class ListUser extends Component {
                 <Row>
                   <Col xs="4">Order_id</Col>
                   <Col xs="4">User_id</Col>
-                  {/* <Col>ชื่อ</Col>
-                  <Col>นามสกุล</Col>
-                  <Col>เบอร์โทร</Col> */}
                   <Col xs="4">สถานะ</Col>
                 </Row>
               </CardHeader>
@@ -178,7 +173,6 @@ class ListUser extends Component {
                             className="bt_listorder"
                             color="danger"
                             onClick={async () => {
-                              // this.orderMenu(item.user_id, item.id);
                               await this.setState({
                                 test: id,
                                 select_id: item.id,
