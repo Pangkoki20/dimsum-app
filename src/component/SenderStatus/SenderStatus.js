@@ -22,8 +22,8 @@ class SenderStatus extends Component {
             <Card className="cardDelivery">
               <CardHeader>
                 <Row>
-                  <Col>Order_id</Col>
-                  <Col>สถานะ</Col>
+                  <Col xs="6">Order_id</Col>
+                  <Col xs="6">สถานะ</Col>
                 </Row>
               </CardHeader>
               {this.state.order.map((order) => {
@@ -31,9 +31,10 @@ class SenderStatus extends Component {
                   return (
                     <CardBody className="cardDataUser">
                       <Row>
-                        <Col>{order.id}</Col>
-                        <Col>
+                        <Col xs="6">{order.id}</Col>
+                        <Col xs="6">
                           <Button
+                            className="fontBTdatauser"
                             color="danger"
                             outline
                             href={`/DeliveryFood/${order.id}`}

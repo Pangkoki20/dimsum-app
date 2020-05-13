@@ -108,21 +108,51 @@
 
 @media only screen and (max-width: 375px) {
     .fromDeliveryfood {
-        width: 500px !important;
-        text-align: center !important;
+        width: 350px !important;
+    }
+
+    .formSender {
+        padding-left: 28px;
+        padding-right: 28px;
     }
 
     .cardDelivery {
-        font-family: "Kanit",
-            sans-serif;
         font-size: 13px;
         text-align: center;
     }
 
     .cardDataUser {
-        font-family: "Kanit",
-            sans-serif;
         font-size: 13px;
         text-align: center;
     }
+
+    .textNameCustomer {
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .fontAddress {
+        font-size: 12px;
+        margin-top: 7px;
+    }
+
+    .fontpayment {
+        margin-left: 15px;
+        font-size: 13px;
+    }
+
+    .fontMoney {
+        font-size: 13px;
+        text-align: left;
+    }
+
+    .fontPriceAll {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+
+    .fontUnit {
+        font-size: 12px;
+    }
+
 }

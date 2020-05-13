@@ -33,43 +33,9 @@ export default class Navigator extends React.Component {
     auth.clearToken();
     this.props.history.push("/");
   };
-  //  componentWillReceiveProps;
-  componentDidMount = async (nextProps) => {
-    //  if (nextProps.user !== null) {
-    //    this.setState({ check: "login" });
-    //  }
-    // let token = localStorage.getItem("token");
-    // if (token) {
-    //   if (token !== null) {
-    //     this.setState({ check: "login" });
-    //   }
-    //   let res = await axios.post(`http://localhost:3001/api/users/me`, {
-    //     token
-    //   });
-    //   console.log(res);
-    // }
-    // let role = localStorage.getItem("role");
-    // this.setState({ role });
-  };
+  componentDidMount = async (nextProps) => {};
 
   render() {
-    // if (
-    //   (token.decodeToken(localStorage.getItem("token")) &&
-    //     token.decodeToken(localStorage.getItem("token")).role) !==
-    //   this.state.role
-    // ) {
-    //   if (
-    //     token.decodeToken(localStorage.getItem("token")) &&
-    //     token.decodeToken(localStorage.getItem("token")).role
-    //   )
-    //     console.log(token.decodeToken(localStorage.getItem("token")).role);
-    //   this.setState({
-    //     role:
-    //       token.decodeToken(localStorage.getItem("token")) &&
-    //       token.decodeToken(localStorage.getItem("token")).role,
-    //     check: "login"
-    //   });
-    // }
     if (localStorage.getItem("token")) {
       if (
         token.decodeToken(localStorage.getItem("token")).role !==

@@ -170,7 +170,7 @@ class ListUser extends Component {
                         <Col xs="4">
                           <Button
                             id="Popover1"
-                            className="bt_listorder"
+                            className="fontBTdatauser"
                             color="danger"
                             onClick={async () => {
                               await this.setState({
@@ -191,7 +191,11 @@ class ListUser extends Component {
                           return (
                             <div key={ids}> */}
 
-                        <Modal isOpen={this.state.modal} toggle={this.toggle}>
+                        <Modal
+                          isOpen={this.state.modal}
+                          toggle={this.toggle}
+                          className="fReadytodeliver"
+                        >
                           <ModalBody className="readytodeliver">
                             อาหารของลูกค้าพร้อมส่ง
                           </ModalBody>

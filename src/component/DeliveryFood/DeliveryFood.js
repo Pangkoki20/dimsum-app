@@ -109,83 +109,81 @@ class DeliveryFood extends Component {
                 return (
                   <Card>
                     <CardHeader>
-                      <Row className="cardDelivery">
-                        <Col xs="4">Order_id</Col>
-                        <Col>ข้อมูลของลูกค้า</Col>
+                      <Row xs="3" className="cardDelivery">
+                        <Col xs="3">Order_id</Col>
+                        <Col xs="8">ข้อมูลของลูกค้า</Col>
                       </Row>
                     </CardHeader>
 
                     <CardBody>
-                      <Row>
-                        <Col className="cardDataUser" xs="4">
+                      <Row xs="3">
+                        <Col xs="3" className="cardDataUser">
                           {order.id}
                         </Col>
-                        <div className="textNameCustomer">
+                        <Col xs="8" className="textNameCustomer">
                           <Col>
-                            ชื่อลูกค้า : {this.state.user.firstname}{" "}
-                            {this.state.user.lastname}
+                            ชื่อลูกค้า :
+                            <b className="fontAddressfrom">
+                              {" "}
+                              {this.state.user.firstname}
+                            </b>
+                            <b className="fontAddressfrom">
+                              {" "}
+                              {this.state.user.lastname}
+                            </b>
                           </Col>
                           <Col className="fontNameCustomer">
                             ที่อยู่สำหรับการจัดส่ง :
                           </Col>
-                          <div>
-                            <Col className="fontAddress">
-                              บ้านเลขที่ :
-                              <b className="fontAddressfrom">
-                                {order.numhouse}
-                              </b>
-                            </Col>
-                            <Col className="fontAddress">
-                              หมู่ที่ :
-                              <b className="fontAddressfrom">{order.nummoo}</b>
-                            </Col>
-                            <Col className="fontAddress">
-                              ซอย/ตรอก :
-                              <b className="fontAddressfrom"> {order.road}</b>
-                            </Col>
-                            <Col className="fontAddress">
-                              ตำบล :
-                              <b className="fontAddressfrom">{order.tambon}</b>
-                            </Col>
-                            <Col className="fontAddress">
-                              อำเภอ :
-                              <b className="fontAddressfrom"> {order.amphoe}</b>
-                            </Col>
-                            <Col className="fontAddress">
-                              จังหวัด :
-                              <b className="fontAddressfrom">
-                                {order.changwat}
-                              </b>
-                            </Col>
-                          </div>
-                          <div>
-                            <Col className="fontNameCustomer">
-                              เบอร์โทรศัพท์ : {this.state.user.phone}
-                            </Col>
-                          </div>
+                          <Col className="fontAddress">
+                            บ้านเลขที่ :
+                            <b className="fontAddressfrom">{order.numhouse}</b>
+                          </Col>
+                          <Col className="fontAddress">
+                            หมู่ที่ :
+                            <b className="fontAddressfrom">{order.nummoo}</b>
+                          </Col>
+                          <Col className="fontAddress">
+                            ซอย/ตรอก :
+                            <b className="fontAddressfrom"> {order.road}</b>
+                          </Col>
+                          <Col className="fontAddress">
+                            ตำบล :
+                            <b className="fontAddressfrom">{order.tambon}</b>
+                          </Col>
+                          <Col className="fontAddress">
+                            อำเภอ :
+                            <b className="fontAddressfrom"> {order.amphoe}</b>
+                          </Col>
+                          <Col className="fontAddress">
+                            จังหวัด :
+                            <b className="fontAddressfrom">{order.changwat}</b>
+                          </Col>
+
+                          <Col className="fontNameCustomer">
+                            เบอร์โทรศัพท์ :
+                            <b className="fontAddressfrom">
+                              {this.state.user.phone}
+                            </b>
+                          </Col>
                           <div>
                             <Col className="fontNameCustomer">
                               วิธีการชำระเงิน :
                               <b className="fontpayment"> {order.payment}</b>
                             </Col>
                           </div>
-                          <br></br> <br></br>
-                        </div>
+                        </Col>
                       </Row>
                     </CardBody>
 
                     <CardFooter>
-                      <div className="row ">
-                        <Col xs="6" className=" fontMoney">
+                      <Row>
+                        <Col xs="7" className=" fontMoney">
                           จำนวนเงินที่ลูกค้าต้องชำระ
                         </Col>
-                        <Col xs="3" className="fontPriceAll">
-                          {order.priceAll}
-                        </Col>
-                        <Col xs="2" className=" fontUnit">
-                          บาท
-                        </Col>
-                      </div>
+                        <Col className="fontPriceAll">{order.priceAll}</Col>
+                        <Col className=" fontUnit">บาท</Col>
+                      </Row>
                     </CardFooter>
                   </Card>
                 );

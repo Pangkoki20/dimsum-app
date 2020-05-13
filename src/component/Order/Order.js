@@ -50,9 +50,6 @@ class Order extends Component {
     let user = auth.getToken();
     let userDecode = auth.decodeToken(user);
     let uId = userDecode.id;
-
-    //  if userDecode.road != "Kitchen"
-
     try {
       const data = {
         priceAll: this.state.priceAll,
@@ -63,7 +60,6 @@ class Order extends Component {
         amphoe: this.state.amphoe,
         changwat: this.state.changwat,
         menu_id: this.state.menu_id,
-        // postcode: this.state.postcode,
         payment: this.state.payment,
         code: this.state.code,
         selects: this.state.selects,
@@ -87,7 +83,6 @@ class Order extends Component {
       console.log("ข้อมูลที่กำลังจะส่งไป ....  ", data);
       axios.post(`http://localhost:3001/api/order/create`, data).then((res) => {
         const { data } = res;
-        //orderNo.
         this.setState({ message: data.message });
         let oldItems = [];
         localStorage.setItem("order", JSON.stringify(oldItems));
@@ -133,17 +128,6 @@ class Order extends Component {
                     </Card>
 
                     <div className="addressdelivery"></div>
-                    {/* <CustomInput
-                      className="addressCurrent"
-                      type="radio"
-                      id="exampleCustomRadio"
-                      name="customRadio"
-                      value="ที่อยู่ที่บันทึกไว้"
-                      label="ที่อยู่ที่บันทึกไว้"
-                      onChange={(e) => {
-                        this.setState({ selects: e.target.value });
-                      }}
-                    /> */}
                     <CustomInput
                       className="addressCurrent font-weight-bold"
                       type="radio"
