@@ -16,8 +16,6 @@ export default class PooDumpling extends Component {
         this.setState({ check: "login" });
         var oldItems = JSON.parse(localStorage.getItem("order")) || [];
         let uid = localStorage.getItem("user_id");
-        console.log("sent !");
-
         const newData = {
           menu_name: this.state.menu_name,
           menu_value: 1,
@@ -39,7 +37,6 @@ export default class PooDumpling extends Component {
           window.location.reload();
         } else {
           console.log("plus in basket");
-
           oldItems.map((item, index) => {
             //console.log(item.menu_value);
             if (newData.menu_name === item.menu_name) {

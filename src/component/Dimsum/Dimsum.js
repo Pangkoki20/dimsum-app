@@ -8,6 +8,7 @@ import ShrimpJeeb from "./ShrimpJeeb";
 import HargaoShrimp from "./HargaoShrimp";
 import ShrimpDumling from "./ShrimpDumling";
 import MenuSelect from "../MenuSelect/MenuSelect";
+import axios from "axios";
 class Dimsum extends Component {
   state = {
     order: [],
@@ -43,8 +44,7 @@ class Dimsum extends Component {
       localStorage.setItem("order", JSON.stringify(oldItems));
     } else {
       oldItems = JSON.parse(localStorage.getItem("order")) || [];
-    }
-    // var oldItems = JSON.parse(localStorage.getItem('order')) || [];
+    } // var oldItems = JSON.parse(localStorage.getItem('order')) || [];
   };
   render() {
     const numberOfMenus = this.state.order.reduce(

@@ -8,6 +8,7 @@ import DrinkOvantin from "./DrinkOvantin";
 import DrinkGreentea from "./DrinkGreentea";
 import DrinkChadum from "./DrinkChadum";
 import MenuSelect from "../MenuSelect/MenuSelect";
+import axios from "axios";
 class Drink extends Component {
   state = {
     order: [],
@@ -29,10 +30,6 @@ class Drink extends Component {
     //   let res = await axios.post(`http://localhost:3001/api/users/me`, {
     //     token,
     //   });
-    //   // if (!res) {
-    //   //   window.location.href = "/login";
-    //   //   return;
-    //   // }
     //   this.setState({ user: res.data });
     // } else {
     //   window.location.href = "/login";
@@ -47,8 +44,7 @@ class Drink extends Component {
       localStorage.setItem("order", JSON.stringify(oldItems));
     } else {
       oldItems = JSON.parse(localStorage.getItem("order")) || [];
-    }
-    // var oldItems = JSON.parse(localStorage.getItem('order')) || [];
+    } // var oldItems = JSON.parse(localStorage.getItem('order')) || [];
   };
   render() {
     const numberOfMenus = this.state.order.reduce(

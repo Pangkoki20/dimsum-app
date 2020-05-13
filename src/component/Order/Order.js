@@ -76,6 +76,7 @@ class Order extends Component {
           };
         }),
       };
+      /////////////////////////////////////////////
       data.priceAll = data.order.reduce((a, b) => {
         return a.priceAll + b.priceAll + 30;
       });
@@ -83,6 +84,7 @@ class Order extends Component {
       console.log("ข้อมูลที่กำลังจะส่งไป ....  ", data);
       axios.post(`http://localhost:3001/api/order/create`, data).then((res) => {
         const { data } = res;
+        console.log("check res after axios: " + JSON.stringify(res));
         this.setState({ message: data.message });
         let oldItems = [];
         localStorage.setItem("order", JSON.stringify(oldItems));

@@ -158,73 +158,85 @@ class ListUser extends Component {
               </CardHeader>
 
               {this.state.order.map((item, id) => {
-                console.log(item);
+                // console.log(item.status);
 
                 return (
                   <div key={id}>
                     {" "}
-                    <CardBody>
-                      <Row>
-                        <Col xs="4">{item.id}</Col>
-                        <Col xs="4">{item.user_id}</Col>
-                        <Col xs="4">
-                          <Button
-                            id="Popover1"
-                            className="fontBTdatauser"
-                            color="danger"
-                            onClick={async () => {
-                              await this.setState({
-                                test: id,
-                                select_id: item.id,
-                              });
-                              console.log(item.id);
-                              this.toggle2();
-                              this.updateStatus(this.state.select_id, 2);
-                            }}
-                          >
-                            รับรายการอาหาร
-                          </Button>
-                        </Col>
-                        {/* {this.state.menu.map((items, ids) => {
-                          // console.log(items);
-                          // if (item.user_id == items.user_id) {
-                          return (
-                            <div key={ids}> */}
-
-                        <Modal
-                          isOpen={this.state.modal}
-                          toggle={this.toggle}
-                          className="fReadytodeliver"
-                        >
-                          <ModalBody className="readytodeliver">
-                            อาหารของลูกค้าพร้อมส่ง
-                          </ModalBody>
-
-                          <div className="piccorrect">
-                            <img
-                              className="img_correct img-fluid"
-                              src={correct}
-                              alt=""
-                            />
-                          </div>
-                          <br></br>
-                          <ModalFooter>
+                    {item.status != 3 ? (
+                      <CardBody>
+                        <Row>
+                          <Col xs="4">{item.id}</Col>
+                          <Col xs="4">{item.user_id}</Col>
+                          <Col xs="4">
                             <Button
-                              className="btoksender"
-                              color="info"
-                              onClick={() => {
-                                this.toggle();
-                                this.updateStatus(this.state.select_id, 3);
+                              id="Popover1"
+                              className="fontBTdatauser"
+                              color="danger"
+                              onClick={async () => {
+                                await this.setState({
+                                  test: id,
+                                  select_id: item.id,
+                                });
+                                console.log(item.id);
+                                this.toggle2();
+                                this.updateStatus(this.state.select_id, 2);
                               }}
-                              size="sm"
-                              block
                             >
-                              ตกลง
+                              รับรายการอาหาร
                             </Button>
-                          </ModalFooter>
-                        </Modal>
-                      </Row>
-                    </CardBody>
+                          </Col>
+                        </Row>
+                      </CardBody>
+                    ) : (
+                      <CardBody className="rowcolor">
+                        <Row>
+                          <Col xs="4">{item.id}</Col>
+                          <Col xs="4">{item.user_id}</Col>
+                          <Col xs="4">
+                            <Button
+                              id="Popover1"
+                              className="fontBTdatauser"
+                              color="dark"
+                            >
+                              รับรายการอาหาร
+                            </Button>
+                          </Col>
+                        </Row>
+                      </CardBody>
+                    )}
+                    <Modal
+                      isOpen={this.state.modal}
+                      toggle={this.toggle}
+                      className="fReadytodeliver"
+                    >
+                      <ModalBody className="readytodeliver">
+                        อาหารของลูกค้าพร้อมส่ง
+                      </ModalBody>
+
+                      <div className="piccorrect">
+                        <img
+                          className="img_correct img-fluid"
+                          src={correct}
+                          alt=""
+                        />
+                      </div>
+                      <br></br>
+                      <ModalFooter>
+                        <Button
+                          className="btoksender"
+                          color="info"
+                          onClick={() => {
+                            this.toggle();
+                            this.updateStatus(this.state.select_id, 3);
+                          }}
+                          size="sm"
+                          block
+                        >
+                          ตกลง
+                        </Button>
+                      </ModalFooter>
+                    </Modal>
                   </div>
                 );
               })}

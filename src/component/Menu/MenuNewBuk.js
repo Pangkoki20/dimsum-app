@@ -18,8 +18,6 @@ class MenuNewBuk extends Component {
         this.setState({ check: "login" });
         var oldItems = JSON.parse(localStorage.getItem("order")) || [];
         let uid = localStorage.getItem("user_id");
-        console.log("sent !");
-
         const newData = {
           menu_name: this.state.menu_name,
           menu_value: 1,
@@ -37,9 +35,9 @@ class MenuNewBuk extends Component {
           console.log(" data : ", newData);
           this.setState({ menu_value: 0 });
           this.setState({ remark: "" });
+          window.location.reload();
         } else {
           console.log("plus in basket");
-
           oldItems.map((item, index) => {
             //console.log(item.menu_value);
             if (newData.menu_name === item.menu_name) {
@@ -81,6 +79,7 @@ class MenuNewBuk extends Component {
               <CardText className="text_price">ราคา 50 .-</CardText>
               <Button
                 onClick={this.sentOrder}
+                color="info"
                 className="btn-basket bg-primary text-white"
               >
                 <div className="bt_basket">เพิ่มไปยังตะกร้า</div>

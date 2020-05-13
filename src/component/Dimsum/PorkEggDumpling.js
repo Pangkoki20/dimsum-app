@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import dl_pokegg from "../../imgdimsum/ขนมจีบหมูไข่เค็ม.png";
-// import auth from "../service/index";
 import axios from "axios";
 export default class PorkEggDumpling extends Component {
   state = {

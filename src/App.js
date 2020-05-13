@@ -81,7 +81,6 @@ class App extends Component {
           <Route exact path="/Basket" component={Basket} />
           <Route exact path="/Order" component={Order} />
           <Route exact path="/ListUser" component={ListUser} />
-          {/* <Route exact path="/Status" component={Status} /> */}
           <Route exact path="/FoodOrder/:userid" component={FoodOrder} />
           <Route exact path="/OrderFood" component={OrderFood} />
           <Route exact path="/EachMenuOrder/:id" component={EachMenuOrder} />

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import ff_babutte from "../../imgfastfoood/บะกุ๊ดเต๋.png";
 import axios from "axios";
-export default class FastFoodBabutte extends Component {
+class FastFoodBabutte extends Component {
   state = {
     menu_name: "บะกุ๊ดเต๋",
     menu_value: 0,
@@ -98,3 +98,4 @@ export default class FastFoodBabutte extends Component {
     );
   }
 }
+export default FastFoodBabutte;

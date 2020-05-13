@@ -143,7 +143,6 @@ class Delivery extends Component {
               <Col md={12}>
                 <div className="fontOrder">
                   <b>ออเดอร์ที่ : {data.id}</b>
-                  {/* status : {data.status} */}
                 </div>
               </Col>
             </Row>

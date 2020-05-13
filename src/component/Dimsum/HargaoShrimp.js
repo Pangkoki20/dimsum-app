@@ -12,8 +12,9 @@ export default class HargaoShrimp extends Component {
       if (token !== null) {
         this.setState({ check: "login" });
         var oldItems = JSON.parse(localStorage.getItem("order")) || [];
-
         let uid = localStorage.getItem("user_id");
+        console.log("sent !");
+
         const newData = {
           menu_name: this.state.menu_name,
           menu_value: 1,
@@ -49,7 +50,6 @@ export default class HargaoShrimp extends Component {
         }
       }
       window.location.reload();
-
       let res = await axios.post(`http://localhost:3001/api/users/me`, {
         token,
       });

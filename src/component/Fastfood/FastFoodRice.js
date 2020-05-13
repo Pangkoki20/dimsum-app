@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import ff_rice from "../../imgfastfoood/ข้าวเปล่า.png";
 import axios from "axios";
-export default class FastFoodRice extends Component {
+class FastFoodRice extends Component {
   state = {
     menu_name: "ข้าวเปล่า",
     menu_value: 0,
@@ -17,8 +17,6 @@ export default class FastFoodRice extends Component {
         this.setState({ check: "login" });
         var oldItems = JSON.parse(localStorage.getItem("order")) || [];
         let uid = localStorage.getItem("user_id");
-        console.log("sent !");
-
         const newData = {
           menu_name: this.state.menu_name,
           menu_value: 1,
@@ -94,3 +92,4 @@ export default class FastFoodRice extends Component {
     );
   }
 }
+export default FastFoodRice;

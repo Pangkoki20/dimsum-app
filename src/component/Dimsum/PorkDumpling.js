@@ -17,8 +17,6 @@ export default class PorkDumpling extends Component {
         this.setState({ check: "login" });
         var oldItems = JSON.parse(localStorage.getItem("order")) || [];
         let uid = localStorage.getItem("user_id");
-        console.log("sent !");
-
         const newData = {
           menu_name: this.state.menu_name,
           menu_value: 1,

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container, Card, CardText, CardTitle, Button } from "reactstrap";
 import ff_crispypork from "../../imgfastfoood/ข้าวหมูกรอบ.png";
 import axios from "axios";
-export default class FastFoodCrispypork extends Component {
+class FastFoodCrispypork extends Component {
   state = {
     menu_name: "ข้าวหมูกรอบ",
     menu_value: 0,
@@ -102,3 +102,4 @@ export default class FastFoodCrispypork extends Component {
     );
   }
 }
+export default FastFoodCrispypork;
