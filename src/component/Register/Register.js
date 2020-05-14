@@ -103,16 +103,6 @@ class Register extends Component {
                   onChange={this.handleInputChange}
                   required
                 />
-
-                {/* <Input
-                className="input_register"
-                type="address"
-                name="address"
-                value={address}
-                placeholder="ที่อยู่ปัจจุบัน"
-                onChange={this.handleInputChange}
-                required
-              /> */}
               </FormGroup>
             </Form>
           </div>

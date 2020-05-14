@@ -8,7 +8,6 @@ import ShrimpJeeb from "./ShrimpJeeb";
 import HargaoShrimp from "./HargaoShrimp";
 import ShrimpDumling from "./ShrimpDumling";
 import MenuSelect from "../MenuSelect/MenuSelect";
-import axios from "axios";
 class Dimsum extends Component {
   state = {
     order: [],

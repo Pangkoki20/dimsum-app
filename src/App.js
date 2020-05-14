@@ -58,7 +58,6 @@ class App extends Component {
   };
   render() {
     const { user } = this.state;
-    // console.log({ user });
     return (
       <div>
         <Navigator user={user} />

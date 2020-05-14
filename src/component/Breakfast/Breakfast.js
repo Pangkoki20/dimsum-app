@@ -8,7 +8,6 @@ import BreakFastShrimp from "./BreakFastShrimp";
 import BreakFastFreshSpring from "./BreakFastFreshSpring";
 import BreakFastShrimpParcelFried from "./BreakFastShrimpParcelFried";
 import MenuSelect from "../MenuSelect/MenuSelect";
-import axios from "axios";
 class Breakfast extends Component {
   state = {
     order: [],

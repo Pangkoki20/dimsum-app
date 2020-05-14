@@ -59,9 +59,7 @@ class Order extends Component {
         tambon: this.state.tambon,
         amphoe: this.state.amphoe,
         changwat: this.state.changwat,
-        menu_id: this.state.menu_id,
         payment: this.state.payment,
-        code: this.state.code,
         selects: this.state.selects,
         user_id: uId,
 
@@ -76,10 +74,11 @@ class Order extends Component {
           };
         }),
       };
-      /////////////////////////////////////////////
-      data.priceAll = data.order.reduce((a, b) => {
-        return a.priceAll + b.priceAll + 30;
+      let tmpPrice = 0;
+      data.order.forEach((element) => {
+        tmpPrice += element.priceAll;
       });
+      data.priceAll = tmpPrice + 30;
 
       console.log("ข้อมูลที่กำลังจะส่งไป ....  ", data);
       axios.post(`http://localhost:3001/api/order/create`, data).then((res) => {

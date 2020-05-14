@@ -8,6 +8,7 @@ export default class PooDumpling extends Component {
     menu_value: 0,
     menu_price: 20,
   };
+
   sentOrder = async (e) => {
     e.preventDefault();
     let token = localStorage.getItem("token");
@@ -38,7 +39,6 @@ export default class PooDumpling extends Component {
         } else {
           console.log("plus in basket");
           oldItems.map((item, index) => {
-            //console.log(item.menu_value);
             if (newData.menu_name === item.menu_name) {
               item.menu_value++;
             }

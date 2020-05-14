@@ -8,7 +8,6 @@ import FastFoodPorkleg from "./FastFoodPorkleg";
 import FastFoodRedpork from "./FastFoodRedpork";
 import FastFoodCrispypork from "./FastFoodCrispypork";
 import MenuSelect from "../MenuSelect/MenuSelect";
-import axios from "axios";
 class Fastfood extends Component {
   state = {
     order: [],

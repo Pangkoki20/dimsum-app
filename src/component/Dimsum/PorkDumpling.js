@@ -38,9 +38,7 @@ export default class PorkDumpling extends Component {
           window.location.reload();
         } else {
           console.log("plus in basket");
-
           oldItems.map((item, index) => {
-            //console.log(item.menu_value);
             if (newData.menu_name === item.menu_name) {
               item.menu_value++;
             }
